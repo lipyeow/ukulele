@@ -1,0 +1,25 @@
+// Shared ChordPro config for all song sheets.
+{
+  "include": [ "ukulele" ],
+  "pdf": {
+    "fonts": {
+      "title": "Times-Bold 18",
+      "subtitle": "Helvetica 11",
+      "text": "Times-Roman 13",
+      "chord": "Helvetica-Bold 11",
+      "comment": "Helvetica 11; background=foreground-light"
+    },
+    "formats": {
+      "title": {
+        "title": [ "", "%{title}", "" ],
+        "subtitle": [ "", "Key: %{key_actual}%{time|   Time: %{}}", "" ],
+        "footer": [ "", "", "%{page}" ]
+      },
+      "default": {
+        "footer": [ "%{title} (%{key_actual})", "", "%{page}" ]
+      }
+    },
+    "spacing": { "lyrics": 1.1, "chords": 1.1 },
+    "diagrams": { "show": "bottom" }
+  }
+}

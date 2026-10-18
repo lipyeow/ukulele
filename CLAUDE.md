@@ -15,7 +15,7 @@ Hymns come first; other genres follow later.
 - Store each song in its original key (`{key: ...}`) and transpose at build time. Never keep a separate source file per key.
 - Output keys: C, G, F for major songs; Am, Em, Dm for minor ones. Override per song with `{meta: pdf_keys ...}`.
 - Write beat placeholders as `[**]`. Leave out optional passing chords such as `(F)`.
-- After changing a `.cho` file, regenerate its PDFs and commit them in the same commit.
+- After changing a `.cho` file, run `make` to regenerate its PDFs (needs ChordPro; see `scripts/build.py`) and commit them in the same commit.
 - Record decisions and plan changes in `wiki/`.
 
 ## Git

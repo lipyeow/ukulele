@@ -6,7 +6,8 @@ repo as ChordPro sources plus generated PDFs.
 ## Source inventory
 
 - ~102 unique hymns in 161 `Lyrics-<Title>-<Key>[-variant].txt` files (chords-over-lyrics text).
-- 37 variant files: `-1col`, `-2col` (layouts), `-full` (all verses), `-vN` (revisions).
+- 37 variant files: `-1col`, `-2col` (layouts), `-full`, `-vN` (revisions). Variants can differ in
+  lyrics, verse count and chords, not just layout (see Phase 0 findings).
 - 24 hymns exist in more than one key.
 - Keys: C (119 files), G (27), Am (6), F (3), D, Dm, Em (2 each).
 - One existing ChordPro file: `Lyrics-Abide_with_me-C.cho`.
@@ -26,7 +27,7 @@ gh-ukulele/
 ├── pdf/                        # generated and committed; mirrors songs/
 │   └── hymns/                  # flat, e.g. abide-with-me-C.pdf
 ├── hymns-published.md          # moved from hymns/published.md
-├── scripts/                    # helpers beyond the Makefile, if any
+├── scripts/                    # build.py (PDFs), txt2cho.py (converter)
 └── wiki/                       # context, plans, specs
 ```
 
@@ -43,29 +44,59 @@ gh-ukulele/
   - Each file sets it with `{key: ...}`.
 - **Output keys:** C, G, F for major hymns; Am, Em, Dm for minor hymns.
   A per-song `{meta: pdf_keys ...}` overrides the default.
+- **Output keys** always include the canonical key itself (e.g. a hymn in D gets D, C, G, F).
 - **Beat placeholders:** `*` in the old files becomes `[**]`. ChordPro treats it as an
-  annotation, so it shows as `*` and isn't transposed.
+  annotation, so it shows as `*` and isn't transposed. A beat that falls on the tail of a
+  word (or on its punctuation) goes after the word and its punctuation: `tide;[**]`, not
+  `tid[**]e;`. Beats inside a multi-syllable word stay put: `migh[**]ty`.
+- **Time signature:** the old beat-count line (`1 2 3 4` above verse 1) becomes `{time: 4/4}`.
 - **Optional passing chords** written in parentheses, like `(F)` or `(Am)`, are omitted.
-- **Verses:** use `{start_of_verse: Verse N}` / `{end_of_verse}`. Refrains use
-  `{start_of_chorus}` / `{end_of_chorus}`.
+- **Verses:** use `{start_of_verse: Verse N}` / `{end_of_verse}`. A refrain is written once
+  with `{start_of_chorus}` / `{end_of_chorus}`; later repeats are `{chorus}` (prints a "Chorus" label).
 - **Header:** set `{title: ...}` and `{key: ...}`. The old "Chords: ..." list isn't
   needed because ChordPro draws the chord diagrams.
 - **Variants:**
-  - The canonical file has all verses (from `-full` if one exists).
+  - The canonical file has all verses. Note: `-full` turned out to mean "more chords", not
+    "all verses" (A Mighty Fortress); since passing chords are omitted, prefer the plain file.
   - Columns are set with `{columns: 2}`, not separate files.
   - `-vN` revisions are dropped. Use the latest one; git keeps the history.
 
 ## Phases
 
-### Phase 0: Setup and pilot
-- Install ChordPro and add `chordpro/ukulele.json` and the `Makefile`.
-- Hand-convert about 5 pilot hymns that cover the tricky cases:
-  - Abide with Me (existing `.cho`)
-  - A Mighty Fortress (passing chords, all verses)
-  - one minor hymn
-  - one hymn with both C and G versions
-  - one 2-column hymn
+### Phase 0: Setup and pilot ✅ (2026-10-18)
+- ChordPro 6.101 is installed as `/Applications/ChordPro.app`. `scripts/build.py` uses
+  `$CHORDPRO`, then `chordpro` on `PATH`, then the app's bundled CLI.
+- Added `chordpro/ukulele.json`, `scripts/build.py` and the `Makefile` (`make` rebuilds
+  out-of-date PDFs, `make force` rebuilds all; ~3 s per PDF).
+- Transposition direction: ChordPro spells with sharps when transposing up and flats when
+  transposing down, so `build.py` shifts up into sharp keys (G, D, Em, …) and down into
+  everything else. C→F gives `Bb`, not `A#`.
+- Converted the 5 pilot hymns with a prototype `scripts/txt2cho.py` plus hand fixes:
+
+  | Hymn | Source file | Notes |
+  |------|-------------|-------|
+  | Abide with Me | `-C.txt` | Converter output matches the hand-made `.cho` exactly (except beats now go after punctuation). |
+  | A Mighty Fortress | `-C.txt` | `(Am)` alternates dropped; `1 2 3 4` beat line → `{time: 4/4}`. |
+  | O Come, O Come, Emmanuel | `-C.txt` | That file is really in **Am** (mislabelled C), 7 verses + refrain, well aligned. The `-Am.txt` file is a different, 5-verse arrangement with chords 1–2 columns off. |
+  | Christ, Whose Glory Fills the Skies | `-C.txt` | Transposed to G, its 72 chords match the hand-made `-G.txt` exactly. |
+  | All Creatures of Our God and King | `-C-1col.txt` | `{columns: 2}`. Fixed source typos: `A m` → `Am`; verses 3–4 "Alle-lu-ia! Alle-lu-ia!" and verses 4–5 "O praise ye! O praise ye!" had chord lines shifted. |
+
+- Findings that affect later phases:
+  - Variants of a hymn can be different arrangements (lyrics, verse count, chords), so
+    Review 2 must actually compare them. All Creatures: `-C.txt` has 7 verses, `-1col`/`-2col`
+    have 5 with different lyrics in verses 1–2.
+  - Key labels in old headers aren't reliable; the converter needs a key override.
+  - Some sources have chords shifted by a column or two. The lint step should flag chords that
+    land mid-syllable for review.
 - **Review 1 (format):** check the PDF layout and the conventions above. Record any changes in this file.
+  Open questions:
+  1. **Syllable hyphens:** keep the old `Is--ra-el`, `Em-ma--nu-el` hyphens (current), or rejoin
+     words (`Is[Dm]rael`) and let chord spacing show the syllables?
+  2. **Paper size:** A4 (ChordPro default, current) or US Letter?
+  3. **Fonts:** Times 13 lyrics, Helvetica-Bold 11 chords (current). Bigger or smaller?
+  4. **Repeated chorus:** a "Chorus" label (current), or print the full chorus each time?
+  5. **Emmanuel:** keep the 7-verse arrangement, or use the 5-verse `-Am.txt` one?
+  6. **All Creatures:** keep the 5-verse `-1col` lyrics, or the 7-verse `-C.txt` lyrics?
 
 ### Phase 1: Inventory
 - A script builds `wiki/migration.csv` with one row per hymn: slug, source files, canonical
@@ -74,7 +105,7 @@ gh-ukulele/
   37 variants and 24 multi-key hymns.
 
 ### Phase 2: Converter
-- Write `scripts/txt2cho.py` to convert chords-over-lyrics to `.cho`:
+- Harden the Phase 0 prototype `scripts/txt2cho.py`, which converts chords-over-lyrics to `.cho`:
   - header line → `{title}` / `{key}`
   - verse numbers → verse sections
   - `*` → `[**]`
