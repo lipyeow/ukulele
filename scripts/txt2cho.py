@@ -191,7 +191,7 @@ def convert(path, key=None):
                 out += ["{start_of_chorus}", *sec, "{end_of_chorus}"]
         else:
             n += 1
-            out += [f"{{start_of_verse: Verse {n}}}", *sec, "{end_of_verse}"]
+            out += [f"{{start_of_verse: {n}}}", *sec, "{end_of_verse}"]
         out.append("")
     return "\n".join(out)
 

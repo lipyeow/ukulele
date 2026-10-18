@@ -60,7 +60,7 @@ gh-ukulele/
   Helvetica-Bold 10 chords. Long hymns run to two pages rather than being squeezed.
 - **Time signature:** the old beat-count line (`1 2 3 4` above verse 1) becomes `{time: 4/4}`.
 - **Optional passing chords** written in parentheses, like `(F)` or `(Am)`, are omitted.
-- **Verses:** use `{start_of_verse: Verse N}` / `{end_of_verse}`. A refrain is written once
+- **Verses:** use `{start_of_verse: N}` (label is just the number) / `{end_of_verse}`. A refrain is written once
   with `{start_of_chorus}` / `{end_of_chorus}`; later repeats are `{chorus}` (prints a "Chorus" label).
 - **Header:** set `{title: ...}` and `{key: ...}`. The old "Chords: ..." list isn't
   needed because ChordPro draws the chord diagrams.
