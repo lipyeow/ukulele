@@ -24,6 +24,6 @@
         "footer": [ "%{title} (%{key_actual})", "", "%{page}" ]
       }
     },
-    "diagrams": { "show": "bottom" }
+    "diagrams": { "show": "top" }
   }
 }
