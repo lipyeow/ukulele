@@ -57,7 +57,8 @@ gh-ukulele/
 - **Chorus:** the full chorus is printed every time it's recalled (`{chorus}`), so players
   don't have to look back up the page.
 - **Page:** US Letter by default (A4 may be added later as a second output); Times 12 lyrics,
-  Helvetica-Bold 10 chords. Long hymns run to two pages rather than being squeezed.
+  Helvetica-Bold 10 chords, title and key line left-aligned. Long hymns run to two pages
+  rather than being squeezed.
 - **Time signature:** the old beat-count line (`1 2 3 4` above verse 1) becomes `{time: 4/4}`.
 - **Optional passing chords** written in parentheses, like `(F)` or `(Am)`, are omitted.
 - **Verses:** use `{start_of_verse: N}` (label is just the number) / `{end_of_verse}`. A refrain is written once

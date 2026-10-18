@@ -16,8 +16,8 @@
     },
     "formats": {
       "title": {
-        "title": [ "", "%{title}", "" ],
-        "subtitle": [ "", "Key: %{key_actual}%{time|   Time: %{}}", "" ],
+        "title": [ "%{title}", "", "" ],
+        "subtitle": [ "Key: %{key_actual}%{time|   Time: %{}}", "", "" ],
         "footer": [ "", "", "%{page}" ]
       },
       "default": {
