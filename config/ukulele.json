@@ -3,8 +3,10 @@
   "include": [ "ukulele" ],
   "pdf": {
     "papersize": "letter",
-    // Draw a hyphen where a chord is wider than the syllable under it.
-    "split-marker": [ "", "", "-" ],
+    // Draw a hyphen where a chord is wider than the syllable under it: [start, repeat, final].
+    // A hyphen right after the syllable, then spaces up to the next one. A "final" marker,
+    // or a start marker with no repeat, can make ChordPro overlap the next syllable.
+    "split-marker": [ "-", " ", "" ],
     // Print the full chorus every time it is recalled, for easy play-along.
     "chorus": { "recall": { "quote": true } },
     "fonts": {
