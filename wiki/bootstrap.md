@@ -19,7 +19,7 @@ repo as ChordPro sources plus generated PDFs.
 gh-ukulele/
 ├── README.md
 ├── Makefile                    # songs/**/*.cho → pdf/
-├── chordpro/
+├── config/
 │   └── ukulele.json            # shared ChordPro config (ukulele diagrams, fonts, page size)
 ├── songs/                      # source of truth: one .cho per song
 │   ├── hymns/                  # flat, e.g. abide-with-me.cho
@@ -66,7 +66,7 @@ gh-ukulele/
 ### Phase 0: Setup and pilot ✅ (2026-10-18)
 - ChordPro 6.101 is installed as `/Applications/ChordPro.app`. `scripts/build.py` uses
   `$CHORDPRO`, then `chordpro` on `PATH`, then the app's bundled CLI.
-- Added `chordpro/ukulele.json`, `scripts/build.py` and the `Makefile` (`make` rebuilds
+- Added `config/ukulele.json` (originally `chordpro/`, renamed to avoid confusion with song sources), `scripts/build.py` and the `Makefile` (`make` rebuilds
   out-of-date PDFs, `make force` rebuilds all; ~3 s per PDF).
 - Transposition direction: ChordPro spells with sharps when transposing up and flats when
   transposing down, so `build.py` shifts up into sharp keys (G, D, Em, …) and down into

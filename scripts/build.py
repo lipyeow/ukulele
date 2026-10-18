@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SONGS = ROOT / "songs"
 PDF = ROOT / "pdf"
-CONFIG = ROOT / "chordpro" / "ukulele.json"
+CONFIG = ROOT / "config" / "ukulele.json"
 APP_CHORDPRO = "/Applications/ChordPro.app/Contents/MacOS/chordpro"
 
 DEFAULT_KEYS = {"major": ["C", "G", "F"], "minor": ["Am", "Em", "Dm"]}
