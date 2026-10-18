@@ -50,13 +50,16 @@ gh-ukulele/
   word (or on its punctuation) goes after the word and its punctuation, separated by a space:
   `tide; [**]`, not `tid[**]e;`. (Without the space ChordPro treats it as a split word and
   draws a hyphen.) Beats inside a multi-syllable word stay put: `migh[**]ty`.
-- **No syllable hyphens:** words are written whole (`Is[Dm]rael`, `fai[**][C]ling`).
-- **Chords and beats go exactly where the music changes**, even mid-syllable (`G[**]od`,
-  `I[**]srael`). Wherever a chord is wider than the text under it, ChordPro's `split-marker`
-  fills the gap with underscores (`G__od`), the hymnal sign for a held syllable. (A hyphen
-  was tried first, but it reads as a syllable break that isn't there.)
-  Real compound words keep their hyphen (`Day-Spring`). The converter decides with the
-  system dictionary (`/usr/share/dict/words`).
+- **Words are written whole by default** (`Israel`, `failing`); the converter strips the old
+  spacing hyphens. Real compound words keep their hyphen (`Day-Spring`). The converter
+  decides with the system dictionary (`/usr/share/dict/words`).
+- **Melismas (held syllables with chord or beat changes) are marked by hand, hymnal style:**
+  hyphenate the word into syllables and put each chord or beat where the music changes,
+  even mid-syllable: `Em-[G]ma[**]-nu-[Am]e[**]l`, `[Dm]I[**]-sra-[Am]e[**]l`, `[Dm]Go[**]-d`.
+  Wherever a chord is wider than the text under it, ChordPro's `split-marker` fills the gap
+  with hyphens (`Is - - ra-el`). Neither the old text sources nor ChordPro represent
+  melismas precisely, so this can't be automated; it's done during Review 3. (Underscores
+  and a blank gap were also tried; see Review 1.)
 - **Chorus:** the full chorus is printed every time it's recalled (`{chorus}`), so players
   don't have to look back up the page.
 - **Page:** US Letter by default (A4 may be added later as a second output); Times 12 lyrics,
@@ -104,7 +107,10 @@ gh-ukulele/
     land mid-syllable for review.
 - **Review 1 (format) ✅ (2026-10-18):** decisions, now reflected in the conventions above:
   1. **Syllable hyphens:** the hyphens only existed to make room for mid-word chords. ChordPro
-     handles that natively, so they're removed.
+     handles that natively, so they're removed. *Revised:* words with a melisma get hymnal-style
+     syllable hyphens by hand, and the split marker is a hyphen (tried in order: hyphen
+     overlapping text, underscores, blank gap, then hand-placed syllable hyphens plus a hyphen
+     marker). Emmanuel verse 1 and the chorus are the reference example.
   2. **Paper size:** US Letter by default; A4 is likely to be supported too, later.
   3. **Fonts:** Times 12 lyrics, Helvetica-Bold 10 chords.
   4. **Repeated chorus:** print the full chorus each time, for easy play-along.
@@ -137,7 +143,8 @@ gh-ukulele/
 ### Phase 4: Batch conversion
 - Convert in batches of 15–20, one commit per batch pushed to `main`. Published hymns go first.
 - **Review 3 (content, per batch):** read the canonical-key PDF (GitHub renders PDFs) and check that each chord sits on
-  the right syllable and that verses are complete. Update the `status` column in `migration.csv`.
+  the right syllable and that verses are complete. Hyphenate and annotate melismas by hand
+  (see Format conventions). Update the `status` column in `migration.csv`.
 
 ### Phase 5: Other-key PDFs
 - Generate the PDFs for all output keys.

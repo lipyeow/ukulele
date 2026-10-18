@@ -3,9 +3,9 @@
   "include": [ "ukulele" ],
   "pdf": {
     "papersize": "letter",
-    // Where a chord is wider than the text under it, fill the gap with underscores: the
-    // singer is holding that syllable while the chord or beat changes (hymnal extender).
-    "split-marker": [ "", "_", "" ],
+    // Where a chord is wider than the text under it, fill the gap with hyphens, hymnal style
+    // (Is - - ra-el): the singer holds that syllable while the chord or beat changes.
+    "split-marker": [ "", "-", "" ],
     // Print the full chorus every time it is recalled, for easy play-along.
     "chorus": { "recall": { "quote": true } },
     "fonts": {
