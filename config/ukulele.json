@@ -2,11 +2,16 @@
 {
   "include": [ "ukulele" ],
   "pdf": {
+    "papersize": "letter",
+    // Draw a hyphen where a chord is wider than the syllable under it.
+    "split-marker": [ "", "", "-" ],
+    // Print the full chorus every time it is recalled, for easy play-along.
+    "chorus": { "recall": { "quote": true } },
     "fonts": {
       "title": "Times-Bold 18",
       "subtitle": "Helvetica 11",
-      "text": "Times-Roman 13",
-      "chord": "Helvetica-Bold 11",
+      "text": "Times-Roman 12",
+      "chord": "Helvetica-Bold 10",
       "comment": "Helvetica 11; background=foreground-light"
     },
     "formats": {
@@ -19,7 +24,6 @@
         "footer": [ "%{title} (%{key_actual})", "", "%{page}" ]
       }
     },
-    "spacing": { "lyrics": 1.1, "chords": 1.1 },
     "diagrams": { "show": "bottom" }
   }
 }

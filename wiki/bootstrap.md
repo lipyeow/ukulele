@@ -47,8 +47,17 @@ gh-ukulele/
 - **Output keys** always include the canonical key itself (e.g. a hymn in D gets D, C, G, F).
 - **Beat placeholders:** `*` in the old files becomes `[**]`. ChordPro treats it as an
   annotation, so it shows as `*` and isn't transposed. A beat that falls on the tail of a
-  word (or on its punctuation) goes after the word and its punctuation: `tide;[**]`, not
-  `tid[**]e;`. Beats inside a multi-syllable word stay put: `migh[**]ty`.
+  word (or on its punctuation) goes after the word and its punctuation, separated by a space:
+  `tide; [**]`, not `tid[**]e;`. (Without the space ChordPro treats it as a split word and
+  draws a hyphen.) Beats inside a multi-syllable word stay put: `migh[**]ty`.
+- **No syllable hyphens:** words are written whole (`Is[Dm]rael`, `fai[**][C]ling`), and
+  ChordPro's `split-marker` draws a hyphen wherever a chord is wider than its syllable.
+  Real compound words keep their hyphen (`Day-Spring`). The converter decides with the
+  system dictionary (`/usr/share/dict/words`).
+- **Chorus:** the full chorus is printed every time it's recalled (`{chorus}`), so players
+  don't have to look back up the page.
+- **Page:** US Letter by default (A4 may be added later as a second output); Times 12 lyrics,
+  Helvetica-Bold 10 chords. Long hymns run to two pages rather than being squeezed.
 - **Time signature:** the old beat-count line (`1 2 3 4` above verse 1) becomes `{time: 4/4}`.
 - **Optional passing chords** written in parentheses, like `(F)` or `(Am)`, are omitted.
 - **Verses:** use `{start_of_verse: Verse N}` / `{end_of_verse}`. A refrain is written once
@@ -75,11 +84,11 @@ gh-ukulele/
 
   | Hymn | Source file | Notes |
   |------|-------------|-------|
-  | Abide with Me | `-C.txt` | Converter output matches the hand-made `.cho` exactly (except beats now go after punctuation). |
+  | Abide with Me | `-C.txt` | Converter output matches the hand-made `.cho` exactly, except for where beats sit around punctuation. |
   | A Mighty Fortress | `-C.txt` | `(Am)` alternates dropped; `1 2 3 4` beat line → `{time: 4/4}`. |
   | O Come, O Come, Emmanuel | `-C.txt` | That file is really in **Am** (mislabelled C), 7 verses + refrain, well aligned. The `-Am.txt` file is a different, 5-verse arrangement with chords 1–2 columns off. |
   | Christ, Whose Glory Fills the Skies | `-C.txt` | Transposed to G, its 72 chords match the hand-made `-G.txt` exactly. |
-  | All Creatures of Our God and King | `-C-1col.txt` | `{columns: 2}`. Fixed source typos: `A m` → `Am`; verses 3–4 "Alle-lu-ia! Alle-lu-ia!" and verses 4–5 "O praise ye! O praise ye!" had chord lines shifted. |
+  | All Creatures of Our God and King | `-C.txt` (after Review 1) | `{columns: 2}`. The first pilot used `-C-1col.txt`, which has typos (`A m`, shifted chord lines in verses 3–5). |
 
 - Findings that affect later phases:
   - Variants of a hymn can be different arrangements (lyrics, verse count, chords), so
@@ -88,15 +97,16 @@ gh-ukulele/
   - Key labels in old headers aren't reliable; the converter needs a key override.
   - Some sources have chords shifted by a column or two. The lint step should flag chords that
     land mid-syllable for review.
-- **Review 1 (format):** check the PDF layout and the conventions above. Record any changes in this file.
-  Open questions:
-  1. **Syllable hyphens:** keep the old `Is--ra-el`, `Em-ma--nu-el` hyphens (current), or rejoin
-     words (`Is[Dm]rael`) and let chord spacing show the syllables?
-  2. **Paper size:** A4 (ChordPro default, current) or US Letter?
-  3. **Fonts:** Times 13 lyrics, Helvetica-Bold 11 chords (current). Bigger or smaller?
-  4. **Repeated chorus:** a "Chorus" label (current), or print the full chorus each time?
-  5. **Emmanuel:** keep the 7-verse arrangement, or use the 5-verse `-Am.txt` one?
-  6. **All Creatures:** keep the 5-verse `-1col` lyrics, or the 7-verse `-C.txt` lyrics?
+- **Review 1 (format) ✅ (2026-10-18):** decisions, now reflected in the conventions above:
+  1. **Syllable hyphens:** the hyphens only existed to make room for mid-word chords. ChordPro
+     handles that natively, so they're removed.
+  2. **Paper size:** US Letter by default; A4 is likely to be supported too, later.
+  3. **Fonts:** Times 12 lyrics, Helvetica-Bold 10 chords.
+  4. **Repeated chorus:** print the full chorus each time, for easy play-along.
+  5. **Emmanuel:** the 7-verse arrangement.
+  6. **All Creatures:** the 7-verse lyrics from `-C.txt`. Its two-phrase lines are split at
+     `;` so the song fits in 2 columns. Also fixed: `wind,air,clouds,&` spacing and two beats
+     a column off (`re[G]joice; [**]`, `our [**]sister`).
 
 ### Phase 1: Inventory
 - A script builds `wiki/migration.csv` with one row per hymn: slug, source files, canonical

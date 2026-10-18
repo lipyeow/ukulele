@@ -10,6 +10,51 @@ TOKEN = re.compile(r"\(\s*" + CHORD + r"\s*\)|" + CHORD + r"|\*")
 CHORD_LINE = re.compile(r"^\s*(?:\d\s+)?(?:(?:\(\s*" + CHORD + r"\s*\)|" + CHORD + r"|\*)\s*)+$")
 BEAT_LINE = re.compile(r"^\s*(?:\d\s*)+$")
 VERSE_NO = re.compile(r"^(\d) ")
+HYPHENATED = re.compile(r"[A-Za-z']+(?:-+ *[A-Za-z']+)+")  # "lu-   ia" is a held syllable
+
+
+def load_words(path="/usr/share/dict/words"):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return {w.strip().lower() for w in f}
+    except OSError:
+        return set()
+
+
+WORDS = load_words()
+
+
+def keep_hyphen(left, right):
+    """True for real compounds (Day-Spring), False for sung syllables (Is-ra-el)."""
+    if (left + right).lower() in WORDS:
+        return right[:1].isupper()
+    return len(left) >= 3 and len(right) >= 3 and \
+        left.lower() in WORDS and right.lower() in WORDS
+
+
+def dehyphenate(text):
+    """Join syllables split with hyphens; ChordPro's split-marker shows the gaps."""
+    plain, where = [], []  # lyric chars and their index in text
+    i = 0
+    while i < len(text):
+        if text[i] == "[":
+            i = text.index("]", i) + 1
+            continue
+        plain.append(text[i])
+        where.append(i)
+        i += 1
+    plain = "".join(plain)
+    drop = set()
+    for m in HYPHENATED.finditer(plain):
+        parts = re.split(r"-+ *", m.group())
+        pos = m.start()
+        for left, right in zip(parts, parts[1:]):
+            pos += len(left)
+            run = re.match(r"-+ *", plain[pos:]).end()
+            if not keep_hyphen(left, right):
+                drop.update(where[pos:pos + run])
+            pos += run
+    return "".join(c for k, c in enumerate(text) if k not in drop)
 
 
 def chords_of(line):
@@ -77,15 +122,20 @@ def merge(chords, lyric):
         if col >= len(lyric):
             tail.append(f"[{ch}]")
         else:
-            placed.append((place(lyric, col, ch), ch))
+            new = place(lyric, col, ch)
+            # A beat after a word gets its own space so ChordPro doesn't draw a split marker.
+            after_word = ch == "**" and (new != col or lyric[col].isspace()) \
+                and new > 0 and not lyric[new - 1].isspace() \
+                and lyric[new:new + 1] != "-"  # syllable boundary, not word end
+            placed.append((new, f" [{ch}] " if after_word else f"[{ch}]"))
     pieces, last = [], 0
-    for col, ch in placed:
+    for col, mark in placed:
         col = max(col, last)
         pieces.append(lyric[last:col])
-        pieces.append(f"[{ch}]")
+        pieces.append(mark)
         last = col
     pieces.append(lyric[last:])
-    text = "".join(pieces) + " ".join(tail)
+    text = dehyphenate("".join(pieces) + " " + " ".join(tail))
     return re.sub(r" {2,}", " ", text).strip()
 
 
