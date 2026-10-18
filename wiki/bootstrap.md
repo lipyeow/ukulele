@@ -66,8 +66,7 @@ gh-ukulele/
   Helvetica-Bold 10 chords, title and key line left-aligned, chord diagrams right after
   them (above the lyrics). Long hymns run to two pages
   rather than being squeezed.
-- **Lyric lines:** each line starts with a capital letter. Line-end punctuation (`, ; : .`) is
-  dropped, except on the last line of a verse or chorus. `?` and `!` are kept.
+- **Beat markers, capitalization and line-end punctuation:** see [style-guide.md](style-guide.md).
 - **Time signature:** the old beat-count line (`1 2 3 4` above verse 1) becomes `{time: 4/4}`.
 - **Optional passing chords** written in parentheses, like `(F)` or `(Am)`, are omitted.
 - **Verses:** use `{start_of_verse: N}` (label is just the number) / `{end_of_verse}`. A refrain is written once
