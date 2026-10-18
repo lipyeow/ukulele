@@ -33,7 +33,7 @@ def keep_hyphen(left, right):
 
 
 def dehyphenate(text):
-    """Join syllables split with hyphens; ChordPro's split-marker shows the gaps."""
+    """Join syllables split with hyphens; ChordPro's split-marker (underscores) shows the gaps."""
     plain, where = [], []  # lyric chars and their index in text
     i = 0
     while i < len(text):

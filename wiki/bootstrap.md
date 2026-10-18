@@ -50,8 +50,11 @@ gh-ukulele/
   word (or on its punctuation) goes after the word and its punctuation, separated by a space:
   `tide; [**]`, not `tid[**]e;`. (Without the space ChordPro treats it as a split word and
   draws a hyphen.) Beats inside a multi-syllable word stay put: `migh[**]ty`.
-- **No syllable hyphens:** words are written whole (`Is[Dm]rael`, `fai[**][C]ling`), and
-  ChordPro's `split-marker` draws a hyphen wherever a chord is wider than its syllable.
+- **No syllable hyphens:** words are written whole (`Is[Dm]rael`, `fai[**][C]ling`).
+- **Chords and beats go exactly where the music changes**, even mid-syllable (`G[**]od`,
+  `I[**]srael`). Wherever a chord is wider than the text under it, ChordPro's `split-marker`
+  fills the gap with underscores (`G__od`), the hymnal sign for a held syllable. (A hyphen
+  was tried first, but it reads as a syllable break that isn't there.)
   Real compound words keep their hyphen (`Day-Spring`). The converter decides with the
   system dictionary (`/usr/share/dict/words`).
 - **Chorus:** the full chorus is printed every time it's recalled (`{chorus}`), so players
