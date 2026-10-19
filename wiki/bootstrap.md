@@ -128,8 +128,22 @@ gh-ukulele/
   line-end punctuation, time signature) and leave melismas for review.
 
 ### Phase 1: Inventory
-- A script builds `wiki/migration.csv` with one row per hymn: slug, source files, canonical
-  source file, canonical key, output keys, published (y/n), status.
+- `scripts/inventory.py` builds `wiki/migration.csv` with one row per hymn (102 hymns, 68
+  published), published hymns first in publish order. Columns:
+  - `slug`, `title`: from the source's header line, title-cased.
+  - `published`: the publish date from `published.md`, empty if unpublished.
+  - `key`, `output_keys`: the suggested canonical key and the PDF keys.
+  - `canonical_source`, `other_sources`: the suggested source file and the rest of the group.
+  - `status`: `todo`, `converted`, later `reviewed`.
+  - `notes`: what Review 2 should look at.
+- How the suggestions are made:
+  - **Key:** prefer C, then Am, then the first published key. Within that key, prefer the
+    latest `-vN`, then the plain file over `-1col` / `-2col` / `-full`.
+  - **Key flags:** a file's header key is compared with its filename, and with the last chord
+    of the song. Where the header and the last chord agree on a minor key, that key is used
+    (God of Abraham, Come Ye Sinners, Sing We Now of Christmas). Converted hymns take their
+    key from the `.cho` file.
+- After Review 2 the CSV is edited by hand, so the script won't overwrite it without `--force`.
 - **Review 2 (choices):** confirm the canonical source and key for each hymn, mainly the
   37 variants and 24 multi-key hymns.
 
