@@ -165,6 +165,36 @@ gh-ukulele/
   - verse numbers → verse sections
   - `*` → `[**]`
   - parenthesized chords → dropped
+- **Done (2026-10-18):** `scripts/convert.py SLUG…` or `--next N` converts hymns from
+  `migration.csv` (title, key, time, canonical source) into `songs/hymns/`, sets their status
+  to `converted`, and never overwrites an existing `.cho` without `--force`. The converter now
+  follows [style-guide.md](style-guide.md):
+  - **Beat markers:** only for sources with a beat-count line (those mark every beat). Each
+    chord is taken to fall on a marked beat. After it, every 2nd `*` is kept in 4/4 and 2/4,
+    every 3rd in 3/4 and 6/8, and all of them in x/2. (Counting bars from the beat line
+    doesn't work: the sources skip some beats.) Hymns with "keep every chord" in their
+    notes are left as they are.
+  - **Pickups:** a chord on the first word of a line, or on the first word after punctuation,
+    is dropped when the next word already has a marker. If that marker is a `*`, the chord
+    moves onto it.
+  - **Held syllables:** a dropped `*` between two marks in one word becomes a hyphen
+    (`fai-[C]ling`). A run of hyphens in the source (`fai--ling`) keeps one hyphen; single
+    spacing hyphens are removed.
+  - **Beats at the end of a word** go right after its letters, before punctuation (`foe[**],`).
+  - **Lyric lines:** a capital at the start of each line; mid-line capitals left over from old
+    line starts are lowercased (`foe, doth`). Proper nouns from the dictionary and divine
+    pronouns are kept. Line-end punctuation is dropped except on the last line.
+  - **Labels:** `Verse 2:`, `[Chorus]` and similar lines start a new section; a chorus label
+    makes it a chorus. Extra `(Key: …)` lines are skipped.
+  - **Time:** taken from the new `time` column in `migration.csv`. It was pre-filled from the
+    beat lines as a guess (3 → 3/4, 6 → 6/8) and needs confirming. 47 hymns have no beat
+    line, so their time is blank until filled in.
+- **Check against A Mighty Fortress:** converted from the source, 25 of 30 lyric lines match
+  the hand-reviewed version. The rest are chords a column off in the source and one
+  mid-line pickup, which review has to catch anyway.
+- **Dry run on all 97 remaining hymns:** no crashes. Things for Phase 3's lint: two-column
+  canonical sources (For the Beauty of the Earth) and chord lines with stray tokens
+  (`(6)` in Were You There).
 
 ### Phase 3: Automated checks
 - **Round-trip:** render each `.cho` back to chords-over-lyrics and diff it against the original

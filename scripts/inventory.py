@@ -52,7 +52,7 @@ def read_txt(path):
     title = key = None
     if first and not CHORD_LINE.match(first):
         m = HEADER.match(first)
-        title = re.sub(r"(?<=\w)-(?=\w)", "", (m.group("title") if m else first)).rstrip("! ")
+        title = re.sub(r"(?<=\w)-(?=[a-z])", "", (m.group("title") if m else first)).rstrip("! ")
         if m:
             km = HEADER_KEY.search(m.group("info"))
             key = km.group(1) if km else None
@@ -146,6 +146,17 @@ def main(argv):
                 key = canon["last"]
             else:
                 notes.append(f"canonical ends on {canon['last']}, not {key}: check the key")
+        time = ""
+        if cho.exists():
+            tm = re.search(r"^\{time:\s*(.*?)\s*\}", cho.read_text(), re.M)
+            time = tm.group(1) if tm else ""
+        else:
+            beat = next((l for l in canon["path"].read_text(errors="replace").splitlines()[:6]
+                         if re.fullmatch(r"\s*(?:\d\s*)+", l)), None)
+            if beat:
+                n = max(int(d) for d in re.findall(r"\d", beat))
+                time = "6/8" if n == 6 else f"{n}/4"
+                notes.append(f"time {time} guessed from beat line")
         mode = "minor" if key.endswith("m") else "major"
         out_keys = [key] + [k for k in DEFAULT_KEYS[mode] if k != key]
 
@@ -154,6 +165,7 @@ def main(argv):
             "title": title,
             "published": pub[0] if pub else "",
             "key": key,
+            "time": time,
             "output_keys": " ".join(out_keys),
             "canonical_source": canon["path"].name,
             "other_sources": " ".join(f["path"].name for f in files if f is not canon),
