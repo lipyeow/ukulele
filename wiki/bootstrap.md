@@ -237,9 +237,9 @@ gh-ukulele/
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
   Batch 1 decision: two columns for Christ the Lord Is Risen Today, Dear Lord and Father
-  of Mankind, For the Beauty of the Earth, God of the Sparrow, He Lives (two lines wrap;
-  accepted), Jesus Keep Me Near the Cross, O God Beyond All Praising, O God Our Help in
-  Ages Past, O Sacred Head Now Wounded, This Is My Father's World.
+  of Mankind, For the Beauty of the Earth, God of the Sparrow, Jesus Keep Me Near the Cross, O God Beyond All Praising, O God Our Help in
+  Ages Past, O Sacred Head Now Wounded, This Is My Father's World. He Lives stays in one column (two
+  lines wrap in two).
 
 ### Phase 5: Other-key PDFs
 - Generate the PDFs for all output keys.

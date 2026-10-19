@@ -11,8 +11,7 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
 
 - Use `{columns: 2}` (after `{time}`) when the song fits on fewer pages that way and no
   line wraps in the narrower column; `make columns` (`scripts/columns.py`) checks every
-  output key. Exceptions are fine when a song reads better in two columns anyway
-  (*He Lives*, where two chorus lines wrap).
+  output key.
 
 ## Beat markers
 
