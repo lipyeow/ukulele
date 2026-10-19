@@ -204,6 +204,22 @@ gh-ukulele/
   against the hand-made file in that key.
 - **Lint:** flag unknown chords, chords placed past the end of a line, and empty sections.
 - Only flagged files get fixed by hand.
+- **Done (2026-10-18):** `make check` (`scripts/check.py [SLUG…]`) runs on converted songs:
+  - **Lyrics:** the words, read in order with `{chorus}` expanded, must match the canonical
+    source. Case, punctuation, hyphens, `&` and how words are joined are ignored.
+  - **Chords:** lines are matched on their lyrics. Each `.cho` line's chords must appear in
+    order in its source line. Missing ones are reported as dropped pickups to look at in
+    review; extra or different ones fail.
+  - **Lint:** unknown chords and missing diagrams (from ChordPro's own output), no `{time}`,
+    empty sections, digits in lyrics, and a source with verses in a second column. Wide gaps
+    in source lines are only a note.
+  - **Cross-key:** covered by `scripts/compare_variants.py` and `wiki/variant-report.md`.
+- **Dry run on all 102 hymns** (converted and then removed again). 5 fail:
+  - For the Beauty of the Earth: the source has verses in two columns.
+  - Were You There: a stray `(6)` in a chord line.
+  - Chords with no ukulele diagram: `Gsus`/`Dsus` (God Moves in a Mysterious Way), `Em7/C`,
+    `Em7/G` (Let All Mortal Flesh), `G/B` (The First Noel). Either define the diagrams in
+    `config/ukulele.json` or simplify the chords.
 
 ### Phase 4: Batch conversion
 - Convert in batches of 15–20, one commit per batch pushed to `main`. Published hymns go first.
