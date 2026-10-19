@@ -144,6 +144,10 @@ gh-ukulele/
     (God of Abraham, Come Ye Sinners, Sing We Now of Christmas). Converted hymns take their
     key from the `.cho` file.
 - After Review 2 the CSV is edited by hand, so the script won't overwrite it without `--force`.
+- `scripts/compare_variants.py` writes `wiki/variant-report.md`. It compares every other
+  source file of a hymn with the suggested canonical one (stanza by stanza, ignoring line
+  breaks and 1col/2col layout, after transposing). "Copy" files need no decision. The rest
+  list where the lyrics or chords differ, and whether chords are missing in either file.
 - **Review 2 (choices):** confirm the canonical source and key for each hymn, mainly the
   37 variants and 24 multi-key hymns.
 
