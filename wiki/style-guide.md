@@ -31,6 +31,10 @@ Count in quarter notes:
   `[G]foe[**], doth`.
 - Reference examples: *A Mighty Fortress Is Our God* (4/4), *All Creatures of Our God and
   King* (3/2).
+- **Keep every mark:** some sources already have exactly the chords and `*`s wanted, so
+  they're converted as is, with no thinning and no pickup chords dropped:
+  - *O God Beyond All Praising*
+
 
 ## Lyric lines
 

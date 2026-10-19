@@ -156,7 +156,8 @@ gh-ukulele/
     those are stored in G. Multi-key hymns whose files are exact transpositions keep C.
   - Five flagged keys were confirmed as labelled (hymns that end on V). What Child Is This
     is in Am.
-  - O God Beyond All Praising uses the suggested `C-v3` (no separate decision).
+  - O God Beyond All Praising uses `C-v3-1col`, keeping every chord and `*` (see
+    [style-guide.md](style-guide.md#beat-markers)).
 
 ### Phase 2: Converter
 - Harden the Phase 0 prototype `scripts/txt2cho.py`, which converts chords-over-lyrics to `.cho`:
