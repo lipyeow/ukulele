@@ -186,9 +186,10 @@ gh-ukulele/
     pronouns are kept. Line-end punctuation is dropped except on the last line.
   - **Labels:** `Verse 2:`, `[Chorus]` and similar lines start a new section; a chorus label
     makes it a chorus. Extra `(Key: …)` lines are skipped.
-  - **Time:** taken from the new `time` column in `migration.csv`. It was pre-filled from the
-    beat lines as a guess (3 → 3/4, 6 → 6/8) and needs confirming. 47 hymns have no beat
-    line, so their time is blank until filled in.
+  - **Time:** taken from the new `time` column in `migration.csv`, pre-filled with these
+    rules of thumb: a beat line counting to 3 means 3/4 (almost always), to 6 means 6/8, and
+    no beat line means 4/4 (almost always). The 47 hymns given 4/4 without a beat line have
+    "time 4/4 assumed" in their notes, for a check later.
 - **Check against A Mighty Fortress:** converted from the source, 25 of 30 lyric lines match
   the hand-reviewed version. The rest are chords a column off in the source and one
   mid-line pickup, which review has to catch anyway.

@@ -21,6 +21,7 @@ Count in quarter notes:
 | Double or quadruple (2/4, 4/4) | 2 quarter notes | beats 1 and 3 |
 | Triple (3/4) | 3 quarter notes | beat 1 |
 | Triple in halves (3/2) | 2 quarter notes (one half note) | every beat: 1, 2 and 3 |
+| Compound (6/8) | 3 eighth notes (one dotted quarter) | beats 1 and 4 |
 
 - Don't mark the beats in between. The old text sources marked every beat, so their extra
   `*`s are removed.
