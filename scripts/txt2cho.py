@@ -74,8 +74,11 @@ def dehyphenate(text):
 
 
 def simplify(chord):
-    """Ukulele-friendly spelling: no slash bass (G/B -> G), and "sus" means sus4."""
+    """Ukulele-friendly spelling: no slash bass (G/B -> G), "sus" means sus4, and E is
+    played as E7 (the familiar shape)."""
     chord = chord.split("/")[0]
+    if chord == "E":
+        return "E7"
     return chord + "4" if chord.endswith("sus") else chord
 
 

@@ -13,6 +13,12 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
   line wraps in the narrower column; `make columns` (`scripts/columns.py`) checks every
   output key.
 
+## Chords
+
+- Write ukulele-friendly chords: no slash bass (`G/B` → `G`), `sus` as `sus4`, and E as
+  `E7` (`1 2 0 2`, the shape players know; the full E is a hard barre). The converter does
+  this (`simplify` in `scripts/txt2cho.py`).
+
 ## Beat markers
 
 Every few beats there is either a chord or a `[**]` beat marker (shown as `*`). Where no
