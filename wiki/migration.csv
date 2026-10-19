@@ -1,13 +1,13 @@
 slug,title,published,key,output_keys,canonical_source,other_sources,status,notes
 for-the-beauty-of-the-earth,For the Beauty of the Earth,2021-02-20,C,C G F,Lyrics-For_the_beauty_of_the_earth-C.txt,Lyrics-For_the_beauty_of_the_earth-C.pdf,todo,
-this-is-my-fathers-world,This Is My Father's World,2021-02-20,C,C G F,Lyrics-This_is_my_Fathers_world-C-v2.txt,Lyrics-This_is_my_Fathers_world-C.txt,todo,1 variant file(s)
+this-is-my-fathers-world,This Is My Father's World,2021-02-20,C,C G F,Lyrics-This_is_my_Fathers_world-C-v2.txt,Lyrics-This_is_my_Fathers_world-C.txt,todo,1 variant file(s); Review 2: use C-v2
 o-god-beyond-all-praising,O God Beyond All Praising,2021-02-26,C,C G F,Lyrics-O_God_beyond_all_praising-C-v3.txt,Lyrics-O_God_beyond_all_praising-C-v2.txt Lyrics-O_God_beyond_all_praising-C-v3-1col.txt Lyrics-O_God_beyond_all_praising-C-v3-2col.txt Lyrics-O_God_beyond_all_praising-C.txt Lyrics-O_God_beyond_all_praising-F-v3-1col.txt Lyrics-O_God_beyond_all_praising-F-v3-2col.txt Lyrics-O_God_beyond_all_praising-F-v3.txt,todo,keys: C F; 7 variant file(s)
 all-things-bright-and-beautiful,All Things Bright and Beautiful,2021-02-27,C,C G F,Lyrics-All_things_bright_and_beautiful-C.txt,,todo,
 christ-whose-glory-fills-the-skies,"Christ, Whose Glory Fills the Skies",2021-02-27,C,C G F,Lyrics-Christ_whose_glory_fills_the_skies-C.txt,Lyrics-Christ_whose_glory_fills_the_skies-G.txt,converted,keys: C G
 let-all-mortal-flesh-keep-silence,Let All Mortal Flesh Keep Silence,2021-02-27,Am,Am Em Dm,Lyrics-Let_all_mortal_flesh-Am.txt,Lyrics-Let_all_mortal_flesh-Dm.txt,todo,keys: Am Dm; Review 2: Am file is the finished one
 lord-who-throughout-these-forty-days,Lord Who Throughout These Forty Days,2021-02-27,C,C G F,Lyrics-Lord_who_throughout_these_forty_days-C.txt,,todo,
 o-come-o-come-emmanuel,"O Come, O Come, Emmanuel",2021-02-27,Am,Am Em Dm,Lyrics-O_come_emmanuel-C.txt,Lyrics-O_come_emmanuel-Am.txt,converted,keys: Am C
-o-god-our-help-in-ages-past,O God Our Help in Ages Past,2021-02-27,C,C G F,Lyrics-O_God_our_help_in_ages_past-C.txt,Lyrics-O_God_our_help_in_ages_past-C-1col.txt Lyrics-O_God_our_help_in_ages_past-C-2col.txt Lyrics-O_God_our_help_in_ages_past-G.txt,todo,keys: C G; 2 variant file(s)
+o-god-our-help-in-ages-past,O God Our Help in Ages Past,2021-02-27,C,C G F,Lyrics-O_God_our_help_in_ages_past-C-1col.txt,Lyrics-O_God_our_help_in_ages_past-C.txt Lyrics-O_God_our_help_in_ages_past-C-2col.txt Lyrics-O_God_our_help_in_ages_past-G.txt,todo,keys: C G; 2 variant file(s); Review 2: use C-1col
 dear-lord-and-father-of-mankind,Dear Lord and Father of Mankind,2021-03-06,C,C G F,Lyrics-Dear_Lord_and_father_of_mankind-C.txt,,todo,
 lord-of-the-dance,Lord of the Dance,2021-03-06,C,C G F,Lyrics-Lord_of_the_dance-C.txt,,todo,
 all-glory-laud-and-honor,"All Glory, Laud, and Honor",2021-03-13,C,C G F,Lyrics-All_glory_laud_and_honor-C.txt,Lyrics-All_glory_laud_and_honor-G.txt,todo,keys: C G
@@ -43,7 +43,7 @@ love-divine-all-loves-excelling,"Love Divine, All Loves Excelling",2021-09-12,C,
 morning-has-broken,Morning Has Broken,2021-09-12,C,C G F,Lyrics-Morning_has_broken-C.txt,,todo,
 god-moves-in-a-mysterious-way,God Moves in a Mysterious Way,2021-10-02,C,C G F,Lyrics-God_moves_in_a_mysterious_way-C.txt,,todo,
 all-creatures-of-our-god-and-king,All Creatures of Our God and King,2021-10-10,C,C G F,Lyrics-All_creatures_of_our_God_and_King-C.txt,Lyrics-All_creatures_of_our_God_and_King-C-1col.txt Lyrics-All_creatures_of_our_God_and_King-C-2col.txt,converted,2 variant file(s)
-a-mighty-fortress-is-our-god,A Mighty Fortress Is Our God,2021-10-23,C,C G F,Lyrics-A_mighty_fortress_is_our_God-C.txt,Lyrics-A_mighty_fortress_is_our_God-C-full.txt,converted,1 variant file(s)
+a-mighty-fortress-is-our-god,A Mighty Fortress Is Our God,2021-10-23,C,C G F,Lyrics-A_mighty_fortress_is_our_God-C.txt,Lyrics-A_mighty_fortress_is_our_God-C-full.txt,converted,1 variant file(s); Review 2: keep the reviewed pilot conversion (from the plain C file)
 come-o-thou-traveler-unknown,"Come, O Thou Traveler Unknown",2021-10-23,C,C G F,Lyrics-Come_O_Thou_Traveler-C.txt,,todo,
 he-leadeth-me,He Leadeth Me,2021-10-23,C,C G F,Lyrics-He_leadeth_me-C.txt,Lyrics-He_leadeth_me-G.txt,todo,keys: C G
 softly-and-tenderly-jesus-is-calling,Softly and Tenderly Jesus Is Calling,2021-10-31,C,C G F,Lyrics-Softly_and_tenderly_Jesus_is_calling-C.txt,,todo,Review 2: key confirmed C
@@ -74,7 +74,7 @@ blessed-assurance,Blessed Assurance,,C,C G F,Lyrics-Blessed_assurance-C.txt,,tod
 christ-is-the-worlds-light,Christ Is the World's Light,,C,C G F,Lyrics-Christ_is_the_worlds_light-C.txt,,todo,
 come-down-o-love-divine,Come Down O Love Divine,,C,C G F,Lyrics-Come_down_o_love_divine-C.txt,Lyrics-Come_down_o_love_divine-G.txt,todo,keys: C G
 come-ye-sinners-poor-and-needy,Come Ye Sinners Poor and Needy,,Am,Am Em Dm,Lyrics-Come_ye_sinners-C.txt,,todo,"Lyrics-Come_ye_sinners-C.txt: header says key Am; filename says C, header and last chord say Am"
-god-has-spoken,God Has Spoken,,Am,Am Em Dm,Lyrics-God_has_spoken-Am.txt,Lyrics-God_has_spoken-Em.txt,todo,keys: Am Em
+god-has-spoken,God Has Spoken,,Am,Am Em Dm,Lyrics-God_has_spoken-Am.txt,Lyrics-God_has_spoken-Em.txt,todo,keys: Am Em; Review 2: Am file is the finished one
 god-whose-love-is-reigning-oer-us,God Whose Love Is Reigning o'er Us,,C,C G F,Lyrics-God_whose_love-C.txt,,todo,
 good-christian-friends-rejoice,"Good Christian Friends, Rejoice",,C,C G F,Lyrics-Good_christian_friends-C.txt,,todo,
 holy-holy-holy,Holy Holy Holy,,C,C G F,Lyrics-Holy_holy_holy-C.txt,,todo,

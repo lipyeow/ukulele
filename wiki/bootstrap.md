@@ -150,6 +150,13 @@ gh-ukulele/
   list where the lyrics or chords differ, and whether chords are missing in either file.
 - **Review 2 (choices):** confirm the canonical source and key for each hymn, mainly the
   37 variants and 24 multi-key hymns.
+- **Review 2 ✅ (2026-10-18):** decisions are in the `notes` column (`Review 2: ...`).
+  - Where a hymn's C and G files really differed, the G file was usually the finished one
+    (Christ the Lord Is Risen, Great Is Thy Faithfulness, Rejoice the Lord Is King), so
+    those are stored in G. Multi-key hymns whose files are exact transpositions keep C.
+  - Five flagged keys were confirmed as labelled (hymns that end on V). What Child Is This
+    is in Am.
+  - O God Beyond All Praising uses the suggested `C-v3` (no separate decision).
 
 ### Phase 2: Converter
 - Harden the Phase 0 prototype `scripts/txt2cho.py`, which converts chords-over-lyrics to `.cho`:
