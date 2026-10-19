@@ -4,7 +4,7 @@ this-is-my-fathers-world,This Is My Father's World,2021-02-20,C,C G F,Lyrics-Thi
 o-god-beyond-all-praising,O God Beyond All Praising,2021-02-26,C,C G F,Lyrics-O_God_beyond_all_praising-C-v3.txt,Lyrics-O_God_beyond_all_praising-C-v2.txt Lyrics-O_God_beyond_all_praising-C-v3-1col.txt Lyrics-O_God_beyond_all_praising-C-v3-2col.txt Lyrics-O_God_beyond_all_praising-C.txt Lyrics-O_God_beyond_all_praising-F-v3-1col.txt Lyrics-O_God_beyond_all_praising-F-v3-2col.txt Lyrics-O_God_beyond_all_praising-F-v3.txt,todo,keys: C F; 7 variant file(s)
 all-things-bright-and-beautiful,All Things Bright and Beautiful,2021-02-27,C,C G F,Lyrics-All_things_bright_and_beautiful-C.txt,,todo,
 christ-whose-glory-fills-the-skies,"Christ, Whose Glory Fills the Skies",2021-02-27,C,C G F,Lyrics-Christ_whose_glory_fills_the_skies-C.txt,Lyrics-Christ_whose_glory_fills_the_skies-G.txt,converted,keys: C G
-let-all-mortal-flesh-keep-silence,Let All Mortal Flesh Keep Silence,2021-02-27,Am,Am Em Dm,Lyrics-Let_all_mortal_flesh-Am.txt,Lyrics-Let_all_mortal_flesh-Dm.txt,todo,keys: Am Dm
+let-all-mortal-flesh-keep-silence,Let All Mortal Flesh Keep Silence,2021-02-27,Am,Am Em Dm,Lyrics-Let_all_mortal_flesh-Am.txt,Lyrics-Let_all_mortal_flesh-Dm.txt,todo,keys: Am Dm; Review 2: Am file is the finished one
 lord-who-throughout-these-forty-days,Lord Who Throughout These Forty Days,2021-02-27,C,C G F,Lyrics-Lord_who_throughout_these_forty_days-C.txt,,todo,
 o-come-o-come-emmanuel,"O Come, O Come, Emmanuel",2021-02-27,Am,Am Em Dm,Lyrics-O_come_emmanuel-C.txt,Lyrics-O_come_emmanuel-Am.txt,converted,keys: Am C
 o-god-our-help-in-ages-past,O God Our Help in Ages Past,2021-02-27,C,C G F,Lyrics-O_God_our_help_in_ages_past-C.txt,Lyrics-O_God_our_help_in_ages_past-C-1col.txt Lyrics-O_God_our_help_in_ages_past-C-2col.txt Lyrics-O_God_our_help_in_ages_past-G.txt,todo,keys: C G; 2 variant file(s)
@@ -14,7 +14,7 @@ all-glory-laud-and-honor,"All Glory, Laud, and Honor",2021-03-13,C,C G F,Lyrics-
 god-of-the-sparrow,God of the Sparrow,2021-03-19,C,C G F,Lyrics-God_of_the_sparrow-C.txt,Lyrics-God_of_the_sparrow-C-1col.txt Lyrics-God_of_the_sparrow-C-2col.txt,todo,"2 variant file(s); canonical ends on G, not C: check the key"
 o-sacred-head-now-wounded,O Sacred Head Now Wounded,2021-03-19,C,C G F,Lyrics-O_sacred_head-C.txt,Lyrics-O_sacred_head-C-1col.txt Lyrics-O_sacred_head-C-2col.txt,todo,2 variant file(s)
 jesus-keep-me-near-the-cross,Jesus Keep Me Near the Cross,2021-03-23,C,C G F,Lyrics-Jesus_keep_me_near_the_cross-C.txt,Lyrics-Jesus_keep_me_near_the_cross-C-1col.txt Lyrics-Jesus_keep_me_near_the_cross-C-2col.txt,todo,2 variant file(s)
-christ-the-lord-is-risen-today,Christ the Lord Is Risen Today,2021-04-05,C,C G F,Lyrics-Christ_the_Lord_is_risen_today-C.txt,Lyrics-Christ_the_Lord_is_risen_today-G.txt,todo,keys: C G
+christ-the-lord-is-risen-today,Christ the Lord Is Risen Today,2021-04-05,G,G C F,Lyrics-Christ_the_Lord_is_risen_today-G.txt,Lyrics-Christ_the_Lord_is_risen_today-C.txt,todo,keys: C G; Review 2: G file is the finished one (C file lacks chords after verse 2)
 he-lives,He Lives,2021-04-05,C,C G F,Lyrics-He_lives-C.txt,,todo,
 i-love-to-tell-the-story,I Love to Tell the Story,2021-04-11,C,C G F,Lyrics-I_love_to_tell_the_story-C.txt,,todo,
 all-hail-the-power-of-jesus-name,All Hail the Power of Jesus' Name,2021-04-24,C,C G F,Lyrics-All_hail_the_power-C.txt,,todo,
