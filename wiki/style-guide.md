@@ -28,6 +28,9 @@ Count in quarter notes:
 - A pickup shorter than the marker spacing (e.g. one quarter note in 4/4) gets no chord. A
   pickup that falls on a marked beat (e.g. beat 3 of 3/2) keeps its chord. If a chord in the source sits on a pickup and the
   next downbeat has only a `*`, move the chord onto the downbeat (`and, [F]armed`).
+- Don't repeat a chord: a chord that is the same as the previous chord on the line becomes
+  a `[**]` marker (`[C]beauti[**]ful`, not `[C]beauti[C]ful`). The first chord of each line
+  stays, even if the previous line ended on it.
 - A held note at the end of a phrase gets a single `*` on its next marked beat:
   `[G]foe[**], doth`.
 - Reference examples: *A Mighty Fortress Is Our God* (4/4), *All Creatures of Our God and

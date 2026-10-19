@@ -240,8 +240,23 @@ def lower_midline(line):
     return re.sub(r"([,;:]\s*(?:\[[^\]]*\])*)([A-Z][a-z']+)", fix, line)
 
 
+def repeats_to_marks(line):
+    """A chord that repeats the previous chord on the same line becomes a [**] marker."""
+    prev = None
+
+    def sub(m):
+        nonlocal prev
+        if m.group(1) == prev:
+            return "[**]"
+        if m.group(1) != "**":
+            prev = m.group(1)
+        return m.group()
+    return re.sub(r"\[([^\]]+)\]", sub, line)
+
+
 def tidy(lines):
-    """Capitalize each line; drop line-end , ; : . except on the last line."""
+    """Capitalize each line; drop line-end , ; : . except on the last line; [**] for
+    repeated chords."""
     def cap(line):
         depth = 0
         for i, c in enumerate(line):
@@ -253,7 +268,7 @@ def tidy(lines):
                 return line[:i] + c.upper() + line[i + 1:]
         return line
     trail = re.compile(r"[,;:.]+(?=(?:\s*\[[^\]]*\])*\s*$)")
-    out = [cap(lower_midline(l)) for l in lines]
+    out = [repeats_to_marks(cap(lower_midline(l))) for l in lines]
     return [trail.sub("", l) for l in out[:-1]] + out[-1:]
 
 
