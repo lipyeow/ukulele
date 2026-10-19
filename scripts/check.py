@@ -70,7 +70,8 @@ def source_parts(path):
 
 
 def song_parts(text):
-    """([(lyric words, chords)] per line, problems) for a .cho file, {chorus} expanded."""
+    """([(lyric words, chords)] per line, problems, chorus words) for a .cho file, {chorus}
+    expanded."""
     chorus, cur, body, problems = [], None, [], []
     sections = 0
     for line in text.splitlines():
@@ -107,7 +108,7 @@ def song_parts(text):
         problems.append("no {time: ...}")
     if not sections:
         problems.append("no sections")
-    return out, problems
+    return out, problems, [w for l in chorus for w in words(re.sub(r"\[[^\]]*\]", "", l))]
 
 
 def chordpro_problems(cho):
@@ -132,7 +133,7 @@ def subsequence(small, big):
 def check(row):
     cho = SONGS / f"{row['slug']}.cho"
     src, problems, notes = source_parts(SRC / row["canonical_source"])
-    song, more = song_parts(cho.read_text())
+    song, more, chorus = song_parts(cho.read_text())
     problems += more + chordpro_problems(cho)
 
     src_words = [w for ws, _ in src for w in ws]
@@ -141,6 +142,9 @@ def check(row):
     for op, i1, i2, j1, j2 in sm.get_opcodes():
         if op == "equal" or "".join(src_words[i1:i2]) == "".join(cho_words[j1:j2]):
             continue  # same letters, joined differently ("undous" / "undo us")
+        if op == "insert" and chorus and cho_words[j1:j2] == chorus * ((j2 - j1) // len(chorus)):
+            notes.append("chorus sung more often than the source shows it")
+            continue
         problems.append(f"lyrics {op}: source \"{phrase(src_words, i1, i2)}\" "
                         f"vs .cho \"{phrase(cho_words, j1, j2)}\"")
 
