@@ -9,6 +9,11 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
   The beat-marker spacing below depends on it. If the source doesn't give one (the old
   beat-count line, e.g. `1 2 3 4`), work it out from the tune.
 
+- Use `{columns: 2}` (after `{time}`) when the song fits on fewer pages that way and no
+  line wraps in the narrower column; `make columns` (`scripts/columns.py`) checks every
+  output key. Exceptions are fine when a song reads better in two columns anyway
+  (*He Lives*, where two chorus lines wrap).
+
 ## Beat markers
 
 Every few beats there is either a chord or a `[**]` beat marker (shown as `*`). Where no

@@ -233,6 +233,13 @@ gh-ukulele/
   (see Format conventions). Update the `status` column in `migration.csv`.
 - **Batch 1 (2026-10-18):** the first 15 published hymns, status `converted`. All pass
   `make check`. Waiting for Review 3.
+- **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
+  one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
+  and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
+  Batch 1 decision: two columns for Christ the Lord Is Risen Today, Dear Lord and Father
+  of Mankind, For the Beauty of the Earth, God of the Sparrow, He Lives (two lines wrap;
+  accepted), Jesus Keep Me Near the Cross, O God Beyond All Praising, O God Our Help in
+  Ages Past, O Sacred Head Now Wounded, This Is My Father's World.
 
 ### Phase 5: Other-key PDFs
 - Generate the PDFs for all output keys.
