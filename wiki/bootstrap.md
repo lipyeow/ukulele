@@ -240,6 +240,11 @@ gh-ukulele/
   of Mankind, For the Beauty of the Earth, God of the Sparrow, Jesus Keep Me Near the Cross, O God Beyond All Praising, O God Our Help in
   Ages Past, O Sacred Head Now Wounded, This Is My Father's World. He Lives stays in one column (two
   lines wrap in two).
+- **6/8 fix (2026-10-19):** the 6/8 sources already mark only beats 1 and 4, so the
+  converter now keeps all their `*`s (it was keeping one in three). A `*` that splits a
+  syllable moves to the syllable start (`lu[**]jahs`) or, inside a vowel, after the word
+  (`to[**]day[**]`). He Lives, Jesus Keep Me Near the Cross and Lord Who Throughout These
+  Forty Days were reconverted, keeping the hand edits.
 
 ### Phase 5: Other-key PDFs
 - Generate the PDFs for all output keys.

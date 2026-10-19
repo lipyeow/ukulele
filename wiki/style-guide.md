@@ -34,7 +34,8 @@ Count in quarter notes:
 | Compound (6/8) | 3 eighth notes (one dotted quarter) | beats 1 and 4 |
 
 - Don't mark the beats in between. The old text sources marked every beat, so their extra
-  `*`s are removed.
+  `*`s are removed. The 6/8 sources are the exception: they already mark only the
+  dotted quarters, so all their `*`s stay.
 - A pickup shorter than the marker spacing (e.g. one quarter note in 4/4) gets no chord. A
   pickup that falls on a marked beat (e.g. beat 3 of 3/2) keeps its chord. If a chord in the source sits on a pickup and the
   next downbeat has only a `*`, move the chord onto the downbeat (`and, [F]armed`).

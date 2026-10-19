@@ -132,6 +132,13 @@ def place(lyric, col, ch):
             syllables(lyric[st:en]) <= 1
             or re.fullmatch(r"[^aeiouy]*(e|es)?", lyric[col:en].lower())):
         return en  # beat on the tail of a word -> right after the word
+    if ch == "**" and col > st:
+        vowel = "aeiouy"
+        left, here = lyric[col - 1].lower(), lyric[col].lower()
+        if left in vowel and here in vowel:
+            return en  # inside a vowel ("da|y", "pa|ir"): the held end of the word
+        if left not in vowel and here in "aeiou" and col - 1 > st:
+            return col - 1  # "luj|ahs" -> "lu|jahs": start the syllable at its consonant
     return col
 
 
@@ -175,7 +182,7 @@ def marker_step(time):
     if den == 2:
         return 1          # 3/2, 2/2: a beat is a half note, so every beat is marked
     if den == 8:
-        return 3          # 6/8: one marker per dotted quarter
+        return 1          # 6/8: the sources already mark only dotted quarters (1 and 4)
     return 3 if num == 3 else 2
 
 
