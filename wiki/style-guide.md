@@ -20,6 +20,9 @@ chord changes on that beat, a `[**]` goes there instead.
 - A held note at the end of a phrase gets a single `*` on its next marked beat:
   `[G]foe[**], doth`.
 - Reference example: *A Mighty Fortress Is Our God*.
+- **Exceptions** (for now) mark every beat with a chord or `*`, and keep their pickup chords.
+  Each one says so in a `#` comment at the top of its `.cho` file:
+  - *All Creatures of Our God and King* (3/4)
 
 ## Lyric lines
 
