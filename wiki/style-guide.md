@@ -8,21 +8,23 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
 Every few beats there is either a chord or a `[**]` beat marker (shown as `*`). Where no
 chord changes on that beat, a `[**]` goes there instead.
 
+Count in quarter notes:
+
 | Time signature | Marker every | Markers fall on |
 |----------------|--------------|-----------------|
-| Double or quadruple (2/4, 4/4) | 2 beats | beats 1 and 3 |
-| Triple (3/4) | 3 beats | beat 1 |
+| Double or quadruple (2/4, 4/4) | 2 quarter notes | beats 1 and 3 |
+| Triple (3/4) | 3 quarter notes | beat 1 |
+| Triple in halves (3/2) | 2 quarter notes (one half note) | every beat: 1, 2 and 3 |
 
 - Don't mark the beats in between. The old text sources marked every beat, so their extra
   `*`s are removed.
-- Pickup notes (before beat 1) get no chord. If a chord in the source sits on a pickup and the
+- A pickup shorter than the marker spacing (e.g. one quarter note in 4/4) gets no chord. A
+  pickup that falls on a marked beat (e.g. beat 3 of 3/2) keeps its chord. If a chord in the source sits on a pickup and the
   next downbeat has only a `*`, move the chord onto the downbeat (`and, [F]armed`).
 - A held note at the end of a phrase gets a single `*` on its next marked beat:
   `[G]foe[**], doth`.
-- Reference example: *A Mighty Fortress Is Our God*.
-- **Exceptions** (for now) mark every beat with a chord or `*`, and keep their pickup chords.
-  Each one says so in a `#` comment at the top of its `.cho` file:
-  - *All Creatures of Our God and King* (3/4)
+- Reference examples: *A Mighty Fortress Is Our God* (4/4), *All Creatures of Our God and
+  King* (3/2).
 
 ## Lyric lines
 
