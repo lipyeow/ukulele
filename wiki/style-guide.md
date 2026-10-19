@@ -3,6 +3,12 @@
 Conventions for writing `.cho` song sources. The wider format conventions (keys, chorus,
 page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
 
+## Header
+
+- Every song needs a time signature, `{time: ...}`, right after `{title}` and `{key}`.
+  The beat-marker spacing below depends on it. If the source doesn't give one (the old
+  beat-count line, e.g. `1 2 3 4`), work it out from the tune.
+
 ## Beat markers
 
 Every few beats there is either a chord or a `[**]` beat marker (shown as `*`). Where no
