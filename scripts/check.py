@@ -21,7 +21,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import CONFIG, chordpro_bin  # noqa: E402
 from txt2cho import (BEAT_LINE, CHORD_LINE, KEY_HEADER, LABEL, TOKEN,  # noqa: E402
-                     VERSE_NO)
+                     VERSE_NO, simplify)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"
@@ -50,7 +50,7 @@ def source_parts(path):
         if CHORD_LINE.match(line):
             if pending:
                 out.append(([], pending))  # chords with no lyric under them
-            pending = [t for t in (m.group() for m in TOKEN.finditer(line))
+            pending = [simplify(t) for t in (m.group() for m in TOKEN.finditer(line))
                        if t != "*" and not t.startswith("(")]
             continue
         lyric = VERSE_NO.sub("", line)

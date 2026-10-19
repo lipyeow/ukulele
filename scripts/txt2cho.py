@@ -7,8 +7,9 @@ import re
 import sys
 
 CHORD = r"[A-G][#b]?(?:maj7|maj|m7|m|dim7|dim|aug|sus2|sus4|sus|add9|7|6|9|2)?(?:/[A-G][#b]?)?"
-TOKEN = re.compile(r"\(\s*" + CHORD + r"\s*\)|" + CHORD + r"|\*")
-CHORD_LINE = re.compile(r"^\s*(?:\d\.?\s+)?(?:(?:\(\s*" + CHORD + r"\s*\)|" + CHORD + r"|\*)\s*)+$")
+OPTIONAL = r"\(\s*(?:" + CHORD + r"|\d+)\s*\)"  # passing chord (F), or a note like (6)
+TOKEN = re.compile(OPTIONAL + r"|" + CHORD + r"|\*")
+CHORD_LINE = re.compile(r"^\s*(?:\d\.?\s+)?(?:(?:" + OPTIONAL + r"|" + CHORD + r"|\*)\s*)+$")
 BEAT_LINE = re.compile(r"^\s*(?:\d\s*)+$")
 VERSE_NO = re.compile(r"^\s*\d\.?\s")
 LABEL = re.compile(r"^\s*\[?\s*(verse\s*\d*|chorus|refrain)\s*\]?\s*:?\s*$", re.I)
@@ -72,6 +73,12 @@ def dehyphenate(text):
     return "".join(c for k, c in enumerate(text) if k not in drop)
 
 
+def simplify(chord):
+    """Ukulele-friendly spelling: no slash bass (G/B -> G), and "sus" means sus4."""
+    chord = chord.split("/")[0]
+    return chord + "4" if chord.endswith("sus") else chord
+
+
 def chords_of(line):
     """[(col, chord)] with optional (parenthesized) chords dropped."""
     out = []
@@ -79,7 +86,7 @@ def chords_of(line):
         tok = m.group()
         if tok.startswith("("):
             continue
-        out.append((m.start(), "**" if tok == "*" else tok))
+        out.append((m.start(), "**" if tok == "*" else simplify(tok)))
     return out
 
 

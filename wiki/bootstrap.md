@@ -214,12 +214,17 @@ gh-ukulele/
     empty sections, digits in lyrics, and a source with verses in a second column. Wide gaps
     in source lines are only a note.
   - **Cross-key:** covered by `scripts/compare_variants.py` and `wiki/variant-report.md`.
-- **Dry run on all 102 hymns** (converted and then removed again). 5 fail:
-  - For the Beauty of the Earth: the source has verses in two columns.
-  - Were You There: a stray `(6)` in a chord line.
-  - Chords with no ukulele diagram: `Gsus`/`Dsus` (God Moves in a Mysterious Way), `Em7/C`,
-    `Em7/G` (Let All Mortal Flesh), `G/B` (The First Noel). Either define the diagrams in
-    `config/ukulele.json` or simplify the chords.
+- **Dry run on all 102 hymns** (converted and then removed again). 5 failed at first:
+  - For the Beauty of the Earth: the source had its verses in two columns. Fixed by hand
+    in the source (one column).
+  - Were You There: a `(6)` note in a chord line. A parenthesized number is now skipped,
+    like a passing chord.
+  - Chords with no ukulele diagram: `Gsus`/`Dsus`, `Em7/C`, `Em7/G`, `G/B`. **Decision:**
+    the converter simplifies chords (`simplify` in `scripts/txt2cho.py`): slash chords
+    become their base chord (`G/B` → `G`, no bass note on a ukulele) and `sus` becomes
+    `sus4`. The ukulele chord set has no sus4 chords, so `config/ukulele.json` defines them
+    for every root.
+- **Second dry run:** all 102 pass, and all 306 output-key builds have every chord diagram.
 
 ### Phase 4: Batch conversion
 - Convert in batches of 15–20, one commit per batch pushed to `main`. Published hymns go first.
