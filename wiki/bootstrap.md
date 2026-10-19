@@ -121,6 +121,12 @@ gh-ukulele/
      `;` so the song fits in 2 columns. Also fixed: `wind,air,clouds,&` spacing and two beats
      a column off (`re[G]joice; [**]`, `our [**]sister`).
 
+- **Pilot content review ✅ (2026-10-18):** all 5 pilot hymns checked and approved after
+  the melisma, beat-marker, capitalization and time-signature passes (see
+  [style-guide.md](style-guide.md)). Several of these needed hand edits, so Phase 2 should
+  teach the converter what it can (beat-marker thinning, pickup chords, capitalization,
+  line-end punctuation, time signature) and leave melismas for review.
+
 ### Phase 1: Inventory
 - A script builds `wiki/migration.csv` with one row per hymn: slug, source files, canonical
   source file, canonical key, output keys, published (y/n), status.
