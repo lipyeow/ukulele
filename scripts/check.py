@@ -8,6 +8,9 @@ For each songs/hymns/<slug>.cho with a row in wiki/migration.csv:
 - lint: unknown chords or missing diagrams (from ChordPro itself), a missing {time},
   empty sections, digits or stray tokens in lyric lines, and two-column source layouts.
 
+Songs with status "reviewed" in the CSV only get the lint checks: review may fix errors
+in the source, so the .cho is the reference from then on.
+
 Usage: python3 scripts/check.py [SLUG ...]   (default: every converted song)
 Exits 1 if any song has problems.
 """
@@ -135,6 +138,10 @@ def check(row):
     src, problems, notes = source_parts(SRC / row["canonical_source"])
     song, more, chorus = song_parts(cho.read_text())
     problems += more + chordpro_problems(cho)
+    if row["status"] == "reviewed":
+        # Review 3 signed off on this .cho, including fixes to errors in the source, so
+        # it is the reference now: only the lint checks apply.
+        return problems, ["reviewed: not compared with the source"]
 
     src_words = [w for ws, _ in src for w in ws]
     cho_words = [w for ws, _ in song for w in ws]

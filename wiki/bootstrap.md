@@ -230,7 +230,8 @@ gh-ukulele/
 - Convert in batches of 15–20, one commit per batch pushed to `main`. Published hymns go first.
 - **Review 3 (content, per batch):** read the canonical-key PDF (GitHub renders PDFs) and check that each chord sits on
   the right syllable and that verses are complete. Hyphenate and annotate melismas by hand
-  (see Format conventions). Update the `status` column in `migration.csv`.
+  (see Format conventions). Set the `status` column in `migration.csv` to `reviewed`;
+  `make check` then only lints that song, since review may fix errors in the source.
 - **Batch 1 (2026-10-18):** the first 15 published hymns, status `converted`. All pass
   `make check`. Waiting for Review 3.
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
