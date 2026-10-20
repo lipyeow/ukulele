@@ -4,6 +4,8 @@
   // The ukulele chord set has no sus4 chords; the sources' "sus" is sus4 (see
   // scripts/txt2cho.py), so define them here, for every root a transposed song can hit.
   "chords": [
+    // The familiar Em (one open string) instead of ChordPro's 0 4 0 2.
+    { "name": "Em", "base": 1, "frets": [ 0, 4, 3, 2 ] },
     { "name": "Csus4", "base": 1, "frets": [ 0, 0, 1, 3 ] },
     { "name": "C#sus4", "base": 1, "frets": [ 1, 1, 2, 4 ] },
     { "name": "Dbsus4", "base": 1, "frets": [ 1, 1, 2, 4 ] },
