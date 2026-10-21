@@ -233,7 +233,8 @@ gh-ukulele/
   (see Format conventions). Set the `status` column in `migration.csv` to `reviewed`;
   `make check` then only lints that song, since review may fix errors in the source.
 - **Batch 1 (2026-10-18):** the first 15 published hymns, status `converted`. All pass
-  `make check`. Waiting for Review 3.
+  `make check`. Review 3 done (2026-10-20): all 20 converted songs (batch 1 and the
+  pilots) are `reviewed`.
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
