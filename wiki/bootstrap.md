@@ -237,6 +237,9 @@ gh-ukulele/
   pilots) are `reviewed`.
 - **Batch 2 (2026-10-20):** the next 15 published hymns, status `converted`. All pass
   `make check`. Waiting for Review 3.
+  Two columns (from `make columns`): Crown Him with Many Crowns, I Know Who Holds
+  Tomorrow, In the Garden, Hail to the Lord's Anointed, Sweet Hour of Prayer, Take My Life
+  and Let It Be, Come Thou Fount, Great Is Thy Faithfulness, 'Tis So Sweet.
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
