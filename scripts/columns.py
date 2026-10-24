@@ -20,7 +20,7 @@ from build import CONFIG, chordpro_bin, output_keys, semitones  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 SONGS = ROOT / "songs" / "hymns"
-TEXT_SIZE = b"12"  # lyric font size in config/ukulele.json
+TEXT_SIZE = b"11"  # lyric font size in config/ukulele.json
 MIDDLE = 306  # half the letter page width, in points
 
 
