@@ -186,6 +186,20 @@ def marker_step(time):
     return 3 if num == 3 else 2
 
 
+def marks_every_beat(lines, beat_line):
+    """Does the source mark every beat? Compare the chord line under the beat line with it.
+
+    Some sources only mark the start of each bar (or half bar); thinning those would drop
+    markers that are already where they belong.
+    """
+    i = lines.index(beat_line)
+    if i + 1 >= len(lines) or not CHORD_LINE.match(lines[i + 1]):
+        return True
+    digits = [m.start() for m in re.finditer(r"\d", beat_line)]
+    marks = [m.start() for m in re.finditer(r"\S+", lines[i + 1]) if m.start() <= digits[-1] + 1]
+    return len(marks) >= 0.8 * len(digits)
+
+
 def thin(chords, step, since):
     """Keep every `step`-th beat marker counted from the last chord; chords always stay.
 
@@ -301,6 +315,9 @@ def convert(path, key=None, time=None, title=None, keep_marks=False):
         warnings.append(f"time {time} guessed from the beat line")
     if not time:
         warnings.append("no time signature: add {time: ...}")
+    if beat_line and not keep_marks and not marks_every_beat(lines, beat_line):
+        keep_marks = True
+        warnings.append("source marks bars, not every beat: markers kept as is")
     step = marker_step(time) if time and beat_line and not keep_marks else None
     if step == 1:
         step = None

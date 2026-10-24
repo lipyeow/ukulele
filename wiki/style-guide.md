@@ -49,6 +49,9 @@ Count in quarter notes:
 - **Keep every mark:** some sources already have exactly the chords and `*`s wanted, so
   they're converted as is, with no thinning and no pickup chords dropped:
   - *O God Beyond All Praising*
+- **Sources that mark bars, not beats:** many sources put a `*` only on beat 1 of each bar
+  (or every other beat in 4/4). Their markers are already where they belong, so they're
+  kept as is too. The converter detects this (example: *Come, Sinners, to the Gospel Feast*).
 
 
 ## Lyric lines

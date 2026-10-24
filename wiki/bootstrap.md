@@ -174,6 +174,10 @@ gh-ukulele/
     every 3rd in 3/4 and 6/8, and all of them in x/2. (Counting bars from the beat line
     doesn't work: the sources skip some beats.) Hymns with "keep every chord" in their
     notes are left as they are.
+    **Fix (2026-10-24):** most sources don't mark every beat: they mark each bar or half
+    bar, and thinning those dropped correct markers (Come Sinners, Sweet Hour, Great Is Thy
+    Faithfulness, He Lives). `marks_every_beat` in `scripts/txt2cho.py` compares the chord
+    line under the beat line with it: under 80% of the beats marked means keep every mark.
   - **Pickups:** a chord on the first word of a line, or on the first word after punctuation,
     is dropped when the next word already has a marker. If that marker is a `*`, the chord
     moves onto it.
