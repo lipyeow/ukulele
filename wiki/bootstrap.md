@@ -62,8 +62,8 @@ gh-ukulele/
   and a blank gap were also tried; see Review 1.)
 - **Chorus:** the full chorus is printed every time it's recalled (`{chorus}`), so players
   don't have to look back up the page.
-- **Page:** US Letter by default (A4 may be added later as a second output); Times 12 lyrics,
-  Helvetica-Bold 10 chords, title and key line left-aligned, chord diagrams right after
+- **Page:** US Letter by default (A4 may be added later as a second output); Courier 11 lyrics,
+  Courier-Bold 10 chords (fixed width, changed from Times/Helvetica on 2026-10-23), title and key line left-aligned, chord diagrams right after
   them (above the lyrics). Long hymns run to two pages
   rather than being squeezed.
 - **Beat markers, capitalization and line-end punctuation:** see [style-guide.md](style-guide.md).
