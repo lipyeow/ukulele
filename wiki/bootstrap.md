@@ -240,7 +240,9 @@ gh-ukulele/
   `make check`. Review 3 done (2026-10-20): all 20 converted songs (batch 1 and the
   pilots) are `reviewed`.
 - **Batch 2 (2026-10-20):** the next 15 published hymns, status `converted`. All pass
-  `make check`. Waiting for Review 3.
+  `make check`. Review 3 done (2026-10-24): all 15 are `reviewed`. Crown Him and 'Tis So
+  Sweet went back to one column, with every two lines joined by "; "; Sweet Hour of Prayer
+  uses one column with the chord diagrams down the right margin.
   Two columns (from `make columns`): Crown Him with Many Crowns, I Know Who Holds
   Tomorrow, In the Garden, Hail to the Lord's Anointed, Sweet Hour of Prayer, Take My Life
   and Let It Be, Come Thou Fount, Great Is Thy Faithfulness, 'Tis So Sweet.

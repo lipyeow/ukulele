@@ -1,15 +1,16 @@
 {title: Sweet Hour of Prayer}
 {key: C}
 {time: 3/4}
-{columns: 2}
+{+pdf.diagrams.show: right}
 
 {start_of_verse: 1}
 Sweet [C]hour of [**]prayer, sweet [F]hour of [**]prayer
 That [C]calls me [**]from a [G]world of [**]care
 And [C]bids me [**]at my [F]Father's [**]throne
 Make [C]all my [**]wants and [G]wishes [C]known
+
 In [C]sea-sons [F]of dis[C]tress and [**]grief
-My [C]soul has [F]often [C]found re[G7]lief
+My [C]soul has [F]often [C]found re[G]lief
 And [C]oft es[**]caped the [F]tempter's [**]snare
 By [C]thy re[**]turn, sweet [G]hour of [C]prayer.
 {end_of_verse}
@@ -19,8 +20,9 @@ Sweet [C]hour of [**]prayer, sweet [F]hour of [**]prayer
 The [C]joys I [**]feel, the [G]bliss I [**]share
 Of [C]those whose [**]anxious [F]spirits [**]burn
 With [C]strong de[**]sires for [G]thy re[C]turn!
+
 With [C]such I [F]hasten [C]to the [**]place
-Where [C]God my [F]Savior [C]shows his [G7]face
+Where [C]God my [F]Savior [C]shows his [G]face
 And [C]gladly [**]take my [F]station [**]there
 And [C]wait for [**]thee, sweet [G]hour of [C]prayer!
 {end_of_verse}
@@ -29,9 +31,10 @@ And [C]wait for [**]thee, sweet [G]hour of [C]prayer!
 Sweet [C]hour of [**]prayer, sweet [F]hour of [**]prayer
 Thy [C]wings shall [**]my pe[G]tition [**]bear
 To [C]him whose [**]truth and [F]faithful[**]ness
-En[C]gage the [**]waiting [G7]soul to [C]bless
+En[C]gage the [**]waiting [G]soul to [C]bless
+
 And [C]since he [F]bids me [C]seek his [**]face
-Be[C]lieve his [F]word, and [C]trust his [G7]grace
+Be[C]lieve his [F]word, and [C]trust his [G]grace
 I'll [C]cast on [**]him my [F]every [**]care
 And [C]wait for [**]thee, sweet [G]hour of [C]prayer.
 {end_of_verse}

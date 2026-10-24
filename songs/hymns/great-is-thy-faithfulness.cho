@@ -1,7 +1,7 @@
 {title: Great Is Thy Faithfulness}
 {key: G}
 {time: 3/4}
-{columns: 2}
+{+pdf.diagrams.show: right}
 
 {start_of_verse: 1}
 [G]Great is Thy [C]faithfulness, [D]O God my [G]Father!

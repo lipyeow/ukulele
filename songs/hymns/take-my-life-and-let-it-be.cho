@@ -1,13 +1,14 @@
 {title: Take My Life, and Let It Be}
 {key: C}
 {time: 4/4}
-{columns: 2}
+{+pdf.diagrams.show: right}
 
 {start_of_verse: 1}
 [C]Take my [**]life, and [F]let it [G]be
 [C]Consec[Am]rated, [C]Lord, to [G]thee
 [C]Take my [**]moments [F]and my [G]days
 [C]Let them [**]flow in [G]ceaseless [C]praise
+
 [G]Take my [Dm]hands, and [Em]let them [C]move
 [G]At the [Dm]impulse [G]of thy [C]love
 [C]Take my [**]feet, and [F]let them [G]be
@@ -19,6 +20,7 @@
 [C]Always, [Am]only, [C]for my [G]King
 [C]Take my [**]lips, and [F]let them [G]be
 [C]Filled with [**]messa[G]ges from [C]thee
+
 [G]Take my [Dm]silver [Em]and my [C]gold
 [G]Not a [Dm]mite would [G]I with[C]hold
 [C]Take my [**]intel[F]lect, and [G]use
@@ -30,6 +32,7 @@
 [C]It shall [Am]be no [C]longer [G]mine
 [C]Take my [**]heart, it [F]is thine [G]own
 [C]It shall [**]be thy [G]royal [C]throne
+
 [G]Take my [Dm]love, my [Em]Lord, I [C]pour
 [G]At thy [Dm]feet its [G]treasure-[C]store
 [C]Take my[**]self, and [F]I will [G]be
