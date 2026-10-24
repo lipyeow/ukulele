@@ -239,7 +239,9 @@ gh-ukulele/
   `make check` then only lints that song, since review may fix errors in the source.
 - **Batch 1 (2026-10-18):** the first 15 published hymns, status `converted`. All pass
   `make check`. Review 3 done (2026-10-20): all 20 converted songs (batch 1 and the
-  pilots) are `reviewed`.
+  pilots) are `reviewed`. Re-reviewed after the Courier font change (2026-10-24): Christ
+  the Lord Is Risen Today back to one column; All Glory, Laud, and Honor fits one page
+  with the chord diagrams on the right.
 - **Batch 2 (2026-10-20):** the next 15 published hymns, status `converted`. All pass
   `make check`. Review 3 done (2026-10-24): all 15 are `reviewed`. Crown Him and 'Tis So
   Sweet went back to one column, with every two lines joined by "; "; Sweet Hour of Prayer
