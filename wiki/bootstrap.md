@@ -250,10 +250,11 @@ gh-ukulele/
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
-  Batch 1 decision: two columns for Christ the Lord Is Risen Today, Dear Lord and Father
+  Batch 1 decision: two columns for Dear Lord and Father
   of Mankind, For the Beauty of the Earth, God of the Sparrow, Jesus Keep Me Near the Cross, O God Beyond All Praising, O God Our Help in
   Ages Past, O Sacred Head Now Wounded, This Is My Father's World. He Lives stays in one column (two
-  lines wrap in two).
+  lines wrap in two). Christ the Lord Is Risen Today went back to one column on 2026-10-24
+  (two pages either way, and Courier made lines wrap in two columns).
 - **6/8 fix (2026-10-19):** the 6/8 sources already mark only beats 1 and 4, so the
   converter now keeps all their `*`s (it was keeping one in three). A `*` that splits a
   syllable moves to the syllable start (`lu[**]jahs`) or, inside a vowel, after the word
