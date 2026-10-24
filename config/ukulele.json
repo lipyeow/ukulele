@@ -48,6 +48,7 @@
         "footer": [ "%{title} (%{key_actual})", "", "%{page}" ]
       }
     },
-    "diagrams": { "show": "top" }
+    "diagrams": { "show": "top" },
+    "labels": { "width": 13.2 }
   }
 }

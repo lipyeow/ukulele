@@ -64,7 +64,8 @@ gh-ukulele/
   don't have to look back up the page.
 - **Page:** US Letter by default (A4 may be added later as a second output); Courier 11 lyrics,
   Courier-Bold 10 chords (fixed width, changed from Times/Helvetica on 2026-10-23), title and key line left-aligned, chord diagrams right after
-  them (above the lyrics). Long hymns run to two pages
+  them (above the lyrics). Verse numbers sit one space left of the lyrics (`pdf.labels.width`
+  13.2, i.e. "1" plus one Courier 11 space; 2026-10-24). Long hymns run to two pages
   rather than being squeezed.
 - **Beat markers, capitalization and line-end punctuation:** see [style-guide.md](style-guide.md).
 - **Time signature:** required on every song (see [style-guide.md](style-guide.md#header)).
