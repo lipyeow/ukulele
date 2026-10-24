@@ -249,6 +249,12 @@ gh-ukulele/
   Two columns (from `make columns`): Crown Him with Many Crowns, I Know Who Holds
   Tomorrow, In the Garden, Hail to the Lord's Anointed, Sweet Hour of Prayer, Take My Life
   and Let It Be, Come Thou Fount, Great Is Thy Faithfulness, 'Tis So Sweet.
+- **Batch 3 (2026-10-24):** the next 15 published hymns, status `converted`. All pass
+  `make check`. Waiting for Review 3 (checklist in `tmp/batch3.md`). The first batch
+  converted with the bar-marker rule: 7 sources mark bars, so their `*`s are kept as is.
+  Two columns (from `make columns`): The God of Abraham Praise, Savior Like a Shepherd
+  Lead Us, God Moves in a Mysterious Way. Diagrams on the right save a page in none of
+  the two-page songs without wrapping.
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
