@@ -18,7 +18,7 @@ Hymns come first; other genres follow later.
 - Write beat placeholders as `[**]`. Leave out the sources' optional passing chords such as
   `(F)`; write `[(F)]` only for a chord that is truly optional, and `[<off>F</off>]` for one
   off the usual beat (see `wiki/style-guide.md`).
-- After changing a `.cho` file, run `make` to regenerate its PDFs (needs ChordPro; see `scripts/build.py`) and commit them in the same commit.
+- After changing a `.cho` file, run `make all` to regenerate its PDFs in every key (needs ChordPro; see `scripts/build.py`) and commit them in the same commit. Plain `make` builds only C / Am, for quick iterations.
 - Record decisions and plan changes in `wiki/`.
 
 ## Git

@@ -2,9 +2,10 @@
 
 Each song is rendered in its own {key} plus the default output keys (C G F for major,
 Am Em Dm for minor), unless the song sets {meta: pdf_keys ...}. A PDF is rebuilt only
-when it is older than its source, the shared config, or this script.
+when it is older than its source, the shared config, or this script. --quick builds only
+C (Am for minor songs), for fast iterations; the other keys' PDFs are left as they are.
 
-Usage: python3 scripts/build.py [--force] [songs/hymns/foo.cho ...]
+Usage: python3 scripts/build.py [--force] [--quick] [songs/hymns/foo.cho ...]
 """
 import os
 import re
@@ -19,10 +20,7 @@ PDF = ROOT / "pdf"
 CONFIG = ROOT / "config" / "ukulele.json"
 APP_CHORDPRO = "/Applications/ChordPro.app/Contents/MacOS/chordpro"
 
-# For now (2026-10-25) only C / Am are built, to speed up config iterations; the other
-# keys' PDFs are left as they are. Swap the two lines back to build every key.
-# DEFAULT_KEYS = {"major": ["C", "G", "F"], "minor": ["Am", "Em", "Dm"]}
-DEFAULT_KEYS = {"major": ["C"], "minor": ["Am"]}
+DEFAULT_KEYS = {"major": ["C", "G", "F"], "minor": ["Am", "Em", "Dm"]}
 NOTES = {"C": 0, "C#": 1, "Db": 1, "D": 2, "D#": 3, "Eb": 3, "E": 4, "F": 5,
          "F#": 6, "Gb": 6, "G": 7, "G#": 8, "Ab": 8, "A": 9, "A#": 10, "Bb": 10, "B": 11}
 # ChordPro spells with sharps when transposing up and flats when transposing down,
@@ -48,8 +46,7 @@ def output_keys(text):
         keys = m.group(1).split()
     else:
         keys = DEFAULT_KEYS["minor" if key.endswith("m") else "major"]
-    # return key, [key] + [k for k in keys if k != key]
-    return key, keys  # for now, not the song's own key unless it is C / Am
+    return key, [key] + [k for k in keys if k != key]
 
 
 def semitones(src, dst):
@@ -57,9 +54,11 @@ def semitones(src, dst):
     return up if dst in SHARP_KEYS else up - 12 if up else 0
 
 
-def build(cho, force=False):
+def build(cho, force=False, quick=False):
     text = cho.read_text(encoding="utf-8")
     src_key, keys = output_keys(text)
+    if quick:
+        keys = [DEFAULT_KEYS["minor" if src_key.endswith("m") else "major"][0]]
     rel = cho.relative_to(SONGS).with_suffix("")
     newest = max(p.stat().st_mtime for p in (cho, CONFIG, Path(__file__)))
     built = 0
@@ -79,10 +78,10 @@ def build(cho, force=False):
 
 
 def main(argv):
-    force = "--force" in argv
-    paths = [Path(a).resolve() for a in argv if a != "--force"]
+    force, quick = "--force" in argv, "--quick" in argv
+    paths = [Path(a).resolve() for a in argv if not a.startswith("--")]
     songs = paths or sorted(SONGS.rglob("*.cho"))
-    built = sum(build(p, force) for p in songs)
+    built = sum(build(p, force, quick) for p in songs)
     print(f"{built} PDF(s) built from {len(songs)} song(s)")
 
 

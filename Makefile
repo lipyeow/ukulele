@@ -1,10 +1,15 @@
-.PHONY: all force check columns
+.PHONY: quick all force check columns
 
-# Rebuild out-of-date PDFs. Override the ChordPro binary with CHORDPRO=/path/to/chordpro.
+# Default: rebuild out-of-date PDFs in C (Am for minor songs) only, for fast iterations.
+# Override the ChordPro binary with CHORDPRO=/path/to/chordpro.
+quick:
+	python3 scripts/build.py --quick
+
+# Rebuild out-of-date PDFs in every output key (do this before committing).
 all:
 	python3 scripts/build.py
 
-# Rebuild every PDF.
+# Rebuild every PDF in every key.
 force:
 	python3 scripts/build.py --force
 
