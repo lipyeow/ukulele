@@ -71,7 +71,7 @@ def build(cho, force=False, quick=False):
         shift = semitones(src_key, key)
         if shift:
             cmd.append(f"--transpose={shift}")
-        subprocess.run(cmd, check=True)
+        subprocess.run(cmd, check=True, cwd=ROOT)  # the config's fontdir is relative to the repo root
         print(out.relative_to(ROOT))
         built += 1
     return built

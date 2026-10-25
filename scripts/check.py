@@ -119,7 +119,7 @@ def song_parts(text):
 
 def chordpro_problems(cho):
     run = subprocess.run([chordpro_bin(), f"--config={CONFIG}", "--generate=Text", str(cho),
-                          "-o", "/dev/null"], capture_output=True, text=True)
+                          "-o", "/dev/null"], capture_output=True, text=True, cwd=ROOT)
     out = []
     for line in (run.stdout + run.stderr).splitlines():
         if "Unknown chord" in line or "No chord diagram" in line:

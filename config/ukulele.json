@@ -34,11 +34,21 @@
     "split-marker": [ "", "-", "" ],
     // Print the full chorus every time it is recalled, for easy play-along.
     "chorus": { "recall": { "quote": true } },
+    // Fixed-width fonts in config/fonts (with their licences). The scripts run ChordPro from
+    // the repo root, so this path resolves. To switch, change "inconsolata" to "ubuntumono"
+    // in "fonts" below. Both are 0.5 em wide, so the label width below fits either.
+    "fontdir": [ "config/fonts" ],
+    "fontconfig": {
+      "inconsolata": { "": "Inconsolata-Regular.ttf", "bold": "Inconsolata-Bold.ttf" },
+      "ubuntumono": { "": "UbuntuMono-Regular.ttf", "bold": "UbuntuMono-Bold.ttf" }
+    },
     "fonts": {
       "title": "Times-Bold 18",
       "subtitle": "Helvetica 11",
-      "text": "Courier 11",
-      "chord": "Courier-Bold 10",
+      "text": "inconsolata 11",
+      "chord": "inconsolata bold 10",
+      // Not used by our songs, but ChordPro loads it anyway; keep Courier out of the PDFs.
+      "tab": "inconsolata 10",
       "comment": "Helvetica 11; background=foreground-light"
     },
     "formats": {
@@ -52,6 +62,7 @@
       }
     },
     "diagrams": { "show": "top" },
-    "labels": { "width": 13.2 }
+    // Verse numbers one space from the lyrics: "1" plus a space, 2 x 5.5 pt at 11 pt.
+    "labels": { "width": 11 }
   }
 }

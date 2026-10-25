@@ -66,7 +66,7 @@ def measure(cho):
                 cmd = [chordpro_bin(), f"--config={CONFIG}", str(src), "-o", str(pdf)]
                 if shift:
                     cmd.append(f"--transpose={shift}")
-                subprocess.run(cmd, capture_output=True, check=True)
+                subprocess.run(cmd, capture_output=True, check=True, cwd=ROOT)
                 out[k][n] = layout(pdf)
     return out
 
