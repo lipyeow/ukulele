@@ -250,7 +250,7 @@ gh-ukulele/
   Tomorrow, In the Garden, Hail to the Lord's Anointed, Sweet Hour of Prayer, Take My Life
   and Let It Be, Come Thou Fount, Great Is Thy Faithfulness, 'Tis So Sweet.
 - **Batch 3 (2026-10-24):** the next 15 published hymns, status `converted`. All pass
-  `make check`. Waiting for Review 3 (checklist in `tmp/batch3.md`). The first batch
+  `make check`. Review 3 done (2026-10-24): all 15 are `reviewed`. The first batch
   converted with the bar-marker rule: 7 sources mark bars, so their `*`s are kept as is.
   Two columns (from `make columns`): The God of Abraham Praise, Savior Like a Shepherd
   Lead Us, God Moves in a Mysterious Way. Diagrams on the right save a page in none of
