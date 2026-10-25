@@ -102,11 +102,14 @@ def song_parts(text):
         cur.append(s)
     out = []
     for line in body:
-        marks = re.findall(r"\[([^\]]+)\]", line)
+        # <off>D</off> is still D; an optional (D) is left out, as it is in the sources.
+        marks = [re.sub(r"</?off>", "", m) for m in re.findall(r"\[([^\]]+)\]", line)]
         lyric = re.sub(r"\[[^\]]*\]", "", line)
         if re.search(r"\d", lyric):
             problems.append(f"digit in lyrics: {line[:60]}")
-        out.append((words(lyric), [m for m in marks if m != "**"]))
+        if any("<" in m for m in marks):
+            problems.append(f"markup other than <off> in a chord: {line[:60]}")
+        out.append((words(lyric), [m for m in marks if m != "**" and not m.startswith("(")]))
     if not re.search(r"^\{time:", text, re.M):
         problems.append("no {time: ...}")
     if not sections:

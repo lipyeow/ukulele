@@ -21,6 +21,13 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
 - Write ukulele-friendly chords: no slash bass (`G/B` → `G`), `sus` as `sus4`, and E as
   `E7` (`1 2 0 2`, the shape players know; the full E is a hard barre). The converter does
   this (`simplify` in `scripts/txt2cho.py`).
+- **Off-beat chord:** a chord that has to fall off the usual marker beat (e.g. beat 2 of
+  a 3/4 bar) is written `[<off>D</off>]`. It prints plain grey instead of bold black,
+  and still transposes and gets its diagram (`markup.shortcodes` in `config/ukulele.json`).
+- **Optional chord:** a chord players may leave out is written `[(D)]`; it prints as
+  "(D)" and transposes. The converter still drops the sources' parenthesized passing
+  chords; add `[(D)]` by hand where one is truly optional. `make check` ignores both
+  the `<off>` tag and optional chords when comparing with the source.
 
 ## Beat markers
 

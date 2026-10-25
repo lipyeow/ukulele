@@ -24,6 +24,9 @@
     { "name": "Bbsus4", "base": 1, "frets": [ 3, 3, 1, 1 ] },
     { "name": "Bsus4", "base": 1, "frets": [ 4, 4, 2, 2 ] }
   ],
+  // [<off>D</off>]: a chord off the usual beat, printed plain grey instead of bold black.
+  // It still transposes and gets its diagram (see wiki/style-guide.md).
+  "markup": { "shortcodes": { "off": "font_weight='normal' color='grey50'" } },
   "pdf": {
     "papersize": "letter",
     // Where a chord is wider than the text under it, fill the gap with hyphens, hymnal style
