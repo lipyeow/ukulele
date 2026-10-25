@@ -19,7 +19,10 @@ PDF = ROOT / "pdf"
 CONFIG = ROOT / "config" / "ukulele.json"
 APP_CHORDPRO = "/Applications/ChordPro.app/Contents/MacOS/chordpro"
 
-DEFAULT_KEYS = {"major": ["C", "G", "F"], "minor": ["Am", "Em", "Dm"]}
+# For now (2026-10-25) only C / Am are built, to speed up config iterations; the other
+# keys' PDFs are left as they are. Swap the two lines back to build every key.
+# DEFAULT_KEYS = {"major": ["C", "G", "F"], "minor": ["Am", "Em", "Dm"]}
+DEFAULT_KEYS = {"major": ["C"], "minor": ["Am"]}
 NOTES = {"C": 0, "C#": 1, "Db": 1, "D": 2, "D#": 3, "Eb": 3, "E": 4, "F": 5,
          "F#": 6, "Gb": 6, "G": 7, "G#": 8, "Ab": 8, "A": 9, "A#": 10, "Bb": 10, "B": 11}
 # ChordPro spells with sharps when transposing up and flats when transposing down,
@@ -45,7 +48,8 @@ def output_keys(text):
         keys = m.group(1).split()
     else:
         keys = DEFAULT_KEYS["minor" if key.endswith("m") else "major"]
-    return key, [key] + [k for k in keys if k != key]
+    # return key, [key] + [k for k in keys if k != key]
+    return key, keys  # for now, not the song's own key unless it is C / Am
 
 
 def semitones(src, dst):
