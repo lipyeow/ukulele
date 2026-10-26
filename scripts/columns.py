@@ -24,8 +24,11 @@ TEXT_SIZE = b"11"  # lyric font size in config/ukulele.json
 MIDDLE = 306  # half the letter page width, in points
 
 
-def layout(pdf):
-    """(pages, lyric rows) of a ChordPro PDF; a row is a (page, column, baseline)."""
+def layout(pdf, columns=1):
+    """(pages, lyric rows) of a ChordPro PDF; a row is a (page, column, baseline).
+
+    In one column a long line runs past the middle of the page, so its halves are one row.
+    """
     data = pdf.read_bytes()
     pages = len(re.findall(rb"/Type\s*/Page\b", data))
     rows, stream = set(), 0
@@ -40,7 +43,8 @@ def layout(pdf):
             if op.group(1):
                 size = op.group(1)
             elif size == TEXT_SIZE:
-                rows.add((stream, float(op.group(2)) > MIDDLE, round(float(op.group(3)))))
+                side = columns == 2 and float(op.group(2)) > MIDDLE
+                rows.add((stream, side, round(float(op.group(3)))))
     return pages, len(rows)
 
 
@@ -67,7 +71,7 @@ def measure(cho):
                 if shift:
                     cmd.append(f"--transpose={shift}")
                 subprocess.run(cmd, capture_output=True, check=True, cwd=ROOT)
-                out[k][n] = layout(pdf)
+                out[k][n] = layout(pdf, n)
     return out
 
 
