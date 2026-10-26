@@ -2,6 +2,7 @@
 {key: C}
 {time: 4/4}
 {columns: 2}
+{+pdf.diagrams.show: right}
 
 {start_of_verse: 1}
 I [C]love to [**]tell the [**]sto[**]ry

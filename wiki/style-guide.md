@@ -12,9 +12,11 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
 - Use `{columns: 2}` (after `{time}`) when the song fits on fewer pages that way and no
   line wraps in the narrower column; `make columns` (`scripts/columns.py`) checks every
   output key.
-- Use `{+pdf.diagrams.show: right}` (after `{time}`) to stack the chord diagrams down the
-  right margin instead of above the song, when that saves a page in a one-column song.
-  It narrows the lyrics, so avoid it with `{columns: 2}`. Example: *Sweet Hour of Prayer*.
+- Use `{+pdf.diagrams.show: right}` (after `{time}`, or after `{columns: 2}`) to stack the
+  chord diagrams down the right margin instead of above the song, when that saves a page.
+  It narrows the lyrics, so with `{columns: 2}` use it only if `make columns` still shows
+  no wrapping. Examples: *Sweet Hour of Prayer* (one column), *I Love to Tell the Story*
+  (two columns).
 
 ## Chords
 
