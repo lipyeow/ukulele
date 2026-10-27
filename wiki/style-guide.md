@@ -44,6 +44,7 @@ Count in quarter notes:
 | Triple (3/4) | 3 quarter notes | beat 1 |
 | Triple in halves (3/2) | 2 quarter notes (one half note) | every beat: 1, 2 and 3 |
 | Compound (6/8) | 3 eighth notes (one dotted quarter) | beats 1 and 4 |
+| Compound triple (9/8) | 3 eighth notes (one dotted quarter) | beats 1, 4 and 7 |
 
 - Don't mark the beats in between. The old text sources marked every beat, so their extra
   `*`s are removed. The 6/8 sources are the exception: they already mark only the
@@ -61,6 +62,7 @@ Count in quarter notes:
 - **Keep every mark:** some sources already have exactly the chords and `*`s wanted, so
   they're converted as is, with no thinning and no pickup chords dropped:
   - *O God Beyond All Praising*
+  - *Blessed Assurance* (9/8: the source marks every dotted quarter)
 - **Sources that mark bars, not beats:** many sources put a `*` only on beat 1 of each bar
   (or every other beat in 4/4). Their markers are already where they belong, so they're
   kept as is too. The converter detects this (example: *Come, Sinners, to the Gospel Feast*).
