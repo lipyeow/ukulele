@@ -258,9 +258,12 @@ gh-ukulele/
   Lead Us, God Moves in a Mysterious Way. Diagrams on the right save a page in none of
   the two-page songs without wrapping.
 - **Batch 4 (2026-10-24):** the next 15 published hymns, status `converted`. All pass
-  `make check`. Waiting for Review 3 (checklist in `tmp/batch4.md`). 12 sources mark bars.
+  `make check`. Review 3 done (2026-10-26), all 15 `reviewed`. 12 sources mark bars.
   None suits two columns. Mid-word chord splits fixed by hand in 7 songs; The Gift of
   Love's source spaces out held notes, so its verses were placed by hand.
+  In review, syncopated chords went back to the source's positions: Lo How a Rose
+  (chords mid-word or on the space before a word) and The Gift of Love (each line's
+  second half starts off the beat, so its chord sits on the space before the word).
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
