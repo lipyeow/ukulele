@@ -159,7 +159,13 @@ def check(row):
                         f"vs .cho \"{phrase(cho_words, j1, j2)}\"")
 
     # Chords, line by line: lines are matched on their lyrics, and each .cho line's chords
-    # must appear in order in the source line. Missing ones are dropped pickups.
+    # must appear in order in the source line. Missing ones are dropped pickups. A line may
+    # start with the chord still sounding from the line before, where the source has a `*`.
+    held, last = [], None
+    for ws, cs in song:
+        held.append((ws, cs[1:] if cs and cs[0] == last else cs))
+        last = cs[-1] if cs else last
+    song = held
     src_lines = [" ".join(ws) for ws, _ in src]
     cho_lines = [" ".join(ws) for ws, _ in song]
     dropped = []

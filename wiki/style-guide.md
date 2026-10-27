@@ -55,6 +55,8 @@ Count in quarter notes:
 - Don't repeat a chord: a chord that is the same as the previous chord on the line becomes
   a `[**]` marker (`[C]beauti[**]ful`, not `[C]beauti[C]ful`). The first chord of each line
   stays, even if the previous line ended on it.
+- Each line starts with a chord, not a marker: a line whose first mark is a `*` gets the
+  chord still sounding from the line before (`[C]O what a`, not `[**]O what a`).
 - A held note at the end of a phrase gets a single `*` on its next marked beat:
   `[G]foe[**], doth`.
 - Reference examples: *A Mighty Fortress Is Our God* (4/4), *All Creatures of Our God and
