@@ -30,6 +30,10 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
   "(D)" and transposes. The converter still drops the sources' parenthesized passing
   chords; add `[(D)]` by hand where one is truly optional. `make check` ignores both
   the `<off>` tag and optional chords when comparing with the source.
+- **Syncopated hymns:** keep each chord exactly where the source puts it, mid-syllable
+  or on the space before a word (`wi[F]thin`, `speak[**][F] with`), since that shows the
+  off-beat. Don't move it to a syllable boundary as for other hymns. Examples: *Lo How a
+  Rose E'er Blooming*, *The Gift of Love*, *Come Down O Love Divine*.
 
 ## Beat markers
 
