@@ -51,7 +51,7 @@ def main(argv):
         print(f"{out.relative_to(ROOT)}" + "".join(f"\n  warning: {w}" for w in warnings))
 
     with CSV.open("w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=list(rows[0]))
+        w = csv.DictWriter(fh, fieldnames=list(rows[0]), lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
 
