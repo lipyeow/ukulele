@@ -265,9 +265,12 @@ gh-ukulele/
   (chords mid-word or on the space before a word) and The Gift of Love (each line's
   second half starts off the beat, so its chord sits on the space before the word).
 - **Batch 5 (2026-10-26):** the next 15 published hymns, status `converted`. All pass
-  `make check`. Waiting for Review 3 (checklist in `tmp/batch5.md`). 5 sources mark bars.
+  `make check`. Review 3 done (2026-10-28), all 15 `reviewed`. 5 sources mark bars.
   Two columns for Blessed Assurance (2 pages to 1). Mid-word chord splits fixed by hand in
   7 songs; melismas (`tra[G]in`, `thi[F]s`, `tear[G]s`) are left for review.
+  In review: Blessed Assurance is 9/8 with every source mark kept; Come Down O Love
+  Divine is syncopated, so its chords stay at the source's positions; I Cannot Tell has
+  its lines joined in pairs (one page); We Three Kings moved to Am in 3/8.
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
