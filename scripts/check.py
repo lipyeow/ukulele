@@ -50,6 +50,8 @@ def source_parts(path):
             continue
         if KEY_HEADER.search(line) and not CHORD_LINE.match(line):
             continue
+        if re.match(r"\s*(\d\.?\s+)?Tune:", line):
+            continue  # a tune name, kept as a {comment} in the .cho
         if CHORD_LINE.match(line):
             if pending:
                 out.append(([], pending))  # chords with no lyric under them

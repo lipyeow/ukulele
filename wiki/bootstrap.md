@@ -271,6 +271,12 @@ gh-ukulele/
   In review: Blessed Assurance is 9/8 with every source mark kept; Come Down O Love
   Divine is syncopated, so its chords stay at the source's positions; I Cannot Tell has
   its lines joined in pairs (one page); We Three Kings moved to Am in 3/8.
+- **Batch 6 (2026-10-28):** the next 15 published hymns, status `converted`. All pass
+  `make check`. Waiting for Review 3 (checklist in `tmp/batch6.md`). 2 sources mark bars.
+  All fit on one page, so none needs two columns. Mid-syllable chord splits moved to the
+  syllable boundary in 10 songs (none is syncopated); one-syllable melismas (`Chr[G]ist`,
+  `L[**]ord`) are left for review. O Day of Peace's "Tune: Jerusalem" is a `{comment}`,
+  and `make check` skips "Tune:" lines in sources.
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
