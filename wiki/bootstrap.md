@@ -277,6 +277,12 @@ gh-ukulele/
   syllable boundary in 10 songs (none is syncopated); one-syllable melismas (`Chr[G]ist`,
   `L[**]ord`) are left for review. O Day of Peace's "Tune: Jerusalem" is a `{comment}`,
   and `make check` skips "Tune:" lines in sources.
+- **Batch 7 (2026-10-30):** the last 7 published hymns, status `converted`. All pass
+  `make check`. Waiting for Review 3 (checklist in `tmp/batch7.md`). 6 sources mark bars;
+  The First Noel's has no beat markers at all, and it's 3/4, not the assumed 4/4. Its
+  mid-word chords moved to syllable boundaries, and it takes two columns (2 pages). The Old
+  Rugged Cross's indented section is now a chorus, sung after every verse. It and The
+  Battle Hymn of the Republic take 2 pages; side diagrams don't help either one.
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
