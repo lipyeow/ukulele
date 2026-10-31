@@ -69,6 +69,7 @@ Count in quarter notes:
   they're converted as is, with no thinning and no pickup chords dropped:
   - *O God Beyond All Praising*
   - *Blessed Assurance* (9/8: the source marks every dotted quarter)
+  - *O Day of Peace That Dimly Shines*
 - **Sources that mark bars, not beats:** many sources put a `*` only on beat 1 of each bar
   (or every other beat in 4/4). Their markers are already where they belong, so they're
   kept as is too. The converter detects this (example: *Come, Sinners, to the Gospel Feast*).

@@ -1,34 +1,53 @@
 {title: O Come All Ye Faithful}
 {key: C}
 {time: 4/4}
+{columns:2}
 
 {start_of_verse: 1}
-O [C]Come [**]All Ye [G]Faith[**]ful; [C]joyful [**]and tri[G]um[**]phant
-O [Am]come [**]ye, O [G]come [**]ye to [D]Beth[**]le[G]hem[**]
-[C]Come [**]and be[F]hold [C]Him, [Dm]born the [F]King of [G]An[**]gels;
+O [C]Come [**]All Ye [G]Faith[**]ful
+[C]Joyful [**]and tri[G]um[**]phant
+O [Am]come [**]ye, O [G]come [**]ye 
+To [D]Be[**]-thle[G]hem[**]
+[C]Come [**]and be[F]hold [C]Him
+[Dm]Born the [F]King of [G]An[**]gels;
 {end_of_verse}
 
-{start_of_verse: 2}
+{start_of_chorus}
 O [C]come, let [**]us a[**]dore [**]Him
-O [C]come, let [**]us a[Am]dore [G]Him
+O [C]come, let [**]us a[Am]dore [G]Him 
 O [F]come, let [Dm]us a[G]dore [F]Him
 [C]Chr[G]ist the [C]Lord[**].
+{end_of_chorus}
+
+{start_of_verse: 2}
+[C]True [**]God of [G]True [**]God
+[C]Light from [**]Light e[G]ter[**]nal
+[Am]Lo! [**]he [G]shuns [**]not 
+The [D]Vir[**]-gin's [G]womb[**]
+[C]Son [**]of the [F]Fa[C]ther
+Be[Dm]gotten, [F]not cre[G]a[**]ted,
 {end_of_verse}
+
+{chorus}
 
 {start_of_verse: 3}
-[C]True [**]God of [G]True [**]God, [C]light from [**]Light e[G]te[**]rnal
-[Am]Lo! [**]he [G]shuns [**]not the [D]Vir[**]gin's [G]womb[**]
-[C]Son [**]of the [F]Fa[C]ther, be[Dm]gotten, [F]not cre[G]a[**]ted,
+O [C]Sing, [**]choirs of [G]an[**]gels
+[C]Sing in [**]exul[G]ta[**]tion
+[Am]Sing [**]all ye [G]citi[**]zens 
+Of [D]Hea[**]ven a[G]bove[**]
+[C]Glo[**]ry to [F]Go[C]d, 
+All [Dm]glory [F]in the [G]High[**]est;
 {end_of_verse}
+
+{chorus}
 
 {start_of_verse: 4}
-O [C]Sing, [**]choirs of [G]an[**]gels, [C]sing in [**]exul[G]ta[**]tion
-[Am]Sing [**]all ye [G]citi[**]zens of [D]Heav[**]en a[G]bove[**]
-[C]Glo[**]ry to [F]Go[C]d, all [Dm]glory [F]in the [G]High[**]est;
+All [C]Hail! [**]Lord, we [G]greet [**]Thee
+[C]Born this [**]happy [G]mor[**]ning
+O [Am]Je[**]sus! for [G]ever[**]more 
+Be [D]Thy [**]name a[G]do[**]red
+[C]Word [**]of the [F]Fa[C]ther
+[Dm]Now in [F]flesh ap[G]pea[**]ring;
 {end_of_verse}
 
-{start_of_verse: 5}
-All [C]Hail! [**]Lord, we [G]greet [**]Thee, [C]born this [**]happy [G]morn[**]ing
-O [Am]Je[**]sus! for [G]ever[**]more be [D]Thy [**]name a[G]do[**]red
-[C]Word [**]of the [F]Fa[C]ther, [Dm]now in [F]flesh ap[G]pearing[**];
-{end_of_verse}
+{chorus}
