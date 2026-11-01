@@ -317,6 +317,11 @@ gh-ukulele/
 ### Phase 6: Cutover
 - Copy `published.md` to `hymns-published.md` and link each hymn to its PDFs.
 - Update `README.md`.
+- **Video dates and links (2026-10-31):** `hymns-published.md` and the `published` column of
+  `migration.csv` now use each video's YouTube publish date, from the Ukulele Hymns playlist
+  (65 videos). Nearer My God to Thee has a video but wasn't in the old list. Let All Mortal
+  Flesh, O God Our Help in Ages Past, I Know Who Holds Tomorrow and Were You There aren't in
+  the playlist, so they keep their old dates.
 - **Done 2026-10-31:** `hymns-published.md` links all 68 published hymns to their PDFs and
   also lists the 34 without a video, so every PDF can be reached. Its "Video key(s)" column
   is the old table's Key(s) and can differ from the PDF keys.
