@@ -30,6 +30,8 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
   "(D)" and transposes. The converter still drops the sources' parenthesized passing
   chords; add `[(D)]` by hand where one is truly optional. `make check` ignores both
   the `<off>` tag and optional chords when comparing with the source.
+- **Optional and off the beat:** write `[<off>(D)</off>]`, with the tag outside the
+  parentheses; it prints as a plain `(D)`. `[(<off>D</off>)]` prints bold, so don't use it.
 - **Syncopated hymns:** keep each chord exactly where the source puts it, mid-syllable
   or on the space before a word (`wi[F]thin`, `speak[**][F] with`), since that shows the
   off-beat. Don't move it to a syllable boundary as for other hymns. Examples: *Lo How a
