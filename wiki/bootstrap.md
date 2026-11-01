@@ -283,6 +283,10 @@ gh-ukulele/
   mid-word chords moved to syllable boundaries; in review it was cut to fit one page in two
   columns. The Old Rugged Cross's indented section is now a chorus, sung after every verse. It and The
   Battle Hymn of the Republic take 2 pages; side diagrams don't help either one.
+- **Batch 8 (2026-10-31):** a review of the 15 hymns whose sources mark optional chords
+  (checklist in `tmp/batch8.md`). Optional chords restored as `[(D)]` or `[<off>(D)</off>]`
+  in 5: Guide Me O Thou Great Jehovah, Lord of the Dance, Love Divine All Loves Excelling,
+  Rejoice the Lord Is King, The God of Abraham Praise. The other 10 stay as they were.
 - **Two columns (2026-10-18):** `scripts/columns.py` (`make columns`) builds each song in
   one and two columns, in every output key, and suggests `{columns: 2}` when it saves pages
   and no line wraps. Too slow for `make check` (about 9 s a song), so run it per batch.
