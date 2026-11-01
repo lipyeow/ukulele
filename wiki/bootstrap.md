@@ -315,12 +315,10 @@ gh-ukulele/
   `0 3 3 1` (`config/ukulele.json`), which needs no barre.
 
 ### Phase 6: Cutover
-- Move `published.md` → `hymns-published.md` and link each hymn to its PDFs.
+- Copy `published.md` to `hymns-published.md` and link each hymn to its PDFs.
 - Update `README.md`.
-- Check whether any YouTube descriptions link to `gh-home`. If they do, keep those files or
-  leave a pointer there.
-- Then remove the hymns from `gh-home/other/hymns/`. `map.py` is replaced by ChordPro's
-  `--transpose`.
+- The hymns stay in `gh-home/other/hymns/` (decided 2026-10-31), so existing links, such as
+  any in YouTube descriptions, keep working. This repo is the one to update from now on.
 
 ## Review rounds summary
 
