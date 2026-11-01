@@ -1,5 +1,9 @@
 # ukulele
-Ukulele song sheets 
+
+Ukulele song sheets, hymns for now, as PDFs in a few easy keys. Major songs come in C, G and
+F, and minor songs in Am, Em and Dm, plus each song's original key if it's a different one.
+
+**[Browse all the hymns](hymns-published.md)**, with links to each PDF.
 
 ## Easier chords
 
@@ -16,3 +20,10 @@ string.
 Eb needs no swap: the sheets already show the easier `0 3 3 1`.
 
 Chords in parentheses, like `(F)`, are optional, so you can also just leave them out.
+
+## Working on the songs
+
+Each song has one source in `songs/`, in [ChordPro](https://www.chordpro.org/) format, in its
+original key. The PDFs in `pdf/` are generated from those sources. After changing a source,
+run `make all` to regenerate its PDFs (needs ChordPro) and `make check` to check it. Format
+conventions are in [wiki/style-guide.md](wiki/style-guide.md).

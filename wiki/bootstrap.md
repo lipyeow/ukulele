@@ -26,7 +26,7 @@ gh-ukulele/
 │   └── worship/                # later genres become sibling folders
 ├── pdf/                        # generated and committed; mirrors songs/
 │   └── hymns/                  # flat, e.g. abide-with-me-C.pdf
-├── hymns-published.md          # moved from hymns/published.md
+├── hymns-published.md          # copied from hymns/published.md
 ├── scripts/                    # build.py (PDFs), txt2cho.py (converter)
 └── wiki/                       # context, plans, specs
 ```
@@ -317,6 +317,9 @@ gh-ukulele/
 ### Phase 6: Cutover
 - Copy `published.md` to `hymns-published.md` and link each hymn to its PDFs.
 - Update `README.md`.
+- **Done 2026-10-31:** `hymns-published.md` links all 68 published hymns to their PDFs and
+  also lists the 34 without a video, so every PDF can be reached. Its "Video key(s)" column
+  is the old table's Key(s) and can differ from the PDF keys.
 - The hymns stay in `gh-home/other/hymns/` (decided 2026-10-31), so existing links, such as
   any in YouTube descriptions, keep working. This repo is the one to update from now on.
 
