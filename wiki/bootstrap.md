@@ -306,6 +306,14 @@ gh-ukulele/
 - **Review 4 (playability):** spot-check the transposed PDFs for hard ukulele chords (B, E, F#m, …).
   Drop bad keys per song with `pdf_keys`.
 
+- **Started 2026-10-31:** `scripts/playability.py` lists each key's hard chords (spelling
+  checked against ChordPro's own transposition for all 306 song keys). 14 songs have a hard
+  chord in some key: E in G (9), Eb in F (2), Bbm in F (2), and optional (E)/(B) (1).
+  Checklist in `tmp/batch9.md`.
+- **Review 4 decision (2026-10-31):** keep every key; no `pdf_keys` overrides. Players get
+  easier swaps in `README.md` (E7 for E, B7 for B, Bbm6 for Bbm). Eb and D# print as
+  `0 3 3 1` (`config/ukulele.json`), which needs no barre.
+
 ### Phase 6: Cutover
 - Move `published.md` → `hymns-published.md` and link each hymn to its PDFs.
 - Update `README.md`.
