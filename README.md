@@ -4,6 +4,7 @@ Ukulele song sheets, hymns for now, as PDFs in a few easy keys. Major songs come
 F, and minor songs in Am, Em and Dm, plus each song's original key if it's a different one.
 
 **[Browse all the hymns](hymns-published.md)**, with links to each PDF.
+**[Hymn metadata](metadata/hymns/index.md)**: tune names, authors and meters, also [by tune](metadata/hymns/tunes.md) and [by person](metadata/hymns/people.md). Data from [Hymnary.org](https://hymnary.org).
 
 ## Easier chords
 

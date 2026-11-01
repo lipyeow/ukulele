@@ -1,0 +1,617 @@
+# Dates and IDs from Hymnary.org people data, by name as used in hymns.yaml.
+A. H. Ackley:
+  born: 1887
+  died: 1960
+  hymnary: Ackley_Alfred
+Albert F. Bayly:
+  born: 1901
+  died: 1984
+  hymnary: Bayly_Albert
+Anonymous:
+  born: null
+  died: null
+  hymnary: Anonymous
+Arnulf, Abbot of Villers-la-Ville:
+  born: 1200
+  died: 1250
+  hymnary: Arnulf_Leuven
+Augustus Toplady:
+  born: 1740
+  died: 1778
+  hymnary: Toplady_Augustus
+Aurelius Clemens Prudentius:
+  born: 348
+  died: 410
+  hymnary: Prudentius_AC
+B. F. White:
+  born: 1900
+  died: 2000
+  hymnary: White_BF
+Bianco da Siena:
+  born: 1350
+  died: 1434
+  hymnary: Bianco_Siena
+Bill Gaither:
+  born: 1936
+  died: null
+  hymnary: Gaither_Bill
+Brian A. Wren:
+  born: 1936
+  died: null
+  hymnary: Wren_Brian
+C. Austin Miles:
+  born: 1868
+  died: 1946
+  hymnary: Miles_CAustin
+C. Hubert H. Parry:
+  born: 1848
+  died: 1918
+  hymnary: Parry_CHH
+Carl P. Daw:
+  born: null
+  died: null
+  hymnary: ''
+Carl Schalk:
+  born: 1929
+  died: 2021
+  hymnary: Schalk_CF
+Catherine Winkworth:
+  born: 1827
+  died: 1878
+  hymnary: Winkworth_C
+Cecil Frances Alexander:
+  born: 1818
+  died: 1895
+  hymnary: Alexander_CF
+Cesáreo Gabarain:
+  born: 1936
+  died: 1991
+  hymnary: Gabarain_C
+Charles Wesley:
+  born: 1757
+  died: 1834
+  hymnary: Wesley_Charles1757
+Christina Georgina Rossetti:
+  born: 1830
+  died: 1894
+  hymnary: Rossetti_CG
+Civilla D. Martin:
+  born: 1866
+  died: 1948
+  hymnary: Martin_CD
+Claudia Frances Hernaman:
+  born: 1838
+  died: 1898
+  hymnary: Hernaman_CF
+Conrad Kocher:
+  born: 1786
+  died: 1872
+  hymnary: Kocher_Conrad
+Cyril Taylor:
+  born: 1907
+  died: 1991
+  hymnary: Taylor_CV
+D. B. Towner:
+  born: 1850
+  died: 1919
+  hymnary: Towner_Daniel
+Daniel L. Schutte:
+  born: 1947
+  died: null
+  hymnary: Schutte_DL
+Daniel ben Judah:
+  born: null
+  died: null
+  hymnary: Judah_Db
+Dorothy A. Thrupp:
+  born: 1779
+  died: 1847
+  hymnary: Thrupp_Dorothy
+Earl Marlatt:
+  born: 1892
+  died: 1976
+  hymnary: Marlatt_E
+Edmond Budry:
+  born: 1854
+  died: 1932
+  hymnary: Budry_Edmond
+Edmund H. Sears:
+  born: 1810
+  died: 1876
+  hymnary: Sears_Edmund
+Edward Dearle:
+  born: 1806
+  died: 1891
+  hymnary: Dearle_Edward
+Edward Mote:
+  born: 1797
+  died: 1874
+  hymnary: Mote_Edward
+Edward Perronet:
+  born: 1721
+  died: 1792
+  hymnary: Perronet_Edward
+Eleanor Farjeon:
+  born: 1881
+  died: 1965
+  hymnary: Farjeon_E
+Fanny Crosby:
+  born: null
+  died: null
+  hymnary: ''
+Felice de Giardini:
+  born: null
+  died: null
+  hymnary: ''
+Ferdinand Hérold:
+  born: 1791
+  died: 1833
+  hymnary: Herold_LJFerdinand
+Folliott Sandford Pierpoint:
+  born: 1835
+  died: 1917
+  hymnary: Pierpoint_FS
+Frances Elizabeth Cox:
+  born: 1812
+  died: 1897
+  hymnary: Cox_Frances
+Frances Ridley Havergal:
+  born: 1836
+  died: 1879
+  hymnary: Havergal_Frances
+Franklin L. Sheppard:
+  born: 1852
+  died: 1930
+  hymnary: Sheppard_Franklin
+Fred Pratt Green:
+  born: 1903
+  died: 2000
+  hymnary: Green_FP
+Frederic Henry Hedge:
+  born: 1805
+  died: 1890
+  hymnary: Hedge_FH
+Frederick Oakeley:
+  born: 1802
+  died: 1880
+  hymnary: Oakeley_F
+G. W. Briggs:
+  born: 1875
+  died: 1959
+  hymnary: Briggs_GW
+George Bennard:
+  born: null
+  died: null
+  hymnary: GeorgeBennard
+George Frideric Handel:
+  born: 1685
+  died: 1759
+  hymnary: Handel_GF
+George J. Elvey:
+  born: 1816
+  died: 1893
+  hymnary: Elvey_George
+Gerard Moultrie:
+  born: 1829
+  died: 1885
+  hymnary: Moultrie_G
+Gloria Gaither:
+  born: 1942
+  died: null
+  hymnary: Gaither_G
+Godfrey Thring:
+  born: 1823
+  died: 1903
+  hymnary: Thring_Godfrey
+Gustav Holst:
+  born: 1874
+  died: 1934
+  hymnary: Holst_GT
+H. W. Baker:
+  born: 1821
+  died: 1877
+  hymnary: Baker_HenryW
+Hal H. Hopson:
+  born: 1933
+  died: 2025
+  hymnary: Hopson_HH
+Hans Leo Hassler:
+  born: 1564
+  died: 1612
+  hymnary: Hassler_HL
+Harry Silvernale Mason:
+  born: null
+  died: null
+  hymnary: ''
+Helen Howarth Lemmel:
+  born: 1864
+  died: 1961
+  hymnary: Lemmel_HH
+Henry Francis Lyte:
+  born: 1793
+  died: 1847
+  hymnary: Lyte_HF
+Henry Percy Smith:
+  born: 1825
+  died: 1898
+  hymnary: Smith_HenryPercy
+Henry Thomas Smart:
+  born: 1813
+  died: 1879
+  hymnary: Smart_Henry
+Horatius Bonar:
+  born: 1808
+  died: 1889
+  hymnary: Bonar_Horatius
+Ira F. Stanphill:
+  born: 1920
+  died: 1993
+  hymnary: Stanphill_IF
+Isaac Watts:
+  born: 1674
+  died: 1748
+  hymnary: Watts_Isaac
+J. H. Gilmore:
+  born: 1834
+  died: 1918
+  hymnary: Gilmore_Joseph
+J. Hart:
+  born: 1712
+  died: 1768
+  hymnary: Hart_Joseph
+J. M. Neale:
+  born: 1818
+  died: 1866
+  hymnary: Neale_JM
+James Ellor:
+  born: 1819
+  died: 1899
+  hymnary: Ellor_J
+James Montgomery:
+  born: null
+  died: null
+  hymnary: Montgomery_JamesComposer
+James W. Alexander:
+  born: null
+  died: null
+  hymnary: ''
+Jaroslav J. Vajda:
+  born: 1919
+  died: 2008
+  hymnary: Vajda_JJ
+Jean Sibelius:
+  born: 1865
+  died: 1957
+  hymnary: Sibelius_J
+Jeffery W. Rowthorn:
+  born: 1934
+  died: 2025
+  hymnary: Rowthorn_Jeffery
+Joachim Neander:
+  born: 1650
+  died: 1680
+  hymnary: Neander_Joachim
+Johann Crüger:
+  born: 1598
+  died: 1662
+  hymnary: Cruger_Johann
+Johann Gottlob Werner:
+  born: 1777
+  died: 1822
+  hymnary: werner_jg
+Johann Jakob Schütz:
+  born: 1640
+  died: 1690
+  hymnary: Schutz_JJ
+John Bacchus Dykes:
+  born: 1823
+  died: 1876
+  hymnary: Dykes_John
+John Darwall:
+  born: 1732
+  died: 1789
+  hymnary: Darwall_J
+John Francis Wade:
+  born: 1711
+  died: 1786
+  hymnary: Wade_John
+John Goss:
+  born: 1800
+  died: 1880
+  hymnary: Goss_John
+John Greenleaf Whittier:
+  born: 1807
+  died: 1892
+  hymnary: Whittier_John
+John H. Sammis:
+  born: 1846
+  died: 1919
+  hymnary: Sammis_John
+John Henry Hopkins:
+  born: 1861
+  died: 1945
+  hymnary: Hopkins_JohnHenry1861
+John Hughes:
+  born: 1842
+  died: 1902
+  hymnary: Hughes_John1842
+John Zundel:
+  born: 1815
+  died: 1882
+  hymnary: Zundel_John
+Joseph Brackett:
+  born: 1797
+  died: 1882
+  hymnary: Brackett_J
+Joseph Parry:
+  born: 1841
+  died: 1903
+  hymnary: Parry_J
+Judson W. Van DeVenter:
+  born: 1855
+  died: 1939
+  hymnary: VanDeVenter_JW
+Julia Ward Howe:
+  born: 1819
+  died: 1910
+  hymnary: Howe_Julia
+K. Jason French:
+  born: null
+  died: null
+  hymnary: French_KJason
+Kate Hankey:
+  born: 1834
+  died: 1911
+  hymnary: Hankey_Kate
+Lewis H. Redner:
+  born: 1831
+  died: 1908
+  hymnary: Redner_Lewis
+Lloyd Stone:
+  born: 1912
+  died: 1993
+  hymnary: Stone_L
+Louis Bourgeois:
+  born: 1510
+  died: 1561
+  hymnary: Bourgeois_Louis
+Louis F. Benson:
+  born: 1855
+  died: 1930
+  hymnary: Benson_Louis
+Louisa M. R. Stead:
+  born: 1850
+  died: 1917
+  hymnary: Stead_Louisa
+Lowell Mason:
+  born: 1792
+  died: 1872
+  hymnary: Mason_Lowell
+Maltbie D. Babcock:
+  born: 1858
+  died: 1901
+  hymnary: Babcock_Maltbie
+Martin Luther:
+  born: 1483
+  died: 1546
+  hymnary: Luther_Martin
+Martin Madan:
+  born: 1726
+  died: 1790
+  hymnary: Madan_Martin
+Martin Rinkart:
+  born: null
+  died: null
+  hymnary: ''
+Matthew Bridges:
+  born: 1800
+  died: 1894
+  hymnary: Bridges_Matthew
+Melchior Teschner:
+  born: 1584
+  died: 1635
+  hymnary: Teschner_Melchior
+Meyer Lyon:
+  born: 1751
+  died: 1797
+  hymnary: Lyon_M
+Michael A. Perry:
+  born: null
+  died: null
+  hymnary: ''
+Natalie Sleeth:
+  born: 1930
+  died: 1992
+  hymnary: Sleeth_N
+Omer Westendorf:
+  born: 1916
+  died: 1997
+  hymnary: Westendorf_O
+Paul Gerhardt:
+  born: 1607
+  died: 1676
+  hymnary: Gerhardt_Paul
+Peter Williams:
+  born: 1847
+  died: 1922
+  hymnary: Williams_Peter1847
+Phillips Brooks:
+  born: 1835
+  died: 1893
+  hymnary: Brooks_P
+Phoebe Palmer Knapp:
+  born: 1839
+  died: 1908
+  hymnary: Knapp_Phoebe
+Ralph Vaughan Williams:
+  born: 1872
+  died: 1958
+  hymnary: VaughanWilliams_Ralph
+Raquel Gutiérrez-Achón:
+  born: null
+  died: null
+  hymnary: ''
+Reginald Heber:
+  born: 1783
+  died: 1826
+  hymnary: Heber_Reginald
+Richard Birch Hoyle:
+  born: null
+  died: null
+  hymnary: ''
+Richard Frederick Littledale:
+  born: 1833
+  died: 1890
+  hymnary: Littledale_RF
+Richard Storrs Willis:
+  born: 1819
+  died: 1900
+  hymnary: Willis_Richard
+Robert Robinson:
+  born: 1735
+  died: 1790
+  hymnary: Robinson_R
+Rowland H. Prichard:
+  born: null
+  died: null
+  hymnary: ''
+Sarah Flower Adams:
+  born: 1805
+  died: 1848
+  hymnary: Adams_Sarah
+Skinner Chávez-Melo:
+  born: 1944
+  died: 1992
+  hymnary: ChavezMelo_Skinner
+St. Bernard of Clairvaux:
+  born: 1090
+  died: 1153
+  hymnary: Clairvaux_Bo
+St. Francis of Assisi:
+  born: 1182
+  died: 1226
+  hymnary: Saint_F
+Sydney Carter:
+  born: 1915
+  died: 2004
+  hymnary: Carter_Sydney
+Theodore Baker:
+  born: 1851
+  died: 1934
+  hymnary: Baker_Theodore
+Theodulf, Bishop of Orléans:
+  born: null
+  died: null
+  hymnary: ''
+Thomas Augustine Arne:
+  born: 1710
+  died: 1778
+  hymnary: Arne_Thomas
+Thomas Hastings:
+  born: 1784
+  died: 1872
+  hymnary: Hastings_Thomas
+Thomas Helmore:
+  born: 1811
+  died: 1890
+  hymnary: Helmore_T
+Thomas John Williams:
+  born: 1869
+  died: 1944
+  hymnary: Williams_ThomasJohn
+Thomas Ken:
+  born: 1637
+  died: 1711
+  hymnary: Ken_Thomas
+Thomas O. Chisholm:
+  born: 1866
+  died: 1960
+  hymnary: Chisholm_Thomas
+Thomas Olivers:
+  born: 1725
+  died: 1799
+  hymnary: Olivers_T
+W. Chatterton Dix:
+  born: 1837
+  died: 1898
+  hymnary: Dix_WC
+W. Howard Doane:
+  born: 1832
+  died: 1915
+  hymnary: Doane_WHoward
+W. S. Turner:
+  born: null
+  died: null
+  hymnary: Turner_WS
+W. S. Weeden:
+  born: 1847
+  died: 1908
+  hymnary: Weeden_WS
+W. Stillman Martin:
+  born: 1862
+  died: 1935
+  hymnary: Martin_Walter
+W. Y. Fullerton:
+  born: null
+  died: null
+  hymnary: ''
+Washington Gladden:
+  born: 1836
+  died: 1918
+  hymnary: Gladden_Washington
+Will L. Thompson:
+  born: 1847
+  died: 1909
+  hymnary: Thompson_Will
+William B. Bradbury:
+  born: 1816
+  died: 1868
+  hymnary: Bradbury_William
+William Boyd Grove:
+  born: null
+  died: null
+  hymnary: Grove_WB
+William Cowper:
+  born: null
+  died: null
+  hymnary: Cowper_William
+William Croft:
+  born: 1678
+  died: 1727
+  hymnary: Croft_William
+William G. Fischer:
+  born: null
+  died: null
+  hymnary: ''
+William H. Draper:
+  born: null
+  died: null
+  hymnary: ''
+William Henry Monk:
+  born: 1823
+  died: 1889
+  hymnary: Monk_William
+William J. Kirkpatrick:
+  born: 1838
+  died: 1921
+  hymnary: Kirkpatrick_William
+William M. Runyan:
+  born: 1870
+  died: 1957
+  hymnary: Runyan_WM
+William Steffe:
+  born: 1830
+  died: 1890
+  hymnary: Steffe_William
+William W. Walford:
+  born: 1772
+  died: 1850
+  hymnary: Walford_William
+William Walsham How:
+  born: 1823
+  died: 1897
+  hymnary: How_William
+William Williams:
+  born: null
+  died: null
+  hymnary: Williams_William2

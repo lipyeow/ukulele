@@ -8,6 +8,7 @@ Hymns come first; other genres follow later.
 - `songs/<genre>/<slug>.cho`: the source for each song. One file per song, kebab-case, no key in the filename. Folders are flat.
 - `pdf/<genre>/<slug>-<Key>.pdf`: generated from the sources and committed. Don't rename or move published PDFs, because people link to them.
 - `config/`: shared ChordPro config (`ukulele.json`). Song sources go in `songs/`, not here.
+- `metadata/<genre>/`: song metadata. `hymns.yaml` and `people.yaml` hold the data; the `.md` pages are generated from them with `make metadata` (needs PyYAML).
 - `wiki/`: context, plans and specs. Start with `wiki/bootstrap.md` (the hymn migration plan and the format conventions).
 
 ## Conventions

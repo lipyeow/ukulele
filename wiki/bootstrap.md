@@ -336,3 +336,31 @@ gh-ukulele/
 | 2 | After inventory | Canonical source file and key per hymn |
 | 3 | Each batch commit | Chord placement and verse completeness in the canonical-key PDF |
 | 4 | After other-key PDFs | Playability of the transposed keys |
+
+## Hymn metadata
+
+Song metadata lives in `metadata/hymns/`, not here. `hymns.yaml` and `people.yaml` hold the data, and
+`make metadata` generates `index.md`, `tunes.md`, `people.md` and `review.md` from them.
+
+How it was collected (`scripts/hymnary.py`):
+
+1. `match`: offline, match each `.cho` to a text in Hymnary's `texts.csv`, by first line and title,
+   preferring the most-published. `OVERRIDES` pins the ones the match gets wrong.
+2. `tunes`: one live pass through Hymnary's search export, because the CSV downloads have no link
+   between texts and tunes. One request every 6 seconds; responses are cached in `tmp/hymnary/`.
+3. `umh`: one live request for the contents of *The United Methodist Hymnal*, saved to
+   `tmp/hymnary/umh.csv`. Most of the hymns here follow its tunes.
+4. `build`: fill in everything else offline from `texts.csv`, `tunes.csv` and `people.csv`.
+
+Decisions:
+
+- Hymnary is the only automatic source. Gaps stay blank until filled by hand.
+- YAML, not CSV: hymns have several authors and tunes, and it edits and diffs well by hand.
+- The Hymnary CSV downloads stay out of the repo. They need a browser, so download them from
+  `hymnary.org/explore` into `tmp/hymnary/`.
+- Tunes follow UMH first, then the most-published tune for hymns not in UMH; `tune_basis` says which.
+  `TUNE_CHOICES` in `scripts/hymnary.py` holds tunes confirmed by hand (`tune_basis: chosen`).
+- Author names keep Hymnary's spelling; only real differences from UMH's credits are flagged.
+- `status`: `likely` follows UMH with nothing to check; `check` is listed in `review.md`. Set `reviewed`
+  once confirmed by hand. `build` never overwrites a `reviewed` entry.
+- `.cho` files and PDFs are unchanged for now. What to print on the PDFs is still undecided.

@@ -1,4 +1,4 @@
-.PHONY: quick all force check columns
+.PHONY: quick all force check columns metadata
 
 # Default: rebuild out-of-date PDFs in C (Am for minor songs) only, for fast iterations.
 # Override the ChordPro binary with CHORDPRO=/path/to/chordpro.
@@ -20,3 +20,7 @@ check:
 # Which songs suit {columns: 2} (scripts/columns.py). Slow: builds every key both ways.
 columns:
 	python3 scripts/columns.py
+
+# Regenerate the pages in metadata/hymns/ from hymns.yaml (scripts/hymn_metadata.py).
+metadata:
+	python3 scripts/hymn_metadata.py
