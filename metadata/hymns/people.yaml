@@ -3,6 +3,10 @@ A. H. Ackley:
   born: 1887
   died: 1960
   hymnary: Ackley_Alfred
+African American spiritual:
+  born: null
+  died: null
+  hymnary: ''
 Albert F. Bayly:
   born: 1901
   died: 1984
@@ -531,6 +535,10 @@ Thomas Olivers:
   born: 1725
   died: 1799
   hymnary: Olivers_T
+Traditional French carol:
+  born: null
+  died: null
+  hymnary: ''
 W. Chatterton Dix:
   born: 1837
   died: 1898

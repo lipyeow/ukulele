@@ -105,8 +105,8 @@ all-glory-laud-and-honor:
   - Theodulf, Bishop of Orléans
   - J. M. Neale
   words_year: 1854; c. 820
-  meter: "7.6.7.6 with refrain"
-  text_meter: "7.6.7.6. with refrain"
+  meter: 7.6.7.6 with refrain
+  text_meter: 7.6.7.6. with refrain
   text_copyright: Public Domain
   umh:
   - '280'
@@ -115,10 +115,10 @@ all-glory-laud-and-honor:
   music:
   - Melchior Teschner
   music_year: '1613'
-  tune_meter: "7.6.7.6.D."
+  tune_meter: 7.6.7.6.D.
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "15567113211715155671"
+  incipit: '15567113211715155671'
   hymnary:
     text: all_glory_laud_and_honor
     tune: st_theodulph_teschner
@@ -129,7 +129,7 @@ all-glory-laud-and-honor:
     hymnary: lancashire_smart
   - name: '[All glory, laud, and honor]'
     hymnary: all_glory_laud_and_honor_warren
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 7.6.7.6. with refrain, tune 7.6.7.6.D.'
 all-hail-the-power-of-jesus-name:
@@ -138,8 +138,8 @@ all-hail-the-power-of-jesus-name:
   words:
   - Edward Perronet
   words_year: '1780'
-  meter: "8.6.8.6.8.6"
-  text_meter: "8.6.8.6.8.6."
+  meter: 8.6.8.6.8.6
+  text_meter: 8.6.8.6.8.6.
   text_copyright: Public Domain
   umh:
   - '154'
@@ -149,10 +149,10 @@ all-hail-the-power-of-jesus-name:
   music:
   - James Ellor
   music_year: '1838'
-  tune_meter: "8.6.6.8. and refrain"
+  tune_meter: 8.6.6.8. and refrain
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "512345121717655"
+  incipit: '512345121717655'
   hymnary:
     text: all_hail_the_power_of_jesus_name_let
     tune: diadem_ellor
@@ -163,7 +163,7 @@ all-hail-the-power-of-jesus-name:
     hymnary: miles_lane_shrubsole
   - name: LET US CROWN HIM
     hymnary: let_us_crown_him_mcgranahan
-  status: check
+  status: reviewed
   notes:
   - 'UMH also credits the words to: John Rippon'
   - 'meters differ: words 8.6.8.6.8.6., tune 8.6.6.8. and refrain'
@@ -173,8 +173,8 @@ all-things-bright-and-beautiful:
   words:
   - Cecil Frances Alexander
   words_year: '1848'
-  meter: "7.6.7.6 with refrain"
-  text_meter: "7.6.7.6 with refrain"
+  meter: 7.6.7.6 with refrain
+  text_meter: 7.6.7.6 with refrain
   text_copyright: Public Domain
   umh:
   - '147'
@@ -182,10 +182,10 @@ all-things-bright-and-beautiful:
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: "7.6.7.6 D"
+  tune_meter: 7.6.7.6 D
   tune_source: English Traditional; The Dancing Master, 1686 (melody)
   tune_copyright: Public Domain
-  incipit: "534321765346767"
+  incipit: '534321765346767'
   hymnary:
     text: each_little_flower_that_opens
     tune: royal_oak
@@ -196,7 +196,7 @@ all-things-bright-and-beautiful:
     hymnary: greystone_waghorne
   - name: DANISH TUNE
     hymnary: danish_tune_51122
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 7.6.7.6 with refrain, tune 7.6.7.6 D'
 angels-from-the-realms-of-glory:
@@ -318,8 +318,8 @@ christ-is-the-worlds-light:
   words:
   - Fred Pratt Green
   words_year: '1968'
-  meter: "10.11.11.6"
-  text_meter: "10 11 11.6"
+  meter: 10.11.11.6
+  text_meter: 10 11 11.6
   text_copyright: © 1969 Hope Publishing Co.
   umh:
   - '188'
@@ -327,10 +327,10 @@ christ-is-the-worlds-light:
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: "11.11.11.5"
+  tune_meter: 11.11.11.5
   tune_source: La Feillée, Méthode du plain-chant, 1782
   tune_copyright: Public Domain
-  incipit: "53432134556556715176"
+  incipit: '53432134556556715176'
   hymnary:
     text: christ_is_the_worlds_light_christ_and_no
     tune: christe_sanctorum_53432
@@ -339,7 +339,7 @@ christ-is-the-worlds-light:
     hymnary: krisztus_urunknak_11155
   - name: NANDINA HILL
     hymnary: nandina_hill_scott
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 10 11 11.6, tune 11.11.11.5'
 christ-the-lord-is-risen-today:
@@ -476,8 +476,8 @@ come-o-thou-traveler-unknown:
   words:
   - Charles Wesley
   words_year: '1742'
-  meter: "8.8.8.8.8.8"
-  text_meter: "8.8.8.8.8.8"
+  meter: 8.8.8.8.8.8
+  text_meter: 8.8.8.8.8.8
   text_copyright: Public Domain
   umh:
   - '386'
@@ -486,10 +486,10 @@ come-o-thou-traveler-unknown:
   tune_basis: chosen
   music: []
   music_year: ''
-  tune_meter: "8.8.8.8"
+  tune_meter: 8.8.8.8
   tune_source: Scottish traditional melody
   tune_copyright: Public Domain
-  incipit: "511212353212321"
+  incipit: '511212353212321'
   hymnary:
     text: come_o_thou_traveller_unknown
     tune: ye_banks_and_braes
@@ -500,7 +500,7 @@ come-o-thou-traveler-unknown:
     hymnary: vernon_chapin
   - name: DAVID'S HARP
     hymnary: davids_harp_king
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.8.8.8.8.8, tune 8.8.8.8'
 come-sinners-to-the-gospel-feast:
@@ -509,8 +509,8 @@ come-sinners-to-the-gospel-feast:
   words:
   - Charles Wesley
   words_year: '1747'
-  meter: "8.6.8.6"
-  text_meter: "8.6.8.6"
+  meter: 8.8.8.8
+  text_meter: 8.6.8.6
   text_copyright: Public Domain
   umh:
   - '339'
@@ -519,10 +519,10 @@ come-sinners-to-the-gospel-feast:
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: "8.8.8.8"
+  tune_meter: 8.8.8.8
   tune_source: Katholisches Gesangbuch, Vienna, ca. 1774
   tune_copyright: Public Domain
-  incipit: "111171232133332"
+  incipit: '111171232133332'
   hymnary:
     text: come_sinners_to_the_gospel_feast_let_ev
     tune: hursley_ritter
@@ -533,7 +533,7 @@ come-sinners-to-the-gospel-feast:
     hymnary: uxbridge_mason
   - name: DUKE STREET
     hymnary: duke_street_hatton
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.6.8.6, tune 8.8.8.8'
 come-thou-almighty-king:
@@ -576,8 +576,8 @@ come-thou-fount-of-every-blessing:
   - Robert Robinson
   - Martin Madan
   words_year: 1758; 1760
-  meter: "8.7.8.7 D"
-  text_meter: "8.7.8.7.D"
+  meter: 8.7.8.7 D
+  text_meter: 8.7.8.7.D
   text_copyright: Public Domain
   umh:
   - '400'
@@ -586,10 +586,10 @@ come-thou-fount-of-every-blessing:
   music:
   - Anonymous
   music_year: ''
-  tune_meter: "8.7.8.7 D"
+  tune_meter: 8.7.8.7 D
   tune_source: Repository of Sacred Music, Part Second, Harrisburg, 1813; American melody
   tune_copyright: Public Domain
-  incipit: "321135223565321"
+  incipit: '321135223565321'
   hymnary:
     text: come_thou_fount_of_every_blessing
     tune: nettleton
@@ -600,7 +600,7 @@ come-thou-fount-of-every-blessing:
     hymnary: restoration_southernharmony
   - name: TRUST
     hymnary: trust_mendelssohn
-  status: check
+  status: reviewed
   notes:
   - 'UMH does not credit the words to: Martin Madan'
 come-thou-long-expected-jesus:
@@ -609,8 +609,8 @@ come-thou-long-expected-jesus:
   words:
   - Charles Wesley
   words_year: '1744'
-  meter: "8.7.8.7"
-  text_meter: "8.7.8.7"
+  meter: 8.7.8.7
+  text_meter: 8.7.8.7
   text_copyright: Public Domain
   umh:
   - '196'
@@ -619,10 +619,10 @@ come-thou-long-expected-jesus:
   music:
   - Rowland H. Prichard
   music_year: '1830'
-  tune_meter: "8.7.8.7.D"
+  tune_meter: 8.7.8.7.D
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "121234321254332"
+  incipit: '121234321254332'
   hymnary:
     text: come_thou_long_expected_jesus_born_to
     tune: hyfrydol_prichard
@@ -633,7 +633,7 @@ come-thou-long-expected-jesus:
     hymnary: st_hilary_anonymous
   - name: CROSS OF JESUS
     hymnary: cross_of_jesus_stainer
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.7.8.7, tune 8.7.8.7.D'
 come-ye-sinners-poor-and-needy:
@@ -642,8 +642,8 @@ come-ye-sinners-poor-and-needy:
   words:
   - J. Hart
   words_year: '1759'
-  meter: "8.7.8.7.8.7"
-  text_meter: "8.7.8.7.8.7."
+  meter: 8.7.8.7.8.7
+  text_meter: 8.7.8.7.8.7.
   text_copyright: Public Domain
   umh:
   - '340'
@@ -653,10 +653,10 @@ come-ye-sinners-poor-and-needy:
   music:
   - Anonymous
   music_year: '1835'
-  tune_meter: "8.7.8.7."
+  tune_meter: 8.7.8.7.
   tune_source: W. Walker's Southern Harmony, 1835
   tune_copyright: Public Domain
-  incipit: "13171331757717134557"
+  incipit: '13171331757717134557'
   hymnary:
     text: come_ye_sinners_poor_and_needy_weak_and
     tune: restoration_southernharmony
@@ -667,7 +667,7 @@ come-ye-sinners-poor-and-needy:
     hymnary: greenville_rousseau
   - name: '[Come, ye sinners, poor and needy]'
     hymnary: come_ye_sinners_poor_and_needy_dunbar
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.7.8.7.8.7., tune 8.7.8.7.'
 crown-him-with-many-crowns:
@@ -677,8 +677,8 @@ crown-him-with-many-crowns:
   - Matthew Bridges
   - Godfrey Thring
   words_year: 1851; 1871
-  meter: "6.6.8.6 D"
-  text_meter: "6.6.8.6. D"
+  meter: 6.6.8.6 D
+  text_meter: 6.6.8.6. D
   text_copyright: Public Domain
   umh:
   - '327'
@@ -687,10 +687,10 @@ crown-him-with-many-crowns:
   music:
   - George J. Elvey
   music_year: '1868'
-  tune_meter: "6.6.8.6"
+  tune_meter: 6.6.8.6
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "111336651432235"
+  incipit: '111336651432235'
   hymnary:
     text: crown_him_with_many_crowns
     tune: diademata_elvey
@@ -701,7 +701,7 @@ crown-him-with-many-crowns:
     hymnary: crown_him_with_many_crowns_nevin
   - name: '[Crown Him with many crowns]'
     hymnary: crown_him_with_many_crowns_gabriel
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 6.6.8.6. D, tune 6.6.8.6'
 dear-lord-and-father-of-mankind:
@@ -839,8 +839,8 @@ god-moves-in-a-mysterious-way:
   words:
   - William Cowper
   words_year: '1774'
-  meter: "8.6.8.6"
-  text_meter: "8.6.8.6."
+  meter: 8.6.8.6
+  text_meter: 8.6.8.6.
   text_copyright: Public Domain
   umh: []
   tune: MYSTERY
@@ -848,10 +848,10 @@ god-moves-in-a-mysterious-way:
   music:
   - K. Jason French
   music_year: ''
-  tune_meter: ""
+  tune_meter: ''
   tune_source: ''
   tune_copyright: Arr. © 2014 Crossworks Music
-  incipit: "13453212313451213453"
+  incipit: '13453212313451213453'
   hymnary:
     text: god_moves_in_a_mysterious_way
     tune: god_moves_in_a_mysterious_way_french
@@ -896,8 +896,8 @@ god-whose-love-is-reigning-oer-us:
   words:
   - William Boyd Grove
   words_year: '1980'
-  meter: "8.7.8.7.8.7"
-  text_meter: "87.87.87"
+  meter: 8.7.8.7.8.7
+  text_meter: 87.87.87
   text_copyright: © 1980, Korean trans. © 2001 William Boyd Groves; Words © 1980 William Boyd Grove
   umh:
   - '100'
@@ -906,15 +906,15 @@ god-whose-love-is-reigning-oer-us:
   music:
   - John Goss
   music_year: '1869'
-  tune_meter: "8.7.8.7.4.4.7"
+  tune_meter: 8.7.8.7.4.4.7
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "555517654365342"
+  incipit: '555517654365342'
   hymnary:
     text: god_whose_love_is_reigning_oer_us
     tune: lauda_anima_goss
   other_tunes: []
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 87.87.87, tune 8.7.8.7.4.4.7'
 god-will-take-care-of-you:
@@ -1003,8 +1003,8 @@ guide-me-o-thou-great-jehovah:
   - William Williams
   - Peter Williams
   words_year: 1745; 1771
-  meter: "8.7.8.7.4.7"
-  text_meter: "8 7. 8 7. 4 7."
+  meter: 8.7.8.7.4.7
+  text_meter: 8 7. 8 7. 4 7.
   text_copyright: Public Domain
   umh:
   - '127'
@@ -1013,10 +1013,10 @@ guide-me-o-thou-great-jehovah:
   music:
   - John Hughes
   music_year: '1907'
-  tune_meter: "8.7.8.7.8.7.7"
+  tune_meter: 8.7.8.7.8.7.7
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "565117123231643"
+  incipit: '565117123231643'
   hymnary:
     text: guide_me_o_thou_great_jehovah
     tune: cwm_rhondda_hughes
@@ -1027,7 +1027,7 @@ guide-me-o-thou-great-jehovah:
     hymnary: dismissal_viner
   - name: SEGUR
     hymnary: segur_holbrook
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8 7. 8 7. 4 7., tune 8.7.8.7.8.7.7'
 hail-to-the-lords-anointed:
@@ -1327,8 +1327,8 @@ i-love-to-tell-the-story:
   - Kate Hankey
   - William G. Fischer
   words_year: 1866; 1869
-  meter: "7.6.7.6 D with refrain"
-  text_meter: "7.6.7.6. D. with refrain"
+  meter: 7.6.7.6 D with refrain
+  text_meter: 7.6.7.6. D. with refrain
   text_copyright: Public Domain
   umh:
   - '156'
@@ -1337,10 +1337,10 @@ i-love-to-tell-the-story:
   music:
   - William G. Fischer
   music_year: '1869'
-  tune_meter: "7.6.7.6 D with refrain"
+  tune_meter: 7.6.7.6 D with refrain
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "51551321116216552123"
+  incipit: '51551321116216552123'
   hymnary:
     text: i_love_to_tell_the_story_of_unseen_thing
     tune: hankey_fischer
@@ -1351,7 +1351,7 @@ i-love-to-tell-the-story:
     hymnary: i_love_to_tell_the_story_jacobs
   - name: '[I love to tell the story]'
     hymnary: i_love_to_tell_the_story_holloway
-  status: check
+  status: reviewed
   notes:
   - 'UMH does not credit the words to: William G. Fischer'
 i-surrender-all:
@@ -1945,8 +1945,8 @@ o-come-o-come-emmanuel:
   words:
   - J. M. Neale
   words_year: '1851'
-  meter: "8.8.8.8.8.8"
-  text_meter: "8.8.8.8.8.8."
+  meter: 8.8.8.8.8.8
+  text_meter: 8.8.8.8.8.8.
   text_copyright: Public Domain
   umh:
   - 112b
@@ -1957,10 +1957,10 @@ o-come-o-come-emmanuel:
   - Anonymous
   - Thomas Helmore
   music_year: ''
-  tune_meter: "8.8.8.8.8.8"
+  tune_meter: 8.8.8.8.8.8
   tune_source: French processional, 15th cent.
   tune_copyright: Public Domain
-  incipit: "13555465434531342171"
+  incipit: '13555465434531342171'
   hymnary:
     text: o_come_o_come_emmanuel_and_ransom
     tune: veni_emmanuel_chant
@@ -1971,7 +1971,7 @@ o-come-o-come-emmanuel:
     hymnary: st_petersburg_bortnianski
   - name: BENISON
     hymnary: benison_hullah
-  status: check
+  status: reviewed
   notes:
   - 'UMH also credits the words to: Henry Sloane Coffin'
   - 'UMH does not credit the words to: J. M. Neale'
@@ -1981,8 +1981,8 @@ o-day-of-peace-that-dimly-shines:
   words:
   - Carl P. Daw
   words_year: '1982'
-  meter: "8.8.8.8 D"
-  text_meter: "8.8.8.8 D"
+  meter: 8.8.8.8 D
+  text_meter: 8.8.8.8 D
   text_copyright: © 1982 Hope Publishing Company
   umh:
   - '729'
@@ -1991,10 +1991,10 @@ o-day-of-peace-that-dimly-shines:
   music:
   - C. Hubert H. Parry
   music_year: '1916'
-  tune_meter: "8.8.8.8"
+  tune_meter: 8.8.8.8
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "1356165456545321"
+  incipit: '1356165456545321'
   hymnary:
     text: o_day_of_peace_that_dimly_shines
     tune: jerusalem_parry
@@ -2003,7 +2003,7 @@ o-day-of-peace-that-dimly-shines:
     hymnary: ye_banks_and_braes
   - name: GRACE
     hymnary: grace_white
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.8.8.8 D, tune 8.8.8.8'
 o-god-beyond-all-praising:
@@ -2069,8 +2069,8 @@ o-little-town-of-bethlehem:
   words:
   - Phillips Brooks
   words_year: '1868'
-  meter: "8.6.8.6 D"
-  text_meter: "8.6.8.6 D."
+  meter: 8.6.8.6 D
+  text_meter: 8.6.8.6 D.
   text_copyright: Public Domain
   umh:
   - '230'
@@ -2080,10 +2080,10 @@ o-little-town-of-bethlehem:
   music:
   - Lewis H. Redner
   music_year: '1868'
-  tune_meter: "8.6.8.6"
+  tune_meter: 8.6.8.6
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "33323546217125333365"
+  incipit: '33323546217125333365'
   hymnary:
     text: o_little_town_of_bethlehem
     tune: st_louis_redner
@@ -2094,7 +2094,7 @@ o-little-town-of-bethlehem:
     hymnary: bethlehem_barnby
   - name: CHRISTMAS CAROL
     hymnary: christmas_carol_davies
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.6.8.6 D., tune 8.6.8.6'
 o-master-let-me-walk-with-thee:
@@ -2138,8 +2138,8 @@ o-sacred-head-now-wounded:
   - Paul Gerhardt
   - James W. Alexander
   words_year: 1656; 1829
-  meter: "7.6.7.6 D"
-  text_meter: "7.6.7.6 D"
+  meter: 7.6.7.6 D
+  text_meter: 7.6.7.6 D
   text_copyright: Public Domain
   umh:
   - '286'
@@ -2149,10 +2149,10 @@ o-sacred-head-now-wounded:
   music:
   - Hans Leo Hassler
   music_year: '1601'
-  tune_meter: "7.6.7.6.D."
+  tune_meter: 7.6.7.6.D.
   tune_source: Secular Origin
   tune_copyright: Public Domain
-  incipit: "517654523322151765"
+  incipit: '517654523322151765'
   hymnary:
     text: o_sacred_head_now_wounded
     tune: passion_chorale_hassler
@@ -2163,7 +2163,7 @@ o-sacred-head-now-wounded:
     hymnary: aurelia_wesley
   - name: WHITFIELD
     hymnary: whitfield_greek
-  status: check
+  status: reviewed
   notes:
   - 'UMH also credits the words to: Anon.'
   - 'UMH does not credit the words to: St. Bernard of Clairvaux, Arnulf, Abbot of Villers-la-Ville'
@@ -2301,8 +2301,8 @@ praise-my-soul-the-king-of-heaven:
   words:
   - Henry Francis Lyte
   words_year: '1834'
-  meter: "8.7.8.7.8.7"
-  text_meter: "8.7.8.7.8.7."
+  meter: 8.7.8.7.8.7
+  text_meter: 8.7.8.7.8.7.
   text_copyright: Public Domain
   umh:
   - '66'
@@ -2312,10 +2312,10 @@ praise-my-soul-the-king-of-heaven:
   music:
   - John Goss
   music_year: '1869'
-  tune_meter: "8.7.8.7.4.4.7"
+  tune_meter: 8.7.8.7.4.4.7
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "555517654365342"
+  incipit: '555517654365342'
   hymnary:
     text: praise_my_soul_the_king_of_heaven
     tune: lauda_anima_goss
@@ -2326,7 +2326,7 @@ praise-my-soul-the-king-of-heaven:
     hymnary: dulce_carmen_12345
   - name: LAUDA ANIMA
     hymnary: lauda_anima_andrews
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.7.8.7.8.7., tune 8.7.8.7.4.4.7'
 praise-to-the-lord-the-almighty:
@@ -2336,8 +2336,8 @@ praise-to-the-lord-the-almighty:
   - Joachim Neander
   - Catherine Winkworth
   words_year: 1680; 1863
-  meter: "14.14.4.7.8"
-  text_meter: "14.14.4.7.8"
+  meter: 14.14.4.7.8
+  text_meter: 14.14.4.7.8
   text_copyright: Public Domain
   umh:
   - '139'
@@ -2347,15 +2347,15 @@ praise-to-the-lord-the-almighty:
   music:
   - Anonymous
   music_year: '1665'
-  tune_meter: "14.14.4.7.8."
+  tune_meter: 14.14.4.7.8.
   tune_source: Praxis Pietatis Melica, 1668; German Choral; Stralsund Gesangbuch
   tune_copyright: Public Domain
-  incipit: "11532176567121115321"
+  incipit: '11532176567121115321'
   hymnary:
     text: praise_to_the_lord_the_almighty_the_king
     tune: lobe_den_herren_115321
   other_tunes: []
-  status: check
+  status: reviewed
   notes:
   - 'UMH also credits the words to: S. Paul Schilling, Rupert E. Davies'
 rejoice-the-lord-is-king:
@@ -2364,8 +2364,8 @@ rejoice-the-lord-is-king:
   words:
   - Charles Wesley
   words_year: '1744'
-  meter: "6.6.6.6.8.8"
-  text_meter: "6.6.6.6.8.8"
+  meter: 6.6.6.6.8.8
+  text_meter: 6.6.6.6.8.8
   text_copyright: Public Domain
   umh:
   - '715'
@@ -2375,10 +2375,10 @@ rejoice-the-lord-is-king:
   music:
   - John Darwall
   music_year: '1770'
-  tune_meter: "6.6.6.6.4.4.4.4"
+  tune_meter: 6.6.6.6.4.4.4.4
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "131531765432231"
+  incipit: '131531765432231'
   hymnary:
     text: rejoice_the_lord_is_king_your_lord_and_k
     tune: darwall_darwall
@@ -2389,7 +2389,7 @@ rejoice-the-lord-is-king:
     hymnary: arthurs_seat_goss
   - name: JUBILATE
     hymnary: jubilate_parker
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 6.6.6.6.8.8, tune 6.6.6.6.4.4.4.4'
 rock-of-ages-cleft-for-me:
@@ -2431,8 +2431,8 @@ savior-like-a-shepherd-lead-us:
   - Dorothy A. Thrupp
   - Henry Francis Lyte
   words_year: '1836'
-  meter: "8.7.8.7.4.7"
-  text_meter: "8.7.8.7.4.7"
+  meter: 8.7.8.7.4.7
+  text_meter: 8.7.8.7.4.7
   text_copyright: Public Domain
   umh:
   - '381'
@@ -2441,10 +2441,10 @@ savior-like-a-shepherd-lead-us:
   music:
   - William B. Bradbury
   music_year: '1859'
-  tune_meter: "8.7.8.7.D."
+  tune_meter: 8.7.8.7.D.
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "33323451532346543333"
+  incipit: '33323451532346543333'
   hymnary:
     text: savior_like_a_shepherd_lead_us
     tune: bradbury_bradbury
@@ -2455,7 +2455,7 @@ savior-like-a-shepherd-lead-us:
     hymnary: st_raphael_hopkins
   - name: SICILIAN MARINERS
     hymnary: sicilian_mariners
-  status: check
+  status: reviewed
   notes:
   - 'UMH does not credit the words to: Henry Francis Lyte'
   - 'meters differ: words 8.7.8.7.4.7, tune 8.7.8.7.D.'
@@ -2465,8 +2465,8 @@ sent-forth-by-gods-blessing:
   words:
   - Omer Westendorf
   words_year: '1964'
-  meter: "6.6.11.6.6.11 D"
-  text_meter: "6.6.11.6.6.11 D"
+  meter: 6.6.11.6.6.11 D
+  text_meter: 6.6.11.6.6.11 D
   text_copyright: © 1964 World Library Publications, Inc.
   umh:
   - '664'
@@ -2474,15 +2474,15 @@ sent-forth-by-gods-blessing:
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: "12.11.12.11 D"
+  tune_meter: 12.11.12.11 D
   tune_source: Traditional Welsh Melody
   tune_copyright: Public Domain
-  incipit: "51354311243217551321"
+  incipit: '51354311243217551321'
   hymnary:
     text: sent_forth_by_gods_blessing
     tune: ash_grove
   other_tunes: []
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 6.6.11.6.6.11 D, tune 12.11.12.11 D'
 sing-praise-to-god-who-reigns-above:
@@ -2523,10 +2523,11 @@ sing-praise-to-god-who-reigns-above:
 sing-we-now-of-christmas:
   title: Sing We Now of Christmas
   first_line: Sing we now of Christmas; Noel, sing we here
-  words: []
+  words:
+  - Traditional French carol
   words_year: ''
-  meter: "11.10.10.11"
-  text_meter: "11 10.10 11"
+  meter: 11.10.10.11
+  text_meter: 11 10.10 11
   text_copyright: ''
   umh:
   - '237'
@@ -2534,17 +2535,17 @@ sing-we-now-of-christmas:
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: "11.10.11.10"
+  tune_meter: 11.10.11.10
   tune_source: Old French tune
   tune_copyright: Public Domain
-  incipit: "15645344532115645344"
+  incipit: '15645344532115645344'
   hymnary:
     text: sing_we_now_of_christmas
     tune: noel_nouvelet
   other_tunes:
   - name: NOËL! NOËL
     hymnary: noel_noel_traditional
-  status: check
+  status: reviewed
   notes:
   - no author for the words
   - 'meters differ: words 11 10.10 11, tune 11.10.11.10'
@@ -2580,8 +2581,8 @@ sweet-hour-of-prayer:
   words:
   - William W. Walford
   words_year: '1845'
-  meter: "8.8.8.8 D"
-  text_meter: "8.8.8.8 D"
+  meter: 8.8.8.8 D
+  text_meter: 8.8.8.8 D
   text_copyright: Public Domain
   umh:
   - '496'
@@ -2590,10 +2591,10 @@ sweet-hour-of-prayer:
   music:
   - William B. Bradbury
   music_year: '1860'
-  tune_meter: "8.8.8.8"
+  tune_meter: 8.8.8.8
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "1345567165332123"
+  incipit: '1345567165332123'
   hymnary:
     text: sweet_hour_of_prayer_sweet_hour_of_pray
     tune: sweet_hour_of_prayer_sweet_hour_bradbury
@@ -2604,7 +2605,7 @@ sweet-hour-of-prayer:
     hymnary: sweet_hour_of_prayer_sweet_hour_dortch
   - name: '[Sweet hour of prayer! sweet hour of prayer!]'
     hymnary: sweet_hour_of_prayer_sween_hour_33451
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.8.8.8 D, tune 8.8.8.8'
 take-my-life-and-let-it-be:
@@ -2613,8 +2614,8 @@ take-my-life-and-let-it-be:
   words:
   - Frances Ridley Havergal
   words_year: '1874'
-  meter: "7.7.7.7.7"
-  text_meter: "7.7.7.7.7"
+  meter: 7.7.7.7
+  text_meter: 7.7.7.7.7
   text_copyright: Public Domain
   umh:
   - '399'
@@ -2623,10 +2624,10 @@ take-my-life-and-let-it-be:
   music:
   - Ferdinand Hérold
   music_year: '1839'
-  tune_meter: "7.7.7.7"
+  tune_meter: 7.7.7.7
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "321143256653123"
+  incipit: '321143256653123'
   hymnary:
     text: take_my_life_and_let_it_be
     tune: messiah_herold
@@ -2637,7 +2638,7 @@ take-my-life-and-let-it-be:
     hymnary: take_my_life_and_let_it_be_bradbury
   - name: NOTTINGHAM
     hymnary: nottingham_mozart
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 7.7.7.7.7, tune 7.7.7.7'
 the-battle-hymn-of-the-republic:
@@ -2733,8 +2734,8 @@ the-god-of-abraham-praise:
   - Daniel ben Judah
   - Thomas Olivers
   words_year: '1770'
-  meter: "6.6.8.4 D"
-  text_meter: "6.6.8.4.D."
+  meter: 6.6.8.4 D
+  text_meter: 6.6.8.4.D.
   text_copyright: Public Domain
   umh:
   - '116'
@@ -2744,10 +2745,10 @@ the-god-of-abraham-praise:
   music:
   - Meyer Lyon
   music_year: '1770'
-  tune_meter: "6.6.8.4 D"
+  tune_meter: 6.6.8.4 D
   tune_source: Traditional Yigdal melody; traditional Hebrew melody
   tune_copyright: Public Domain
-  incipit: "512345345675234"
+  incipit: '512345345675234'
   hymnary:
     text: the_god_of_abraham_praise_who_reigns
     tune: leoni_hebrew_5123453456752
@@ -2758,7 +2759,7 @@ the-god-of-abraham-praise:
     hymnary: the_god_of_abraham_praise_anonymous
   - name: URIEL
     hymnary: uriel_stryker
-  status: check
+  status: reviewed
   notes:
   - 'UMH does not credit the words to: Daniel ben Judah'
 the-old-rugged-cross:
@@ -2767,8 +2768,8 @@ the-old-rugged-cross:
   words:
   - George Bennard
   words_year: '1913'
-  meter: "12.8.12.8 with refrain"
-  text_meter: "12.8.12.8 with refrain"
+  meter: 12.8.12.8 with refrain
+  text_meter: 12.8.12.8 with refrain
   text_copyright: Public Domain
   umh:
   - '504'
@@ -2777,17 +2778,17 @@ the-old-rugged-cross:
   music:
   - George Bennard
   music_year: '1913'
-  tune_meter: "6.6.8.6.6.8 with refrain"
+  tune_meter: 6.6.8.6.6.8 with refrain
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: "34546555657667654543"
+  incipit: '34546555657667654543'
   hymnary:
     text: on_a_hill_far_away_stood_an_old_rugged
     tune: old_rugged_cross_bennard
   other_tunes:
   - name: '[On a hill far away stood an old rugged cross]'
     hymnary: on_a_hill_far_away_stood_an_old_bradley
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 12.8.12.8 with refrain, tune 6.6.8.6.6.8 with refrain'
 thine-be-the-glory:
@@ -2855,8 +2856,8 @@ this-is-my-song:
   words:
   - Lloyd Stone
   words_year: '1934'
-  meter: "11.10.11.10.11.10"
-  text_meter: "11.10.11.10.11.10."
+  meter: 11.10.11.10.11.10
+  text_meter: 11.10.11.10.11.10.
   text_copyright: © 1934, 1962, Lorenz Publishing Co
   umh:
   - '437'
@@ -2865,15 +2866,15 @@ this-is-my-song:
   music:
   - Jean Sibelius
   music_year: '1899'
-  tune_meter: "10.10.10.10.10.10."
+  tune_meter: 10.10.10.10.10.10.
   tune_source: ''
   tune_copyright: P. D. in the U.S. and Canada, © Breitkopf & Härtel in other territories of the world
-  incipit: "323432312233234"
+  incipit: '323432312233234'
   hymnary:
     text: this_is_my_song_o_god_of_all_the_nations
     tune: finlandia
   other_tunes: []
-  status: check
+  status: reviewed
   notes:
   - 'UMH also credits the words to: Georgia Harkness'
   - 'meters differ: words 11.10.11.10.11.10., tune 10.10.10.10.10.10.'
@@ -2998,10 +2999,11 @@ we-three-kings:
 were-you-there:
   title: Were You There
   first_line: Were you there when they crucified my Lord?
-  words: []
+  words:
+  - African American spiritual
   words_year: ''
-  meter: "Irregular"
-  text_meter: "Irregular"
+  meter: Irregular
+  text_meter: Irregular
   text_copyright: Public Domain
   umh:
   - '288'
@@ -3009,15 +3011,15 @@ were-you-there:
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: "10.10 with refrain"
+  tune_meter: 10.10 with refrain
   tune_source: Afro-American spiritual
   tune_copyright: Public Domain
-  incipit: "513332132113555"
+  incipit: '513332132113555'
   hymnary:
     text: were_you_there_when_they_crucified_my_lo
     tune: were_you_there
   other_tunes: []
-  status: check
+  status: reviewed
   notes:
   - no author for the words
 what-child-is-this:
@@ -3026,8 +3028,8 @@ what-child-is-this:
   words:
   - W. Chatterton Dix
   words_year: ''
-  meter: "8.7.8.7 with refrain"
-  text_meter: "8.7.8.7. with Refrain"
+  meter: 8.7.8.7 with refrain
+  text_meter: 8.7.8.7. with Refrain
   text_copyright: Public Domain
   umh:
   - '219'
@@ -3035,10 +3037,10 @@ what-child-is-this:
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: "8.7.8.7.6.8.6.7"
+  tune_meter: 8.7.8.7.6.8.6.7
   tune_source: English ballad, 16th cent.
   tune_copyright: Public Domain
-  incipit: "134565427123117"
+  incipit: '134565427123117'
   hymnary:
     text: what_child_is_this_who_laid_to_rest
     tune: greensleeves
@@ -3049,7 +3051,7 @@ what-child-is-this:
     hymnary: holy_child_nevin
   - name: '[What child is this, who, laid to rest]'
     hymnary: what_child_is_this_who_laid_to_babcock
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.7.8.7. with Refrain, tune 8.7.8.7.6.8.6.7'
 what-wondrous-love-is-this:

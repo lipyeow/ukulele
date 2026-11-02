@@ -360,7 +360,8 @@ Decisions:
   `hymnary.org/explore` into `tmp/hymnary/`.
 - Tunes follow UMH first, then the most-published tune for hymns not in UMH; `tune_basis` says which.
   `TUNE_CHOICES` in `scripts/hymnary.py` holds tunes confirmed by hand (`tune_basis: chosen`).
-- Author names keep Hymnary's spelling; only real differences from UMH's credits are flagged.
+- Author credits follow Hymnary's text records, not UMH, by review decision; UMH differences stay in `notes`.
+  Where the tune's and words' meters differ, `meter` keeps the words' meter unless corrected by hand.
 - `status`: `likely` follows UMH with nothing to check; `check` is listed in `review.md`. Set `reviewed`
   once confirmed by hand. `build` never overwrites a `reviewed` entry.
 - `.cho` files and PDFs are unchanged for now. What to print on the PDFs is still undecided.

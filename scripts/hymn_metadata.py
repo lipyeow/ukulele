@@ -88,6 +88,8 @@ def review(hymns, people):
     likely = sum(h["status"] == "likely" for h in hymns.values())
     lines = ["# Hymn metadata to review", "", CREDIT,
              f"Tunes follow *The United Methodist Hymnal* (UMH) where it has the hymn. `tune_basis: chosen` marks tunes confirmed by hand. {likely} hymns follow UMH with nothing to check, so they aren't listed here.", ""]
+    if not flagged:
+        lines += ["Nothing to review.", ""]
     for heading, group in ((f"Decide the tune ({len(decide)})", decide), (f"Check the details ({len(details)})", details)):
         if not group:
             continue

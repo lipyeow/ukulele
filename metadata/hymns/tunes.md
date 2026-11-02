@@ -48,7 +48,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [HE LEADETH ME](https://hymnary.org/tune/he_leadeth_me_bradbury) | 8.8.8.8 D | William B. Bradbury | [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) |
 | [HELMSLEY](https://hymnary.org/tune/helmsley) | 8.7.8.7.4.7 | Martin Madan; Thomas Olivers; Thomas Augustine Arne | [Lo, He Comes with Clouds Descending](../../songs/hymns/lo-he-comes-with-clouds-descending.cho) |
 | [HERE I AM, LORD](https://hymnary.org/tune/here_i_am_lord_schutte) | 7.7.7.4 D with refrain | Daniel L. Schutte | [Here I Am, Lord](../../songs/hymns/here-i-am-lord.cho) |
-| [HURSLEY](https://hymnary.org/tune/hursley_ritter) | 8.6.8.6 | Katholisches Gesangbuch, Vienna, ca. 1774 | [Come, Sinners, to the Gospel Feast](../../songs/hymns/come-sinners-to-the-gospel-feast.cho) |
+| [HURSLEY](https://hymnary.org/tune/hursley_ritter) | 8.8.8.8 | Katholisches Gesangbuch, Vienna, ca. 1774 | [Come, Sinners, to the Gospel Feast](../../songs/hymns/come-sinners-to-the-gospel-feast.cho) |
 | [HYFRYDOL](https://hymnary.org/tune/hyfrydol_prichard) | 8.7.8.7 | Rowland H. Prichard | [Come Thou Long-Expected Jesus](../../songs/hymns/come-thou-long-expected-jesus.cho) |
 | [[I don't know about tomorrow]](https://hymnary.org/tune/i_dont_know_about_tomorrow_stanphill) |  | Ira F. Stanphill | [I Know Who Holds Tomorrow](../../songs/hymns/i-know-who-holds-tomorrow.cho) |
 | [ID Y ENSEÑAD](https://hymnary.org/tune/id_y_ensenad_gabarain) | 10.9.10.8 D with refrain | Cesáreo Gabarain | [You Are the Seed](../../songs/hymns/you-are-the-seed.cho) |
@@ -68,7 +68,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [LORD OF THE DANCE](https://hymnary.org/tune/simple_gifts) | Irregular | Joseph Brackett | [Lord of the Dance](../../songs/hymns/lord-of-the-dance.cho) |
 | [MARTIN](https://hymnary.org/tune/god_cares_martin) | 8.6.8.6 with refrain | W. Stillman Martin | [God Will Take Care of You](../../songs/hymns/god-will-take-care-of-you.cho) |
 | [MARYTON](https://hymnary.org/tune/maryton_smith) | 8.8.8.8 | Henry Percy Smith | [O Master Let Me Walk with Thee](../../songs/hymns/o-master-let-me-walk-with-thee.cho) |
-| [MESSIAH](https://hymnary.org/tune/messiah_herold) | 7.7.7.7.7 | Ferdinand Hérold | [Take My Life, and Let It Be](../../songs/hymns/take-my-life-and-let-it-be.cho) |
+| [MESSIAH](https://hymnary.org/tune/messiah_herold) | 7.7.7.7 | Ferdinand Hérold | [Take My Life, and Let It Be](../../songs/hymns/take-my-life-and-let-it-be.cho) |
 | [MIT FREUDEN ZART](https://hymnary.org/tune/mit_freuden_zart) | 8.7.8.7.8.8.7 | Bohemian Brethren's Kirchengesänge, 1566 | [Sing Praise to God Who Reigns Above](../../songs/hymns/sing-praise-to-god-who-reigns-above.cho) |
 | [MYSTERY](https://hymnary.org/tune/god_moves_in_a_mysterious_way_french) | 8.6.8.6 | K. Jason French | [God Moves in a Mysterious Way](../../songs/hymns/god-moves-in-a-mysterious-way.cho) |
 | [NEAR THE CROSS](https://hymnary.org/tune/near_the_cross_doane) | 7.6.7.6 with refrain | W. Howard Doane | [Jesus Keep Me Near the Cross](../../songs/hymns/jesus-keep-me-near-the-cross.cho) |
@@ -253,6 +253,10 @@ Tunes in the same meter can usually swap words.
 
 - [HERE I AM, LORD](https://hymnary.org/tune/here_i_am_lord_schutte): [Here I Am, Lord](../../songs/hymns/here-i-am-lord.cho)
 
+### 7.7.7.7
+
+- [MESSIAH](https://hymnary.org/tune/messiah_herold): [Take My Life, and Let It Be](../../songs/hymns/take-my-life-and-let-it-be.cho)
+
 ### 7.7.7.7 D
 
 - [ABERYSTWYTH](https://hymnary.org/tune/aberystwyth_parry): [Jesus, Lover of My Soul](../../songs/hymns/jesus-lover-of-my-soul.cho)
@@ -260,10 +264,6 @@ Tunes in the same meter can usually swap words.
 ### 7.7.7.7 with alleluias
 
 - [EASTER HYMN](https://hymnary.org/tune/easter_hymn_lyra_davidica): [Christ the Lord Is Risen Today](../../songs/hymns/christ-the-lord-is-risen-today.cho)
-
-### 7.7.7.7.7
-
-- [MESSIAH](https://hymnary.org/tune/messiah_herold): [Take My Life, and Let It Be](../../songs/hymns/take-my-life-and-let-it-be.cho)
 
 ### 7.7.7.7.7.7
 
@@ -278,7 +278,6 @@ Tunes in the same meter can usually swap words.
 ### 8.6.8.6
 
 - [DOVE OF PEACE](https://hymnary.org/tune/dove_of_peace_51116): [I Come with Joy to Meet My Lord](../../songs/hymns/i-come-with-joy-to-meet-my-lord.cho)
-- [HURSLEY](https://hymnary.org/tune/hursley_ritter): [Come, Sinners, to the Gospel Feast](../../songs/hymns/come-sinners-to-the-gospel-feast.cho)
 - [LAND OF REST](https://hymnary.org/tune/land_of_rest_american): [Lord Who Throughout These Forty Days](../../songs/hymns/lord-who-throughout-these-forty-days.cho)
 - [MYSTERY](https://hymnary.org/tune/god_moves_in_a_mysterious_way_french): [God Moves in a Mysterious Way](../../songs/hymns/god-moves-in-a-mysterious-way.cho)
 - [ST. ANNE](https://hymnary.org/tune/st_anne_croft): [O God Our Help in Ages Past](../../songs/hymns/o-god-our-help-in-ages-past.cho)
@@ -359,6 +358,7 @@ Tunes in the same meter can usually swap words.
 
 - [GIFT OF LOVE](https://hymnary.org/tune/o_waly_waly): [The Gift of Love](../../songs/hymns/the-gift-of-love.cho)
 - [HAMBURG](https://hymnary.org/tune/hamburg_mason): [When I Survey the Wondrous Cross](../../songs/hymns/when-i-survey-the-wondrous-cross.cho)
+- [HURSLEY](https://hymnary.org/tune/hursley_ritter): [Come, Sinners, to the Gospel Feast](../../songs/hymns/come-sinners-to-the-gospel-feast.cho)
 - [MARYTON](https://hymnary.org/tune/maryton_smith): [O Master Let Me Walk with Thee](../../songs/hymns/o-master-let-me-walk-with-thee.cho)
 - [OLD 100TH](https://hymnary.org/tune/old_hundredth_bourgeois): [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho)
 

@@ -26,6 +26,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [G. W. Briggs](https://hymnary.org/person/Briggs_GW) | 1875–1959 | [God Has Spoken](../../songs/hymns/god-has-spoken.cho) |  |
 | [Phillips Brooks](https://hymnary.org/person/Brooks_P) | 1835–1893 | [O Little Town of Bethlehem](../../songs/hymns/o-little-town-of-bethlehem.cho) |  |
 | [Edmond Budry](https://hymnary.org/person/Budry_Edmond) | 1854–1932 | [Thine Be the Glory](../../songs/hymns/thine-be-the-glory.cho) |  |
+| Traditional French carol |  | [Sing We Now of Christmas](../../songs/hymns/sing-we-now-of-christmas.cho) |  |
 | [Sydney Carter](https://hymnary.org/person/Carter_Sydney) | 1915–2004 | [Lord of the Dance](../../songs/hymns/lord-of-the-dance.cho) |  |
 | [Thomas O. Chisholm](https://hymnary.org/person/Chisholm_Thomas) | 1866–1960 | [Great Is Thy Faithfulness](../../songs/hymns/great-is-thy-faithfulness.cho) |  |
 | [Skinner Chávez-Melo](https://hymnary.org/person/ChavezMelo_Skinner) | 1944–1992 | [You Are the Seed](../../songs/hymns/you-are-the-seed.cho) |  |
@@ -127,6 +128,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [Natalie Sleeth](https://hymnary.org/person/Sleeth_N) | 1930–1992 | [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) | [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) |
 | [Henry Thomas Smart](https://hymnary.org/person/Smart_Henry) | 1813–1879 |  | [Angels from the Realms of Glory](../../songs/hymns/angels-from-the-realms-of-glory.cho) |
 | [Henry Percy Smith](https://hymnary.org/person/Smith_HenryPercy) | 1825–1898 |  | [O Master Let Me Walk with Thee](../../songs/hymns/o-master-let-me-walk-with-thee.cho) |
+| African American spiritual |  | [Were You There](../../songs/hymns/were-you-there.cho) |  |
 | [Ira F. Stanphill](https://hymnary.org/person/Stanphill_IF) | 1920–1993 | [I Know Who Holds Tomorrow](../../songs/hymns/i-know-who-holds-tomorrow.cho) | [I Know Who Holds Tomorrow](../../songs/hymns/i-know-who-holds-tomorrow.cho) |
 | [Louisa M. R. Stead](https://hymnary.org/person/Stead_Louisa) | 1850–1917 | [Tis So Sweet to Trust in Jesus](../../songs/hymns/tis-so-sweet-to-trust-in-jesus.cho) |  |
 | [William Steffe](https://hymnary.org/person/Steffe_William) | 1830–1890 |  | [The Battle Hymn of the Republic](../../songs/hymns/the-battle-hymn-of-the-republic.cho) |
