@@ -15,6 +15,18 @@ a-mighty-fortress-is-our-god:
   - '110'
   - '764'
   - '780'
+  topics:
+  - Adoration and Praise
+  - Christian Year
+  - Funerals and Memorial Services
+  - Heritage
+  - Kingdom of God
+  - Nature
+  - Particular Times of Worship
+  - Presence (Holy Spirit)
+  - Psalter
+  - Sanctifiying and Perfecting Grace
+  - The Glory of the Triune God
   tune: EIN' FESTE BURG
   tune_basis: umh
   music:
@@ -43,6 +55,17 @@ abide-with-me:
   text_copyright: Public Domain
   umh:
   - '700'
+  topics:
+  - Assurance
+  - Calmness and Serenity
+  - Comfort
+  - Eternal Life
+  - Evening Prayer
+  - Funerals and Memorial Services
+  - Grief
+  - Jesus Christ
+  - New Heaven and a New Earth
+  - Particular Times of Worship
   tune: EVENTIDE
   tune_basis: umh
   music:
@@ -78,6 +101,20 @@ all-creatures-of-our-god-and-king:
   - '62'
   - 764b
   - '861'
+  topics:
+  - Adoration and Praise
+  - Christian Year
+  - Creation
+  - Eternal Life
+  - Music and Singing
+  - Nature
+  - Opening Hymns
+  - Processionals
+  - Psalter
+  - Responses, Antiphonal
+  - Service Music
+  - The Glory of the Triune God
+  - Trinity
   tune: LASST UNS ERFREUEN
   tune_basis: umh
   music: []
@@ -105,20 +142,27 @@ all-glory-laud-and-honor:
   - Theodulf, Bishop of Orléans
   - J. M. Neale
   words_year: 1854; c. 820
-  meter: 7.6.7.6 with refrain
-  text_meter: 7.6.7.6. with refrain
+  meter: "7.6.7.6 with refrain"
+  text_meter: "7.6.7.6. with refrain"
   text_copyright: Public Domain
   umh:
   - '280'
+  topics:
+  - Adoration and Praise
+  - Children's Choir Selections
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Processionals
   tune: ST. THEODULPH
   tune_basis: umh
   music:
   - Melchior Teschner
   music_year: '1613'
-  tune_meter: 7.6.7.6.D.
+  tune_meter: "7.6.7.6.D."
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '15567113211715155671'
+  incipit: "15567113211715155671"
   hymnary:
     text: all_glory_laud_and_honor
     tune: st_theodulph_teschner
@@ -138,21 +182,30 @@ all-hail-the-power-of-jesus-name:
   words:
   - Edward Perronet
   words_year: '1780'
-  meter: 8.6.8.6.8.6
-  text_meter: 8.6.8.6.8.6.
+  meter: "8.6.8.6.8.6"
+  text_meter: "8.6.8.6.8.6."
   text_copyright: Public Domain
   umh:
   - '154'
   - '155'
+  topics:
+  - Christian Year
+  - Funerals and Memorial Services
+  - Love
+  - Opening Hymns
+  - Processionals
+  - Salvation
+  - The Grace of Jesus Christ
+  - Zeal
   tune: DIADEM
   tune_basis: chosen
   music:
   - James Ellor
   music_year: '1838'
-  tune_meter: 8.6.6.8. and refrain
+  tune_meter: "8.6.6.8. and refrain"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '512345121717655'
+  incipit: "512345121717655"
   hymnary:
     text: all_hail_the_power_of_jesus_name_let
     tune: diadem_ellor
@@ -173,19 +226,27 @@ all-things-bright-and-beautiful:
   words:
   - Cecil Frances Alexander
   words_year: '1848'
-  meter: 7.6.7.6 with refrain
-  text_meter: 7.6.7.6 with refrain
+  meter: "7.6.7.6 with refrain"
+  text_meter: "7.6.7.6 with refrain"
   text_copyright: Public Domain
   umh:
   - '147'
+  topics:
+  - Adoration and Praise
+  - Children's Choir Selections
+  - Creation
+  - Nature
+  - Responses, Antiphonal
+  - Testimony and Witness
+  - The Glory of the Triune God
   tune: ROYAL OAK
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: 7.6.7.6 D
+  tune_meter: "7.6.7.6 D"
   tune_source: English Traditional; The Dancing Master, 1686 (melody)
   tune_copyright: Public Domain
-  incipit: '534321765346767'
+  incipit: "534321765346767"
   hymnary:
     text: each_little_flower_that_opens
     tune: royal_oak
@@ -210,6 +271,12 @@ angels-from-the-realms-of-glory:
   text_copyright: Public Domain
   umh:
   - '220'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Opening Hymns
+  - Responses, Antiphonal
   tune: REGENT SQUARE
   tune_basis: umh
   music:
@@ -242,6 +309,11 @@ are-ye-able:
   text_copyright: Public Domain
   umh:
   - '530'
+  topics:
+  - Closing Hymns
+  - Discipleship and Service
+  - Eternal Life
+  - Sanctifiying and Perfecting Grace
   tune: BEACON HILL
   tune_basis: umh
   music:
@@ -269,6 +341,17 @@ because-he-lives:
   text_copyright: © 1971 Hanna Street Music (BMI) (admin. at CapitolCMGPublishing.com)
   umh:
   - '364'
+  topics:
+  - Christian Year
+  - Confession
+  - Eternal Life
+  - Forgiveness
+  - Jesus Christ
+  - Justifying Grace
+  - Love
+  - Pardon
+  - Prayer
+  - Service Music
   tune: RESURRECTION
   tune_basis: umh
   music:
@@ -295,6 +378,12 @@ blessed-assurance:
   text_copyright: Public Domain
   umh:
   - '369'
+  topics:
+  - Assurance
+  - Jesus Christ
+  - Justifying Grace
+  - New Creation
+  - Obedience
   tune: ASSURANCE
   tune_basis: umh
   music:
@@ -318,19 +407,28 @@ christ-is-the-worlds-light:
   words:
   - Fred Pratt Green
   words_year: '1968'
-  meter: 10.11.11.6
-  text_meter: 10 11 11.6
+  meter: "10.11.11.6"
+  text_meter: "10 11 11.6"
   text_copyright: © 1969 Hope Publishing Co.
   umh:
   - '188'
+  topics:
+  - Christian Year
+  - Glory
+  - Light
+  - Peace, World
+  - Redemption
+  - Responses, Antiphonal
+  - Service Music
+  - The Grace of Jesus Christ
   tune: CHRISTE SANCTORUM
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: 11.11.11.5
+  tune_meter: "11.11.11.5"
   tune_source: La Feillée, Méthode du plain-chant, 1782
   tune_copyright: Public Domain
-  incipit: '53432134556556715176'
+  incipit: "53432134556556715176"
   hymnary:
     text: christ_is_the_worlds_light_christ_and_no
     tune: christe_sanctorum_53432
@@ -353,6 +451,13 @@ christ-the-lord-is-risen-today:
   text_copyright: Public Domain
   umh:
   - '302'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Funerals and Memorial Services
+  - Jesus Christ
+  - Joy
+  - Processionals
   tune: EASTER HYMN
   tune_basis: umh
   music: []
@@ -384,6 +489,14 @@ christ-whose-glory-fills-the-skies:
   text_copyright: Public Domain
   umh:
   - '173'
+  topics:
+  - Aspiration and Resolve
+  - Christian Perfection
+  - Christian Year
+  - Glory
+  - Light
+  - Particular Times of Worship
+  - The Grace of Jesus Christ
   tune: RATISBON
   tune_basis: umh
   music:
@@ -417,6 +530,14 @@ come-down-o-love-divine:
   text_copyright: Public Domain
   umh:
   - '475'
+  topics:
+  - Aspiration and Resolve
+  - Hope
+  - Love
+  - Prayer
+  - Presence (Holy Spirit)
+  - Sanctifiying and Perfecting Grace
+  - Trust
   tune: DOWN AMPNEY
   tune_basis: umh
   music:
@@ -449,6 +570,12 @@ come-let-us-join-our-friends-above:
   text_copyright: Public Domain
   umh:
   - '709'
+  topics:
+  - All Saints
+  - Christian Year
+  - Funerals and Memorial Services
+  - New Heaven and a New Earth
+  - The Sacraments and Rites of the Church
   tune: FOREST GREEN
   tune_basis: umh
   music:
@@ -476,20 +603,32 @@ come-o-thou-traveler-unknown:
   words:
   - Charles Wesley
   words_year: '1742'
-  meter: 8.8.8.8.8.8
-  text_meter: 8.8.8.8.8.8
+  meter: "8.8.8.8.8.8"
+  text_meter: "8.8.8.8.8.8"
   text_copyright: Public Domain
   umh:
   - '386'
   - '387'
+  topics:
+  - Aldersgate
+  - Biblical Narrative
+  - Christian Experience
+  - Faith
+  - Love
+  - Nature
+  - New Creation
+  - Pilgrimage
+  - Prevenient Grace
+  - Sanctifiying and Perfecting Grace
+  - The Glory of the Triune God
   tune: CANDLER
   tune_basis: chosen
   music: []
   music_year: ''
-  tune_meter: 8.8.8.8
+  tune_meter: "8.8.8.8"
   tune_source: Scottish traditional melody
   tune_copyright: Public Domain
-  incipit: '511212353212321'
+  incipit: "511212353212321"
   hymnary:
     text: come_o_thou_traveller_unknown
     tune: ye_banks_and_braes
@@ -509,20 +648,28 @@ come-sinners-to-the-gospel-feast:
   words:
   - Charles Wesley
   words_year: '1747'
-  meter: 8.8.8.8
-  text_meter: 8.6.8.6
+  meter: "8.8.8.8"
+  text_meter: "8.6.8.6"
   text_copyright: Public Domain
   umh:
   - '339'
   - '616'
+  topics:
+  - Call to the Christian Life
+  - Christian Experience
+  - Holy Communion
+  - Jesus Christ
+  - Prevenient Grace
+  - Salvation
+  - The Sacraments and Rites of the Church
   tune: HURSLEY
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: 8.8.8.8
+  tune_meter: "8.8.8.8"
   tune_source: Katholisches Gesangbuch, Vienna, ca. 1774
   tune_copyright: Public Domain
-  incipit: '111171232133332'
+  incipit: "111171232133332"
   hymnary:
     text: come_sinners_to_the_gospel_feast_let_ev
     tune: hursley_ritter
@@ -542,21 +689,29 @@ come-thou-almighty-king:
   words:
   - Anonymous
   words_year: '1757'
-  meter: 6.6.4.6.6.6.4
-  text_meter: 6.6.4.6.6.6.4.
+  meter: "6.6.4.6.6.6.4"
+  text_meter: "6.6.4.6.6.6.4."
   text_copyright: Public Domain
   umh:
   - '61'
   - 61b
+  topics:
+  - Adoration and Praise
+  - Christian Year
+  - Jesus Christ
+  - Presence (Holy Spirit)
+  - Service Music
+  - The Glory of the Triune God
+  - Trinity
   tune: ITALIAN HYMN
   tune_basis: chosen
   music:
   - Felice de Giardini
   music_year: '1769'
-  tune_meter: 6.6.4.6.6.6.4.
+  tune_meter: "6.6.4.6.6.6.4."
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '531217112345432'
+  incipit: "531217112345432"
   hymnary:
     text: come_thou_almighty_king_help_us_thy
     tune: italian_hymn_giardini
@@ -576,20 +731,23 @@ come-thou-fount-of-every-blessing:
   - Robert Robinson
   - Martin Madan
   words_year: 1758; 1760
-  meter: 8.7.8.7 D
-  text_meter: 8.7.8.7.D
+  meter: "8.7.8.7 D"
+  text_meter: "8.7.8.7.D"
   text_copyright: Public Domain
   umh:
   - '400'
+  topics:
+  - Jesus Christ
+  - Sanctifiying and Perfecting Grace
   tune: NETTLETON
   tune_basis: umh
   music:
   - Anonymous
   music_year: ''
-  tune_meter: 8.7.8.7 D
+  tune_meter: "8.7.8.7 D"
   tune_source: Repository of Sacred Music, Part Second, Harrisburg, 1813; American melody
   tune_copyright: Public Domain
-  incipit: '321135223565321'
+  incipit: "321135223565321"
   hymnary:
     text: come_thou_fount_of_every_blessing
     tune: nettleton
@@ -609,20 +767,27 @@ come-thou-long-expected-jesus:
   words:
   - Charles Wesley
   words_year: '1744'
-  meter: 8.7.8.7
-  text_meter: 8.7.8.7
+  meter: "8.7.8.7"
+  text_meter: "8.7.8.7"
   text_copyright: Public Domain
   umh:
   - '196'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Freedom and Liberation
+  - Hope
+  - Jesus Christ
+  - Opening Hymns
   tune: HYFRYDOL
   tune_basis: umh
   music:
   - Rowland H. Prichard
   music_year: '1830'
-  tune_meter: 8.7.8.7.D
+  tune_meter: "8.7.8.7.D"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '121234321254332'
+  incipit: "121234321254332"
   hymnary:
     text: come_thou_long_expected_jesus_born_to
     tune: hyfrydol_prichard
@@ -642,21 +807,26 @@ come-ye-sinners-poor-and-needy:
   words:
   - J. Hart
   words_year: '1759'
-  meter: 8.7.8.7.8.7
-  text_meter: 8.7.8.7.8.7.
+  meter: "8.7.8.7.8.7"
+  text_meter: "8.7.8.7.8.7."
   text_copyright: Public Domain
   umh:
   - '340'
   - 340b
+  topics:
+  - Affliction and Tribulation
+  - Call to the Christian Life
+  - Christian Experience
+  - Prevenient Grace
   tune: RESTORATION
   tune_basis: chosen
   music:
   - Anonymous
   music_year: '1835'
-  tune_meter: 8.7.8.7.
+  tune_meter: "8.7.8.7."
   tune_source: W. Walker's Southern Harmony, 1835
   tune_copyright: Public Domain
-  incipit: '13171331757717134557'
+  incipit: "13171331757717134557"
   hymnary:
     text: come_ye_sinners_poor_and_needy_weak_and
     tune: restoration_southernharmony
@@ -677,20 +847,28 @@ crown-him-with-many-crowns:
   - Matthew Bridges
   - Godfrey Thring
   words_year: 1851; 1871
-  meter: 6.6.8.6 D
-  text_meter: 6.6.8.6. D
+  meter: "6.6.8.6 D"
+  text_meter: "6.6.8.6. D"
   text_copyright: Public Domain
   umh:
   - '327'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Particular Times of Worship
+  - Peace, World
+  - Processionals
+  - Testimony and Witness
   tune: DIADEMATA
   tune_basis: umh
   music:
   - George J. Elvey
   music_year: '1868'
-  tune_meter: 6.6.8.6
+  tune_meter: "6.6.8.6"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '111336651432235'
+  incipit: "111336651432235"
   hymnary:
     text: crown_him_with_many_crowns
     tune: diademata_elvey
@@ -710,20 +888,31 @@ dear-lord-and-father-of-mankind:
   words:
   - John Greenleaf Whittier
   words_year: '1872'
-  meter: 8.6.8.8.6
-  text_meter: 8.6.8.8.6
+  meter: "8.6.8.8.6"
+  text_meter: "8.6.8.8.6"
   text_copyright: Public Domain
   umh:
   - '358'
+  topics:
+  - Calmness and Serenity
+  - Confession
+  - Discipleship and Service
+  - Hope
+  - Pardon
+  - Prayer
+  - Prevenient Grace
+  - Sanctifiying and Perfecting Grace
+  - Service Music
+  - Trust
   tune: REPTON
   tune_basis: chosen
   music:
   - C. Hubert H. Parry
   music_year: '1888'
-  tune_meter: 8.6.8.8.6
+  tune_meter: "8.6.8.8.6"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '155653455114517'
+  incipit: "155653455114517"
   hymnary:
     text: dear_lord_and_father_of_mankind
     tune: repton_parry
@@ -747,6 +936,17 @@ for-all-the-saints:
   text_copyright: Public Domain
   umh:
   - '711'
+  topics:
+  - Adoration and Praise
+  - All Saints
+  - Christian Year
+  - Eternal Life
+  - Funerals and Memorial Services
+  - New Heaven and a New Earth
+  - Processionals
+  - Service Music
+  - The Sacraments and Rites of the Church
+  - Triumph
   tune: SINE NOMINE
   tune_basis: umh
   music:
@@ -780,6 +980,19 @@ for-the-beauty-of-the-earth:
   umh:
   - '92'
   - '829'
+  topics:
+  - Adoration and Praise
+  - Children's Choir Selections
+  - Christian Year
+  - Gratitude
+  - Holy Communion
+  - Home and Family
+  - Joy
+  - Nature
+  - Psalter
+  - Responses, Antiphonal
+  - The Glory of the Triune God
+  - The Sacraments and Rites of the Church
   tune: DIX
   tune_basis: umh
   music:
@@ -812,6 +1025,14 @@ god-has-spoken:
   text_copyright: © 1953. Renewal 1981 The Hymn Society (admin. Hope Publishing Co.)
   umh:
   - '108'
+  topics:
+  - Adoration and Praise
+  - Church
+  - Kingdom of God
+  - Nature
+  - Providence
+  - The Glory of the Triune God
+  - Trinity
   tune: EBENEZER
   tune_basis: umh
   music:
@@ -839,19 +1060,20 @@ god-moves-in-a-mysterious-way:
   words:
   - William Cowper
   words_year: '1774'
-  meter: 8.6.8.6
-  text_meter: 8.6.8.6.
+  meter: "8.6.8.6"
+  text_meter: "8.6.8.6."
   text_copyright: Public Domain
   umh: []
+  topics: []
   tune: MYSTERY
   tune_basis: chosen
   music:
   - K. Jason French
   music_year: ''
-  tune_meter: ''
+  tune_meter: ""
   tune_source: ''
   tune_copyright: Arr. © 2014 Crossworks Music
-  incipit: '13453212313451213453'
+  incipit: "13453212313451213453"
   hymnary:
     text: god_moves_in_a_mysterious_way
     tune: god_moves_in_a_mysterious_way_french
@@ -875,6 +1097,16 @@ god-of-the-sparrow:
   text_copyright: © 1983 Concordia Publishing House
   umh:
   - '122'
+  topics:
+  - Adoration and Praise
+  - Children's Choir Selections
+  - Grace
+  - Gratitude
+  - Hope
+  - Jesus Christ
+  - Nature
+  - Social Concerns
+  - The Glory of the Triune God
   tune: ROEDER
   tune_basis: umh
   music:
@@ -896,20 +1128,26 @@ god-whose-love-is-reigning-oer-us:
   words:
   - William Boyd Grove
   words_year: '1980'
-  meter: 8.7.8.7.8.7
-  text_meter: 87.87.87
+  meter: "8.7.8.7.8.7"
+  text_meter: "87.87.87"
   text_copyright: © 1980, Korean trans. © 2001 William Boyd Groves; Words © 1980 William Boyd Grove
   umh:
   - '100'
+  topics:
+  - Adoration and Praise
+  - Faith
+  - Music and Singing
+  - The Glory of the Triune God
+  - Weddings
   tune: LAUDA ANIMA
   tune_basis: umh
   music:
   - John Goss
   music_year: '1869'
-  tune_meter: 8.7.8.7.4.4.7
+  tune_meter: "8.7.8.7.4.4.7"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '555517654365342'
+  incipit: "555517654365342"
   hymnary:
     text: god_whose_love_is_reigning_oer_us
     tune: lauda_anima_goss
@@ -928,6 +1166,12 @@ god-will-take-care-of-you:
   text_copyright: Public Domain
   umh:
   - '130'
+  topics:
+  - Adoration and Praise
+  - Comfort
+  - Providence
+  - The Glory of the Triune God
+  - Trust
   tune: MARTIN
   tune_basis: umh
   music:
@@ -956,6 +1200,12 @@ good-christian-friends-rejoice:
   text_copyright: Public Domain
   umh:
   - '224'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Joy
+  - Salvation
   tune: IN DULCI JUBILO
   tune_basis: umh
   music: []
@@ -981,6 +1231,12 @@ great-is-thy-faithfulness:
   text_copyright: Public Domain
   umh:
   - '140'
+  topics:
+  - Adoration and Praise
+  - Calmness and Serenity
+  - Forgiveness
+  - Providence
+  - The Glory of the Triune God
   tune: FAITHFULNESS
   tune_basis: umh
   music:
@@ -1003,20 +1259,30 @@ guide-me-o-thou-great-jehovah:
   - William Williams
   - Peter Williams
   words_year: 1745; 1771
-  meter: 8.7.8.7.4.7
-  text_meter: 8 7. 8 7. 4 7.
+  meter: "8.7.8.7.4.7"
+  text_meter: "8 7. 8 7. 4 7."
   text_copyright: Public Domain
   umh:
   - '127'
+  topics:
+  - Adoration and Praise
+  - Assurance
+  - Eternal Life
+  - Funerals and Memorial Services
+  - Guidance
+  - New Heaven and a New Earth
+  - Pilgrimage
+  - Providence
+  - The Glory of the Triune God
   tune: CWM RHONDDA
   tune_basis: umh
   music:
   - John Hughes
   music_year: '1907'
-  tune_meter: 8.7.8.7.8.7.7
+  tune_meter: "8.7.8.7.8.7.7"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '565117123231643'
+  incipit: "565117123231643"
   hymnary:
     text: guide_me_o_thou_great_jehovah
     tune: cwm_rhondda_hughes
@@ -1036,21 +1302,36 @@ hail-to-the-lords-anointed:
   words:
   - James Montgomery
   words_year: '1821'
-  meter: 7.6.7.6 D
-  text_meter: 7.6.7.6 D
+  meter: "7.6.7.6 D"
+  text_meter: "7.6.7.6 D"
   text_copyright: Public Domain
   umh:
   - '203'
   - '208'
   - '845'
+  topics:
+  - Canticles
+  - Christ's Gracious Life
+  - Christian Year
+  - Forgiveness
+  - Freedom and Liberation
+  - Jesus Christ
+  - Justice
+  - Kingdom of God
+  - Love
+  - Processionals
+  - Providence
+  - Psalter
+  - Salvation
+  - The Glory of the Triune God
   tune: ELLACOMBE
   tune_basis: chosen
   music: []
   music_year: ''
-  tune_meter: 7.6.7.6.D
+  tune_meter: "7.6.7.6.D"
   tune_source: Gesangbuch der Herzogl. Hofkapelle, Würtemberg, 1784
   tune_copyright: Public Domain
-  incipit: '517651345567122'
+  incipit: "517651345567122"
   hymnary:
     text: hail_to_the_lords_anointed
     tune: ellacombe
@@ -1074,6 +1355,18 @@ he-leadeth-me:
   text_copyright: Public Domain
   umh:
   - '128'
+  topics:
+  - Adoration and Praise
+  - Assurance
+  - Comfort
+  - Eternal Life
+  - Funerals and Memorial Services
+  - Guidance
+  - Justifying Grace
+  - Pilgrimage
+  - Providence
+  - The Glory of the Triune God
+  - Trust
   tune: HE LEADETH ME
   tune_basis: umh
   music:
@@ -1106,6 +1399,11 @@ he-lives:
   text_copyright: © 1933. Renewed 1961 Word Music, LLC.
   umh:
   - '310'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Salvation
+  - The Grace of Jesus Christ
   tune: ACKLEY
   tune_basis: umh
   music:
@@ -1132,6 +1430,12 @@ here-i-am-lord:
   text_copyright: © 1981, OCP Publications
   umh:
   - '593'
+  topics:
+  - Commitment
+  - Installation Services
+  - Mission and Outreach
+  - Ordination
+  - The Nature of the Church
   tune: HERE I AM, LORD
   tune_basis: umh
   music:
@@ -1158,6 +1462,12 @@ here-o-my-lord-i-see-thee-face-to-face:
   text_copyright: Public Domain
   umh:
   - '623'
+  topics:
+  - Closing Hymns
+  - Holy Communion
+  - Opening Hymns
+  - Service Music
+  - The Sacraments and Rites of the Church
   tune: PENITENTIA
   tune_basis: umh
   music:
@@ -1190,6 +1500,15 @@ holy-holy-holy:
   text_copyright: Public Domain
   umh:
   - '64'
+  topics:
+  - Adoration and Praise
+  - Christian Year
+  - Holy Communion
+  - Particular Times of Worship
+  - Processionals
+  - Service Music
+  - The Glory of the Triune God
+  - Trinity
   tune: NICAEA
   tune_basis: umh
   music:
@@ -1222,6 +1541,14 @@ hymn-of-promise:
   text_copyright: © 1986 Hope Publishing Co.
   umh:
   - '707'
+  topics:
+  - Eternal Life
+  - Faith
+  - Funerals and Memorial Services
+  - Hope
+  - New Heaven and a New Earth
+  - Providence
+  - The Glory of the Triune God
   tune: PROMISE
   tune_basis: umh
   music:
@@ -1243,19 +1570,20 @@ i-cannot-tell:
   words:
   - W. Y. Fullerton
   words_year: c. 1920
-  meter: 11.10.11.10 D
-  text_meter: ''
+  meter: "11.10.11.10 D"
+  text_meter: ""
   text_copyright: Public Domain
   umh: []
+  topics: []
   tune: LONDONDERRY AIR
   tune_basis: chosen
   music:
   - Anonymous
   music_year: ''
-  tune_meter: 11.10.11.10 D
+  tune_meter: "11.10.11.10 D"
   tune_source: Air from County Derry; Traditional Irish melody; Irish folk melody
   tune_copyright: Public Domain
-  incipit: '712323653216134'
+  incipit: "712323653216134"
   hymnary:
     text: i_cannot_tell_why_he_whom_angels_worship
     tune: londonderry_air
@@ -1275,6 +1603,11 @@ i-come-with-joy-to-meet-my-lord:
   text_copyright: © 1971, 1995, Hope Publishing Co.
   umh:
   - '617'
+  topics:
+  - Holy Communion
+  - Joy
+  - Service Music
+  - The Sacraments and Rites of the Church
   tune: DOVE OF PEACE
   tune_basis: umh
   music: []
@@ -1301,19 +1634,20 @@ i-know-who-holds-tomorrow:
   words:
   - Ira F. Stanphill
   words_year: '1950'
-  meter: ''
-  text_meter: ''
+  meter: ""
+  text_meter: ""
   text_copyright: © 1950 New Spring Publishing Inc. (ASCAP) (admin. at CapitolCMGPublishing.com)
   umh: []
+  topics: []
   tune: '[I don''t know about tomorrow]'
   tune_basis: chosen
   music:
   - Ira F. Stanphill
   music_year: '1950'
-  tune_meter: ''
+  tune_meter: ""
   tune_source: ''
   tune_copyright: © 1950 New Spring Publishing Inc. (ASCAP) (admin. at CapitolCMGPublishing.com)
-  incipit: '12323653216176511117'
+  incipit: "12323653216176511117"
   hymnary:
     text: i_dont_know_about_tomorrow
     tune: i_dont_know_about_tomorrow_stanphill
@@ -1327,20 +1661,25 @@ i-love-to-tell-the-story:
   - Kate Hankey
   - William G. Fischer
   words_year: 1866; 1869
-  meter: 7.6.7.6 D with refrain
-  text_meter: 7.6.7.6. D. with refrain
+  meter: "7.6.7.6 D with refrain"
+  text_meter: "7.6.7.6. D. with refrain"
   text_copyright: Public Domain
   umh:
   - '156'
+  topics:
+  - Love
+  - Processionals
+  - Testimony and Witness
+  - The Grace of Jesus Christ
   tune: HANKEY
   tune_basis: umh
   music:
   - William G. Fischer
   music_year: '1869'
-  tune_meter: 7.6.7.6 D with refrain
+  tune_meter: "7.6.7.6 D with refrain"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '51551321116216552123'
+  incipit: "51551321116216552123"
   hymnary:
     text: i_love_to_tell_the_story_of_unseen_thing
     tune: hankey_fischer
@@ -1365,6 +1704,14 @@ i-surrender-all:
   text_copyright: Public Domain
   umh:
   - '354'
+  topics:
+  - Christian Experience
+  - Commitment
+  - Confession
+  - Pardon
+  - Prayer
+  - Prevenient Grace
+  - Service Music
   tune: SURRENDER
   tune_basis: umh
   music:
@@ -1393,6 +1740,12 @@ in-the-bleak-midwinter:
   text_copyright: Public Domain
   umh:
   - '221'
+  topics:
+  - Children's Choir Selections
+  - Christ's Gracious Life
+  - Christian Year
+  - Commitment
+  - Jesus Christ
   tune: CRANHAM
   tune_basis: umh
   music:
@@ -1425,6 +1778,13 @@ in-the-garden:
   text_copyright: Public Domain
   umh:
   - '314'
+  topics:
+  - Biblical Narrative
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Joy
+  - Love
   tune: GARDEN
   tune_basis: umh
   music:
@@ -1453,6 +1813,11 @@ it-came-upon-a-midnight-clear:
   text_copyright: Public Domain
   umh:
   - '218'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Peace, World
   tune: CAROL
   tune_basis: umh
   music:
@@ -1485,6 +1850,15 @@ jesus-keep-me-near-the-cross:
   text_copyright: Public Domain
   umh:
   - '301'
+  topics:
+  - Christ's Gracious Life
+  - Christian Experience
+  - Christian Year
+  - Hope
+  - Jesus Christ
+  - Prayer
+  - Sanctifiying and Perfecting Grace
+  - Trust
   tune: NEAR THE CROSS
   tune_basis: umh
   music:
@@ -1515,6 +1889,16 @@ jesus-lover-of-my-soul:
   text_copyright: Public Domain
   umh:
   - '479'
+  topics:
+  - Comfort
+  - Confession
+  - Hope
+  - Jesus Christ
+  - Pardon
+  - Prayer
+  - Sanctifiying and Perfecting Grace
+  - Service Music
+  - Trust
   tune: ABERYSTWYTH
   tune_basis: umh
   music:
@@ -1547,6 +1931,10 @@ let-all-mortal-flesh-keep-silence:
   text_copyright: Public Domain
   umh:
   - '626'
+  topics:
+  - Christian Year
+  - Holy Communion
+  - The Sacraments and Rites of the Church
   tune: PICARDY
   tune_basis: umh
   music: []
@@ -1578,6 +1966,13 @@ lo-he-comes-with-clouds-descending:
   text_copyright: Public Domain
   umh:
   - '718'
+  topics:
+  - Adoration and Praise
+  - Christian Year
+  - Judgment
+  - Kingdom of God
+  - New Heaven and a New Earth
+  - Triumph
   tune: HELMSLEY
   tune_basis: umh
   music:
@@ -1612,6 +2007,12 @@ lo-how-a-rose-eer-blooming:
   text_copyright: Public Domain
   umh:
   - '216'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Light
+  - Salvation
   tune: ES IST EIN ROS
   tune_basis: umh
   music: []
@@ -1637,6 +2038,9 @@ lord-of-the-dance:
   text_copyright: © 1963, Stainer & Bell, Ltd., London, England. (admin. by Hope Publishing Co.)
   umh:
   - '261'
+  topics:
+  - Christ's Gracious Life
+  - Jesus Christ
   tune: LORD OF THE DANCE
   tune_basis: umh
   music:
@@ -1665,6 +2069,10 @@ lord-who-throughout-these-forty-days:
   text_copyright: Public Domain
   umh:
   - '269'
+  topics:
+  - Biblical Narrative
+  - Christian Year
+  - Jesus Christ
   tune: LAND OF REST
   tune_basis: umh
   music:
@@ -1697,6 +2105,14 @@ lord-whose-love-through-humble-service:
   text_copyright: © Oxford University Press
   umh:
   - '581'
+  topics:
+  - Closing Hymns
+  - Discipleship and Service
+  - Jesus Christ
+  - Mission and Outreach
+  - Particular Times of Worship
+  - Social Concerns
+  - The Nature of the Church
   tune: BEACH SPRING
   tune_basis: umh
   music:
@@ -1729,6 +2145,12 @@ lord-you-give-the-great-commission:
   text_copyright: © 1978 Hope Publishing Co.
   umh:
   - '584'
+  topics:
+  - Justice
+  - Mission and Outreach
+  - Ordination
+  - Responses, Antiphonal
+  - The Nature of the Church
   tune: ABBOT'S LEIGH
   tune_basis: umh
   music:
@@ -1756,21 +2178,31 @@ love-divine-all-loves-excelling:
   words:
   - Charles Wesley
   words_year: '1747'
-  meter: 8.7.8.7 D
-  text_meter: 8.7.8.7 D.
+  meter: "8.7.8.7 D"
+  text_meter: "8.7.8.7 D."
   text_copyright: Public Domain
   umh:
   - '384'
   - 384b
+  topics:
+  - Christian Experience
+  - Christian Perfection
+  - City
+  - Freedom and Liberation
+  - Funerals and Memorial Services
+  - Love
+  - New Creation
+  - New Heaven and a New Earth
+  - Sanctifiying and Perfecting Grace
   tune: BEECHER
   tune_basis: chosen
   music:
   - John Zundel
   music_year: '1870'
-  tune_meter: 8.7.8.7. D
+  tune_meter: "8.7.8.7. D"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '556532321761654'
+  incipit: "556532321761654"
   hymnary:
     text: love_divine_all_love_excelling_joy_of_he
     tune: beecher_zundel
@@ -1794,6 +2226,16 @@ morning-has-broken:
   text_copyright: By permission of David Higham Associates Limited, London
   umh:
   - '145'
+  topics:
+  - Adoration and Praise
+  - Children's Choir Selections
+  - Creation
+  - Morning Prayer
+  - Nature
+  - Opening Hymns
+  - Particular Times of Worship
+  - Service Music
+  - The Glory of the Triune God
   tune: BUNESSAN
   tune_basis: umh
   music: []
@@ -1819,6 +2261,12 @@ my-hope-is-built-on-nothing-less:
   text_copyright: Public Domain
   umh:
   - '368'
+  topics:
+  - Assurance
+  - Forgiveness
+  - Hope
+  - Jesus Christ
+  - Justifying Grace
   tune: THE SOLID ROCK
   tune_basis: umh
   music:
@@ -1851,6 +2299,14 @@ nearer-my-god-to-thee:
   text_copyright: Public Domain
   umh:
   - '528'
+  topics:
+  - Biblical Narrative
+  - Comfort
+  - Eternal Life
+  - Funerals and Memorial Services
+  - Grief
+  - Sanctifiying and Perfecting Grace
+  - The Sacraments and Rites of the Church
   tune: BETHANY
   tune_basis: umh
   music:
@@ -1885,6 +2341,20 @@ now-thank-we-all-our-god:
   umh:
   - '102'
   - '789'
+  topics:
+  - Adoration and Praise
+  - Children's Choir Selections
+  - Christian Year
+  - Grace
+  - Gratitude
+  - Guidance
+  - Nature
+  - Processionals
+  - Providence
+  - Psalter
+  - Service Music
+  - Table Graces
+  - The Glory of the Triune God
   tune: NUN DANKET
   tune_basis: umh
   music:
@@ -1918,6 +2388,14 @@ o-come-all-ye-faithful:
   text_copyright: Public Domain
   umh:
   - '234'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Music and Singing
+  - Processionals
+  - Responses, Antiphonal
+  - Service Music
   tune: ADESTES FIDELES
   tune_basis: umh
   music:
@@ -1945,22 +2423,34 @@ o-come-o-come-emmanuel:
   words:
   - J. M. Neale
   words_year: '1851'
-  meter: 8.8.8.8.8.8
-  text_meter: 8.8.8.8.8.8.
+  meter: "8.8.8.8.8.8"
+  text_meter: "8.8.8.8.8.8."
   text_copyright: Public Domain
   umh:
   - 112b
   - '211'
+  topics:
+  - Canticles
+  - Christ's Gracious Life
+  - Christian Year
+  - Freedom and Liberation
+  - Jesus Christ
+  - Joy
+  - Justice
+  - Light
+  - Nature
+  - Peace, World
+  - The Glory of the Triune God
   tune: VENI EMMANUEL
   tune_basis: umh
   music:
   - Anonymous
   - Thomas Helmore
   music_year: ''
-  tune_meter: 8.8.8.8.8.8
+  tune_meter: "8.8.8.8.8.8"
   tune_source: French processional, 15th cent.
   tune_copyright: Public Domain
-  incipit: '13555465434531342171'
+  incipit: "13555465434531342171"
   hymnary:
     text: o_come_o_come_emmanuel_and_ransom
     tune: veni_emmanuel_chant
@@ -1981,20 +2471,29 @@ o-day-of-peace-that-dimly-shines:
   words:
   - Carl P. Daw
   words_year: '1982'
-  meter: 8.8.8.8 D
-  text_meter: 8.8.8.8 D
+  meter: "8.8.8.8 D"
+  text_meter: "8.8.8.8 D"
   text_copyright: © 1982 Hope Publishing Company
   umh:
   - '729'
+  topics:
+  - Christian Perfection
+  - City
+  - Creation
+  - Hope
+  - Justice
+  - New Heaven and a New Earth
+  - Peace, World
+  - Triumph
   tune: JERUSALEM
   tune_basis: umh
   music:
   - C. Hubert H. Parry
   music_year: '1916'
-  tune_meter: 8.8.8.8
+  tune_meter: "8.8.8.8"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '1356165456545321'
+  incipit: "1356165456545321"
   hymnary:
     text: o_day_of_peace_that_dimly_shines
     tune: jerusalem_parry
@@ -2012,19 +2511,20 @@ o-god-beyond-all-praising:
   words:
   - Michael A. Perry
   words_year: '1982'
-  meter: 13.13.13.13.13.13
-  text_meter: 13.13.13.13.13.13.
+  meter: "13.13.13.13.13.13"
+  text_meter: "13.13.13.13.13.13."
   text_copyright: © 1982, Hope Publishing Co.
   umh: []
+  topics: []
   tune: THAXTED
   tune_basis: chosen
   music:
   - Gustav Holst
   music_year: '1918'
-  tune_meter: 13.13.13.13.13.13.
+  tune_meter: "13.13.13.13.13.13."
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '356175121767653'
+  incipit: "356175121767653"
   hymnary:
     text: o_god_beyond_all_praising_we_worship_you
     tune: thaxted_holst
@@ -2042,6 +2542,18 @@ o-god-our-help-in-ages-past:
   text_copyright: Public Domain
   umh:
   - '117'
+  topics:
+  - Adoration and Praise
+  - Assurance
+  - Christian Year
+  - Courage
+  - Eternal Life
+  - Funerals and Memorial Services
+  - Hope
+  - Nature
+  - Processionals
+  - The Glory of the Triune God
+  - The Sacraments and Rites of the Church
   tune: ST. ANNE
   tune_basis: umh
   music:
@@ -2069,21 +2581,28 @@ o-little-town-of-bethlehem:
   words:
   - Phillips Brooks
   words_year: '1868'
-  meter: 8.6.8.6 D
-  text_meter: 8.6.8.6 D.
+  meter: "8.6.8.6 D"
+  text_meter: "8.6.8.6 D."
   text_copyright: Public Domain
   umh:
   - '230'
   - 230b
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Light
+  - Prayer
+  - Service Music
   tune: ST. LOUIS
   tune_basis: chosen
   music:
   - Lewis H. Redner
   music_year: '1868'
-  tune_meter: 8.6.8.6
+  tune_meter: "8.6.8.6"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '33323546217125333365'
+  incipit: "33323546217125333365"
   hymnary:
     text: o_little_town_of_bethlehem
     tune: st_louis_redner
@@ -2108,6 +2627,15 @@ o-master-let-me-walk-with-thee:
   text_copyright: Public Domain
   umh:
   - '430'
+  topics:
+  - Commitment
+  - Discipleship and Service
+  - Faith
+  - Guidance
+  - Installation Services
+  - Love
+  - Sanctifiying and Perfecting Grace
+  - Testimony and Witness
   tune: MARYTON
   tune_basis: umh
   music:
@@ -2138,21 +2666,29 @@ o-sacred-head-now-wounded:
   - Paul Gerhardt
   - James W. Alexander
   words_year: 1656; 1829
-  meter: 7.6.7.6 D
-  text_meter: 7.6.7.6 D
+  meter: "7.6.7.6 D"
+  text_meter: "7.6.7.6 D"
   text_copyright: Public Domain
   umh:
   - '286'
   - '752'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Gratitude
+  - Jesus Christ
+  - Love
+  - Penitence
+  - Psalter
   tune: PASSION CHORALE
   tune_basis: umh
   music:
   - Hans Leo Hassler
   music_year: '1601'
-  tune_meter: 7.6.7.6.D.
+  tune_meter: "7.6.7.6.D."
   tune_source: Secular Origin
   tune_copyright: Public Domain
-  incipit: '517654523322151765'
+  incipit: "517654523322151765"
   hymnary:
     text: o_sacred_head_now_wounded
     tune: passion_chorale_hassler
@@ -2178,6 +2714,11 @@ o-sing-a-song-of-bethlehem:
   text_copyright: Public Domain
   umh:
   - '179'
+  topics:
+  - Children's Choir Selections
+  - Christian Year
+  - Salvation
+  - The Grace of Jesus Christ
   tune: KINGSFOLD
   tune_basis: umh
   music: []
@@ -2211,6 +2752,12 @@ of-the-fathers-love-begotten:
   text_copyright: Public Domain
   umh:
   - '184'
+  topics:
+  - Christian Year
+  - Music and Singing
+  - Service Music
+  - Testimony and Witness
+  - The Grace of Jesus Christ
   tune: DIVINUM MYSTERIUM
   tune_basis: umh
   music: []
@@ -2242,6 +2789,13 @@ pass-me-not-o-gentle-savior:
   text_copyright: Public Domain
   umh:
   - '351'
+  topics:
+  - Confession
+  - Pardon
+  - Prayer
+  - Prevenient Grace
+  - Service Music
+  - Trust
   tune: PASS ME NOT
   tune_basis: umh
   music:
@@ -2274,6 +2828,11 @@ praise-god-from-whom-all-blessings-flow:
   text_copyright: Public Domain
   umh:
   - '95'
+  topics:
+  - Adoration and Praise
+  - Gratitude
+  - Service Music
+  - The Glory of the Triune God
   tune: OLD 100TH
   tune_basis: umh
   music:
@@ -2301,21 +2860,32 @@ praise-my-soul-the-king-of-heaven:
   words:
   - Henry Francis Lyte
   words_year: '1834'
-  meter: 8.7.8.7.8.7
-  text_meter: 8.7.8.7.8.7.
+  meter: "8.7.8.7.8.7"
+  text_meter: "8.7.8.7.8.7."
   text_copyright: Public Domain
   umh:
   - '66'
   - 66b
+  topics:
+  - Adoration and Praise
+  - All Saints
+  - Christian Year
+  - Funerals and Memorial Services
+  - Grace
+  - Gratitude
+  - New Heaven and a New Earth
+  - Opening Hymns
+  - Processionals
+  - The Glory of the Triune God
   tune: LAUDA ANIMA
   tune_basis: chosen
   music:
   - John Goss
   music_year: '1869'
-  tune_meter: 8.7.8.7.4.4.7
+  tune_meter: "8.7.8.7.4.4.7"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '555517654365342'
+  incipit: "555517654365342"
   hymnary:
     text: praise_my_soul_the_king_of_heaven
     tune: lauda_anima_goss
@@ -2336,21 +2906,29 @@ praise-to-the-lord-the-almighty:
   - Joachim Neander
   - Catherine Winkworth
   words_year: 1680; 1863
-  meter: 14.14.4.7.8
-  text_meter: 14.14.4.7.8
+  meter: "14.14.4.7.8"
+  text_meter: "14.14.4.7.8"
   text_copyright: Public Domain
   umh:
   - '139'
   - '826'
+  topics:
+  - Adoration and Praise
+  - Christian Year
+  - Love
+  - Opening Hymns
+  - Providence
+  - Psalter
+  - The Glory of the Triune God
   tune: LOBE DEN HERREN
   tune_basis: umh
   music:
   - Anonymous
   music_year: '1665'
-  tune_meter: 14.14.4.7.8.
+  tune_meter: "14.14.4.7.8."
   tune_source: Praxis Pietatis Melica, 1668; German Choral; Stralsund Gesangbuch
   tune_copyright: Public Domain
-  incipit: '11532176567121115321'
+  incipit: "11532176567121115321"
   hymnary:
     text: praise_to_the_lord_the_almighty_the_king
     tune: lobe_den_herren_115321
@@ -2364,21 +2942,32 @@ rejoice-the-lord-is-king:
   words:
   - Charles Wesley
   words_year: '1744'
-  meter: 6.6.6.6.8.8
-  text_meter: 6.6.6.6.8.8
+  meter: "6.6.6.6.8.8"
+  text_meter: "6.6.6.6.8.8"
   text_copyright: Public Domain
   umh:
   - '715'
   - '716'
+  topics:
+  - Adoration and Praise
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Joy
+  - Kingdom of God
+  - New Heaven and a New Earth
+  - Processionals
+  - Responses, Antiphonal
+  - Triumph
   tune: DARWALL'S 148TH
   tune_basis: chosen
   music:
   - John Darwall
   music_year: '1770'
-  tune_meter: 6.6.6.6.4.4.4.4
+  tune_meter: "6.6.6.6.4.4.4.4"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '131531765432231'
+  incipit: "131531765432231"
   hymnary:
     text: rejoice_the_lord_is_king_your_lord_and_k
     tune: darwall_darwall
@@ -2403,6 +2992,17 @@ rock-of-ages-cleft-for-me:
   text_copyright: Public Domain
   umh:
   - '361'
+  topics:
+  - Confession
+  - Eternal Life
+  - Faith
+  - Forgiveness
+  - Jesus Christ
+  - Justifying Grace
+  - Pardon
+  - Penitence
+  - Prayer
+  - Service Music
   tune: TOPLADY
   tune_basis: umh
   music:
@@ -2431,20 +3031,27 @@ savior-like-a-shepherd-lead-us:
   - Dorothy A. Thrupp
   - Henry Francis Lyte
   words_year: '1836'
-  meter: 8.7.8.7.4.7
-  text_meter: 8.7.8.7.4.7
+  meter: "8.7.8.7.4.7"
+  text_meter: "8.7.8.7.4.7"
   text_copyright: Public Domain
   umh:
   - '381'
+  topics:
+  - Assurance
+  - Children's Choir Selections
+  - Guidance
+  - Jesus Christ
+  - Justifying Grace
+  - Love
   tune: BRADBURY
   tune_basis: umh
   music:
   - William B. Bradbury
   music_year: '1859'
-  tune_meter: 8.7.8.7.D.
+  tune_meter: "8.7.8.7.D."
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '33323451532346543333'
+  incipit: "33323451532346543333"
   hymnary:
     text: savior_like_a_shepherd_lead_us
     tune: bradbury_bradbury
@@ -2465,19 +3072,26 @@ sent-forth-by-gods-blessing:
   words:
   - Omer Westendorf
   words_year: '1964'
-  meter: 6.6.11.6.6.11 D
-  text_meter: 6.6.11.6.6.11 D
+  meter: "6.6.11.6.6.11 D"
+  text_meter: "6.6.11.6.6.11 D"
   text_copyright: © 1964 World Library Publications, Inc.
   umh:
   - '664'
+  topics:
+  - Closing Hymns
+  - Gratitude
+  - Holy Communion
+  - Particular Times of Worship
+  - Service Music
+  - Testimony and Witness
   tune: THE ASH GROVE
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: 12.11.12.11 D
+  tune_meter: "12.11.12.11 D"
   tune_source: Traditional Welsh Melody
   tune_copyright: Public Domain
-  incipit: '51354311243217551321'
+  incipit: "51354311243217551321"
   hymnary:
     text: sent_forth_by_gods_blessing
     tune: ash_grove
@@ -2500,6 +3114,21 @@ sing-praise-to-god-who-reigns-above:
   - '126'
   - '743'
   - '851'
+  topics:
+  - Adoration and Praise
+  - Aspiration and Resolve
+  - Canticles
+  - Christian Perfection
+  - Christian Year
+  - Grief
+  - Jesus Christ
+  - Morning Prayer
+  - Opening Hymns
+  - Presence (Holy Spirit)
+  - Providence
+  - Psalter
+  - The Glory of the Triune God
+  - Trinity
   tune: MIT FREUDEN ZART
   tune_basis: umh
   music: []
@@ -2526,19 +3155,24 @@ sing-we-now-of-christmas:
   words:
   - Traditional French carol
   words_year: ''
-  meter: 11.10.10.11
-  text_meter: 11 10.10 11
+  meter: "11.10.10.11"
+  text_meter: "11 10.10 11"
   text_copyright: ''
   umh:
   - '237'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Eternal Life
+  - Jesus Christ
   tune: FRENCH CAROL
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: 11.10.11.10
+  tune_meter: "11.10.11.10"
   tune_source: Old French tune
   tune_copyright: Public Domain
-  incipit: '15645344532115645344'
+  incipit: "15645344532115645344"
   hymnary:
     text: sing_we_now_of_christmas
     tune: noel_nouvelet
@@ -2560,6 +3194,11 @@ softly-and-tenderly-jesus-is-calling:
   text_copyright: Public Domain
   umh:
   - '348'
+  topics:
+  - Affliction and Tribulation
+  - Call to the Christian Life
+  - Forgiveness
+  - Prevenient Grace
   tune: THOMPSON
   tune_basis: umh
   music:
@@ -2581,20 +3220,26 @@ sweet-hour-of-prayer:
   words:
   - William W. Walford
   words_year: '1845'
-  meter: 8.8.8.8 D
-  text_meter: 8.8.8.8 D
+  meter: "8.8.8.8 D"
+  text_meter: "8.8.8.8 D"
   text_copyright: Public Domain
   umh:
   - '496'
+  topics:
+  - Comfort
+  - Hope
+  - Prayer
+  - Sanctifiying and Perfecting Grace
+  - Trust
   tune: SWEET HOUR
   tune_basis: umh
   music:
   - William B. Bradbury
   music_year: '1860'
-  tune_meter: 8.8.8.8
+  tune_meter: "8.8.8.8"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '1345567165332123'
+  incipit: "1345567165332123"
   hymnary:
     text: sweet_hour_of_prayer_sweet_hour_of_pray
     tune: sweet_hour_of_prayer_sweet_hour_bradbury
@@ -2614,20 +3259,28 @@ take-my-life-and-let-it-be:
   words:
   - Frances Ridley Havergal
   words_year: '1874'
-  meter: 7.7.7.7
-  text_meter: 7.7.7.7.7
+  meter: "7.7.7.7"
+  text_meter: "7.7.7.7.7"
   text_copyright: Public Domain
   umh:
   - '399'
+  topics:
+  - Commitment
+  - Installation Services
+  - Jesus Christ
+  - Love
+  - Sanctifiying and Perfecting Grace
+  - Stewardship
+  - Testimony and Witness
   tune: MESSIAH
   tune_basis: umh
   music:
   - Ferdinand Hérold
   music_year: '1839'
-  tune_meter: 7.7.7.7
+  tune_meter: "7.7.7.7"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '321143256653123'
+  incipit: "321143256653123"
   hymnary:
     text: take_my_life_and_let_it_be
     tune: messiah_herold
@@ -2652,6 +3305,16 @@ the-battle-hymn-of-the-republic:
   text_copyright: Public Domain
   umh:
   - '717'
+  topics:
+  - Christian Year
+  - Glory
+  - God's World
+  - Jesus Christ
+  - Judgment
+  - New Heaven and a New Earth
+  - Responses, Antiphonal
+  - Service Music
+  - Triumph
   tune: BATTLE HYMN OF THE REPUBLIC
   tune_basis: umh
   music:
@@ -2684,6 +3347,12 @@ the-first-noel:
   text_copyright: Public Domain
   umh:
   - '245'
+  topics:
+  - Biblical Narrative
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Responses, Antiphonal
   tune: THE FIRST NOEL
   tune_basis: umh
   music: []
@@ -2711,6 +3380,14 @@ the-gift-of-love:
   text_copyright: © 1972 by Hope Publishing Company
   umh:
   - '408'
+  topics:
+  - Home and Family
+  - Love
+  - Ordination
+  - Reconciliation
+  - Sanctifiying and Perfecting Grace
+  - The Sacraments and Rites of the Church
+  - Weddings
   tune: GIFT OF LOVE
   tune_basis: umh
   music: []
@@ -2734,21 +3411,28 @@ the-god-of-abraham-praise:
   - Daniel ben Judah
   - Thomas Olivers
   words_year: '1770'
-  meter: 6.6.8.4 D
-  text_meter: 6.6.8.4.D.
+  meter: "6.6.8.4 D"
+  text_meter: "6.6.8.4.D."
   text_copyright: Public Domain
   umh:
   - '116'
   - 801b
+  topics:
+  - Adoration and Praise
+  - Assurance
+  - Heaven
+  - Nature
+  - Opening Hymns
+  - The Glory of the Triune God
   tune: LEONI
   tune_basis: umh
   music:
   - Meyer Lyon
   music_year: '1770'
-  tune_meter: 6.6.8.4 D
+  tune_meter: "6.6.8.4 D"
   tune_source: Traditional Yigdal melody; traditional Hebrew melody
   tune_copyright: Public Domain
-  incipit: '512345345675234'
+  incipit: "512345345675234"
   hymnary:
     text: the_god_of_abraham_praise_who_reigns
     tune: leoni_hebrew_5123453456752
@@ -2768,20 +3452,28 @@ the-old-rugged-cross:
   words:
   - George Bennard
   words_year: '1913'
-  meter: 12.8.12.8 with refrain
-  text_meter: 12.8.12.8 with refrain
+  meter: "12.8.12.8 with refrain"
+  text_meter: "12.8.12.8 with refrain"
   text_copyright: Public Domain
   umh:
   - '504'
+  topics:
+  - Eternal Life
+  - Hope
+  - Jesus Christ
+  - New Heaven and a New Earth
+  - Prayer
+  - Sanctifiying and Perfecting Grace
+  - Trust
   tune: THE OLD RUGGED CROSS
   tune_basis: umh
   music:
   - George Bennard
   music_year: '1913'
-  tune_meter: 6.6.8.6.6.8 with refrain
+  tune_meter: "6.6.8.6.6.8 with refrain"
   tune_source: ''
   tune_copyright: Public Domain
-  incipit: '34546555657667654543'
+  incipit: "34546555657667654543"
   hymnary:
     text: on_a_hill_far_away_stood_an_old_rugged
     tune: old_rugged_cross_bennard
@@ -2803,6 +3495,12 @@ thine-be-the-glory:
   text_copyright: Public Domain
   umh:
   - '308'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Eternal Life
+  - Jesus Christ
+  - Triumph
   tune: JUDAS MACCABEUS
   tune_basis: umh
   music:
@@ -2829,6 +3527,15 @@ this-is-my-fathers-world:
   text_copyright: Public Domain
   umh:
   - '144'
+  topics:
+  - Adoration and Praise
+  - Assurance
+  - Creation
+  - Joy
+  - Kingdom of God
+  - Nature
+  - Presence (Holy Spirit)
+  - The Glory of the Triune God
   tune: TERRA BEATA
   tune_basis: umh
   music:
@@ -2856,20 +3563,26 @@ this-is-my-song:
   words:
   - Lloyd Stone
   words_year: '1934'
-  meter: 11.10.11.10.11.10
-  text_meter: 11.10.11.10.11.10.
+  meter: "11.10.11.10.11.10"
+  text_meter: "11.10.11.10.11.10."
   text_copyright: © 1934, 1962, Lorenz Publishing Co
   umh:
   - '437'
+  topics:
+  - Nation
+  - Particular Times of Worship
+  - Peace, World
+  - Prayer
+  - Sanctifiying and Perfecting Grace
   tune: FINLANDIA
   tune_basis: umh
   music:
   - Jean Sibelius
   music_year: '1899'
-  tune_meter: 10.10.10.10.10.10.
+  tune_meter: "10.10.10.10.10.10."
   tune_source: ''
   tune_copyright: P. D. in the U.S. and Canada, © Breitkopf & Härtel in other territories of the world
-  incipit: '323432312233234'
+  incipit: "323432312233234"
   hymnary:
     text: this_is_my_song_o_god_of_all_the_nations
     tune: finlandia
@@ -2889,6 +3602,13 @@ tis-so-sweet-to-trust-in-jesus:
   text_copyright: Public Domain
   umh:
   - '462'
+  topics:
+  - Hope
+  - Jesus Christ
+  - Love
+  - Prayer
+  - Sanctifiying and Perfecting Grace
+  - Trust
   tune: TRUST IN JESUS
   tune_basis: umh
   music:
@@ -2917,6 +3637,13 @@ trust-and-obey:
   text_copyright: Public Domain
   umh:
   - '467'
+  topics:
+  - Commitment
+  - Hope
+  - Obedience
+  - Prayer
+  - Sanctifiying and Perfecting Grace
+  - Trust
   tune: TRUST AND OBEY
   tune_basis: umh
   music:
@@ -2947,6 +3674,13 @@ turn-your-eyes-upon-jesus:
   text_copyright: Public Domain
   umh:
   - '349'
+  topics:
+  - Call to the Christian Life
+  - Choruses and Refrains
+  - Courage
+  - Prayer
+  - Prevenient Grace
+  - Service Music
   tune: LEMMEL
   tune_basis: umh
   music:
@@ -2975,6 +3709,10 @@ we-three-kings:
   text_copyright: Public Domain
   umh:
   - '254'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
   tune: KINGS OF ORIENT
   tune_basis: umh
   music:
@@ -3002,19 +3740,23 @@ were-you-there:
   words:
   - African American spiritual
   words_year: ''
-  meter: Irregular
-  text_meter: Irregular
+  meter: "Irregular"
+  text_meter: "Irregular"
   text_copyright: Public Domain
   umh:
   - '288'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
   tune: WERE YOU THERE
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: 10.10 with refrain
+  tune_meter: "10.10 with refrain"
   tune_source: Afro-American spiritual
   tune_copyright: Public Domain
-  incipit: '513332132113555'
+  incipit: "513332132113555"
   hymnary:
     text: were_you_there_when_they_crucified_my_lo
     tune: were_you_there
@@ -3028,19 +3770,24 @@ what-child-is-this:
   words:
   - W. Chatterton Dix
   words_year: ''
-  meter: 8.7.8.7 with refrain
-  text_meter: 8.7.8.7. with Refrain
+  meter: "8.7.8.7 with refrain"
+  text_meter: "8.7.8.7. with Refrain"
   text_copyright: Public Domain
   umh:
   - '219'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Salvation
   tune: GREENSLEEVES
   tune_basis: umh
   music: []
   music_year: ''
-  tune_meter: 8.7.8.7.6.8.6.7
+  tune_meter: "8.7.8.7.6.8.6.7"
   tune_source: English ballad, 16th cent.
   tune_copyright: Public Domain
-  incipit: '134565427123117'
+  incipit: "134565427123117"
   hymnary:
     text: what_child_is_this_who_laid_to_rest
     tune: greensleeves
@@ -3065,6 +3812,17 @@ what-wondrous-love-is-this:
   text_copyright: Public Domain
   umh:
   - '292'
+  topics:
+  - Adoration and Praise
+  - Assurance
+  - Christ's Gracious Life
+  - Christian Year
+  - Eternal Life
+  - Jesus Christ
+  - Justifying Grace
+  - Love
+  - Music and Singing
+  - New Heaven and a New Earth
   tune: WONDROUS LOVE
   tune_basis: umh
   music:
@@ -3092,21 +3850,31 @@ when-i-survey-the-wondrous-cross:
   words:
   - Isaac Watts
   words_year: '1707'
-  meter: 8.8.8.8
-  text_meter: 8.8.8.8.
+  meter: "8.8.8.8"
+  text_meter: "8.8.8.8."
   text_copyright: Public Domain
   umh:
   - '298'
   - '299'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Commitment
+  - Holy Communion
+  - Jesus Christ
+  - Love
+  - Penitence
+  - Sanctifiying and Perfecting Grace
+  - The Sacraments and Rites of the Church
   tune: HAMBURG
   tune_basis: chosen
   music:
   - Lowell Mason
   music_year: '1824'
-  tune_meter: 8.8.8.8.
+  tune_meter: "8.8.8.8."
   tune_source: Adapted from a Gregorian Chant; Gregorian
   tune_copyright: Public Domain
-  incipit: '112323432333343'
+  incipit: "112323432333343"
   hymnary:
     text: when_i_survey_the_wondrous_cross_watts
     tune: hamburg_mason
@@ -3132,6 +3900,12 @@ you-are-the-seed:
   text_copyright: © 1979 Cesareo Gabarain. Published by OCP Publications
   umh:
   - '583'
+  topics:
+  - Closing Hymns
+  - Discipleship and Service
+  - Mission and Outreach
+  - Testimony and Witness
+  - The Nature of the Church
   tune: ID Y ENSEÑAD
   tune_basis: umh
   music:

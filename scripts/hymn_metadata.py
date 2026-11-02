@@ -39,7 +39,7 @@ def write(name, lines):
 
 def index(hymns):
     lines = ["# Hymn metadata", "", CREDIT,
-             "Also: [by tune and meter](tunes.md) · [by person](people.md) · [to review](review.md).", "",
+             "Also: [by tune and meter](tunes.md) · [by person](people.md) · [by topic](topics.md) · [to review](review.md).", "",
              "UMH is the hymn's number in *The United Methodist Hymnal*. `Status` is `reviewed` once confirmed by hand; `likely` follows UMH with nothing to check; `check` is listed in [review.md](review.md).", "",
              "| Hymn | UMH | Tune | Meter | Words | Music | Status |", "|------|-----|------|-------|-------|-------|--------|"]
     for slug, h in sorted(hymns.items(), key=lambda i: i[1]["title"].lower()):
@@ -81,6 +81,21 @@ def people_page(hymns, people):
     write("people.md", lines)
 
 
+def topics_page(hymns):
+    groups = defaultdict(list)
+    for slug, h in hymns.items():
+        for topic in h.get("topics") or []:
+            groups[topic].append((slug, h))
+    missing = sorted(h["title"] for h in hymns.values() if not h.get("topics"))
+    lines = ["# Hymns by topic", "", CREDIT,
+             "Topics from the index of *The United Methodist Hymnal* (UMH). Hymnary's search also returns longer topics containing the same phrase, so a hymn under Justifying Grace isn't also listed under Grace.", ""]
+    for topic, items in sorted(groups.items()):
+        songs = " · ".join(song_link(s, h) for s, h in sorted(items, key=lambda i: i[1]["title"].lower()))
+        lines += [f"## {topic} ({len(items)})", "", songs, ""]
+    lines += ["## Not in UMH, so no topics", "", " · ".join(missing), ""]
+    write("topics.md", lines)
+
+
 def review(hymns, people):
     flagged = [(s, h) for s, h in hymns.items() if h["status"] == "check"]
     decide = [i for i in flagged if needs_tune(i[1])]
@@ -117,8 +132,9 @@ def main():
     index(hymns)
     tunes(hymns)
     people_page(hymns, people)
+    topics_page(hymns)
     review(hymns, people)
-    print(f"Wrote {OUT}/index.md, tunes.md, people.md, review.md")
+    print(f"Wrote {OUT}/index.md, tunes.md, people.md, topics.md, review.md")
 
 
 if __name__ == "__main__":

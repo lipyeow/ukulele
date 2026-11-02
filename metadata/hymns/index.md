@@ -2,7 +2,7 @@
 
 Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. Data from [Hymnary.org](https://hymnary.org).
 
-Also: [by tune and meter](tunes.md) · [by person](people.md) · [to review](review.md).
+Also: [by tune and meter](tunes.md) · [by person](people.md) · [by topic](topics.md) · [to review](review.md).
 
 UMH is the hymn's number in *The United Methodist Hymnal*. `Status` is `reviewed` once confirmed by hand; `likely` follows UMH with nothing to check; `check` is listed in [review.md](review.md).
 

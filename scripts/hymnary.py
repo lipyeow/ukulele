@@ -7,6 +7,8 @@ Needs the Hymnary CSV downloads in tmp/hymnary/ (gitignored; see hymnary.org/exp
   tunes   Live, once: fetch the tunes published with each matched text. One request every
           6 seconds; responses are cached, and it stops if a response isn't CSV.
   umh     Live, once: save the contents of The United Methodist Hymnal to tmp/hymnary/umh.csv.
+  topics  Live, once: for each topic in scripts/umh-topics.txt, save its UMH hymns to
+          tmp/hymnary/topics/. One request every 6 seconds; cached; stops if not CSV.
   build   Offline: write metadata/hymns/hymns.yaml and people.yaml. Entries with
           status: reviewed are kept exactly as they are.
 """
@@ -182,6 +184,32 @@ def umh():
         target.write_bytes(response.read())
 
 
+def topic_names():
+    return (ROOT / "scripts/umh-topics.txt").read_text().splitlines()
+
+
+def topic_file(index):
+    return DATA / "topics" / f"{index:03}.csv"
+
+
+def topics():
+    topic_file(0).parent.mkdir(exist_ok=True)
+    names = topic_names()
+    for index, name in enumerate(names):
+        target = topic_file(index)
+        if target.exists():
+            continue
+        query = f'hymnalNumber:UMH topics:"{name}" in:instances'
+        params = urllib.parse.urlencode({"qu": query, "export": "csv", "limit": 2000}, quote_via=urllib.parse.quote)
+        time.sleep(6)
+        request = urllib.request.Request(f"https://hymnary.org/search?{params}", headers={"User-Agent": UA})
+        with urllib.request.urlopen(request, timeout=60) as response:
+            if not response.headers.get("content-type", "").startswith("text/csv"):
+                sys.exit(f"Not CSV at {name}; stopping.")
+            target.write_bytes(response.read())
+        print(f"{index + 1}/{len(names)} {name}", flush=True)
+
+
 def surname(name):
     name = re.sub(r",?\s*(Jr|Sr)\.?$", "", name.strip())
     if name.lower().startswith("anon"):
@@ -236,6 +264,29 @@ class Quoted(str):
 
 
 yaml.SafeDumper.add_representer(Quoted, lambda dumper, value: dumper.represent_scalar("tag:yaml.org,2002:str", str(value), style='"'))
+
+
+def hymn_topics(numbers):
+    """UMH topics for these hymn numbers. Hymnary's topic search also matches longer topics
+    containing the phrase (Grace finds Justifying Grace), so the broader one is dropped."""
+    found = []
+    for index, name in enumerate(topic_names()):
+        with topic_file(index).open(newline="", encoding="utf8") as handle:
+            if any(row["number"] in numbers for row in csv.DictReader(handle)):
+                found.append(name)
+    return [name for name in found if not any(name != other and re.search(rf"\b{re.escape(name)}\b", other) for other in found)]
+
+
+def with_topics(hymn):
+    """The entry with topics after its UMH numbers, and meters still quoted."""
+    entry = {}
+    for key, value in hymn.items():
+        if key == "topics":
+            continue
+        entry[key] = Quoted(value) if key in ("meter", "text_meter", "tune_meter", "incipit") else value
+        if key == "umh":
+            entry["topics"] = hymn_topics(set(value or []))
+    return entry
 
 
 def build():
@@ -331,6 +382,7 @@ def build():
                 "status": "check" if flags else ("reviewed" if basis == "chosen" else "likely"),
                 "notes": flags,
             }
+        hymns[slug] = with_topics(hymns[slug])
         used.update(hymns[slug]["words"], hymns[slug]["music"])
     OUTPUT.mkdir(parents=True, exist_ok=True)
     header = "# Hymn metadata from Hymnary.org (https://hymnary.org), checked by hand.\n# Set status: reviewed once an entry is confirmed; scripts/hymnary.py then leaves it alone.\n# Pages in this folder are generated from this file: run make metadata.\n"
@@ -347,4 +399,4 @@ def build():
 
 
 if __name__ == "__main__":
-    {"match": match, "tunes": tunes, "umh": umh, "build": build}[sys.argv[1]]()
+    {"match": match, "tunes": tunes, "umh": umh, "topics": topics, "build": build}[sys.argv[1]]()

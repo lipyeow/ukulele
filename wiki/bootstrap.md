@@ -350,10 +350,15 @@ How it was collected (`scripts/hymnary.py`):
    between texts and tunes. One request every 6 seconds; responses are cached in `tmp/hymnary/`.
 3. `umh`: one live request for the contents of *The United Methodist Hymnal*, saved to
    `tmp/hymnary/umh.csv`. Most of the hymns here follow its tunes.
-4. `build`: fill in everything else offline from `texts.csv`, `tunes.csv` and `people.csv`.
+4. `topics`: one live request per topic in `scripts/umh-topics.txt`, saved to `tmp/hymnary/topics/`.
+   Search export, because the topic index pages (`/browse/topics/UMH`) now return a bot challenge.
+5. `build`: fill in everything else offline from `texts.csv`, `tunes.csv` and `people.csv`.
 
 Decisions:
 
+- Topics come from UMH only, so hymns not in UMH have none. The topic search also matches longer topics
+  containing the phrase, so a broader topic is dropped when a longer one matched the same hymn. `Mercy`
+  and `Lord's Prayer (Text)` returned no hymns from the search. `build` adds topics to `reviewed` entries too.
 - Hymnary is the only automatic source. Gaps stay blank until filled by hand.
 - YAML, not CSV: hymns have several authors and tunes, and it edits and diffs well by hand.
 - The Hymnary CSV downloads stay out of the repo. They need a browser, so download them from
