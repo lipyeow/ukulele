@@ -1,5 +1,9 @@
 // Shared ChordPro config for all song sheets.
 {
+  // Allow {meta: tune NAME} in songs, printed on the title line. ChordPro ignores undeclared keys.
+  "metadata": {
+    "keys": [ "title", "subtitle", "artist", "composer", "lyricist", "arranger", "copyright", "album", "year", "key", "time", "tempo", "capo", "duration", "tune" ]
+  },
   "include": [ "ukulele" ],
   // The ukulele chord set has no sus4 chords; the sources' "sus" is sus4 (see
   // scripts/txt2cho.py), so define them here, for every root a transposed song can hit.
