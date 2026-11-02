@@ -372,4 +372,6 @@ Decisions:
   Where the tune's and words' meters differ, `meter` keeps the words' meter unless corrected by hand.
 - `status`: `likely` follows UMH with nothing to check; `check` is listed in `review.md`. Set `reviewed`
   once confirmed by hand. `build` never overwrites a `reviewed` entry.
-- `.cho` files and PDFs are unchanged for now. What to print on the PDFs is still undecided.
+- PDFs print only the tune name, after the time signature, from `{meta: tune NAME}` in each `.cho`. Placeholder
+  names in brackets are left off. Tunes go in the `.cho` rather than being read from `hymns.yaml` at build time, so
+  each source stays complete and YAML edits don't rebuild every PDF. `make check` compares the two.

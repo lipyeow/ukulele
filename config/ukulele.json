@@ -57,7 +57,7 @@
     "formats": {
       "title": {
         "title": [ "%{title}", "", "" ],
-        "subtitle": [ "Key: %{key_actual}%{time|   Time: %{}}", "", "" ],
+        "subtitle": [ "Key: %{key_actual}%{time|   Time: %{}}%{tune|   Tune: %{}}", "", "" ],
         "footer": [ "", "", "%{page}" ]
       },
       "default": {

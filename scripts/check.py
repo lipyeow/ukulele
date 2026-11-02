@@ -21,6 +21,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import yaml
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import CONFIG, chordpro_bin  # noqa: E402
 from txt2cho import (BEAT_LINE, CHORD_LINE, KEY_HEADER, LABEL, TOKEN,  # noqa: E402
@@ -31,6 +33,7 @@ SRC = ROOT.parent / "gh-home" / "other" / "hymns"
 CSV = ROOT / "wiki" / "migration.csv"
 SONGS = ROOT / "songs" / "hymns"
 GAP = re.compile(r"\S\s{5,}\S")
+HYMNS = yaml.safe_load((ROOT / "metadata" / "hymns" / "hymns.yaml").read_text())
 
 
 def words(text):
@@ -138,11 +141,20 @@ def subsequence(small, big):
     return all(any(c == x for x in it) for c in small)
 
 
+def tune_problems(slug, text):
+    """The {meta: tune} line must match metadata/hymns/hymns.yaml."""
+    tune = (HYMNS.get(slug) or {}).get("tune") or ""
+    expected = "" if tune.startswith("[") else tune
+    found = re.search(r"^\{meta:\s*tune\s+(.*?)\}", text, re.M)
+    actual = found.group(1).strip() if found else ""
+    return [] if actual == expected else [f"tune: .cho has \"{actual}\", hymns.yaml has \"{expected}\""]
+
+
 def check(row):
     cho = SONGS / f"{row['slug']}.cho"
     src, problems, notes = source_parts(SRC / row["canonical_source"])
     song, more, chorus = song_parts(cho.read_text())
-    problems += more + chordpro_problems(cho)
+    problems += more + chordpro_problems(cho) + tune_problems(row["slug"], cho.read_text())
     if row["status"] == "reviewed":
         # Review 3 signed off on this .cho, including fixes to errors in the source, so
         # it is the reference now: only the lint checks apply.
