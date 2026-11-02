@@ -359,6 +359,9 @@ Decisions:
 - Topics come from UMH only, so hymns not in UMH have none. The topic search also matches longer topics
   containing the phrase, so a broader topic is dropped when a longer one matched the same hymn. `Mercy`
   and `Lord's Prayer (Text)` returned no hymns from the search. `build` adds topics to `reviewed` entries too.
+  This extraction is provisional and may be redesigned. `hymn_topics()` in `scripts/hymnary.py` is the only
+  place to change: `build` regenerates the `topics` field on every entry, so don't edit topics by hand until
+  this is settled.
 - Hymnary is the only automatic source. Gaps stay blank until filled by hand.
 - YAML, not CSV: hymns have several authors and tunes, and it edits and diffs well by hand.
 - The Hymnary CSV downloads stay out of the repo. They need a browser, so download them from
