@@ -371,7 +371,7 @@ be-still-my-soul:
     hymnary: unde_et_memores_monk
   - name: '[Be still, my soul: the Lord is on thy side]'
     hymnary: be_still_my_soul_the_lord_is_mcphail
-  status: likely
+  status: reviewed
   notes: []
 because-he-lives:
   title: Because He Lives
