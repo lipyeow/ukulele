@@ -59,7 +59,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [KINGS OF ORIENT](https://hymnary.org/tune/kings_of_orient_hopkins) | 8.8.4.4.6 with refrain | John Henry Hopkins | [We Three Kings](../../songs/hymns/we-three-kings.cho) |
 | [KINGSFOLD](https://hymnary.org/tune/kingsfold_english) | 8.6.8.6 D | English Traditional; English County Songs, 1893; Westminster tune (18th or early 19th Century) | [O Sing a Song of Bethlehem](../../songs/hymns/o-sing-a-song-of-bethlehem.cho) |
 | [LAND OF REST](https://hymnary.org/tune/land_of_rest_american) | 8.6.8.6 | W. S. Turner | [Lord Who Throughout These Forty Days](../../songs/hymns/lord-who-throughout-these-forty-days.cho) |
-| [LASST UNS ERFREUEN](https://hymnary.org/tune/lasst_uns_erfreuen) | 8.8.4.4.8.8 with refrain | Geistliche Kirchengesang Cologne 1623; Auserlesene Catholische Geistliche Kirchengesäng, Cologne, 1623 | [All Creatures of Our God and King](../../songs/hymns/all-creatures-of-our-god-and-king.cho) |
+| [LASST UNS ERFREUEN](https://hymnary.org/tune/lasst_uns_erfreuen) | 8.8.4.4.8.8 with refrain | Geistliche Kirchengesang Cologne 1623; Auserlesene Catholische Geistliche Kirchengesäng, Cologne, 1623 | [All Creatures of Our God and King](../../songs/hymns/all-creatures-of-our-god-and-king.cho) · [Ye Watchers and Ye Holy Ones](../../songs/hymns/ye-watchers-and-ye-holy-ones.cho) |
 | [LAUDA ANIMA](https://hymnary.org/tune/lauda_anima_goss) | 8.7.8.7.8.7 | John Goss | [God Whose Love Is Reigning o'er Us](../../songs/hymns/god-whose-love-is-reigning-oer-us.cho) · [Praise, My Soul, the King of Heaven](../../songs/hymns/praise-my-soul-the-king-of-heaven.cho) |
 | [LEMMEL](https://hymnary.org/tune/lemmel_chorus_lemmel) |  | Helen Howarth Lemmel | [Turn Your Eyes Upon Jesus](../../songs/hymns/turn-your-eyes-upon-jesus.cho) |
 | [LEONI](https://hymnary.org/tune/leoni_hebrew_5123453456752) | 6.6.8.4 D | Meyer Lyon | [The God of Abraham Praise](../../songs/hymns/the-god-of-abraham-praise.cho) |
@@ -352,7 +352,7 @@ Tunes in the same meter can usually swap words.
 
 ### 8.8.4.4.8.8 with refrain
 
-- [LASST UNS ERFREUEN](https://hymnary.org/tune/lasst_uns_erfreuen): [All Creatures of Our God and King](../../songs/hymns/all-creatures-of-our-god-and-king.cho)
+- [LASST UNS ERFREUEN](https://hymnary.org/tune/lasst_uns_erfreuen): [All Creatures of Our God and King](../../songs/hymns/all-creatures-of-our-god-and-king.cho) · [Ye Watchers and Ye Holy Ones](../../songs/hymns/ye-watchers-and-ye-holy-ones.cho)
 
 ### 8.8.8.8
 

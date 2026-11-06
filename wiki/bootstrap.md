@@ -385,5 +385,9 @@ Decisions:
   syllables. First case: *Be Still, My Soul* (UMH 534, 2026-11-05) takes the FINLANDIA chords from
   *This Is My Song*. Its words are 10.10.10.10.10.10, against 11.10 for *This Is My Song*, so each line's last chord
   falls on a one-syllable word.
+  Second: *Ye Watchers and Ye Holy Ones* (UMH 90, 2026-11-05) takes the LASST UNS ERFREUEN chords from
+  *All Creatures of Our God and King*. Its refrain is all alleluias, so a whole alleluia goes where
+  *All Creatures* sings each word of "O praise ye".
 - Metadata: `scripts/hymnary.py match`, then `tunes` (one live request per new hymn), then `build` and
-  `make metadata`.
+  `make metadata`. Check the match: a hymn full of alleluias can match the wrong text. Fix it in `OVERRIDES`,
+  delete the hymn's file in `tmp/hymnary/cache/`, and run the three steps again.

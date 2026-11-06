@@ -113,6 +113,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | Rowland H. Prichard |  |  | [Come Thou Long-Expected Jesus](../../songs/hymns/come-thou-long-expected-jesus.cho) |
 | [Aurelius Clemens Prudentius](https://hymnary.org/person/Prudentius_AC) | 348–410 | [Of the Father's Love Begotten](../../songs/hymns/of-the-fathers-love-begotten.cho) |  |
 | [Lewis H. Redner](https://hymnary.org/person/Redner_Lewis) | 1831–1908 |  | [O Little Town of Bethlehem](../../songs/hymns/o-little-town-of-bethlehem.cho) |
+| Athelston Riley |  | [Ye Watchers and Ye Holy Ones](../../songs/hymns/ye-watchers-and-ye-holy-ones.cho) |  |
 | Martin Rinkart |  | [Now Thank We All Our God](../../songs/hymns/now-thank-we-all-our-god.cho) |  |
 | [Robert Robinson](https://hymnary.org/person/Robinson_R) | 1735–1790 | [Come Thou Fount of Every Blessing](../../songs/hymns/come-thou-fount-of-every-blessing.cho) |  |
 | [Christina Georgina Rossetti](https://hymnary.org/person/Rossetti_CG) | 1830–1894 | [In the Bleak Midwinter](../../songs/hymns/in-the-bleak-midwinter.cho) |  |

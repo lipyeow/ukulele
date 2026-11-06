@@ -35,6 +35,7 @@ OVERRIDES = {
     "o-come-o-come-emmanuel": "o_come_o_come_emmanuel_and_ransom",
     "the-first-noel": "the_first_nowell_the_angel_did_say",
     "thine-be-the-glory": "thine_is_the_glory_risen_conquering",
+    "ye-watchers-and-ye-holy-ones": "ye_watchers_and_ye_holy_ones",
 }
 # Same hymn as UMH, under a different Hymnary text.
 UMH_TEXTS = {"you-are-the-seed": "sois_la_semilla_que_ha_de_crecer"}

@@ -3931,6 +3931,42 @@ when-i-survey-the-wondrous-cross:
     hymnary: duke_street_hatton
   status: reviewed
   notes: []
+ye-watchers-and-ye-holy-ones:
+  title: Ye Watchers and Ye Holy Ones
+  first_line: Ye watchers and ye holy ones
+  words:
+  - Athelston Riley
+  words_year: '1906'
+  meter: "8.8.8.8.8.8.8.4"
+  text_meter: "8.8.8.8.8.8.8.4"
+  text_copyright: Public Domain
+  umh:
+  - '90'
+  topics:
+  - Adoration and Praise
+  - All Saints
+  - Christian Year
+  - Music and Singing
+  - New Heaven and a New Earth
+  - Opening Hymns
+  - Service Music
+  - Testimony and Witness
+  - The Glory of the Triune God
+  tune: LASST UNS ERFREUEN
+  tune_basis: umh
+  music: []
+  music_year: ''
+  tune_meter: "8.8.4.4.8.8 with refrain"
+  tune_source: Geistliche Kirchengesang Cologne 1623; Auserlesene Catholische Geistliche Kirchengesäng, Cologne, 1623
+  tune_copyright: Public Domain
+  incipit: "11231345112313451765"
+  hymnary:
+    text: ye_watchers_and_ye_holy_ones
+    tune: lasst_uns_erfreuen
+  other_tunes: []
+  status: check
+  notes:
+  - 'meters differ: words 8.8.8.8.8.8.8.4, tune 8.8.4.4.8.8 with refrain'
 you-are-the-seed:
   title: You Are the Seed
   first_line: You are the seed that will grow a new sprout
