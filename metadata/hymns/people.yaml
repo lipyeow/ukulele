@@ -279,6 +279,10 @@ James W. Alexander:
   born: null
   died: null
   hymnary: ''
+Jane Borthwick:
+  born: 1813
+  died: 1897
+  hymnary: Borthwick_Jane
 Jaroslav J. Vajda:
   born: 1919
   died: 2008
@@ -367,6 +371,10 @@ Kate Hankey:
   born: 1834
   died: 1911
   hymnary: Hankey_Kate
+Kathrina von Schlegel:
+  born: 1697
+  died: 1777
+  hymnary: Schlegel_KV
 Lewis H. Redner:
   born: 1831
   died: 1908

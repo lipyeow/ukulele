@@ -9,7 +9,8 @@ For each songs/hymns/<slug>.cho with a row in wiki/migration.csv:
   empty sections, digits or stray tokens in lyric lines, and two-column source layouts.
 
 Songs with status "reviewed" in the CSV only get the lint checks: review may fix errors
-in the source, so the .cho is the reference from then on.
+in the source, so the .cho is the reference from then on. So do new songs written
+directly as .cho, with no canonical_source.
 
 Usage: python3 scripts/check.py [SLUG ...]   (default: every converted song)
 Exits 1 if any song has problems.
@@ -152,9 +153,12 @@ def tune_problems(slug, text):
 
 def check(row):
     cho = SONGS / f"{row['slug']}.cho"
-    src, problems, notes = source_parts(SRC / row["canonical_source"])
     song, more, chorus = song_parts(cho.read_text())
-    problems += more + chordpro_problems(cho) + tune_problems(row["slug"], cho.read_text())
+    lint = more + chordpro_problems(cho) + tune_problems(row["slug"], cho.read_text())
+    if not row["canonical_source"]:
+        return lint, ["new song: no source to compare with"]
+    src, problems, notes = source_parts(SRC / row["canonical_source"])
+    problems += lint
     if row["status"] == "reviewed":
         # Review 3 signed off on this .cho, including fixes to errors in the source, so
         # it is the reference now: only the lint checks apply.

@@ -375,3 +375,15 @@ Decisions:
 - PDFs print only the tune name, after the time signature, from `{meta: tune NAME}` in each `.cho`. Placeholder
   names in brackets are left off. Tunes go in the `.cho` rather than being read from `hymns.yaml` at build time, so
   each source stays complete and YAML edits don't rebuild every PDF. `make check` compares the two.
+
+## New hymns (not from the old sheets)
+
+- New hymns are written directly as `.cho`, with no old `.txt` source. They still get a row in
+  `wiki/migration.csv`, with `canonical_source` left empty. `make check` then runs only the lint and tune
+  checks on them, as for `reviewed` songs.
+- A hymn whose tune is already in the repo reuses that sheet's chords, refitted to the new words'
+  syllables. First case: *Be Still, My Soul* (UMH 534, 2026-11-05) takes the FINLANDIA chords from
+  *This Is My Song*. Its words are 10.10.10.10.10.10, against 11.10 for *This Is My Song*, so each line's last chord
+  falls on a one-syllable word.
+- Metadata: `scripts/hymnary.py match`, then `tunes` (one live request per new hymn), then `build` and
+  `make metadata`.

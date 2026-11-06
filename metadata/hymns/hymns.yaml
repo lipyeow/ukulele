@@ -329,6 +329,50 @@ are-ye-able:
   other_tunes: []
   status: likely
   notes: []
+be-still-my-soul:
+  title: Be Still, My Soul
+  first_line: 'Be still, my soul: the Lord is on thy side'
+  words:
+  - Jane Borthwick
+  - Kathrina von Schlegel
+  words_year: 1752; 1855
+  meter: "10.10.10.10.10.10"
+  text_meter: "10.10.10.10.10.10."
+  text_copyright: Public Domain
+  umh:
+  - '534'
+  - '746'
+  topics:
+  - Calmness and Serenity
+  - Comfort
+  - Courage
+  - Eternal Life
+  - Faith
+  - Funerals and Memorial Services
+  - Psalter
+  - Sanctifiying and Perfecting Grace
+  - Trust
+  tune: FINLANDIA
+  tune_basis: umh
+  music:
+  - Jean Sibelius
+  music_year: '1899'
+  tune_meter: "10.10.10.10.10.10."
+  tune_source: ''
+  tune_copyright: P. D. in the U.S. and Canada, © Breitkopf & Härtel in other territories of the world
+  incipit: "323432312233234"
+  hymnary:
+    text: be_still_my_soul_the_lord_is_on_thy_side
+    tune: finlandia
+  other_tunes:
+  - name: ST. HELEN
+    hymnary: st_helen_hateley
+  - name: UNDE ET MEMORES
+    hymnary: unde_et_memores_monk
+  - name: '[Be still, my soul: the Lord is on thy side]'
+    hymnary: be_still_my_soul_the_lord_is_mcphail
+  status: likely
+  notes: []
 because-he-lives:
   title: Because He Lives
   first_line: God sent His son, they called Him, Jesus

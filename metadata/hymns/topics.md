@@ -36,9 +36,9 @@ Topics from the index of *The United Methodist Hymnal* (UMH). Hymnary's search a
 
 [Come Ye Sinners Poor and Needy](../../songs/hymns/come-ye-sinners-poor-and-needy.cho) · [Come, Sinners, to the Gospel Feast](../../songs/hymns/come-sinners-to-the-gospel-feast.cho) · [Softly and Tenderly Jesus Is Calling](../../songs/hymns/softly-and-tenderly-jesus-is-calling.cho) · [Turn Your Eyes Upon Jesus](../../songs/hymns/turn-your-eyes-upon-jesus.cho)
 
-## Calmness and Serenity (3)
+## Calmness and Serenity (4)
 
-[Abide with Me](../../songs/hymns/abide-with-me.cho) · [Dear Lord and Father of Mankind](../../songs/hymns/dear-lord-and-father-of-mankind.cho) · [Great Is Thy Faithfulness](../../songs/hymns/great-is-thy-faithfulness.cho)
+[Abide with Me](../../songs/hymns/abide-with-me.cho) · [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [Dear Lord and Father of Mankind](../../songs/hymns/dear-lord-and-father-of-mankind.cho) · [Great Is Thy Faithfulness](../../songs/hymns/great-is-thy-faithfulness.cho)
 
 ## Canticles (3)
 
@@ -80,9 +80,9 @@ Topics from the index of *The United Methodist Hymnal* (UMH). Hymnary's search a
 
 [Are Ye Able](../../songs/hymns/are-ye-able.cho) · [Here, O My Lord, I See Thee Face to Face](../../songs/hymns/here-o-my-lord-i-see-thee-face-to-face.cho) · [Lord, Whose Love Through Humble Service](../../songs/hymns/lord-whose-love-through-humble-service.cho) · [Sent Forth by God's Blessing](../../songs/hymns/sent-forth-by-gods-blessing.cho) · [You Are the Seed](../../songs/hymns/you-are-the-seed.cho)
 
-## Comfort (6)
+## Comfort (7)
 
-[Abide with Me](../../songs/hymns/abide-with-me.cho) · [God Will Take Care of You](../../songs/hymns/god-will-take-care-of-you.cho) · [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [Jesus, Lover of My Soul](../../songs/hymns/jesus-lover-of-my-soul.cho) · [Nearer, My God, to Thee](../../songs/hymns/nearer-my-god-to-thee.cho) · [Sweet Hour of Prayer](../../songs/hymns/sweet-hour-of-prayer.cho)
+[Abide with Me](../../songs/hymns/abide-with-me.cho) · [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [God Will Take Care of You](../../songs/hymns/god-will-take-care-of-you.cho) · [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [Jesus, Lover of My Soul](../../songs/hymns/jesus-lover-of-my-soul.cho) · [Nearer, My God, to Thee](../../songs/hymns/nearer-my-god-to-thee.cho) · [Sweet Hour of Prayer](../../songs/hymns/sweet-hour-of-prayer.cho)
 
 ## Commitment (7)
 
@@ -92,9 +92,9 @@ Topics from the index of *The United Methodist Hymnal* (UMH). Hymnary's search a
 
 [Because He Lives](../../songs/hymns/because-he-lives.cho) · [Dear Lord and Father of Mankind](../../songs/hymns/dear-lord-and-father-of-mankind.cho) · [I Surrender All](../../songs/hymns/i-surrender-all.cho) · [Jesus, Lover of My Soul](../../songs/hymns/jesus-lover-of-my-soul.cho) · [Pass Me Not, O Gentle Savior](../../songs/hymns/pass-me-not-o-gentle-savior.cho) · [Rock of Ages Cleft for Me](../../songs/hymns/rock-of-ages-cleft-for-me.cho)
 
-## Courage (2)
+## Courage (3)
 
-[O God Our Help in Ages Past](../../songs/hymns/o-god-our-help-in-ages-past.cho) · [Turn Your Eyes Upon Jesus](../../songs/hymns/turn-your-eyes-upon-jesus.cho)
+[Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [O God Our Help in Ages Past](../../songs/hymns/o-god-our-help-in-ages-past.cho) · [Turn Your Eyes Upon Jesus](../../songs/hymns/turn-your-eyes-upon-jesus.cho)
 
 ## Creation (5)
 
@@ -104,17 +104,17 @@ Topics from the index of *The United Methodist Hymnal* (UMH). Hymnary's search a
 
 [Are Ye Able](../../songs/hymns/are-ye-able.cho) · [Dear Lord and Father of Mankind](../../songs/hymns/dear-lord-and-father-of-mankind.cho) · [Lord, Whose Love Through Humble Service](../../songs/hymns/lord-whose-love-through-humble-service.cho) · [O Master Let Me Walk with Thee](../../songs/hymns/o-master-let-me-walk-with-thee.cho) · [You Are the Seed](../../songs/hymns/you-are-the-seed.cho)
 
-## Eternal Life (15)
+## Eternal Life (16)
 
-[Abide with Me](../../songs/hymns/abide-with-me.cho) · [All Creatures of Our God and King](../../songs/hymns/all-creatures-of-our-god-and-king.cho) · [Are Ye Able](../../songs/hymns/are-ye-able.cho) · [Because He Lives](../../songs/hymns/because-he-lives.cho) · [For All the Saints](../../songs/hymns/for-all-the-saints.cho) · [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho) · [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) · [Nearer, My God, to Thee](../../songs/hymns/nearer-my-god-to-thee.cho) · [O God Our Help in Ages Past](../../songs/hymns/o-god-our-help-in-ages-past.cho) · [Rock of Ages Cleft for Me](../../songs/hymns/rock-of-ages-cleft-for-me.cho) · [Sing We Now of Christmas](../../songs/hymns/sing-we-now-of-christmas.cho) · [The Old Rugged Cross](../../songs/hymns/the-old-rugged-cross.cho) · [Thine Be the Glory](../../songs/hymns/thine-be-the-glory.cho) · [What Wondrous Love Is This](../../songs/hymns/what-wondrous-love-is-this.cho)
+[Abide with Me](../../songs/hymns/abide-with-me.cho) · [All Creatures of Our God and King](../../songs/hymns/all-creatures-of-our-god-and-king.cho) · [Are Ye Able](../../songs/hymns/are-ye-able.cho) · [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [Because He Lives](../../songs/hymns/because-he-lives.cho) · [For All the Saints](../../songs/hymns/for-all-the-saints.cho) · [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho) · [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) · [Nearer, My God, to Thee](../../songs/hymns/nearer-my-god-to-thee.cho) · [O God Our Help in Ages Past](../../songs/hymns/o-god-our-help-in-ages-past.cho) · [Rock of Ages Cleft for Me](../../songs/hymns/rock-of-ages-cleft-for-me.cho) · [Sing We Now of Christmas](../../songs/hymns/sing-we-now-of-christmas.cho) · [The Old Rugged Cross](../../songs/hymns/the-old-rugged-cross.cho) · [Thine Be the Glory](../../songs/hymns/thine-be-the-glory.cho) · [What Wondrous Love Is This](../../songs/hymns/what-wondrous-love-is-this.cho)
 
 ## Evening Prayer (1)
 
 [Abide with Me](../../songs/hymns/abide-with-me.cho)
 
-## Faith (5)
+## Faith (6)
 
-[Come, O Thou Traveler Unknown](../../songs/hymns/come-o-thou-traveler-unknown.cho) · [God Whose Love Is Reigning o'er Us](../../songs/hymns/god-whose-love-is-reigning-oer-us.cho) · [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) · [O Master Let Me Walk with Thee](../../songs/hymns/o-master-let-me-walk-with-thee.cho) · [Rock of Ages Cleft for Me](../../songs/hymns/rock-of-ages-cleft-for-me.cho)
+[Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [Come, O Thou Traveler Unknown](../../songs/hymns/come-o-thou-traveler-unknown.cho) · [God Whose Love Is Reigning o'er Us](../../songs/hymns/god-whose-love-is-reigning-oer-us.cho) · [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) · [O Master Let Me Walk with Thee](../../songs/hymns/o-master-let-me-walk-with-thee.cho) · [Rock of Ages Cleft for Me](../../songs/hymns/rock-of-ages-cleft-for-me.cho)
 
 ## Forgiveness (6)
 
@@ -124,9 +124,9 @@ Topics from the index of *The United Methodist Hymnal* (UMH). Hymnary's search a
 
 [Come Thou Long-Expected Jesus](../../songs/hymns/come-thou-long-expected-jesus.cho) · [Hail to the Lord's Anointed](../../songs/hymns/hail-to-the-lords-anointed.cho) · [Love Divine, All Loves Excelling](../../songs/hymns/love-divine-all-loves-excelling.cho) · [O Come, O Come, Emmanuel](../../songs/hymns/o-come-o-come-emmanuel.cho)
 
-## Funerals and Memorial Services (13)
+## Funerals and Memorial Services (14)
 
-[A Mighty Fortress Is Our God](../../songs/hymns/a-mighty-fortress-is-our-god.cho) · [Abide with Me](../../songs/hymns/abide-with-me.cho) · [All Hail the Power of Jesus' Name](../../songs/hymns/all-hail-the-power-of-jesus-name.cho) · [Christ the Lord Is Risen Today](../../songs/hymns/christ-the-lord-is-risen-today.cho) · [Come Let Us Join Our Friends Above](../../songs/hymns/come-let-us-join-our-friends-above.cho) · [For All the Saints](../../songs/hymns/for-all-the-saints.cho) · [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho) · [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) · [Love Divine, All Loves Excelling](../../songs/hymns/love-divine-all-loves-excelling.cho) · [Nearer, My God, to Thee](../../songs/hymns/nearer-my-god-to-thee.cho) · [O God Our Help in Ages Past](../../songs/hymns/o-god-our-help-in-ages-past.cho) · [Praise, My Soul, the King of Heaven](../../songs/hymns/praise-my-soul-the-king-of-heaven.cho)
+[A Mighty Fortress Is Our God](../../songs/hymns/a-mighty-fortress-is-our-god.cho) · [Abide with Me](../../songs/hymns/abide-with-me.cho) · [All Hail the Power of Jesus' Name](../../songs/hymns/all-hail-the-power-of-jesus-name.cho) · [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [Christ the Lord Is Risen Today](../../songs/hymns/christ-the-lord-is-risen-today.cho) · [Come Let Us Join Our Friends Above](../../songs/hymns/come-let-us-join-our-friends-above.cho) · [For All the Saints](../../songs/hymns/for-all-the-saints.cho) · [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho) · [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) · [Love Divine, All Loves Excelling](../../songs/hymns/love-divine-all-loves-excelling.cho) · [Nearer, My God, to Thee](../../songs/hymns/nearer-my-god-to-thee.cho) · [O God Our Help in Ages Past](../../songs/hymns/o-god-our-help-in-ages-past.cho) · [Praise, My Soul, the King of Heaven](../../songs/hymns/praise-my-soul-the-king-of-heaven.cho)
 
 ## Glory (3)
 
@@ -288,9 +288,9 @@ Topics from the index of *The United Methodist Hymnal* (UMH). Hymnary's search a
 
 [God Has Spoken](../../songs/hymns/god-has-spoken.cho) · [God Will Take Care of You](../../songs/hymns/god-will-take-care-of-you.cho) · [Great Is Thy Faithfulness](../../songs/hymns/great-is-thy-faithfulness.cho) · [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho) · [Hail to the Lord's Anointed](../../songs/hymns/hail-to-the-lords-anointed.cho) · [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) · [Now Thank We All Our God](../../songs/hymns/now-thank-we-all-our-god.cho) · [Praise to the Lord, the Almighty](../../songs/hymns/praise-to-the-lord-the-almighty.cho) · [Sing Praise to God Who Reigns Above](../../songs/hymns/sing-praise-to-god-who-reigns-above.cho)
 
-## Psalter (8)
+## Psalter (9)
 
-[A Mighty Fortress Is Our God](../../songs/hymns/a-mighty-fortress-is-our-god.cho) · [All Creatures of Our God and King](../../songs/hymns/all-creatures-of-our-god-and-king.cho) · [For the Beauty of the Earth](../../songs/hymns/for-the-beauty-of-the-earth.cho) · [Hail to the Lord's Anointed](../../songs/hymns/hail-to-the-lords-anointed.cho) · [Now Thank We All Our God](../../songs/hymns/now-thank-we-all-our-god.cho) · [O Sacred Head Now Wounded](../../songs/hymns/o-sacred-head-now-wounded.cho) · [Praise to the Lord, the Almighty](../../songs/hymns/praise-to-the-lord-the-almighty.cho) · [Sing Praise to God Who Reigns Above](../../songs/hymns/sing-praise-to-god-who-reigns-above.cho)
+[A Mighty Fortress Is Our God](../../songs/hymns/a-mighty-fortress-is-our-god.cho) · [All Creatures of Our God and King](../../songs/hymns/all-creatures-of-our-god-and-king.cho) · [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [For the Beauty of the Earth](../../songs/hymns/for-the-beauty-of-the-earth.cho) · [Hail to the Lord's Anointed](../../songs/hymns/hail-to-the-lords-anointed.cho) · [Now Thank We All Our God](../../songs/hymns/now-thank-we-all-our-god.cho) · [O Sacred Head Now Wounded](../../songs/hymns/o-sacred-head-now-wounded.cho) · [Praise to the Lord, the Almighty](../../songs/hymns/praise-to-the-lord-the-almighty.cho) · [Sing Praise to God Who Reigns Above](../../songs/hymns/sing-praise-to-god-who-reigns-above.cho)
 
 ## Reconciliation (1)
 
@@ -308,9 +308,9 @@ Topics from the index of *The United Methodist Hymnal* (UMH). Hymnary's search a
 
 [All Hail the Power of Jesus' Name](../../songs/hymns/all-hail-the-power-of-jesus-name.cho) · [Come, Sinners, to the Gospel Feast](../../songs/hymns/come-sinners-to-the-gospel-feast.cho) · [Good Christian Friends, Rejoice](../../songs/hymns/good-christian-friends-rejoice.cho) · [Hail to the Lord's Anointed](../../songs/hymns/hail-to-the-lords-anointed.cho) · [He Lives](../../songs/hymns/he-lives.cho) · [Lo How a Rose E'er Blooming](../../songs/hymns/lo-how-a-rose-eer-blooming.cho) · [O Sing a Song of Bethlehem](../../songs/hymns/o-sing-a-song-of-bethlehem.cho) · [What Child Is This](../../songs/hymns/what-child-is-this.cho)
 
-## Sanctifiying and Perfecting Grace (19)
+## Sanctifiying and Perfecting Grace (20)
 
-[A Mighty Fortress Is Our God](../../songs/hymns/a-mighty-fortress-is-our-god.cho) · [Are Ye Able](../../songs/hymns/are-ye-able.cho) · [Come Down O Love Divine](../../songs/hymns/come-down-o-love-divine.cho) · [Come Thou Fount of Every Blessing](../../songs/hymns/come-thou-fount-of-every-blessing.cho) · [Come, O Thou Traveler Unknown](../../songs/hymns/come-o-thou-traveler-unknown.cho) · [Dear Lord and Father of Mankind](../../songs/hymns/dear-lord-and-father-of-mankind.cho) · [Jesus Keep Me Near the Cross](../../songs/hymns/jesus-keep-me-near-the-cross.cho) · [Jesus, Lover of My Soul](../../songs/hymns/jesus-lover-of-my-soul.cho) · [Love Divine, All Loves Excelling](../../songs/hymns/love-divine-all-loves-excelling.cho) · [Nearer, My God, to Thee](../../songs/hymns/nearer-my-god-to-thee.cho) · [O Master Let Me Walk with Thee](../../songs/hymns/o-master-let-me-walk-with-thee.cho) · [Sweet Hour of Prayer](../../songs/hymns/sweet-hour-of-prayer.cho) · [Take My Life, and Let It Be](../../songs/hymns/take-my-life-and-let-it-be.cho) · [The Gift of Love](../../songs/hymns/the-gift-of-love.cho) · [The Old Rugged Cross](../../songs/hymns/the-old-rugged-cross.cho) · [This Is My Song](../../songs/hymns/this-is-my-song.cho) · [Tis So Sweet to Trust in Jesus](../../songs/hymns/tis-so-sweet-to-trust-in-jesus.cho) · [Trust and Obey](../../songs/hymns/trust-and-obey.cho) · [When I Survey the Wondrous Cross](../../songs/hymns/when-i-survey-the-wondrous-cross.cho)
+[A Mighty Fortress Is Our God](../../songs/hymns/a-mighty-fortress-is-our-god.cho) · [Are Ye Able](../../songs/hymns/are-ye-able.cho) · [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [Come Down O Love Divine](../../songs/hymns/come-down-o-love-divine.cho) · [Come Thou Fount of Every Blessing](../../songs/hymns/come-thou-fount-of-every-blessing.cho) · [Come, O Thou Traveler Unknown](../../songs/hymns/come-o-thou-traveler-unknown.cho) · [Dear Lord and Father of Mankind](../../songs/hymns/dear-lord-and-father-of-mankind.cho) · [Jesus Keep Me Near the Cross](../../songs/hymns/jesus-keep-me-near-the-cross.cho) · [Jesus, Lover of My Soul](../../songs/hymns/jesus-lover-of-my-soul.cho) · [Love Divine, All Loves Excelling](../../songs/hymns/love-divine-all-loves-excelling.cho) · [Nearer, My God, to Thee](../../songs/hymns/nearer-my-god-to-thee.cho) · [O Master Let Me Walk with Thee](../../songs/hymns/o-master-let-me-walk-with-thee.cho) · [Sweet Hour of Prayer](../../songs/hymns/sweet-hour-of-prayer.cho) · [Take My Life, and Let It Be](../../songs/hymns/take-my-life-and-let-it-be.cho) · [The Gift of Love](../../songs/hymns/the-gift-of-love.cho) · [The Old Rugged Cross](../../songs/hymns/the-old-rugged-cross.cho) · [This Is My Song](../../songs/hymns/this-is-my-song.cho) · [Tis So Sweet to Trust in Jesus](../../songs/hymns/tis-so-sweet-to-trust-in-jesus.cho) · [Trust and Obey](../../songs/hymns/trust-and-obey.cho) · [When I Survey the Wondrous Cross](../../songs/hymns/when-i-survey-the-wondrous-cross.cho)
 
 ## Service Music (22)
 
@@ -356,9 +356,9 @@ Topics from the index of *The United Methodist Hymnal* (UMH). Hymnary's search a
 
 [For All the Saints](../../songs/hymns/for-all-the-saints.cho) · [Lo, He Comes with Clouds Descending](../../songs/hymns/lo-he-comes-with-clouds-descending.cho) · [O Day of Peace That Dimly Shines](../../songs/hymns/o-day-of-peace-that-dimly-shines.cho) · [Rejoice the Lord Is King](../../songs/hymns/rejoice-the-lord-is-king.cho) · [The Battle Hymn of the Republic](../../songs/hymns/the-battle-hymn-of-the-republic.cho) · [Thine Be the Glory](../../songs/hymns/thine-be-the-glory.cho)
 
-## Trust (11)
+## Trust (12)
 
-[Come Down O Love Divine](../../songs/hymns/come-down-o-love-divine.cho) · [Dear Lord and Father of Mankind](../../songs/hymns/dear-lord-and-father-of-mankind.cho) · [God Will Take Care of You](../../songs/hymns/god-will-take-care-of-you.cho) · [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [Jesus Keep Me Near the Cross](../../songs/hymns/jesus-keep-me-near-the-cross.cho) · [Jesus, Lover of My Soul](../../songs/hymns/jesus-lover-of-my-soul.cho) · [Pass Me Not, O Gentle Savior](../../songs/hymns/pass-me-not-o-gentle-savior.cho) · [Sweet Hour of Prayer](../../songs/hymns/sweet-hour-of-prayer.cho) · [The Old Rugged Cross](../../songs/hymns/the-old-rugged-cross.cho) · [Tis So Sweet to Trust in Jesus](../../songs/hymns/tis-so-sweet-to-trust-in-jesus.cho) · [Trust and Obey](../../songs/hymns/trust-and-obey.cho)
+[Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [Come Down O Love Divine](../../songs/hymns/come-down-o-love-divine.cho) · [Dear Lord and Father of Mankind](../../songs/hymns/dear-lord-and-father-of-mankind.cho) · [God Will Take Care of You](../../songs/hymns/god-will-take-care-of-you.cho) · [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [Jesus Keep Me Near the Cross](../../songs/hymns/jesus-keep-me-near-the-cross.cho) · [Jesus, Lover of My Soul](../../songs/hymns/jesus-lover-of-my-soul.cho) · [Pass Me Not, O Gentle Savior](../../songs/hymns/pass-me-not-o-gentle-savior.cho) · [Sweet Hour of Prayer](../../songs/hymns/sweet-hour-of-prayer.cho) · [The Old Rugged Cross](../../songs/hymns/the-old-rugged-cross.cho) · [Tis So Sweet to Trust in Jesus](../../songs/hymns/tis-so-sweet-to-trust-in-jesus.cho) · [Trust and Obey](../../songs/hymns/trust-and-obey.cho)
 
 ## Weddings (2)
 

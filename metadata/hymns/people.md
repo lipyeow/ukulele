@@ -19,6 +19,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [George Bennard](https://hymnary.org/person/GeorgeBennard) |  | [The Old Rugged Cross](../../songs/hymns/the-old-rugged-cross.cho) | [The Old Rugged Cross](../../songs/hymns/the-old-rugged-cross.cho) |
 | [Louis F. Benson](https://hymnary.org/person/Benson_Louis) | 1855–1930 | [O Sing a Song of Bethlehem](../../songs/hymns/o-sing-a-song-of-bethlehem.cho) |  |
 | [Horatius Bonar](https://hymnary.org/person/Bonar_Horatius) | 1808–1889 | [Here, O My Lord, I See Thee Face to Face](../../songs/hymns/here-o-my-lord-i-see-thee-face-to-face.cho) |  |
+| [Jane Borthwick](https://hymnary.org/person/Borthwick_Jane) | 1813–1897 | [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) |  |
 | [Louis Bourgeois](https://hymnary.org/person/Bourgeois_Louis) | 1510–1561 |  | [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho) |
 | [Joseph Brackett](https://hymnary.org/person/Brackett_J) | 1797–1882 |  | [Lord of the Dance](../../songs/hymns/lord-of-the-dance.cho) |
 | [William B. Bradbury](https://hymnary.org/person/Bradbury_William) | 1816–1868 |  | [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [My Hope Is Built on Nothing Less](../../songs/hymns/my-hope-is-built-on-nothing-less.cho) · [Savior Like a Shepherd Lead Us](../../songs/hymns/savior-like-a-shepherd-lead-us.cho) · [Sweet Hour of Prayer](../../songs/hymns/sweet-hour-of-prayer.cho) |
@@ -119,11 +120,12 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [William M. Runyan](https://hymnary.org/person/Runyan_WM) | 1870–1957 |  | [Great Is Thy Faithfulness](../../songs/hymns/great-is-thy-faithfulness.cho) |
 | [John H. Sammis](https://hymnary.org/person/Sammis_John) | 1846–1919 | [Trust and Obey](../../songs/hymns/trust-and-obey.cho) |  |
 | [Carl Schalk](https://hymnary.org/person/Schalk_CF) | 1929–2021 |  | [God of the Sparrow](../../songs/hymns/god-of-the-sparrow.cho) |
+| [Kathrina von Schlegel](https://hymnary.org/person/Schlegel_KV) | 1697–1777 | [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) |  |
 | [Daniel L. Schutte](https://hymnary.org/person/Schutte_DL) | 1947–? | [Here I Am, Lord](../../songs/hymns/here-i-am-lord.cho) | [Here I Am, Lord](../../songs/hymns/here-i-am-lord.cho) |
 | [Johann Jakob Schütz](https://hymnary.org/person/Schutz_JJ) | 1640–1690 | [Sing Praise to God Who Reigns Above](../../songs/hymns/sing-praise-to-god-who-reigns-above.cho) |  |
 | [Edmund H. Sears](https://hymnary.org/person/Sears_Edmund) | 1810–1876 | [It Came Upon a Midnight Clear](../../songs/hymns/it-came-upon-a-midnight-clear.cho) |  |
 | [Franklin L. Sheppard](https://hymnary.org/person/Sheppard_Franklin) | 1852–1930 |  | [This Is My Father's World](../../songs/hymns/this-is-my-fathers-world.cho) |
-| [Jean Sibelius](https://hymnary.org/person/Sibelius_J) | 1865–1957 |  | [This Is My Song](../../songs/hymns/this-is-my-song.cho) |
+| [Jean Sibelius](https://hymnary.org/person/Sibelius_J) | 1865–1957 |  | [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [This Is My Song](../../songs/hymns/this-is-my-song.cho) |
 | [Bianco da Siena](https://hymnary.org/person/Bianco_Siena) | 1350–1434 | [Come Down O Love Divine](../../songs/hymns/come-down-o-love-divine.cho) |  |
 | [Natalie Sleeth](https://hymnary.org/person/Sleeth_N) | 1930–1992 | [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) | [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) |
 | [Henry Thomas Smart](https://hymnary.org/person/Smart_Henry) | 1813–1879 |  | [Angels from the Realms of Glory](../../songs/hymns/angels-from-the-realms-of-glory.cho) |
