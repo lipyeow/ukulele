@@ -65,6 +65,10 @@ Count in quarter notes:
   chord still sounding from the line before (`[C]O what a`, not `[**]O what a`).
 - A held note at the end of a phrase gets a single `*` on its next marked beat:
   `[G]foe[**], doth`.
+- At the end of a line, the beat markers (and any chord after them) go right after the last
+  word, with no space: `[C]side[**][**]`, `[E7]main[**][C]`, and on a verse's last line
+  `[C]end[**][**].`. ChordPro then prints `side--`, and the hyphens show the held note.
+  Adding a space (`side [**][**]`) was tried and rejected (2026-11-05).
 - Reference examples: *A Mighty Fortress Is Our God* (4/4), *All Creatures of Our God and
   King* (3/2).
 - **Keep every mark:** some sources already have exactly the chords and `*`s wanted, so
