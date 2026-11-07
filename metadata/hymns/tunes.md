@@ -22,7 +22,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [CAROL](https://hymnary.org/tune/carol_willis) | 8.6.8.6 D | Richard Storrs Willis | [It Came Upon a Midnight Clear](../../songs/hymns/it-came-upon-a-midnight-clear.cho) |
 | [CHRISTE SANCTORUM](https://hymnary.org/tune/christe_sanctorum_53432) | 10.11.11.6 | La Feillée, Méthode du plain-chant, 1782 | [Christ Is the World's Light](../../songs/hymns/christ-is-the-worlds-light.cho) |
 | [CRANHAM](https://hymnary.org/tune/cranham_holst) | Irregular | Gustav Holst | [In the Bleak Midwinter](../../songs/hymns/in-the-bleak-midwinter.cho) |
-| [CWM RHONDDA](https://hymnary.org/tune/cwm_rhondda_hughes) | 8.7.8.7.4.7 | John Hughes | [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho) |
+| [CWM RHONDDA](https://hymnary.org/tune/cwm_rhondda_hughes) | 8.7.8.7.8.7.7 | John Hughes | [God of Grace and God of Glory](../../songs/hymns/god-of-grace-and-god-of-glory.cho) · [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho) |
 | [DARWALL'S 148TH](https://hymnary.org/tune/darwall_darwall) | 6.6.6.6.8.8 | John Darwall | [Rejoice the Lord Is King](../../songs/hymns/rejoice-the-lord-is-king.cho) |
 | [DIADEM](https://hymnary.org/tune/diadem_ellor) | 8.6.8.6.8.6 | James Ellor | [All Hail the Power of Jesus' Name](../../songs/hymns/all-hail-the-power-of-jesus-name.cho) |
 | [DIADEMATA](https://hymnary.org/tune/diademata_elvey) | 6.6.8.6 D | George J. Elvey | [Crown Him with Many Crowns](../../songs/hymns/crown-him-with-many-crowns.cho) |
@@ -324,7 +324,6 @@ Tunes in the same meter can usually swap words.
 ### 8.7.8.7.4.7
 
 - [BRADBURY](https://hymnary.org/tune/bradbury_bradbury): [Savior Like a Shepherd Lead Us](../../songs/hymns/savior-like-a-shepherd-lead-us.cho)
-- [CWM RHONDDA](https://hymnary.org/tune/cwm_rhondda_hughes): [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho)
 - [HELMSLEY](https://hymnary.org/tune/helmsley): [Lo, He Comes with Clouds Descending](../../songs/hymns/lo-he-comes-with-clouds-descending.cho)
 
 ### 8.7.8.7.6.6.6.6.7
@@ -340,6 +339,7 @@ Tunes in the same meter can usually swap words.
 
 ### 8.7.8.7.8.7.7
 
+- [CWM RHONDDA](https://hymnary.org/tune/cwm_rhondda_hughes): [God of Grace and God of Glory](../../songs/hymns/god-of-grace-and-god-of-glory.cho) · [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho)
 - [DIVINUM MYSTERIUM](https://hymnary.org/tune/divinum_mysterium): [Of the Father's Love Begotten](../../songs/hymns/of-the-fathers-love-begotten.cho)
 
 ### 8.7.8.7.8.8.7

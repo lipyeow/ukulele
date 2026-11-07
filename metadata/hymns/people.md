@@ -49,6 +49,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [George J. Elvey](https://hymnary.org/person/Elvey_George) | 1816–1893 |  | [Crown Him with Many Crowns](../../songs/hymns/crown-him-with-many-crowns.cho) |
 | [Eleanor Farjeon](https://hymnary.org/person/Farjeon_E) | 1881–1965 | [Morning Has Broken](../../songs/hymns/morning-has-broken.cho) |  |
 | William G. Fischer |  | [I Love to Tell the Story](../../songs/hymns/i-love-to-tell-the-story.cho) | [I Love to Tell the Story](../../songs/hymns/i-love-to-tell-the-story.cho) |
+| [Harry Emerson Fosdick](https://hymnary.org/person/Fosdick_HE) | 1878–1969 | [God of Grace and God of Glory](../../songs/hymns/god-of-grace-and-god-of-glory.cho) |  |
 | [K. Jason French](https://hymnary.org/person/French_KJason) |  |  | [God Moves in a Mysterious Way](../../songs/hymns/god-moves-in-a-mysterious-way.cho) |
 | W. Y. Fullerton |  | [I Cannot Tell](../../songs/hymns/i-cannot-tell.cho) |  |
 | [Cesáreo Gabarain](https://hymnary.org/person/Gabarain_C) | 1936–1991 | [You Are the Seed](../../songs/hymns/you-are-the-seed.cho) | [You Are the Seed](../../songs/hymns/you-are-the-seed.cho) |
@@ -78,7 +79,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [William Walsham How](https://hymnary.org/person/How_William) | 1823–1897 | [For All the Saints](../../songs/hymns/for-all-the-saints.cho) |  |
 | [Julia Ward Howe](https://hymnary.org/person/Howe_Julia) | 1819–1910 | [The Battle Hymn of the Republic](../../songs/hymns/the-battle-hymn-of-the-republic.cho) |  |
 | Richard Birch Hoyle |  | [Thine Be the Glory](../../songs/hymns/thine-be-the-glory.cho) |  |
-| [John Hughes](https://hymnary.org/person/Hughes_John1842) | 1842–1902 |  | [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho) |
+| [John Hughes](https://hymnary.org/person/Hughes_John1842) | 1842–1902 |  | [God of Grace and God of Glory](../../songs/hymns/god-of-grace-and-god-of-glory.cho) · [Guide Me, O Thou Great Jehovah](../../songs/hymns/guide-me-o-thou-great-jehovah.cho) |
 | [Ferdinand Hérold](https://hymnary.org/person/Herold_LJFerdinand) | 1791–1833 |  | [Take My Life, and Let It Be](../../songs/hymns/take-my-life-and-let-it-be.cho) |
 | [Daniel ben Judah](https://hymnary.org/person/Judah_Db) |  | [The God of Abraham Praise](../../songs/hymns/the-god-of-abraham-praise.cho) |  |
 | [Thomas Ken](https://hymnary.org/person/Ken_Thomas) | 1637–1711 | [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho) |  |

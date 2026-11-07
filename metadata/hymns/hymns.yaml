@@ -1130,6 +1130,49 @@ god-moves-in-a-mysterious-way:
     hymnary: st_anne_croft
   status: reviewed
   notes: []
+god-of-grace-and-god-of-glory:
+  title: God of Grace and God of Glory
+  first_line: God of grace and God of glory
+  words:
+  - Harry Emerson Fosdick
+  words_year: '1930'
+  meter: "8.7.8.7.8.7.7"
+  text_meter: "8.7.8.7.8.7.7."
+  text_copyright: Public Domain
+  umh:
+  - '577'
+  topics:
+  - Confession
+  - Courage
+  - Discipleship and Service
+  - Funerals and Memorial Services
+  - Mission and Outreach
+  - Opening Hymns
+  - Prayer
+  - Service Music
+  - Social Concerns
+  - The Nature of the Church
+  tune: CWM RHONDDA
+  tune_basis: umh
+  music:
+  - John Hughes
+  music_year: '1907'
+  tune_meter: "8.7.8.7.8.7.7"
+  tune_source: ''
+  tune_copyright: Public Domain
+  incipit: "565117123231643"
+  hymnary:
+    text: god_of_grace_and_god_of_glory
+    tune: cwm_rhondda_hughes
+  other_tunes:
+  - name: REGENT SQUARE
+    hymnary: regent_square_smart
+  - name: RHUDDLAN
+    hymnary: rhuddlan_welsh
+  - name: MANNHEIM
+    hymnary: mannheim_filitz
+  status: likely
+  notes: []
 god-of-the-sparrow:
   title: God of the Sparrow
   first_line: God of the sparrow
