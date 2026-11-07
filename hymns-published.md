@@ -79,6 +79,7 @@ played in the videos; the PDFs come in the keys listed under "PDFs".
 |------|------|
 | Angels from the Realms of Glory | [C](pdf/hymns/angels-from-the-realms-of-glory-C.pdf) · [G](pdf/hymns/angels-from-the-realms-of-glory-G.pdf) · [F](pdf/hymns/angels-from-the-realms-of-glory-F.pdf) |
 | Are Ye Able | [C](pdf/hymns/are-ye-able-C.pdf) · [G](pdf/hymns/are-ye-able-G.pdf) · [F](pdf/hymns/are-ye-able-F.pdf) |
+| Be Still, My Soul | [C](pdf/hymns/be-still-my-soul-C.pdf) · [G](pdf/hymns/be-still-my-soul-G.pdf) · [F](pdf/hymns/be-still-my-soul-F.pdf) |
 | Because He Lives | [G](pdf/hymns/because-he-lives-G.pdf) · [C](pdf/hymns/because-he-lives-C.pdf) · [F](pdf/hymns/because-he-lives-F.pdf) |
 | Blessed Assurance | [C](pdf/hymns/blessed-assurance-C.pdf) · [G](pdf/hymns/blessed-assurance-G.pdf) · [F](pdf/hymns/blessed-assurance-F.pdf) |
 | Christ Is the World's Light | [C](pdf/hymns/christ-is-the-worlds-light-C.pdf) · [G](pdf/hymns/christ-is-the-worlds-light-G.pdf) · [F](pdf/hymns/christ-is-the-worlds-light-F.pdf) |
@@ -114,3 +115,4 @@ played in the videos; the PDFs come in the keys listed under "PDFs".
 | What Child Is This | [Am](pdf/hymns/what-child-is-this-Am.pdf) · [Em](pdf/hymns/what-child-is-this-Em.pdf) · [Dm](pdf/hymns/what-child-is-this-Dm.pdf) |
 | What Wondrous Love Is This | [Am](pdf/hymns/what-wondrous-love-is-this-Am.pdf) · [Em](pdf/hymns/what-wondrous-love-is-this-Em.pdf) · [Dm](pdf/hymns/what-wondrous-love-is-this-Dm.pdf) |
 | When I Survey the Wondrous Cross | [C](pdf/hymns/when-i-survey-the-wondrous-cross-C.pdf) · [G](pdf/hymns/when-i-survey-the-wondrous-cross-G.pdf) · [F](pdf/hymns/when-i-survey-the-wondrous-cross-F.pdf) |
+| Ye Watchers and Ye Holy Ones | [C](pdf/hymns/ye-watchers-and-ye-holy-ones-C.pdf) · [G](pdf/hymns/ye-watchers-and-ye-holy-ones-G.pdf) · [F](pdf/hymns/ye-watchers-and-ye-holy-ones-F.pdf) |

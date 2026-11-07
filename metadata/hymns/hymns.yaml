@@ -3964,7 +3964,7 @@ ye-watchers-and-ye-holy-ones:
     text: ye_watchers_and_ye_holy_ones
     tune: lasst_uns_erfreuen
   other_tunes: []
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.8.8.8.8.8.8.4, tune 8.8.4.4.8.8 with refrain'
 you-are-the-seed:
