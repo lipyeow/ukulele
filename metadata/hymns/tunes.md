@@ -38,7 +38,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [EVENTIDE](https://hymnary.org/tune/eventide_monk) | 10.10.10.10 | William Henry Monk | [Abide with Me](../../songs/hymns/abide-with-me.cho) |
 | [FAITHFULNESS](https://hymnary.org/tune/faithfulness_runyan) | 11.10.11.10 with refrain | William M. Runyan | [Great Is Thy Faithfulness](../../songs/hymns/great-is-thy-faithfulness.cho) |
 | [FINLANDIA](https://hymnary.org/tune/finlandia) | 10.10.10.10.10.10 | Jean Sibelius | [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) · [This Is My Song](../../songs/hymns/this-is-my-song.cho) |
-| [FOREST GREEN](https://hymnary.org/tune/forest_green_english) | 8.6.8.6 D | Ralph Vaughan Williams | [Come Let Us Join Our Friends Above](../../songs/hymns/come-let-us-join-our-friends-above.cho) |
+| [FOREST GREEN](https://hymnary.org/tune/forest_green_english) | 8.6.8.6 D | Ralph Vaughan Williams | [Come Let Us Join Our Friends Above](../../songs/hymns/come-let-us-join-our-friends-above.cho) · [I Sing the Almighty Power of God](../../songs/hymns/i-sing-the-almighty-power-of-god.cho) |
 | [FRENCH CAROL](https://hymnary.org/tune/noel_nouvelet) | 11.10.10.11 | Old French tune | [Sing We Now of Christmas](../../songs/hymns/sing-we-now-of-christmas.cho) |
 | [GARDEN](https://hymnary.org/tune/garden_miles) | 8.9.10.7 with refrain | C. Austin Miles | [In the Garden](../../songs/hymns/in-the-garden.cho) |
 | [GIFT OF LOVE](https://hymnary.org/tune/o_waly_waly) | 8.8.8.8 | English folk tune | [The Gift of Love](../../songs/hymns/the-gift-of-love.cho) |
@@ -285,7 +285,7 @@ Tunes in the same meter can usually swap words.
 ### 8.6.8.6 D
 
 - [CAROL](https://hymnary.org/tune/carol_willis): [It Came Upon a Midnight Clear](../../songs/hymns/it-came-upon-a-midnight-clear.cho)
-- [FOREST GREEN](https://hymnary.org/tune/forest_green_english): [Come Let Us Join Our Friends Above](../../songs/hymns/come-let-us-join-our-friends-above.cho)
+- [FOREST GREEN](https://hymnary.org/tune/forest_green_english): [Come Let Us Join Our Friends Above](../../songs/hymns/come-let-us-join-our-friends-above.cho) · [I Sing the Almighty Power of God](../../songs/hymns/i-sing-the-almighty-power-of-god.cho)
 - [KINGSFOLD](https://hymnary.org/tune/kingsfold_english): [O Sing a Song of Bethlehem](../../songs/hymns/o-sing-a-song-of-bethlehem.cho)
 - [ST. LOUIS](https://hymnary.org/tune/st_louis_redner): [O Little Town of Bethlehem](../../songs/hymns/o-little-town-of-bethlehem.cho)
 

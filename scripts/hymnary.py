@@ -30,6 +30,7 @@ csv.field_size_limit(10**9)
 OVERRIDES = {
     "christ-is-the-worlds-light": "christ_is_the_worlds_light_christ_and_no",
     "god-has-spoken": "god_has_spoken_by_his_prophets",
+    "i-sing-the-almighty-power-of-god": "i_sing_the_mighty_power_of_god",
     "it-came-upon-a-midnight-clear": "it_came_upon_the_midnight_clear",
     "o-come-all-ye-faithful": "o_come_all_ye_faithful_joyful_and_triump",
     "o-come-o-come-emmanuel": "o_come_o_come_emmanuel_and_ransom",

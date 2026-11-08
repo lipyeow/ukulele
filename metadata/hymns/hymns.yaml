@@ -1780,6 +1780,47 @@ i-love-to-tell-the-story:
   status: reviewed
   notes:
   - 'UMH does not credit the words to: William G. Fischer'
+i-sing-the-almighty-power-of-god:
+  title: I Sing the Almighty Power of God
+  first_line: I sing th'almighty power of God, that made the mountains rise
+  words:
+  - Isaac Watts
+  words_year: '1715'
+  meter: "8.6.8.6 D"
+  text_meter: "C.M.D."
+  text_copyright: Public Domain
+  umh:
+  - '152'
+  topics:
+  - Adoration and Praise
+  - Assurance
+  - Children's Choir Selections
+  - Creation
+  - Music and Singing
+  - Nature
+  - Presence (Holy Spirit)
+  - The Glory of the Triune God
+  tune: FOREST GREEN
+  tune_basis: umh
+  music:
+  - Ralph Vaughan Williams
+  music_year: ''
+  tune_meter: "C.M.D."
+  tune_source: English Traditional Melody
+  tune_copyright: Public Domain
+  incipit: "511123234534312"
+  hymnary:
+    text: i_sing_the_mighty_power_of_god
+    tune: forest_green_english
+  other_tunes:
+  - name: ELLACOMBE
+    hymnary: ellacombe
+  - name: VARINA
+    hymnary: varina_rinck
+  - name: KINGSFOLD
+    hymnary: kingsfold_english
+  status: likely
+  notes: []
 i-surrender-all:
   title: I Surrender All
   first_line: All to Jesus I surrender; all to Him I freely give
