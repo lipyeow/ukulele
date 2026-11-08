@@ -75,7 +75,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [NETTLETON](https://hymnary.org/tune/nettleton) | 8.7.8.7 D | Anonymous | [Come Thou Fount of Every Blessing](../../songs/hymns/come-thou-fount-of-every-blessing.cho) |
 | [NICAEA](https://hymnary.org/tune/nicaea_dykes) | 11.12.12.10 | John Bacchus Dykes | [Holy Holy Holy](../../songs/hymns/holy-holy-holy.cho) |
 | [NUN DANKET](https://hymnary.org/tune/nun_danket_cruger_555665) | 6.7.6.7.6.6.6.6 | Johann Crüger | [Now Thank We All Our God](../../songs/hymns/now-thank-we-all-our-god.cho) |
-| [OLD 100TH](https://hymnary.org/tune/old_hundredth_bourgeois) | 8.8.8.8 | Louis Bourgeois | [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho) |
+| [OLD 100TH](https://hymnary.org/tune/old_hundredth_bourgeois) | 8.8.8.8 | Louis Bourgeois | [All People That on Earth Do Dwell](../../songs/hymns/all-people-that-on-earth-do-dwell.cho) · [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho) |
 | [PASS ME NOT](https://hymnary.org/tune/pass_me_not_doane) | 8.5.8.5 with refrain | W. Howard Doane | [Pass Me Not, O Gentle Savior](../../songs/hymns/pass-me-not-o-gentle-savior.cho) |
 | [PASSION CHORALE](https://hymnary.org/tune/passion_chorale_hassler) | 7.6.7.6 D | Hans Leo Hassler | [O Sacred Head Now Wounded](../../songs/hymns/o-sacred-head-now-wounded.cho) |
 | [PENITENTIA](https://hymnary.org/tune/penitentia_dearle) | 10.10.10.10 | Edward Dearle | [Here, O My Lord, I See Thee Face to Face](../../songs/hymns/here-o-my-lord-i-see-thee-face-to-face.cho) |
@@ -360,7 +360,7 @@ Tunes in the same meter can usually swap words.
 - [HAMBURG](https://hymnary.org/tune/hamburg_mason): [When I Survey the Wondrous Cross](../../songs/hymns/when-i-survey-the-wondrous-cross.cho)
 - [HURSLEY](https://hymnary.org/tune/hursley_ritter): [Come, Sinners, to the Gospel Feast](../../songs/hymns/come-sinners-to-the-gospel-feast.cho)
 - [MARYTON](https://hymnary.org/tune/maryton_smith): [O Master Let Me Walk with Thee](../../songs/hymns/o-master-let-me-walk-with-thee.cho)
-- [OLD 100TH](https://hymnary.org/tune/old_hundredth_bourgeois): [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho)
+- [OLD 100TH](https://hymnary.org/tune/old_hundredth_bourgeois): [All People That on Earth Do Dwell](../../songs/hymns/all-people-that-on-earth-do-dwell.cho) · [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho)
 
 ### 8.8.8.8 D
 

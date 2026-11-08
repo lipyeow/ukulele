@@ -20,7 +20,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [Louis F. Benson](https://hymnary.org/person/Benson_Louis) | 1855–1930 | [O Sing a Song of Bethlehem](../../songs/hymns/o-sing-a-song-of-bethlehem.cho) |  |
 | [Horatius Bonar](https://hymnary.org/person/Bonar_Horatius) | 1808–1889 | [Here, O My Lord, I See Thee Face to Face](../../songs/hymns/here-o-my-lord-i-see-thee-face-to-face.cho) |  |
 | [Jane Borthwick](https://hymnary.org/person/Borthwick_Jane) | 1813–1897 | [Be Still, My Soul](../../songs/hymns/be-still-my-soul.cho) |  |
-| [Louis Bourgeois](https://hymnary.org/person/Bourgeois_Louis) | 1510–1561 |  | [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho) |
+| [Louis Bourgeois](https://hymnary.org/person/Bourgeois_Louis) | 1510–1561 |  | [All People That on Earth Do Dwell](../../songs/hymns/all-people-that-on-earth-do-dwell.cho) · [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho) |
 | [Joseph Brackett](https://hymnary.org/person/Brackett_J) | 1797–1882 |  | [Lord of the Dance](../../songs/hymns/lord-of-the-dance.cho) |
 | [William B. Bradbury](https://hymnary.org/person/Bradbury_William) | 1816–1868 |  | [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) · [My Hope Is Built on Nothing Less](../../songs/hymns/my-hope-is-built-on-nothing-less.cho) · [Savior Like a Shepherd Lead Us](../../songs/hymns/savior-like-a-shepherd-lead-us.cho) · [Sweet Hour of Prayer](../../songs/hymns/sweet-hour-of-prayer.cho) |
 | [Matthew Bridges](https://hymnary.org/person/Bridges_Matthew) | 1800–1894 | [Crown Him with Many Crowns](../../songs/hymns/crown-him-with-many-crowns.cho) |  |
@@ -84,6 +84,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [Ferdinand Hérold](https://hymnary.org/person/Herold_LJFerdinand) | 1791–1833 |  | [Take My Life, and Let It Be](../../songs/hymns/take-my-life-and-let-it-be.cho) |
 | [Daniel ben Judah](https://hymnary.org/person/Judah_Db) |  | [The God of Abraham Praise](../../songs/hymns/the-god-of-abraham-praise.cho) |  |
 | [Thomas Ken](https://hymnary.org/person/Ken_Thomas) | 1637–1711 | [Praise God from Whom All Blessings Flow](../../songs/hymns/praise-god-from-whom-all-blessings-flow.cho) |  |
+| [William Kethe](https://hymnary.org/person/Kethe_William) | ?–1594 | [All People That on Earth Do Dwell](../../songs/hymns/all-people-that-on-earth-do-dwell.cho) |  |
 | [William J. Kirkpatrick](https://hymnary.org/person/Kirkpatrick_William) | 1838–1921 |  | [Tis So Sweet to Trust in Jesus](../../songs/hymns/tis-so-sweet-to-trust-in-jesus.cho) |
 | [Phoebe Palmer Knapp](https://hymnary.org/person/Knapp_Phoebe) | 1839–1908 |  | [Blessed Assurance](../../songs/hymns/blessed-assurance.cho) |
 | [Conrad Kocher](https://hymnary.org/person/Kocher_Conrad) | 1786–1872 |  | [For the Beauty of the Earth](../../songs/hymns/for-the-beauty-of-the-earth.cho) |

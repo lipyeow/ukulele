@@ -220,6 +220,47 @@ all-hail-the-power-of-jesus-name:
   notes:
   - 'UMH also credits the words to: John Rippon'
   - 'meters differ: words 8.6.8.6.8.6., tune 8.6.6.8. and refrain'
+all-people-that-on-earth-do-dwell:
+  title: All People That on Earth Do Dwell
+  first_line: All people that on earth do dwell
+  words:
+  - William Kethe
+  words_year: '1561'
+  meter: "8.8.8.8"
+  text_meter: "8.8.8.8."
+  text_copyright: Public Domain
+  umh:
+  - '75'
+  topics:
+  - Adoration and Praise
+  - Canticles, Metrical Paraphrase of
+  - Creation
+  - Joy
+  - Morning Prayer
+  - Nature
+  - Opening Hymns
+  - The Glory of the Triune God
+  tune: OLD 100TH
+  tune_basis: umh
+  music:
+  - Louis Bourgeois
+  music_year: '1551'
+  tune_meter: "8.8.8.8."
+  tune_source: Genevan Psalter, 1551
+  tune_copyright: Public Domain
+  incipit: "117651233332143"
+  hymnary:
+    text: all_people_that_on_earth_do_dwell
+    tune: old_hundredth_bourgeois
+  other_tunes:
+  - name: SESSIONS
+    hymnary: sessions_emerson
+  - name: GENEVAN 100
+    hymnary: genevan_100_12732
+  - name: WELLS
+    hymnary: wells_holdroyd
+  status: likely
+  notes: []
 all-things-bright-and-beautiful:
   title: All Things Bright and Beautiful
   first_line: Each little flower that opens, each little bird that sings
