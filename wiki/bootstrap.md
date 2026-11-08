@@ -388,6 +388,8 @@ Decisions:
   Second: *Ye Watchers and Ye Holy Ones* (UMH 90, 2026-11-05) takes the LASST UNS ERFREUEN chords from
   *All Creatures of Our God and King*. Its refrain is all alleluias, so a whole alleluia goes where
   *All Creatures* sings each word of "O praise ye".
+  The hymns still to add, and the ones already done, are listed in
+  [same-tune-todo.md](same-tune-todo.md).
 - Metadata: `scripts/hymnary.py match`, then `tunes` (one live request per new hymn), then `build` and
   `make metadata`. Check the match: a hymn full of alleluias can match the wrong text. Fix it in `OVERRIDES`,
   delete the hymn's file in `tmp/hymnary/cache/`, and run the three steps again.
