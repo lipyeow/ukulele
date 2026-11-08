@@ -259,7 +259,7 @@ all-people-that-on-earth-do-dwell:
     hymnary: genevan_100_12732
   - name: WELLS
     hymnary: wells_holdroyd
-  status: likely
+  status: reviewed
   notes: []
 all-things-bright-and-beautiful:
   title: All Things Bright and Beautiful
