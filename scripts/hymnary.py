@@ -43,6 +43,7 @@ UMH_TEXTS = {"you-are-the-seed": "sois_la_semilla_que_ha_de_crecer"}
 
 # Tunes confirmed by hand: a Hymnary tune ID, or that ID with the name used here.
 TUNE_CHOICES = {
+    "alas-and-did-my-savior-bleed": "hudson_hudson_13213",
     "all-hail-the-power-of-jesus-name": "diadem_ellor",
     "come-o-thou-traveler-unknown": "ye_banks_and_braes",
     "come-thou-almighty-king": "italian_hymn_giardini",

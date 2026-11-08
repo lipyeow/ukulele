@@ -48,6 +48,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [HE LEADETH ME](https://hymnary.org/tune/he_leadeth_me_bradbury) | 8.8.8.8 D | William B. Bradbury | [He Leadeth Me](../../songs/hymns/he-leadeth-me.cho) |
 | [HELMSLEY](https://hymnary.org/tune/helmsley) | 8.7.8.7.4.7 | Martin Madan; Thomas Olivers; Thomas Augustine Arne | [Lo, He Comes with Clouds Descending](../../songs/hymns/lo-he-comes-with-clouds-descending.cho) |
 | [HERE I AM, LORD](https://hymnary.org/tune/here_i_am_lord_schutte) | 7.7.7.4 D with refrain | Daniel L. Schutte | [Here I Am, Lord](../../songs/hymns/here-i-am-lord.cho) |
+| [HUDSON](https://hymnary.org/tune/hudson_hudson_13213) | 8.6.8.6 | R. E. Hudson | [Alas! and Did My Savior Bleed](../../songs/hymns/alas-and-did-my-savior-bleed.cho) |
 | [HURSLEY](https://hymnary.org/tune/hursley_ritter) | 8.8.8.8 | Katholisches Gesangbuch, Vienna, ca. 1774 | [Come, Sinners, to the Gospel Feast](../../songs/hymns/come-sinners-to-the-gospel-feast.cho) |
 | [HYFRYDOL](https://hymnary.org/tune/hyfrydol_prichard) | 8.7.8.7 | Rowland H. Prichard | [Come Thou Long-Expected Jesus](../../songs/hymns/come-thou-long-expected-jesus.cho) |
 | [[I don't know about tomorrow]](https://hymnary.org/tune/i_dont_know_about_tomorrow_stanphill) |  | Ira F. Stanphill | [I Know Who Holds Tomorrow](../../songs/hymns/i-know-who-holds-tomorrow.cho) |
@@ -278,6 +279,7 @@ Tunes in the same meter can usually swap words.
 ### 8.6.8.6
 
 - [DOVE OF PEACE](https://hymnary.org/tune/dove_of_peace_51116): [I Come with Joy to Meet My Lord](../../songs/hymns/i-come-with-joy-to-meet-my-lord.cho)
+- [HUDSON](https://hymnary.org/tune/hudson_hudson_13213): [Alas! and Did My Savior Bleed](../../songs/hymns/alas-and-did-my-savior-bleed.cho)
 - [LAND OF REST](https://hymnary.org/tune/land_of_rest_american): [Lord Who Throughout These Forty Days](../../songs/hymns/lord-who-throughout-these-forty-days.cho)
 - [MYSTERY](https://hymnary.org/tune/god_moves_in_a_mysterious_way_french): [God Moves in a Mysterious Way](../../songs/hymns/god-moves-in-a-mysterious-way.cho)
 - [ST. ANNE](https://hymnary.org/tune/st_anne_croft): [O God Our Help in Ages Past](../../songs/hymns/o-god-our-help-in-ages-past.cho)

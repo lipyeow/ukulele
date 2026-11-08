@@ -87,6 +87,52 @@ abide-with-me:
     hymnary: emmaus_goss
   status: likely
   notes: []
+alas-and-did-my-savior-bleed:
+  title: Alas! and Did My Savior Bleed
+  first_line: Alas! and did my Savior bleed
+  words:
+  - Isaac Watts
+  words_year: '1707'
+  meter: "8.6.8.6"
+  text_meter: "8.6.8.6."
+  text_copyright: Public Domain
+  umh:
+  - '294'
+  - '359'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Commitment
+  - Confession
+  - Forgiveness
+  - Gratitude
+  - Jesus Christ
+  - Pardon
+  - Prayer
+  - Prevenient Grace
+  - Service Music
+  tune: HUDSON
+  tune_basis: chosen
+  music:
+  - R. E. Hudson
+  music_year: '1885'
+  tune_meter: "CM with refrain"
+  tune_source: ''
+  tune_copyright: Public Domain
+  incipit: "132135435654321"
+  hymnary:
+    text: alas_and_did_my_savior_bleed
+    tune: hudson_hudson_13213
+  other_tunes:
+  - name: MARTYRDOM
+    hymnary: martyrdom_wilson
+  - name: '[Alas! and did my Savior bleed?]'
+    hymnary: alas_and_did_my_savior_bleed_55311
+  - name: '[Alas! and did my Savior bleed]'
+    hymnary: alas_and_did_my_savior_bleed_hull
+  status: check
+  notes:
+  - 'meters differ: words 8.6.8.6., tune CM with refrain'
 all-creatures-of-our-god-and-king:
   title: All Creatures of Our God and King
   first_line: All creatures of our God & King
