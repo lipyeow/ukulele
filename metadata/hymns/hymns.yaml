@@ -1653,7 +1653,7 @@ hosanna-loud-hosanna:
     hymnary: bradford_haydn
   - name: LANCASHIRE
     hymnary: lancashire_smart
-  status: likely
+  status: reviewed
   notes: []
 hymn-of-promise:
   title: Hymn of Promise

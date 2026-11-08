@@ -90,6 +90,7 @@ played in the videos; the PDFs come in the keys listed under "PDFs".
 | God Whose Love Is Reigning o'er Us | [C](pdf/hymns/god-whose-love-is-reigning-oer-us-C.pdf) · [G](pdf/hymns/god-whose-love-is-reigning-oer-us-G.pdf) · [F](pdf/hymns/god-whose-love-is-reigning-oer-us-F.pdf) |
 | Good Christian Friends, Rejoice | [C](pdf/hymns/good-christian-friends-rejoice-C.pdf) · [G](pdf/hymns/good-christian-friends-rejoice-G.pdf) · [F](pdf/hymns/good-christian-friends-rejoice-F.pdf) |
 | Holy Holy Holy | [C](pdf/hymns/holy-holy-holy-C.pdf) · [G](pdf/hymns/holy-holy-holy-G.pdf) · [F](pdf/hymns/holy-holy-holy-F.pdf) |
+| Hosanna, Loud Hosanna | [C](pdf/hymns/hosanna-loud-hosanna-C.pdf) · [G](pdf/hymns/hosanna-loud-hosanna-G.pdf) · [F](pdf/hymns/hosanna-loud-hosanna-F.pdf) |
 | I Cannot Tell | [C](pdf/hymns/i-cannot-tell-C.pdf) · [G](pdf/hymns/i-cannot-tell-G.pdf) · [F](pdf/hymns/i-cannot-tell-F.pdf) |
 | I Know Who Holds Tomorrow | [G](pdf/hymns/i-know-who-holds-tomorrow-G.pdf) · [C](pdf/hymns/i-know-who-holds-tomorrow-C.pdf) · [F](pdf/hymns/i-know-who-holds-tomorrow-F.pdf) |
 | I Sing the Almighty Power of God | [C](pdf/hymns/i-sing-the-almighty-power-of-god-C.pdf) · [G](pdf/hymns/i-sing-the-almighty-power-of-god-G.pdf) · [F](pdf/hymns/i-sing-the-almighty-power-of-god-F.pdf) |
