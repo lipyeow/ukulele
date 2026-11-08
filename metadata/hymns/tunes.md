@@ -33,7 +33,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [EASTER HYMN](https://hymnary.org/tune/easter_hymn_lyra_davidica) | 7.7.7.7 with alleluias | Lyra Davidica (London: 1708) | [Christ the Lord Is Risen Today](../../songs/hymns/christ-the-lord-is-risen-today.cho) |
 | [EBENEZER](https://hymnary.org/tune/ebenezer_williams) | 8.7.8.7 D | Thomas John Williams | [God Has Spoken](../../songs/hymns/god-has-spoken.cho) |
 | [EIN' FESTE BURG](https://hymnary.org/tune/ein_feste_burg_luther) | 8.7.8.7.6.6.6.6.7 | Martin Luther | [A Mighty Fortress Is Our God](../../songs/hymns/a-mighty-fortress-is-our-god.cho) |
-| [ELLACOMBE](https://hymnary.org/tune/ellacombe) | 7.6.7.6 D | Gesangbuch der Herzogl. Hofkapelle, Würtemberg, 1784 | [Hail to the Lord's Anointed](../../songs/hymns/hail-to-the-lords-anointed.cho) |
+| [ELLACOMBE](https://hymnary.org/tune/ellacombe) | 7.6.7.6 D | Gesangbuch der Herzogl. Hofkapelle, Würtemberg, 1784 | [Hail to the Lord's Anointed](../../songs/hymns/hail-to-the-lords-anointed.cho) · [Hosanna, Loud Hosanna](../../songs/hymns/hosanna-loud-hosanna.cho) |
 | [ES IST EIN ROS](https://hymnary.org/tune/es_ist_ein_ros_5556553) | 7.6.7.6.6.7.6 | Alte Catholische Geisliche Kirchengasäng, Cologne, 1599; Geistliche Kirchengesänge, Köln (1599) | [Lo How a Rose E'er Blooming](../../songs/hymns/lo-how-a-rose-eer-blooming.cho) |
 | [EVENTIDE](https://hymnary.org/tune/eventide_monk) | 10.10.10.10 | William Henry Monk | [Abide with Me](../../songs/hymns/abide-with-me.cho) |
 | [FAITHFULNESS](https://hymnary.org/tune/faithfulness_runyan) | 11.10.11.10 with refrain | William M. Runyan | [Great Is Thy Faithfulness](../../songs/hymns/great-is-thy-faithfulness.cho) |
@@ -228,7 +228,7 @@ Tunes in the same meter can usually swap words.
 
 ### 7.6.7.6 D
 
-- [ELLACOMBE](https://hymnary.org/tune/ellacombe): [Hail to the Lord's Anointed](../../songs/hymns/hail-to-the-lords-anointed.cho)
+- [ELLACOMBE](https://hymnary.org/tune/ellacombe): [Hail to the Lord's Anointed](../../songs/hymns/hail-to-the-lords-anointed.cho) · [Hosanna, Loud Hosanna](../../songs/hymns/hosanna-loud-hosanna.cho)
 - [PASSION CHORALE](https://hymnary.org/tune/passion_chorale_hassler): [O Sacred Head Now Wounded](../../songs/hymns/o-sacred-head-now-wounded.cho)
 
 ### 7.6.7.6 D with refrain

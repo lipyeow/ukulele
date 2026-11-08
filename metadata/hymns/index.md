@@ -49,6 +49,7 @@ UMH is the hymn's number in *The United Methodist Hymnal*. `Status` is `reviewed
 | [Here I Am, Lord](../../songs/hymns/here-i-am-lord.cho) | 593 | [HERE I AM, LORD](https://hymnary.org/tune/here_i_am_lord_schutte) | 7.7.7.4 D with refrain | Daniel L. Schutte | Daniel L. Schutte | likely |
 | [Here, O My Lord, I See Thee Face to Face](../../songs/hymns/here-o-my-lord-i-see-thee-face-to-face.cho) | 623 | [PENITENTIA](https://hymnary.org/tune/penitentia_dearle) | 10.10.10.10 | Horatius Bonar | Edward Dearle | likely |
 | [Holy Holy Holy](../../songs/hymns/holy-holy-holy.cho) | 64 | [NICAEA](https://hymnary.org/tune/nicaea_dykes) | 11.12.12.10 | Reginald Heber | John Bacchus Dykes | likely |
+| [Hosanna, Loud Hosanna](../../songs/hymns/hosanna-loud-hosanna.cho) | 278 | [ELLACOMBE](https://hymnary.org/tune/ellacombe) | 7.6.7.6 D | Jennette Threlfall | Gesangbuch der Herzogl. Hofkapelle, Würtemberg, 1784 | likely |
 | [Hymn of Promise](../../songs/hymns/hymn-of-promise.cho) | 707 | [PROMISE](https://hymnary.org/tune/promise_sleeth) | 8.7.8.7 D | Natalie Sleeth | Natalie Sleeth | likely |
 | [I Cannot Tell](../../songs/hymns/i-cannot-tell.cho) |  | [LONDONDERRY AIR](https://hymnary.org/tune/londonderry_air) | 11.10.11.10 D | W. Y. Fullerton | Anonymous | reviewed |
 | [I Come with Joy to Meet My Lord](../../songs/hymns/i-come-with-joy-to-meet-my-lord.cho) | 617 | [DOVE OF PEACE](https://hymnary.org/tune/dove_of_peace_51116) | 8.6.8.6 | Brian A. Wren | The Wesleyan Psalmist by M. L. Scudder (Boston: D. S. King, 1842) | likely |

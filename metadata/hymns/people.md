@@ -141,6 +141,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [Melchior Teschner](https://hymnary.org/person/Teschner_Melchior) | 1584–1635 |  | [All Glory, Laud, and Honor](../../songs/hymns/all-glory-laud-and-honor.cho) |
 | Theodulf, Bishop of Orléans |  | [All Glory, Laud, and Honor](../../songs/hymns/all-glory-laud-and-honor.cho) |  |
 | [Will L. Thompson](https://hymnary.org/person/Thompson_Will) | 1847–1909 | [Softly and Tenderly Jesus Is Calling](../../songs/hymns/softly-and-tenderly-jesus-is-calling.cho) | [Softly and Tenderly Jesus Is Calling](../../songs/hymns/softly-and-tenderly-jesus-is-calling.cho) |
+| [Jennette Threlfall](https://hymnary.org/person/Threlfall_Jennette) | 1821–1880 | [Hosanna, Loud Hosanna](../../songs/hymns/hosanna-loud-hosanna.cho) |  |
 | [Godfrey Thring](https://hymnary.org/person/Thring_Godfrey) | 1823–1903 | [Crown Him with Many Crowns](../../songs/hymns/crown-him-with-many-crowns.cho) |  |
 | [Dorothy A. Thrupp](https://hymnary.org/person/Thrupp_Dorothy) | 1779–1847 | [Savior Like a Shepherd Lead Us](../../songs/hymns/savior-like-a-shepherd-lead-us.cho) |  |
 | [Augustus Toplady](https://hymnary.org/person/Toplady_Augustus) | 1740–1778 | [Rock of Ages Cleft for Me](../../songs/hymns/rock-of-ages-cleft-for-me.cho) |  |

@@ -1617,6 +1617,44 @@ holy-holy-holy:
     hymnary: holy_holy_holy_lord_god_almighty_harris
   status: likely
   notes: []
+hosanna-loud-hosanna:
+  title: Hosanna, Loud Hosanna
+  first_line: Hosanna, loud hosanna
+  words:
+  - Jennette Threlfall
+  words_year: '1873'
+  meter: "7.6.7.6 D"
+  text_meter: "7.6.7.6.D."
+  text_copyright: Public Domain
+  umh:
+  - '278'
+  topics:
+  - Children's Choir Selections
+  - Christ's Gracious Life
+  - Christian Year
+  - Jesus Christ
+  - Processionals
+  - Service Music
+  tune: ELLACOMBE
+  tune_basis: umh
+  music: []
+  music_year: ''
+  tune_meter: "7.6.7.6.D"
+  tune_source: Gesangbuch der Herzogl. Hofkapelle, Würtemberg, 1784
+  tune_copyright: Public Domain
+  incipit: "517651345567122"
+  hymnary:
+    text: hosanna_loud_hosanna_the_little_children
+    tune: ellacombe
+  other_tunes:
+  - name: ABERDOUR
+    hymnary: aberdour_essex
+  - name: BRADFORD
+    hymnary: bradford_haydn
+  - name: LANCASHIRE
+    hymnary: lancashire_smart
+  status: likely
+  notes: []
 hymn-of-promise:
   title: Hymn of Promise
   first_line: In the bulb there is a flower; in the seed, an apple tree
