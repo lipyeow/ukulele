@@ -92,6 +92,7 @@ played in the videos; the PDFs come in the keys listed under "PDFs".
 | Holy Holy Holy | [C](pdf/hymns/holy-holy-holy-C.pdf) · [G](pdf/hymns/holy-holy-holy-G.pdf) · [F](pdf/hymns/holy-holy-holy-F.pdf) |
 | I Cannot Tell | [C](pdf/hymns/i-cannot-tell-C.pdf) · [G](pdf/hymns/i-cannot-tell-G.pdf) · [F](pdf/hymns/i-cannot-tell-F.pdf) |
 | I Know Who Holds Tomorrow | [G](pdf/hymns/i-know-who-holds-tomorrow-G.pdf) · [C](pdf/hymns/i-know-who-holds-tomorrow-C.pdf) · [F](pdf/hymns/i-know-who-holds-tomorrow-F.pdf) |
+| I Sing the Almighty Power of God | [C](pdf/hymns/i-sing-the-almighty-power-of-god-C.pdf) · [G](pdf/hymns/i-sing-the-almighty-power-of-god-G.pdf) · [F](pdf/hymns/i-sing-the-almighty-power-of-god-F.pdf) |
 | Jesus, Lover of My Soul | [Am](pdf/hymns/jesus-lover-of-my-soul-Am.pdf) · [Em](pdf/hymns/jesus-lover-of-my-soul-Em.pdf) · [Dm](pdf/hymns/jesus-lover-of-my-soul-Dm.pdf) |
 | Let All Mortal Flesh Keep Silence | [Am](pdf/hymns/let-all-mortal-flesh-keep-silence-Am.pdf) · [Em](pdf/hymns/let-all-mortal-flesh-keep-silence-Em.pdf) · [Dm](pdf/hymns/let-all-mortal-flesh-keep-silence-Dm.pdf) |
 | Now Thank We All Our God | [C](pdf/hymns/now-thank-we-all-our-god-C.pdf) · [G](pdf/hymns/now-thank-we-all-our-god-G.pdf) · [F](pdf/hymns/now-thank-we-all-our-god-F.pdf) |
