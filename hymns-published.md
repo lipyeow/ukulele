@@ -97,6 +97,7 @@ played in the videos; the PDFs come in the keys listed under "PDFs".
 | Jesus, Lover of My Soul | [Am](pdf/hymns/jesus-lover-of-my-soul-Am.pdf) · [Em](pdf/hymns/jesus-lover-of-my-soul-Em.pdf) · [Dm](pdf/hymns/jesus-lover-of-my-soul-Dm.pdf) |
 | Let All Mortal Flesh Keep Silence | [Am](pdf/hymns/let-all-mortal-flesh-keep-silence-Am.pdf) · [Em](pdf/hymns/let-all-mortal-flesh-keep-silence-Em.pdf) · [Dm](pdf/hymns/let-all-mortal-flesh-keep-silence-Dm.pdf) |
 | Now Thank We All Our God | [C](pdf/hymns/now-thank-we-all-our-god-C.pdf) · [G](pdf/hymns/now-thank-we-all-our-god-G.pdf) · [F](pdf/hymns/now-thank-we-all-our-god-F.pdf) |
+| Now the Green Blade Riseth | [Am](pdf/hymns/now-the-green-blade-riseth-Am.pdf) · [Em](pdf/hymns/now-the-green-blade-riseth-Em.pdf) · [Dm](pdf/hymns/now-the-green-blade-riseth-Dm.pdf) |
 | O Come All Ye Faithful | [C](pdf/hymns/o-come-all-ye-faithful-C.pdf) · [G](pdf/hymns/o-come-all-ye-faithful-G.pdf) · [F](pdf/hymns/o-come-all-ye-faithful-F.pdf) |
 | O Day of Peace That Dimly Shines | [C](pdf/hymns/o-day-of-peace-that-dimly-shines-C.pdf) · [G](pdf/hymns/o-day-of-peace-that-dimly-shines-G.pdf) · [F](pdf/hymns/o-day-of-peace-that-dimly-shines-F.pdf) |
 | O God Our Help in Ages Past | [C](pdf/hymns/o-god-our-help-in-ages-past-C.pdf) · [G](pdf/hymns/o-god-our-help-in-ages-past-G.pdf) · [F](pdf/hymns/o-god-our-help-in-ages-past-F.pdf) |

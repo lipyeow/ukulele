@@ -2581,7 +2581,7 @@ now-the-green-blade-riseth:
     hymnary: grain_of_wheat_routley
   - name: AU JARDIN DE MON PÈRE
     hymnary: au_jardin_de_mon_pere_french
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 11.10.10.11, tune 11.10.11.10'
 o-come-all-ye-faithful:
