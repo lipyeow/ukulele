@@ -1171,7 +1171,7 @@ god-of-grace-and-god-of-glory:
     hymnary: rhuddlan_welsh
   - name: MANNHEIM
     hymnary: mannheim_filitz
-  status: likely
+  status: reviewed
   notes: []
 god-of-the-sparrow:
   title: God of the Sparrow

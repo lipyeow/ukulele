@@ -85,6 +85,7 @@ played in the videos; the PDFs come in the keys listed under "PDFs".
 | Christ Is the World's Light | [C](pdf/hymns/christ-is-the-worlds-light-C.pdf) · [G](pdf/hymns/christ-is-the-worlds-light-G.pdf) · [F](pdf/hymns/christ-is-the-worlds-light-F.pdf) |
 | Come Down O Love Divine | [C](pdf/hymns/come-down-o-love-divine-C.pdf) · [G](pdf/hymns/come-down-o-love-divine-G.pdf) · [F](pdf/hymns/come-down-o-love-divine-F.pdf) |
 | Come Ye Sinners Poor and Needy | [Am](pdf/hymns/come-ye-sinners-poor-and-needy-Am.pdf) · [Em](pdf/hymns/come-ye-sinners-poor-and-needy-Em.pdf) · [Dm](pdf/hymns/come-ye-sinners-poor-and-needy-Dm.pdf) |
+| God of Grace and God of Glory | [C](pdf/hymns/god-of-grace-and-god-of-glory-C.pdf) · [G](pdf/hymns/god-of-grace-and-god-of-glory-G.pdf) · [F](pdf/hymns/god-of-grace-and-god-of-glory-F.pdf) |
 | God Has Spoken | [Am](pdf/hymns/god-has-spoken-Am.pdf) · [Em](pdf/hymns/god-has-spoken-Em.pdf) · [Dm](pdf/hymns/god-has-spoken-Dm.pdf) |
 | God Whose Love Is Reigning o'er Us | [C](pdf/hymns/god-whose-love-is-reigning-oer-us-C.pdf) · [G](pdf/hymns/god-whose-love-is-reigning-oer-us-G.pdf) · [F](pdf/hymns/god-whose-love-is-reigning-oer-us-F.pdf) |
 | Good Christian Friends, Rejoice | [C](pdf/hymns/good-christian-friends-rejoice-C.pdf) · [G](pdf/hymns/good-christian-friends-rejoice-G.pdf) · [F](pdf/hymns/good-christian-friends-rejoice-F.pdf) |

@@ -36,7 +36,7 @@ UMH is the hymn's number in *The United Methodist Hymnal*. `Status` is `reviewed
 | [For the Beauty of the Earth](../../songs/hymns/for-the-beauty-of-the-earth.cho) | 92, 829 | [DIX](https://hymnary.org/tune/dix_kocher) | 7.7.7.7.7.7 | Folliott Sandford Pierpoint | Conrad Kocher | likely |
 | [God Has Spoken](../../songs/hymns/god-has-spoken.cho) | 108 | [EBENEZER](https://hymnary.org/tune/ebenezer_williams) | 8.7.8.7 D | G. W. Briggs | Thomas John Williams | likely |
 | [God Moves in a Mysterious Way](../../songs/hymns/god-moves-in-a-mysterious-way.cho) |  | [MYSTERY](https://hymnary.org/tune/god_moves_in_a_mysterious_way_french) | 8.6.8.6 | William Cowper | K. Jason French | reviewed |
-| [God of Grace and God of Glory](../../songs/hymns/god-of-grace-and-god-of-glory.cho) | 577 | [CWM RHONDDA](https://hymnary.org/tune/cwm_rhondda_hughes) | 8.7.8.7.8.7.7 | Harry Emerson Fosdick | John Hughes | likely |
+| [God of Grace and God of Glory](../../songs/hymns/god-of-grace-and-god-of-glory.cho) | 577 | [CWM RHONDDA](https://hymnary.org/tune/cwm_rhondda_hughes) | 8.7.8.7.8.7.7 | Harry Emerson Fosdick | John Hughes | reviewed |
 | [God of the Sparrow](../../songs/hymns/god-of-the-sparrow.cho) | 122 | [ROEDER](https://hymnary.org/tune/roeder_schalk) | 5.4.6.7.7 | Jaroslav J. Vajda | Carl Schalk | likely |
 | [God Whose Love Is Reigning o'er Us](../../songs/hymns/god-whose-love-is-reigning-oer-us.cho) | 100 | [LAUDA ANIMA](https://hymnary.org/tune/lauda_anima_goss) | 8.7.8.7.8.7 | William Boyd Grove | John Goss | reviewed |
 | [God Will Take Care of You](../../songs/hymns/god-will-take-care-of-you.cho) | 130 | [MARTIN](https://hymnary.org/tune/god_cares_martin) | 8.6.8.6 with refrain | Civilla D. Martin | W. Stillman Martin | likely |
