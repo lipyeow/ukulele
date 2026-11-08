@@ -77,6 +77,7 @@ played in the videos; the PDFs come in the keys listed under "PDFs".
 
 | Hymn | PDFs |
 |------|------|
+| Alas! and Did My Savior Bleed | [C](pdf/hymns/alas-and-did-my-savior-bleed-C.pdf) · [G](pdf/hymns/alas-and-did-my-savior-bleed-G.pdf) · [F](pdf/hymns/alas-and-did-my-savior-bleed-F.pdf) |
 | All People That on Earth Do Dwell | [C](pdf/hymns/all-people-that-on-earth-do-dwell-C.pdf) · [G](pdf/hymns/all-people-that-on-earth-do-dwell-G.pdf) · [F](pdf/hymns/all-people-that-on-earth-do-dwell-F.pdf) |
 | Angels from the Realms of Glory | [C](pdf/hymns/angels-from-the-realms-of-glory-C.pdf) · [G](pdf/hymns/angels-from-the-realms-of-glory-G.pdf) · [F](pdf/hymns/angels-from-the-realms-of-glory-F.pdf) |
 | Are Ye Able | [C](pdf/hymns/are-ye-able-C.pdf) · [G](pdf/hymns/are-ye-able-G.pdf) · [F](pdf/hymns/are-ye-able-F.pdf) |

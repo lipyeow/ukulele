@@ -130,7 +130,7 @@ alas-and-did-my-savior-bleed:
     hymnary: alas_and_did_my_savior_bleed_55311
   - name: '[Alas! and did my Savior bleed]'
     hymnary: alas_and_did_my_savior_bleed_hull
-  status: check
+  status: reviewed
   notes:
   - 'meters differ: words 8.6.8.6., tune CM with refrain'
 all-creatures-of-our-god-and-king:
