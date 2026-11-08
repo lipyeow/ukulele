@@ -36,6 +36,7 @@ Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. D
 | [Frances Elizabeth Cox](https://hymnary.org/person/Cox_Frances) | 1812–1897 | [Sing Praise to God Who Reigns Above](../../songs/hymns/sing-praise-to-god-who-reigns-above.cho) |  |
 | [William Croft](https://hymnary.org/person/Croft_William) | 1678–1727 |  | [O God Our Help in Ages Past](../../songs/hymns/o-god-our-help-in-ages-past.cho) |
 | Fanny Crosby |  | [Blessed Assurance](../../songs/hymns/blessed-assurance.cho) · [Jesus Keep Me Near the Cross](../../songs/hymns/jesus-keep-me-near-the-cross.cho) · [Pass Me Not, O Gentle Savior](../../songs/hymns/pass-me-not-o-gentle-savior.cho) |  |
+| [John Macleod Campbell Crum](https://hymnary.org/person/Crum_JMC) | 1872–1958 | [Now the Green Blade Riseth](../../songs/hymns/now-the-green-blade-riseth.cho) |  |
 | [Johann Crüger](https://hymnary.org/person/Cruger_Johann) | 1598–1662 |  | [Now Thank We All Our God](../../songs/hymns/now-thank-we-all-our-god.cho) |
 | [John Darwall](https://hymnary.org/person/Darwall_J) | 1732–1789 |  | [Rejoice the Lord Is King](../../songs/hymns/rejoice-the-lord-is-king.cho) |
 | Carl P. Daw |  | [O Day of Peace That Dimly Shines](../../songs/hymns/o-day-of-peace-that-dimly-shines.cho) |  |

@@ -2542,6 +2542,48 @@ now-thank-we-all-our-god:
     hymnary: diademata_elvey
   status: likely
   notes: []
+now-the-green-blade-riseth:
+  title: Now the Green Blade Riseth
+  first_line: Now the green blade riseth from the buried grain
+  words:
+  - John Macleod Campbell Crum
+  words_year: ''
+  meter: "11.10.10.11"
+  text_meter: "11.10.10.11"
+  text_copyright: Public Domain
+  umh:
+  - '311'
+  topics:
+  - Christ's Gracious Life
+  - Christian Year
+  - Eternal Life
+  - Grief
+  - Jesus Christ
+  - Love
+  - New Creation
+  - New Heaven and a New Earth
+  - Sanctifiying and Perfecting Grace
+  tune: FRENCH CAROL
+  tune_basis: umh
+  music: []
+  music_year: ''
+  tune_meter: "11.10.11.10"
+  tune_source: Old French tune
+  tune_copyright: Public Domain
+  incipit: "15645344532115645344"
+  hymnary:
+    text: now_the_green_blade_riseth
+    tune: noel_nouvelet
+  other_tunes:
+  - name: '[Slowly fall the snowflakes]'
+    hymnary: slowly_fall_the_snowflakes_borrow
+  - name: GRAIN OF WHEAT
+    hymnary: grain_of_wheat_routley
+  - name: AU JARDIN DE MON PÈRE
+    hymnary: au_jardin_de_mon_pere_french
+  status: check
+  notes:
+  - 'meters differ: words 11.10.10.11, tune 11.10.11.10'
 o-come-all-ye-faithful:
   title: O Come All Ye Faithful
   first_line: O Come All Ye Faithful
