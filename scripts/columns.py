@@ -20,7 +20,7 @@ from build import CONFIG, chordpro_bin, output_keys, semitones  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 SONGS = ROOT / "songs" / "hymns"
-TEXT_SIZE = b"11"  # lyric font size in config/ukulele.json
+TEXT_SIZE = b"13"  # lyric font size in config/ukulele.json
 MIDDLE = 306  # half the letter page width, in points
 
 
@@ -42,7 +42,7 @@ def layout(pdf, columns=1):
         for op in re.finditer(rb"([\d.]+) Tf|1 0 0 1 ([\d.]+) ([\d.]+) Tm", text):
             if op.group(1):
                 size = op.group(1)
-            elif size == TEXT_SIZE:
+            elif size == TEXT_SIZE and float(op.group(3)) > 40:  # footers use the text font too
                 side = columns == 2 and float(op.group(2)) > MIDDLE
                 rows.add((stream, side, round(float(op.group(3)))))
     return pages, len(rows)

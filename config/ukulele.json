@@ -52,8 +52,8 @@
     "fonts": {
       "title": "Times-Bold 18",
       "subtitle": "Helvetica 11",
-      "text": "inconsolata 11",
-      "chord": "inconsolata bold 10",
+      "text": "inconsolata 13",
+      "chord": "inconsolata bold 12",
       // Not used by our songs, but ChordPro loads it anyway; keep Courier out of the PDFs.
       "tab": "inconsolata 10",
       "comment": "Helvetica 11; background=foreground-light"
@@ -69,7 +69,7 @@
       }
     },
     "diagrams": { "show": "top" },
-    // Verse numbers one space from the lyrics: "1" plus a space, 2 x 5.5 pt at 11 pt.
-    "labels": { "width": 11 }
+    // Verse numbers one space from the lyrics: "1" plus a space, 2 x 6.5 pt at 13 pt.
+    "labels": { "width": 13 }
   }
 }
