@@ -9,21 +9,17 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
   The beat-marker spacing below depends on it. If the source doesn't give one (the old
   beat-count line, e.g. `1 2 3 4`), work it out from the tune.
 
-- Use `{columns: 2}` (after `{time}`) when the song fits on fewer pages that way and no
-  line wraps in the narrower column; `make columns` (`scripts/columns.py`) checks every
-  output key. Since the switch to 13 pt lyrics (2026-11-08), lines are longer, so fewer songs
-  fit: 11 two-column songs went back to one column because lines wrapped. Six more, whose
-  verses run to 8 lines, also went to one column so that no verse splits across the columns
-  (2026-11-09). Two columns now suit only short verses (6 lines or fewer).
-- If a two-column song splits a verse across the columns, put `{column_break}` on the line
-  right before that verse's `{start_of_verse}`, with no blank line between them, or the second
-  column starts a line lower (2026-11-07). No song uses it now: *Hosanna, Loud Hosanna*
-  did, until it went to one column.
-- Use `{+pdf.diagrams.show: right}` (after `{time}`, or after `{columns: 2}`) to stack the
-  chord diagrams down the right margin instead of above the song, when that saves a page.
-  It narrows the lyrics, so with `{columns: 2}` use it only if `make columns` still shows
-  no wrapping. Example: *Sweet Hour of Prayer*. No two-column song uses it at 13 pt
-  (*I Love to Tell the Story* did at 11 pt).
+- All songs are one column. Two columns (`{columns: 2}` after `{time}`) were used for songs
+  that fit on fewer pages that way, but after the switch to 13 pt lyrics (2026-11-08) lines
+  wrapped in the narrower columns and verses split across them, so every song went back to
+  one column (2026-11-10). Long lines are split or joined to fit 13 pt instead. If two
+  columns come back: check with `make columns` (`scripts/columns.py`, every output key), and
+  put `{column_break}` on the line right before a verse's `{start_of_verse}`, with no blank
+  line between them, to keep that verse in one column (a blank line starts the second column
+  a line lower).
+- Use `{+pdf.diagrams.show: right}` (after `{time}`) to stack the chord diagrams down the
+  right margin instead of above the song, when that saves a page. Example: *Sweet Hour of
+  Prayer*.
 
 ## Chords
 
