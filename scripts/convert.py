@@ -10,20 +10,27 @@ Usage:
   python3 scripts/convert.py --force SLUG ...   overwrite existing .cho files
 """
 
+from __future__ import annotations
+
 import csv
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from repos import find, shown  # noqa: E402
-from txt2cho import convert  # noqa: E402
+from repos import find, shown
+from txt2cho import convert
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"
 CSV = ROOT / "wiki" / "migration.csv"
 
 
-def main(argv):
+def main(argv: list[str]) -> None:
+    """Convert the hymns given, writing each .cho and updating wiki/migration.csv.
+
+    Args:
+        argv: Slugs, or --next N; plus --force to overwrite existing .cho files.
+    """
     force = "--force" in argv
     args = [a for a in argv if a != "--force"]
     with CSV.open() as fh:

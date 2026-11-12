@@ -23,12 +23,17 @@ columns:
 
 # Python tools, pinned and run through uv (https://docs.astral.sh/uv/); settings in pyproject.toml.
 RUFF = uvx ruff@0.17.4
-PYREFLY = uvx pyrefly@1.4.1
+# Pyrefly gets the PyYAML the scripts use, plus its type stubs.
+PYREFLY = uvx --with pyyaml==6.0.1 --with types-pyyaml==6.0.12.20260906 pyrefly@1.4.1
 
 # Check the scripts' formatting and lint them (run before committing a script change).
 lint:
 	$(RUFF) format --check scripts
 	$(RUFF) check scripts
+
+# Type-check the scripts.
+typecheck:
+	$(PYREFLY) check
 
 # Reformat the scripts and apply ruff's safe fixes.
 format:

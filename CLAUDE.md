@@ -24,6 +24,7 @@ Hymns come first; other genres follow later.
 - Each `.cho` with a standard tune name has `{meta: tune NAME}` under `{time: ...}`, printed after the time signature. It must match `metadata/<genre>/`; `make check` compares them.
 - `make check` fails a public song whose words are still copyrighted in the US (`words_pd_us` in `metadata/hymns/hymns.yaml`, unless `keep_public` is set) and notes a private one whose words have become public domain. Set `words_pd_us` for any new song with copyrighted words, and put it in the private repo.
 - Record decisions and plan changes in `wiki/`.
+- Scripts in `scripts/` must pass `make lint` (ruff: every rule, formatted) and `make typecheck` (pyrefly, every check) before committing; both run through `uvx`, and the few exceptions are explained in `pyproject.toml`. Suppress a single finding with `# ruff: ignore[rule-name] - reason`, never a blanket ignore. The scripts still run on Python 3.7, so use `from __future__ import annotations` and `typing` aliases for types used at runtime.
 
 ## Git
 

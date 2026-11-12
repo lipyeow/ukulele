@@ -22,55 +22,84 @@ Usage: python3 scripts/check.py [SLUG ...]   (default: every converted song)
 Exits 1 if any song has problems.
 """
 
+from __future__ import annotations
+
 import csv
 import difflib
 import re
-import subprocess
+import subprocess  # ruff: ignore[suspicious-subprocess-import] - runs ChordPro
 import sys
 from pathlib import Path
-
+from typing import Dict, List, Tuple
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build import CONFIG, chordpro_bin  # noqa: E402
-from repos import PRIVATE, find, hymns, repo_of, song_files, words_status  # noqa: E402
-from txt2cho import (
-    BEAT_LINE,
-    CHORD_LINE,
-    KEY_HEADER,
-    LABEL,
-    TOKEN,  # noqa: E402
-    VERSE_NO,
-    simplify,
-)
+from build import CONFIG, chordpro_bin
+from repos import PRIVATE, find, hymns, repo_of, song_files, words_status
+from txt2cho import BEAT_LINE, CHORD_LINE, KEY_HEADER, LABEL, TOKEN, VERSE_NO, simplify
+
+Line = Tuple[List[str], List[str]]  # a line's lyric words and the chords on it
+Findings = Tuple[List[str], List[str]]  # (problems, notes)
+Row = Dict[str, str]  # a row of wiki/migration.csv
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"
 CSV = ROOT / "wiki" / "migration.csv"
 GAP = re.compile(r"\S\s{5,}\S")
 HYMNS = hymns()
+CHORUS = "{chorus}"  # the directive that repeats the chorus
+TWO_COLUMNS = 3  # wide gaps at the same place on this many lines suggest two columns
+CONTEXT = 2  # words of context around a lyric difference
 
 
-def words(text):
-    text = re.sub(
-        r"(?<=[A-Za-z])-+\s*(?=[A-Za-z])", "", text.replace("’", "'").replace("&", " and ")
-    )
+def words(text: str) -> list[str]:
+    """Reduce lyrics to words for comparing.
+
+    Args:
+        text: Lyrics.
+
+    Returns:
+        The words, lowercased, with apostrophes and hyphens between letters dropped.
+    """
+    text = text.replace("\N{RIGHT SINGLE QUOTATION MARK}", "'").replace("&", " and ")
+    text = re.sub(r"(?<=[A-Za-z])-+\s*(?=[A-Za-z])", "", text)
     return re.findall(r"[a-z']+", text.lower().replace("'", ""))
 
 
-def source_parts(path):
-    """([(lyric words, chords over it)] per lyric line, problems, notes) for a source."""
+def skip_source_line(line: str) -> bool:
+    """Say whether a source line has nothing to compare: a blank, beat, label or header line.
+
+    Args:
+        line: A line of the source.
+
+    Returns:
+        True to skip it.
+    """
+    if not line.strip() or BEAT_LINE.match(line) or LABEL.match(line):
+        return True
+    if KEY_HEADER.search(line) and not CHORD_LINE.match(line):
+        return True
+    return bool(re.match(r"\s*(\d\.?\s+)?Tune:", line))  # a tune name, a {comment} in the .cho
+
+
+def source_parts(path: Path) -> tuple[list[Line], list[str], list[str]]:
+    """Read a source file's lyric lines and the chords over each.
+
+    Args:
+        path: The .txt source.
+
+    Returns:
+        ([(lyric words, chords over it)] per lyric line, problems, notes).
+    """
     lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
     if lines and not CHORD_LINE.match(lines[0]):
         lines = lines[1:]  # title line
-    out, problems, gaps = [], [], {}
-    pending = []
+    out: list[Line] = []
+    problems: list[str] = []
+    gaps: dict[int, list[int]] = {}
+    pending: list[str] = []
     for n, line in enumerate(lines, 2):
-        if not line.strip() or BEAT_LINE.match(line) or LABEL.match(line):
+        if skip_source_line(line):
             continue
-        if KEY_HEADER.search(line) and not CHORD_LINE.match(line):
-            continue
-        if re.match(r"\s*(\d\.?\s+)?Tune:", line):
-            continue  # a tune name, kept as a {comment} in the .cho
         if CHORD_LINE.match(line):
             if pending:
                 out.append(([], pending))  # chords with no lyric under them
@@ -94,40 +123,61 @@ def source_parts(path):
     notes = [
         f"wide gaps on source lines {', '.join(map(str, ns[:4]))}: two columns?"
         for ns in gaps.values()
-        if len(ns) >= 3
+        if len(ns) >= TWO_COLUMNS
     ]
     return out, problems, notes
 
 
-def song_parts(text):
-    """([(lyric words, chords)] per line, problems, chorus words) for a .cho file, {chorus}
-    expanded."""
-    chorus, cur, body, problems = [], None, [], []
+def song_lines(text: str) -> tuple[list[str], list[str], list[str], int]:
+    """Read a .cho file's sung lines in order, with {chorus} expanded.
+
+    Args:
+        text: The .cho source.
+
+    Returns:
+        (the lines, the chorus's lines, problems, the number of sections).
+    """
+    chorus: list[str] = []
+    cur: list[str] | None = None
+    body: list[str] = []
+    problems: list[str] = []
+    kind = ""
     sections = 0
     for line in text.splitlines():
         s = line.strip()
         if s.startswith("{start_of_"):
-            cur, sections = [], sections + 1
+            cur = []
+            sections += 1
             kind = s
-            continue
-        if s.startswith("{end_of_"):
-            if not any(l for l in cur):
+        elif s.startswith("{end_of_") and cur is not None:
+            if not any(cur):
                 problems.append(f"empty section: {kind}")
             if "chorus" in kind:
                 chorus = cur
             body += cur
             cur = None
-            continue
-        if s == "{chorus}":
+        elif s == CHORUS:
             body += chorus
+        elif s.startswith(("{", "#")) or not s:
             continue
-        if s.startswith("{") or s.startswith("#") or not s:
-            continue
-        if cur is None:
+        elif cur is None:
             problems.append(f"line outside a section: {s[:60]}")
-            continue
-        cur.append(s)
-    out = []
+        else:
+            cur.append(s)
+    return body, chorus, problems, sections
+
+
+def song_parts(text: str) -> tuple[list[Line], list[str], list[str]]:
+    """Read a .cho file's lyric words and chords, with {chorus} expanded.
+
+    Args:
+        text: The .cho source.
+
+    Returns:
+        ([(lyric words, chords)] per line, problems, the chorus's words).
+    """
+    body, chorus, problems, sections = song_lines(text)
+    out: list[Line] = []
     for line in body:
         # <off>D</off> is still D; an optional (D) is left out, as it is in the sources.
         marks = [re.sub(r"</?off>", "", m) for m in re.findall(r"\[([^\]]+)\]", line)]
@@ -137,49 +187,91 @@ def song_parts(text):
         if any("<" in m for m in marks):
             problems.append(f"markup other than <off> in a chord: {line[:60]}")
         out.append((words(lyric), [m for m in marks if m != "**" and not m.startswith("(")]))
-    if not re.search(r"^\{time:", text, re.M):
+    if not re.search(r"^\{time:", text, re.MULTILINE):
         problems.append("no {time: ...}")
     if not sections:
         problems.append("no sections")
-    return out, problems, [w for l in chorus for w in words(re.sub(r"\[[^\]]*\]", "", l))]
+    chorus_words = [w for line in chorus for w in words(re.sub(r"\[[^\]]*\]", "", line))]
+    return out, problems, chorus_words
 
 
-def chordpro_problems(cho):
-    run = subprocess.run(
-        [chordpro_bin(), f"--config={CONFIG}", "--generate=Text", str(cho), "-o", "/dev/null"],
-        capture_output=True,
-        text=True,
-        cwd=ROOT,
-    )
-    out = []
-    for line in (run.stdout + run.stderr).splitlines():
-        if "Unknown chord" in line or "No chord diagram" in line:
-            out.append("chordpro: " + line.split(", ", 1)[-1].strip())
+def chordpro_problems(cho: Path) -> list[str]:
+    """Ask ChordPro about unknown chords and missing chord diagrams.
+
+    Args:
+        cho: The song's source.
+
+    Returns:
+        ChordPro's complaints, sorted.
+    """
+    cmd = [chordpro_bin(), f"--config={CONFIG}", "--generate=Text", str(cho), "-o", "/dev/null"]
+    # ruff: ignore[subprocess-without-shell-equals-true] - our own arguments
+    run = subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT, check=False)
+    found = (run.stdout + run.stderr).splitlines()
+    out = [
+        "chordpro: " + line.split(", ", 1)[-1].strip()
+        for line in found
+        if "Unknown chord" in line or "No chord diagram" in line
+    ]
     return sorted(set(out))
 
 
-def phrase(ws, i, j):
-    return " ".join(ws[max(i - 2, 0) : j + 2])
+def phrase(ws: list[str], i: int, j: int) -> str:
+    """Quote words i to j with a little context.
+
+    Args:
+        ws: The words.
+        i: Where the difference starts.
+        j: Where it ends.
+
+    Returns:
+        The words, with CONTEXT more on each side.
+    """
+    return " ".join(ws[max(i - CONTEXT, 0) : j + CONTEXT])
 
 
-def subsequence(small, big):
+def subsequence(small: list[str], big: list[str]) -> bool:
+    """Say whether one list appears in another, in order.
+
+    Args:
+        small: The list to look for.
+        big: The list to look in.
+
+    Returns:
+        True if every item of small is in big, in the same order.
+    """
     it = iter(big)
     return all(any(c == x for x in it) for c in small)
 
 
-def tune_problems(slug, text):
-    """The {meta: tune} line must match metadata/hymns/hymns.yaml."""
+def tune_problems(slug: str, text: str) -> list[str]:
+    """Check the {meta: tune} line against metadata/hymns/hymns.yaml.
+
+    Args:
+        slug: The song's slug.
+        text: Its .cho source.
+
+    Returns:
+        A problem if they differ.
+    """
     tune = (HYMNS.get(slug) or {}).get("tune") or ""
     expected = "" if tune.startswith("[") else tune
-    found = re.search(r"^\{meta:\s*tune\s+(.*?)\}", text, re.M)
+    found = re.search(r"^\{meta:\s*tune\s+(.*?)\}", text, re.MULTILINE)
     actual = found.group(1).strip() if found else ""
     return [] if actual == expected else [f'tune: .cho has "{actual}", hymns.yaml has "{expected}"']
 
 
-def words_check(slug, cho):
-    """Problems and notes on where a song lives, by its words' copyright (wiki/copyright.md).
+def words_check(slug: str, cho: Path) -> Findings:
+    """Check that a song is in the right repo for its words' copyright (wiki/copyright.md).
 
     Copyrighted words belong in the private repo, unless hymns.yaml sets keep_public.
+
+    Args:
+        slug: The song's slug.
+        cho: Its source.
+
+    Returns:
+        (problems, notes).
     """
     hymn = HYMNS.get(slug) or {}
     state, message = words_status(hymn)
@@ -197,25 +289,34 @@ def words_check(slug, cho):
     return [], []
 
 
-def check(row):
+def check(row: Row) -> Findings:
+    """Run every check on one song.
+
+    Args:
+        row: Its row of wiki/migration.csv.
+
+    Returns:
+        (problems, notes).
+    """
     cho = find(row["slug"])
     problems, notes = check_song(row, cho)
     more_problems, more_notes = words_check(row["slug"], cho)
     return problems + more_problems, notes + more_notes
 
 
-def check_song(row, cho):
-    song, more, chorus = song_parts(cho.read_text())
-    lint = more + chordpro_problems(cho) + tune_problems(row["slug"], cho.read_text())
-    if not row["canonical_source"]:
-        return lint, ["new song: no source to compare with"]
-    src, problems, notes = source_parts(SRC / row["canonical_source"])
-    problems += lint
-    if row["status"] == "reviewed":
-        # Review 3 signed off on this .cho, including fixes to errors in the source, so
-        # it is the reference now: only the lint checks apply.
-        return problems, ["reviewed: not compared with the source"]
+def lyric_findings(src: list[Line], song: list[Line], chorus: list[str]) -> Findings:
+    """Compare a song's words with its source's.
 
+    Args:
+        src: The source's lines.
+        song: The .cho's lines.
+        chorus: The chorus's words.
+
+    Returns:
+        (problems, notes).
+    """
+    problems: list[str] = []
+    notes: list[str] = []
     src_words = [w for ws, _ in src for w in ws]
     cho_words = [w for ws, _ in song for w in ws]
     sm = difflib.SequenceMatcher(None, src_words, cho_words, autojunk=False)
@@ -229,24 +330,38 @@ def check_song(row, cho):
             f'lyrics {op}: source "{phrase(src_words, i1, i2)}" '
             f'vs .cho "{phrase(cho_words, j1, j2)}"'
         )
+    return problems, notes
 
-    # Chords, line by line: lines are matched on their lyrics, and each .cho line's chords
-    # must appear in order in the source line. Missing ones are dropped pickups. A line may
-    # start with the chord still sounding from the line before, where the source has a `*`.
-    held, last = [], None
+
+def chord_findings(src: list[Line], song: list[Line]) -> Findings:
+    """Compare a song's chords with its source's, line by line.
+
+    Lines are matched on their lyrics, and each .cho line's chords must appear in order in
+    the source line. Missing ones are dropped pickups. A line may start with the chord still
+    sounding from the line before, where the source has a `*`.
+
+    Args:
+        src: The source's lines.
+        song: The .cho's lines.
+
+    Returns:
+        (problems, notes).
+    """
+    held: list[Line] = []
+    last: str | None = None
     for ws, cs in song:
         held.append((ws, cs[1:] if cs and cs[0] == last else cs))
         last = cs[-1] if cs else last
-    song = held
     src_lines = [" ".join(ws) for ws, _ in src]
-    cho_lines = [" ".join(ws) for ws, _ in song]
-    dropped = []
+    cho_lines = [" ".join(ws) for ws, _ in held]
+    problems: list[str] = []
+    dropped: list[str] = []
     sm = difflib.SequenceMatcher(None, src_lines, cho_lines, autojunk=False)
     for op, i1, i2, j1, j2 in sm.get_opcodes():
-        if op not in ("equal", "replace"):
+        if op not in {"equal", "replace"}:
             continue
         a_chords = [c for _, cs in src[i1:i2] for c in cs]
-        b_chords = [c for _, cs in song[j1:j2] for c in cs]
+        b_chords = [c for _, cs in held[j1:j2] for c in cs]
         if not subsequence(b_chords, a_chords):
             problems.append(
                 f'chords on "{cho_lines[j1][:50]}": .cho {" ".join(b_chords)} '
@@ -254,16 +369,50 @@ def check_song(row, cho):
             )
         elif len(b_chords) < len(a_chords):
             dropped.append(cho_lines[j1][:40])
-    if dropped:
-        notes.append(
-            f"chords dropped (pickups) on {len(dropped)} line(s), e.g. "
-            f'"{dropped[0]}": check them in review'
-        )
+    if not dropped:
+        return problems, []
+    note = f'chords dropped (pickups) on {len(dropped)} line(s), e.g. "{dropped[0]}"'
+    return problems, [f"{note}: check them in review"]
+
+
+def check_song(row: Row, cho: Path) -> Findings:
+    """Check a song's .cho, and compare it with its source unless it's been reviewed.
+
+    Args:
+        row: Its row of wiki/migration.csv.
+        cho: Its source.
+
+    Returns:
+        (problems, notes).
+    """
+    text = cho.read_text(encoding="utf-8")
+    song, more, chorus = song_parts(text)
+    lint = more + chordpro_problems(cho) + tune_problems(row["slug"], text)
+    if not row["canonical_source"]:
+        return lint, ["new song: no source to compare with"]
+    src, problems, notes = source_parts(SRC / row["canonical_source"])
+    problems += lint
+    if row["status"] == "reviewed":
+        # Review 3 signed off on this .cho, including fixes to errors in the source, so
+        # it is the reference now: only the lint checks apply.
+        return problems, ["reviewed: not compared with the source"]
+    for found_problems, found_notes in (
+        lyric_findings(src, song, chorus),
+        chord_findings(src, song),
+    ):
+        problems += found_problems
+        notes += found_notes
     return problems, notes
 
 
-def main(argv):
-    rows = {r["slug"]: r for r in csv.DictReader(CSV.open())}
+def main(argv: list[str]) -> None:
+    """Check the songs given, or every song in both repos, and exit 1 if any has problems.
+
+    Args:
+        argv: Slugs.
+    """
+    with CSV.open(encoding="utf-8") as fh:
+        rows = {r["slug"]: r for r in csv.DictReader(fh)}
     slugs = argv or [p.stem for p in song_files("hymns")]
     bad = 0
     for slug in slugs:
