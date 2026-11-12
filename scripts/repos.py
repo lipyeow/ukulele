@@ -5,6 +5,7 @@ Songs whose words are still copyrighted in the US live in a private repo, by def
 pdf/: the tools, config and metadata stay here. Without a private checkout, the scripts
 just see the public songs.
 """
+
 import os
 from datetime import date
 from pathlib import Path
@@ -24,7 +25,9 @@ def roots():
 def song_files(genre=None):
     """Every .cho in both repos (one genre, or all), sorted by slug."""
     pattern = f"{genre}/*.cho" if genre else "**/*.cho"
-    return sorted((p for root in roots() for p in (root / "songs").glob(pattern)), key=lambda p: p.stem)
+    return sorted(
+        (p for root in roots() for p in (root / "songs").glob(pattern)), key=lambda p: p.stem
+    )
 
 
 def find(slug, genre="hymns"):
@@ -69,7 +72,7 @@ def words_status(hymn, today=None):
         line = hymn.get("text_copyright") or "Public Domain"
         if "public domain" in line.lower():
             return "free", ""
-        return "error", f"hymns.yaml has \"{line}\" but no words_pd_us"
+        return "error", f'hymns.yaml has "{line}" but no words_pd_us'
     if pd_us == "now":
         return "free", ""
     if pd_us == "unknown":
@@ -77,7 +80,7 @@ def words_status(hymn, today=None):
     try:
         free = date.fromisoformat(str(pd_us))
     except ValueError:
-        return "error", f"words_pd_us \"{pd_us}\" is not a date, now or unknown"
+        return "error", f'words_pd_us "{pd_us}" is not a date, now or unknown'
     if free <= (today or date.today()):
         return "free", ""
     return "copyrighted", f"words copyrighted in the US until {free}"

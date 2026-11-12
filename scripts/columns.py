@@ -7,6 +7,7 @@ rows ChordPro drew: more rows in two columns means some line wrapped.
 
 Usage: python3 scripts/columns.py [SLUG ...]   (default: every hymn, public and private)
 """
+
 import re
 import subprocess
 import sys

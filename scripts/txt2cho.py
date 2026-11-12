@@ -3,6 +3,7 @@
 Usage: python3 scripts/txt2cho.py SRC.txt [KEY [TIME]] > out.cho
 (scripts/convert.py runs this for the hymns in wiki/migration.csv.)
 """
+
 import re
 import sys
 
@@ -35,8 +36,7 @@ def keep_hyphen(left, right):
     """True for real compounds (Day-Spring), False for sung syllables (Is-ra-el)."""
     if (left + right).lower() in WORDS:
         return right[:1].isupper()
-    return len(left) >= 3 and len(right) >= 3 and \
-        left.lower() in WORDS and right.lower() in WORDS
+    return len(left) >= 3 and len(right) >= 3 and left.lower() in WORDS and right.lower() in WORDS
 
 
 def dehyphenate(text):
@@ -66,9 +66,9 @@ def dehyphenate(text):
                 pass
             elif run > 1:
                 dash = plain.index("-", pos)  # keep one hyphen, drop the rest of the run
-                drop.update(w for w in where[pos:pos + run] if w != where[dash])
+                drop.update(w for w in where[pos : pos + run] if w != where[dash])
             else:
-                drop.update(where[pos:pos + run])
+                drop.update(where[pos : pos + run])
             pos += run
     return "".join(c for k, c in enumerate(text) if k not in drop)
 
@@ -128,9 +128,14 @@ def place(lyric, col, ch):
     if not lyric[col].isalpha():
         return col
     st, en = word_bounds(lyric, col)
-    if ch == "**" and col > st and (
+    if (
+        ch == "**"
+        and col > st
+        and (
             syllables(lyric[st:en]) <= 1
-            or re.fullmatch(r"[^aeiouy]*(e|es)?", lyric[col:en].lower())):
+            or re.fullmatch(r"[^aeiouy]*(e|es)?", lyric[col:en].lower())
+        )
+    ):
         return en  # beat on the tail of a word -> right after the word
     if ch == "**" and col > st:
         vowel = "aeiouy"
@@ -168,21 +173,29 @@ def merge(chords, lyric):
     # A dropped beat inside a word, followed by a mark later in the same word, is a held
     # syllable: "fai[**][C]ling" -> "fai-[C]ling". Anywhere else it just disappears.
     text = re.sub(r"(?<=[A-Za-z])" + HELD + r"(?=[^\s\[]*\[[^\]]*\][A-Za-z])", "-", text)
-    text = re.sub(r"-*" + HELD + "-*", lambda m: "-" if m.group().startswith("-") and
-                  m.group().endswith("-") else m.group().replace(HELD, ""), text)
+    text = re.sub(
+        r"-*" + HELD + "-*",
+        lambda m: (
+            "-"
+            if m.group().startswith("-") and m.group().endswith("-")
+            else m.group().replace(HELD, "")
+        ),
+        text,
+    )
     text = re.sub(r"-{2,}", "-", text)
     return re.sub(r" {2,}", " ", text).strip()
 
 
 # --- Beat markers (wiki/style-guide.md) ---
 
+
 def marker_step(time):
     """Source beats between kept markers, assuming the source marks every beat."""
     num, den = (int(x) for x in time.split("/"))
     if den == 2:
-        return 1          # 3/2, 2/2: a beat is a half note, so every beat is marked
+        return 1  # 3/2, 2/2: a beat is a half note, so every beat is marked
     if den == 8:
-        return 1          # 6/8: the sources already mark only dotted quarters (1 and 4)
+        return 1  # 6/8: the sources already mark only dotted quarters (1 and 4)
     return 3 if num == 3 else 2
 
 
@@ -255,12 +268,14 @@ KEEP_CAPS = {"I", "O", "He", "His", "Him", "Thee", "Thou", "Thy", "Thine", "Alle
 
 def lower_midline(line):
     """'foe, Doth seek' -> 'foe, doth seek': old sources start each half-line with a capital."""
+
     def fix(m):
         w = m.group(2)
         base = re.sub(r"'s$", "", w)
         if w in KEEP_CAPS or base in PROPER or not base[1:].islower():
             return m.group()
         return m.group(1) + w.lower()
+
     return re.sub(r"([,;:]\s*(?:\[[^\]]*\])*)([A-Z][a-z']+)", fix, line)
 
 
@@ -275,12 +290,14 @@ def repeats_to_marks(line):
         if m.group(1) != "**":
             prev = m.group(1)
         return m.group()
+
     return re.sub(r"\[([^\]]+)\]", sub, line)
 
 
 def tidy(lines):
     """Capitalize each line; drop line-end , ; : . except on the last line; [**] for
     repeated chords."""
+
     def cap(line):
         depth = 0
         for i, c in enumerate(line):
@@ -289,8 +306,9 @@ def tidy(lines):
             elif c == "]":
                 depth -= 1
             elif depth == 0 and c.isalpha():
-                return line[:i] + c.upper() + line[i + 1:]
+                return line[:i] + c.upper() + line[i + 1 :]
         return line
+
     trail = re.compile(r"[,;:.]+(?=(?:\s*\[[^\]]*\])*\s*$)")
     out = [repeats_to_marks(cap(lower_midline(l))) for l in lines]
     return [trail.sub("", l) for l in out[:-1]] + out[-1:]
@@ -334,14 +352,21 @@ def convert(path, key=None, time=None, title=None, keep_marks=False):
                 if label_chorus:
                     chorus_labels.add(len(sections) - 1)
                 cur = []
-            label_chorus = bool(LABEL.match(line)) and not line.lower().strip(" []:").startswith("verse")
+            label_chorus = bool(LABEL.match(line)) and not line.lower().strip(" []:").startswith(
+                "verse"
+            )
             i += 1
             continue
         if BEAT_LINE.match(line) or KEY_HEADER.search(line) and not CHORD_LINE.match(line):
             i += 1
             continue
-        if CHORD_LINE.match(line) and i + 1 < len(lines) and lines[i + 1].strip() \
-                and not CHORD_LINE.match(lines[i + 1]) and not LABEL.match(lines[i + 1]):
+        if (
+            CHORD_LINE.match(line)
+            and i + 1 < len(lines)
+            and lines[i + 1].strip()
+            and not CHORD_LINE.match(lines[i + 1])
+            and not LABEL.match(lines[i + 1])
+        ):
             cur.append((chords_of(line), lines[i + 1]))
             i += 2
             continue
@@ -367,8 +392,10 @@ def convert(path, key=None, time=None, title=None, keep_marks=False):
 
     keys = [tuple((tuple(c), l) for c, l in sec) for sec in sections]
     repeated = {k for k in keys if keys.count(k) > 1}
-    rendered = [(keys[i] in repeated or i in chorus_labels, keys[i], render(sec))
-                for i, sec in enumerate(sections)]
+    rendered = [
+        (keys[i] in repeated or i in chorus_labels, keys[i], render(sec))
+        for i, sec in enumerate(sections)
+    ]
 
     out = [f"{{title: {title}}}", f"{{key: {key}}}"]
     if time:

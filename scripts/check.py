@@ -21,6 +21,7 @@ directly as .cho, with no canonical_source.
 Usage: python3 scripts/check.py [SLUG ...]   (default: every converted song)
 Exits 1 if any song has problems.
 """
+
 import csv
 import difflib
 import re
@@ -32,8 +33,15 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import CONFIG, chordpro_bin  # noqa: E402
 from repos import PRIVATE, find, hymns, repo_of, song_files, words_status  # noqa: E402
-from txt2cho import (BEAT_LINE, CHORD_LINE, KEY_HEADER, LABEL, TOKEN,  # noqa: E402
-                     VERSE_NO, simplify)
+from txt2cho import (
+    BEAT_LINE,
+    CHORD_LINE,
+    KEY_HEADER,
+    LABEL,
+    TOKEN,  # noqa: E402
+    VERSE_NO,
+    simplify,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"
@@ -43,7 +51,9 @@ HYMNS = hymns()
 
 
 def words(text):
-    text = re.sub(r"(?<=[A-Za-z])-+\s*(?=[A-Za-z])", "", text.replace("’", "'").replace("&", " and "))
+    text = re.sub(
+        r"(?<=[A-Za-z])-+\s*(?=[A-Za-z])", "", text.replace("’", "'").replace("&", " and ")
+    )
     return re.findall(r"[a-z']+", text.lower().replace("'", ""))
 
 
@@ -64,13 +74,16 @@ def source_parts(path):
         if CHORD_LINE.match(line):
             if pending:
                 out.append(([], pending))  # chords with no lyric under them
-            pending = [simplify(t) for t in (m.group() for m in TOKEN.finditer(line))
-                       if t != "*" and not t.startswith("(")]
+            pending = [
+                simplify(t)
+                for t in (m.group() for m in TOKEN.finditer(line))
+                if t != "*" and not t.startswith("(")
+            ]
             continue
         lyric = VERSE_NO.sub("", line)
         m = GAP.search(lyric.rstrip())
         if m:
-            right = lyric[m.end() - 1:]
+            right = lyric[m.end() - 1 :]
             gaps.setdefault(round(m.end() / 3), []).append(n)
             if re.match(r"\d\.?\s", right):
                 problems.append(f"source line {n} has a second column: {line.strip()[:60]}")
@@ -78,8 +91,11 @@ def source_parts(path):
         pending = []
     if pending:
         out.append(([], pending))
-    notes = [f"wide gaps on source lines {', '.join(map(str, ns[:4]))}: two columns?"
-             for ns in gaps.values() if len(ns) >= 3]
+    notes = [
+        f"wide gaps on source lines {', '.join(map(str, ns[:4]))}: two columns?"
+        for ns in gaps.values()
+        if len(ns) >= 3
+    ]
     return out, problems, notes
 
 
@@ -129,8 +145,12 @@ def song_parts(text):
 
 
 def chordpro_problems(cho):
-    run = subprocess.run([chordpro_bin(), f"--config={CONFIG}", "--generate=Text", str(cho),
-                          "-o", "/dev/null"], capture_output=True, text=True, cwd=ROOT)
+    run = subprocess.run(
+        [chordpro_bin(), f"--config={CONFIG}", "--generate=Text", str(cho), "-o", "/dev/null"],
+        capture_output=True,
+        text=True,
+        cwd=ROOT,
+    )
     out = []
     for line in (run.stdout + run.stderr).splitlines():
         if "Unknown chord" in line or "No chord diagram" in line:
@@ -139,7 +159,7 @@ def chordpro_problems(cho):
 
 
 def phrase(ws, i, j):
-    return " ".join(ws[max(i - 2, 0):j + 2])
+    return " ".join(ws[max(i - 2, 0) : j + 2])
 
 
 def subsequence(small, big):
@@ -153,7 +173,7 @@ def tune_problems(slug, text):
     expected = "" if tune.startswith("[") else tune
     found = re.search(r"^\{meta:\s*tune\s+(.*?)\}", text, re.M)
     actual = found.group(1).strip() if found else ""
-    return [] if actual == expected else [f"tune: .cho has \"{actual}\", hymns.yaml has \"{expected}\""]
+    return [] if actual == expected else [f'tune: .cho has "{actual}", hymns.yaml has "{expected}"']
 
 
 def words_check(slug, cho):
@@ -205,8 +225,10 @@ def check_song(row, cho):
         if op == "insert" and chorus and cho_words[j1:j2] == chorus * ((j2 - j1) // len(chorus)):
             notes.append("chorus sung more often than the source shows it")
             continue
-        problems.append(f"lyrics {op}: source \"{phrase(src_words, i1, i2)}\" "
-                        f"vs .cho \"{phrase(cho_words, j1, j2)}\"")
+        problems.append(
+            f'lyrics {op}: source "{phrase(src_words, i1, i2)}" '
+            f'vs .cho "{phrase(cho_words, j1, j2)}"'
+        )
 
     # Chords, line by line: lines are matched on their lyrics, and each .cho line's chords
     # must appear in order in the source line. Missing ones are dropped pickups. A line may
@@ -226,13 +248,17 @@ def check_song(row, cho):
         a_chords = [c for _, cs in src[i1:i2] for c in cs]
         b_chords = [c for _, cs in song[j1:j2] for c in cs]
         if not subsequence(b_chords, a_chords):
-            problems.append(f"chords on \"{cho_lines[j1][:50]}\": .cho {' '.join(b_chords)} "
-                            f"not in source {' '.join(a_chords)}")
+            problems.append(
+                f'chords on "{cho_lines[j1][:50]}": .cho {" ".join(b_chords)} '
+                f"not in source {' '.join(a_chords)}"
+            )
         elif len(b_chords) < len(a_chords):
             dropped.append(cho_lines[j1][:40])
     if dropped:
-        notes.append(f"chords dropped (pickups) on {len(dropped)} line(s), e.g. "
-                     f"\"{dropped[0]}\": check them in review")
+        notes.append(
+            f"chords dropped (pickups) on {len(dropped)} line(s), e.g. "
+            f'"{dropped[0]}": check them in review'
+        )
     return problems, notes
 
 

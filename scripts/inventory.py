@@ -6,6 +6,7 @@ is edited by hand, so this refuses to overwrite it without --force.
 
 Usage: python3 scripts/inventory.py [--force] [SRC_DIR]
 """
+
 import csv
 import re
 import sys
@@ -19,12 +20,32 @@ SRC = ROOT.parent / "gh-home" / "other" / "hymns"
 OUT = ROOT / "wiki" / "migration.csv"
 
 DEFAULT_KEYS = {"major": ["C", "G", "F"], "minor": ["Am", "Em", "Dm"]}
-FILE = re.compile(r"^Lyrics-(?P<name>.+?)-(?P<key>[A-G][#b]?m?)(?P<variant>(?:-[^.]+)?)\.(?P<ext>\w+)$")
-CHORD = re.compile(r"(?<![\w(])([A-G][#b]?)(maj7|m7|m|dim7?|aug|sus[24]|7|6|9)?(?:/[A-G][#b]?)?(?![\w)])")
+FILE = re.compile(
+    r"^Lyrics-(?P<name>.+?)-(?P<key>[A-G][#b]?m?)(?P<variant>(?:-[^.]+)?)\.(?P<ext>\w+)$"
+)
+CHORD = re.compile(
+    r"(?<![\w(])([A-G][#b]?)(maj7|m7|m|dim7?|aug|sus[24]|7|6|9)?(?:/[A-G][#b]?)?(?![\w)])"
+)
 CHORD_LINE = re.compile(r"^[\s\d*()A-Gmajdisu#b/79]+$")
 HEADER = re.compile(r"^\s*(?P<title>.*?)\s*\((?P<info>.*)\)\s*$")
 HEADER_KEY = re.compile(r"key:?\s*([A-G][#b]?m?)\b", re.I)
-SMALL = {"a", "an", "and", "the", "of", "in", "to", "for", "on", "with", "by", "from", "o'er", "as", "at"}
+SMALL = {
+    "a",
+    "an",
+    "and",
+    "the",
+    "of",
+    "in",
+    "to",
+    "for",
+    "on",
+    "with",
+    "by",
+    "from",
+    "o'er",
+    "as",
+    "at",
+}
 
 
 def norm(s):
@@ -97,7 +118,9 @@ def main(argv):
     args = [a for a in argv if a != "--force"]
     src = Path(args[0]) if args else SRC
     if OUT.exists() and not force:
-        sys.exit(f"{OUT.relative_to(ROOT)} exists and may have review edits; use --force to overwrite")
+        sys.exit(
+            f"{OUT.relative_to(ROOT)} exists and may have review edits; use --force to overwrite"
+        )
 
     groups = {}
     for p in sorted(src.glob("Lyrics-*")):
@@ -116,8 +139,10 @@ def main(argv):
                 f["title"], f["header_key"], f["last"] = read_txt(f["path"])
         titles = [f["title"] for f in files if f.get("title")]
         header_title = max(titles, key=len) if titles else name.replace("_", " ")
-        pub = next((v for k, v in pubs.items()
-                    if k == norm(name) or norm(header_title).startswith(k)), None)
+        pub = next(
+            (v for k, v in pubs.items() if k == norm(name) or norm(header_title).startswith(k)),
+            None,
+        )
         if pub:
             used.add(norm(pub[1]))
         canon = pick(files, pub[2] if pub else [])
@@ -153,8 +178,14 @@ def main(argv):
             tm = re.search(r"^\{time:\s*(.*?)\s*\}", cho.read_text(), re.M)
             time = tm.group(1) if tm else ""
         else:
-            beat = next((l for l in canon["path"].read_text(errors="replace").splitlines()[:6]
-                         if re.fullmatch(r"\s*(?:\d\s*)+", l)), None)
+            beat = next(
+                (
+                    l
+                    for l in canon["path"].read_text(errors="replace").splitlines()[:6]
+                    if re.fullmatch(r"\s*(?:\d\s*)+", l)
+                ),
+                None,
+            )
             if beat:
                 n = max(int(d) for d in re.findall(r"\d", beat))
                 time = "6/8" if n == 6 else f"{n}/4"
@@ -162,18 +193,20 @@ def main(argv):
         mode = "minor" if key.endswith("m") else "major"
         out_keys = [key] + [k for k in DEFAULT_KEYS[mode] if k != key]
 
-        rows.append({
-            "slug": slug,
-            "title": title,
-            "published": pub[0] if pub else "",
-            "key": key,
-            "time": time,
-            "output_keys": " ".join(out_keys),
-            "canonical_source": canon["path"].name,
-            "other_sources": " ".join(f["path"].name for f in files if f is not canon),
-            "status": "converted" if cho.exists() else "todo",
-            "notes": "; ".join(notes),
-        })
+        rows.append(
+            {
+                "slug": slug,
+                "title": title,
+                "published": pub[0] if pub else "",
+                "key": key,
+                "time": time,
+                "output_keys": " ".join(out_keys),
+                "canonical_source": canon["path"].name,
+                "other_sources": " ".join(f["path"].name for f in files if f is not canon),
+                "status": "converted" if cho.exists() else "todo",
+                "notes": "; ".join(notes),
+            }
+        )
 
     rows.sort(key=lambda r: (r["published"] == "", r["published"], r["slug"]))
     with OUT.open("w", newline="") as fh:
@@ -183,7 +216,9 @@ def main(argv):
     for k, (date, t, _) in pubs.items():
         if k not in used:
             print(f"published but not matched: {t}", file=sys.stderr)
-    print(f"{len(rows)} hymns, {sum(1 for r in rows if r['published'])} published -> {OUT.relative_to(ROOT)}")
+    print(
+        f"{len(rows)} hymns, {sum(1 for r in rows if r['published'])} published -> {OUT.relative_to(ROOT)}"
+    )
 
 
 if __name__ == "__main__":

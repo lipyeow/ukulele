@@ -11,6 +11,7 @@ private repo first (wiki/copyright.md).
 
 Usage: python3 scripts/build.py [--force] [--quick] [songs/hymns/foo.cho ...]
 """
+
 import os
 import re
 import shutil
@@ -28,8 +29,25 @@ CONFIG = ROOT / "config" / "ukulele.json"
 APP_CHORDPRO = "/Applications/ChordPro.app/Contents/MacOS/chordpro"
 
 DEFAULT_KEYS = {"major": ["C", "G", "F"], "minor": ["Am", "Em", "Dm"]}
-NOTES = {"C": 0, "C#": 1, "Db": 1, "D": 2, "D#": 3, "Eb": 3, "E": 4, "F": 5,
-         "F#": 6, "Gb": 6, "G": 7, "G#": 8, "Ab": 8, "A": 9, "A#": 10, "Bb": 10, "B": 11}
+NOTES = {
+    "C": 0,
+    "C#": 1,
+    "Db": 1,
+    "D": 2,
+    "D#": 3,
+    "Eb": 3,
+    "E": 4,
+    "F": 5,
+    "F#": 6,
+    "Gb": 6,
+    "G": 7,
+    "G#": 8,
+    "Ab": 8,
+    "A": 9,
+    "A#": 10,
+    "Bb": 10,
+    "B": 11,
+}
 # ChordPro spells with sharps when transposing up and flats when transposing down,
 # so sharp keys are reached by an upward shift and everything else by a downward one.
 SHARP_KEYS = {"G", "D", "A", "E", "B", "F#", "Em", "Bm", "F#m", "C#m", "G#m"}
@@ -83,7 +101,9 @@ def build(cho, force=False, quick=False, metadata=None):
         shift = semitones(src_key, key)
         if shift:
             cmd.append(f"--transpose={shift}")
-        subprocess.run(cmd, check=True, cwd=ROOT)  # the config's fontdir is relative to the repo root
+        subprocess.run(
+            cmd, check=True, cwd=ROOT
+        )  # the config's fontdir is relative to the repo root
         print(shown(out))
         built += 1
     return built

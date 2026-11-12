@@ -1,0 +1,27 @@
+# Tool settings for scripts/. Run `make lint` (ruff) and `make typecheck` (pyrefly).
+# This isn't an installable package: the scripts are run directly with python3.
+
+[tool.ruff]
+# The scripts still run on the system Python 3.7, so ruff mustn't suggest newer syntax.
+target-version = "py37"
+line-length = 100
+src = ["scripts"]
+
+[tool.ruff.lint]
+# Every rule, preview ones included; each exception below says why.
+select = ["ALL"]
+preview = true
+ignore = [
+    # Conflict with `ruff format`, as ruff's docs warn.
+    "COM812",
+    # Incompatible pairs: keep D211 (no blank line before a class docstring) and D212
+    # (summary on the docstring's first line).
+    "D203",
+    "D213",
+    # The scripts are command-line tools: printing is how they report.
+    "T201",
+    # The repo is CC0 (see LICENSE): no per-file copyright notices.
+    "CPY001",
+    # scripts/ is a folder of standalone scripts, not a package.
+    "INP001",
+]

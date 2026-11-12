@@ -1,4 +1,4 @@
-.PHONY: quick all force check columns metadata
+.PHONY: quick all force check columns metadata lint format typecheck
 
 # Default: rebuild out-of-date PDFs in C (Am for minor songs) only, for fast iterations.
 # Override the ChordPro binary with CHORDPRO=/path/to/chordpro.
@@ -20,6 +20,20 @@ check:
 # Which songs suit {columns: 2} (scripts/columns.py). Slow: builds every key both ways.
 columns:
 	python3 scripts/columns.py
+
+# Python tools, pinned and run through uv (https://docs.astral.sh/uv/); settings in pyproject.toml.
+RUFF = uvx ruff@0.17.4
+PYREFLY = uvx pyrefly@1.4.1
+
+# Check the scripts' formatting and lint them (run before committing a script change).
+lint:
+	$(RUFF) format --check scripts
+	$(RUFF) check scripts
+
+# Reformat the scripts and apply ruff's safe fixes.
+format:
+	$(RUFF) format scripts
+	$(RUFF) check --fix scripts
 
 # Regenerate the pages in metadata/hymns/ from hymns.yaml (scripts/hymn_metadata.py).
 metadata:

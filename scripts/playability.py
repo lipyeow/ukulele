@@ -6,6 +6,7 @@ listed in parentheses: a player can leave them out.
 
 Usage: python3 scripts/playability.py [--all] [SLUG ...]   (--all lists clean songs too)
 """
+
 import re
 import sys
 from pathlib import Path
@@ -19,7 +20,13 @@ FLATS = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"]
 ROOTS = [r for r in SHARPS + FLATS if len(r) == 2]
 # Barres or awkward stretches, with no easy open shape.
 HARD = {r + q for r in ROOTS if r not in ("A#", "Bb") for q in ("", "m", "7", "m7")} | {
-    "E", "B", "A#m", "Bbm", "A#m7", "Bbm7"}
+    "E",
+    "B",
+    "A#m",
+    "Bbm",
+    "A#m7",
+    "Bbm7",
+}
 # Harder than the open shapes, but common: fine for most players with some practice.
 FAIR = {"A#", "Bb", "A#7", "Bb7", "Bm", "Bm7", "B7", "E7", "Dm7"}
 

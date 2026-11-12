@@ -12,6 +12,7 @@ Needs the Hymnary CSV downloads in tmp/hymnary/ (gitignored; see hymnary.org/exp
   build   Offline: write metadata/hymns/hymns.yaml and people.yaml. Entries with
           status: reviewed are kept exactly as they are.
 """
+
 import csv, difflib, io, json, re, sys, time, urllib.parse, urllib.request
 import unicodedata
 import yaml
@@ -53,7 +54,10 @@ TUNE_CHOICES = {
     "come-thou-almighty-king": "italian_hymn_giardini",
     "come-ye-sinners-poor-and-needy": "restoration_southernharmony",
     "dear-lord-and-father-of-mankind": "repton_parry",
-    "god-moves-in-a-mysterious-way": {"name": "MYSTERY", "id": "god_moves_in_a_mysterious_way_french"},
+    "god-moves-in-a-mysterious-way": {
+        "name": "MYSTERY",
+        "id": "god_moves_in_a_mysterious_way_french",
+    },
     "hail-to-the-lords-anointed": "ellacombe",
     "i-cannot-tell": "londonderry_air",
     "i-know-who-holds-tomorrow": "i_dont_know_about_tomorrow_stanphill",
@@ -95,7 +99,9 @@ def song(path):
         line = " ".join(re.sub(r"\[[^\]]*\]", "", line).split())
         if line:
             lines.append(line)
-    match = re.search(r"\{start_of_verse[^}]*\}\n(.*)", source) or re.search(r"\{start_of_chorus[^}]*\}\n(.*)", source)
+    match = re.search(r"\{start_of_verse[^}]*\}\n(.*)", source) or re.search(
+        r"\{start_of_chorus[^}]*\}\n(.*)", source
+    )
     first = " ".join(re.sub(r"\[[^\]]*\]", "", match.group(1)).split())
     return title, first, lines
 
@@ -133,7 +139,11 @@ def match():
         ranked = []
         for text in pool.values():
             start, anywhere, named = score(text, title, first, lines)
-            if start >= 0.85 or (named and anywhere >= 0.6) or (anywhere >= 0.9 and len(norm(text["firstLine"])) >= 4):
+            if (
+                start >= 0.85
+                or (named and anywhere >= 0.6)
+                or (anywhere >= 0.9 and len(norm(text["firstLine"])) >= 4)
+            ):
                 ranked.append((int(text["totalInstances"] or 0), start, anywhere, named, text))
         ranked.sort(key=lambda r: r[0], reverse=True)
         flags = []
@@ -145,17 +155,26 @@ def match():
             if not named and start < 0.85:
                 flags.append(f"title differs ({best['displayTitle'][:60]})")
             if len(ranked) > 1 and ranked[1][0] >= instances / 3 and start < 0.85:
-                flags.append(f"close alternative: {ranked[1][4]['textAuthNumber']} ({ranked[1][0]} vs {instances})")
+                flags.append(
+                    f"close alternative: {ranked[1][4]['textAuthNumber']} ({ranked[1][0]} vs {instances})"
+                )
         else:
             flags.append("no text found")
         if path.stem in OVERRIDES:
             best, flags = by_id[OVERRIDES[path.stem]], ["text chosen by hand"]
-        results[path.stem] = {"title": title, "first_line": first, "text": best, "flags": flags,
-                              "alternatives": [r[4]["textAuthNumber"] for r in ranked[1:4]]}
+        results[path.stem] = {
+            "title": title,
+            "first_line": first,
+            "text": best,
+            "flags": flags,
+            "alternatives": [r[4]["textAuthNumber"] for r in ranked[1:4]],
+        }
     MATCHES.write_text(json.dumps(results, indent=1, ensure_ascii=False))
     for slug, result in results.items():
         text = result["text"] or {}
-        print(f"{slug} -> {text.get('textAuthNumber')} [{text.get('totalInstances')}] {text.get('authors')} | {'; '.join(result['flags'])}")
+        print(
+            f"{slug} -> {text.get('textAuthNumber')} [{text.get('totalInstances')}] {text.get('authors')} | {'; '.join(result['flags'])}"
+        )
 
 
 def tunes():
@@ -168,23 +187,36 @@ def tunes():
         if cached.exists():
             continue
         query = f'textAuthNumber:"^{result["text"]["textAuthNumber"]}$" in:tunes'
-        params = urllib.parse.urlencode({"qu": query, "sort": "matchingInstances", "export": "csv"}, quote_via=urllib.parse.quote)
+        params = urllib.parse.urlencode(
+            {"qu": query, "sort": "matchingInstances", "export": "csv"},
+            quote_via=urllib.parse.quote,
+        )
         time.sleep(6)
-        request = urllib.request.Request(f"https://hymnary.org/search?{params}", headers={"User-Agent": UA})
+        request = urllib.request.Request(
+            f"https://hymnary.org/search?{params}", headers={"User-Agent": UA}
+        )
         with urllib.request.urlopen(request, timeout=60) as response:
             body = response.read().decode("utf8")
             if not response.headers.get("content-type", "").startswith("text/csv"):
                 sys.exit(f"Not CSV at {slug}; stopping.")
         cached.write_text(body)
-        print(f"{index}/{len(results)} {slug}: {len(list(csv.DictReader(io.StringIO(body))))} tunes", flush=True)
+        print(
+            f"{index}/{len(results)} {slug}: {len(list(csv.DictReader(io.StringIO(body))))} tunes",
+            flush=True,
+        )
 
 
 def umh():
     target = DATA / "umh.csv"
     if target.exists():
         return
-    params = urllib.parse.urlencode({"qu": "hymnalNumber:UMH in:instances", "export": "csv", "limit": 2000}, quote_via=urllib.parse.quote)
-    request = urllib.request.Request(f"https://hymnary.org/search?{params}", headers={"User-Agent": UA})
+    params = urllib.parse.urlencode(
+        {"qu": "hymnalNumber:UMH in:instances", "export": "csv", "limit": 2000},
+        quote_via=urllib.parse.quote,
+    )
+    request = urllib.request.Request(
+        f"https://hymnary.org/search?{params}", headers={"User-Agent": UA}
+    )
     with urllib.request.urlopen(request, timeout=90) as response:
         if not response.headers.get("content-type", "").startswith("text/csv"):
             sys.exit("Not CSV; stopping.")
@@ -207,9 +239,13 @@ def topics():
         if target.exists():
             continue
         query = f'hymnalNumber:UMH topics:"{name}" in:instances'
-        params = urllib.parse.urlencode({"qu": query, "export": "csv", "limit": 2000}, quote_via=urllib.parse.quote)
+        params = urllib.parse.urlencode(
+            {"qu": query, "export": "csv", "limit": 2000}, quote_via=urllib.parse.quote
+        )
         time.sleep(6)
-        request = urllib.request.Request(f"https://hymnary.org/search?{params}", headers={"User-Agent": UA})
+        request = urllib.request.Request(
+            f"https://hymnary.org/search?{params}", headers={"User-Agent": UA}
+        )
         with urllib.request.urlopen(request, timeout=60) as response:
             if not response.headers.get("content-type", "").startswith("text/csv"):
                 sys.exit(f"Not CSV at {name}; stopping.")
@@ -245,8 +281,17 @@ def meter_key(meter):
     refrain = bool(re.search(r"\b(refrain|chorus)\b|\bR$", meter, flags=re.I))
     alleluias = bool(re.search(r"alleluia", meter, flags=re.I))
     core = re.sub(r",?\s*(with|and)\s+.*$|\s+R$", "", meter, flags=re.I).strip(" .,")
-    named = {"c.m": "8.6.8.6", "c.m.d": "8.6.8.6 D", "l.m": "8.8.8.8", "l.m.d": "8.8.8.8 D", "s.m": "6.6.8.6",
-             "s.m.d": "6.6.8.6 D", "6 lines 8": "8.8.8.8.8.8", "irr": "Irregular", "irregular": "Irregular"}
+    named = {
+        "c.m": "8.6.8.6",
+        "c.m.d": "8.6.8.6 D",
+        "l.m": "8.8.8.8",
+        "l.m.d": "8.8.8.8 D",
+        "s.m": "6.6.8.6",
+        "s.m.d": "6.6.8.6 D",
+        "6 lines 8": "8.8.8.8.8.8",
+        "irr": "Irregular",
+        "irregular": "Irregular",
+    }
     core = named.get(core.lower(), core)
     if core != "Irregular":
         doubled = bool(re.search(r"[\s.]D\.?$", core))
@@ -270,7 +315,10 @@ class Quoted(str):
     """Written with quotes, so a meter like 8.7 stays text."""
 
 
-yaml.SafeDumper.add_representer(Quoted, lambda dumper, value: dumper.represent_scalar("tag:yaml.org,2002:str", str(value), style='"'))
+yaml.SafeDumper.add_representer(
+    Quoted,
+    lambda dumper, value: dumper.represent_scalar("tag:yaml.org,2002:str", str(value), style='"'),
+)
 
 
 def hymn_topics(numbers):
@@ -281,7 +329,11 @@ def hymn_topics(numbers):
         with topic_file(index).open(newline="", encoding="utf8") as handle:
             if any(row["number"] in numbers for row in csv.DictReader(handle)):
                 found.append(name)
-    return [name for name in found if not any(name != other and re.search(rf"\b{re.escape(name)}\b", other) for other in found)]
+    return [
+        name
+        for name in found
+        if not any(name != other and re.search(rf"\b{re.escape(name)}\b", other) for other in found)
+    ]
 
 
 def with_topics(hymn):
@@ -290,7 +342,9 @@ def with_topics(hymn):
     for key, value in hymn.items():
         if key == "topics":
             continue
-        entry[key] = Quoted(value) if key in ("meter", "text_meter", "tune_meter", "incipit") else value
+        entry[key] = (
+            Quoted(value) if key in ("meter", "text_meter", "tune_meter", "incipit") else value
+        )
         if key == "umh":
             entry["topics"] = hymn_topics(set(value or []))
     return entry
@@ -312,11 +366,17 @@ def build():
         else:
             text = result["text"] or {}
             umh_rows = hymnal.get(UMH_TEXTS.get(slug, text.get("textAuthNumber")), [])
-            umh_tunes = list(dict.fromkeys(row["tuneAuthNumber"] for row in umh_rows if row["tuneAuthNumber"]))
+            umh_tunes = list(
+                dict.fromkeys(row["tuneAuthNumber"] for row in umh_rows if row["tuneAuthNumber"])
+            )
             # Being in UMH confirms the text, so the match's doubts no longer apply.
             flags = [] if umh_rows else list(result["flags"])
             cached = CACHE / f"{slug}.csv"
-            rows = list(csv.DictReader(cached.open(newline="", encoding="utf8"))) if cached.exists() else []
+            rows = (
+                list(csv.DictReader(cached.open(newline="", encoding="utf8")))
+                if cached.exists()
+                else []
+            )
             ids = [row["tuneAuthNumber"] for row in rows]
             published = {row["tuneAuthNumber"]: row for row in rows}
             umh_names = {}
@@ -324,8 +384,12 @@ def build():
                 if row["tuneAuthNumber"]:
                     published[row["tuneAuthNumber"]] = row
                     title = tune_name(row["tuneTitle"])
-                    if title and (not title.startswith("[") or row["tuneAuthNumber"] not in umh_names):
-                        if not umh_names.get(row["tuneAuthNumber"]) or umh_names[row["tuneAuthNumber"]].startswith("["):
+                    if title and (
+                        not title.startswith("[") or row["tuneAuthNumber"] not in umh_names
+                    ):
+                        if not umh_names.get(row["tuneAuthNumber"]) or umh_names[
+                            row["tuneAuthNumber"]
+                        ].startswith("["):
                             umh_names[row["tuneAuthNumber"]] = title
             choice = TUNE_CHOICES.get(slug)
             if choice:
@@ -336,15 +400,26 @@ def build():
                     names = ", ".join(umh_names[i] for i in umh_tunes)
                     flags.append(f"UMH has several tunes: {names}")
                 if any(not row["tuneAuthNumber"] for row in umh_rows):
-                    flags.append("UMH also has an entry with no tune: " + ", ".join(f"#{r['number']}" for r in umh_rows if not r["tuneAuthNumber"]))
+                    flags.append(
+                        "UMH also has an entry with no tune: "
+                        + ", ".join(f"#{r['number']}" for r in umh_rows if not r["tuneAuthNumber"])
+                    )
             else:
                 chosen, basis = (ids[0] if ids else ""), "most-published"
                 flags.append("not found in UMH: most-published tune, so confirm it")
             tune = tune_data.get(chosen) or published.get(chosen) or {}
-            name = umh_names.get(chosen) if chosen in umh_names else tune_name(tune.get("tuneTitle", ""))
+            name = (
+                umh_names.get(chosen)
+                if chosen in umh_names
+                else tune_name(tune.get("tuneTitle", ""))
+            )
             if isinstance(choice, dict):
                 name = choice["name"]
-            if chosen in umh_names and name.startswith("[") and not tune_name(tune.get("tuneTitle", "")).startswith("["):
+            if (
+                chosen in umh_names
+                and name.startswith("[")
+                and not tune_name(tune.get("tuneTitle", "")).startswith("[")
+            ):
                 name = tune_name(tune.get("tuneTitle", ""))
             if chosen and name.startswith("[") and basis != "chosen":
                 flags.append("tune has no proper name on Hymnary")
@@ -355,18 +430,29 @@ def build():
             ours = {surname(n) for n in split(clean(text.get("authors")))}
             umh_authors = split(clean(umh_rows[0]["authors"])) if umh_rows else []
             added = [n for n in umh_authors if surname(n) not in ours]
-            dropped = [n for n in split(clean(text.get("authors"))) if surname(n) not in {surname(u) for u in umh_authors}]
+            dropped = [
+                n
+                for n in split(clean(text.get("authors")))
+                if surname(n) not in {surname(u) for u in umh_authors}
+            ]
             if umh_authors and added:
                 flags.append("UMH also credits the words to: " + ", ".join(added))
             if umh_authors and dropped:
                 flags.append("UMH does not credit the words to: " + ", ".join(dropped))
             text_meter, tune_meter = clean(text.get("meter")), clean(tune.get("meter"))
-            if text_meter and tune_meter and plain(text_meter) != plain(tune_meter) and "Irregular" not in (plain(text_meter), plain(tune_meter)):
+            if (
+                text_meter
+                and tune_meter
+                and plain(text_meter) != plain(tune_meter)
+                and "Irregular" not in (plain(text_meter), plain(tune_meter))
+            ):
                 flags.append(f"meters differ: words {text_meter}, tune {tune_meter}")
             others = []
             for row in [r for r in rows if r["tuneAuthNumber"] != chosen][:3]:
                 other = tune_data.get(row["tuneAuthNumber"], row)
-                others.append({"name": tune_name(other["tuneTitle"]), "hymnary": row["tuneAuthNumber"]})
+                others.append(
+                    {"name": tune_name(other["tuneTitle"]), "hymnary": row["tuneAuthNumber"]}
+                )
             hymns[slug] = {
                 "title": result["title"],
                 "first_line": result["first_line"],
@@ -407,11 +493,18 @@ def build():
     for name in sorted(used):
         person = people.get(name, {})
         born, died = person.get("personYear", "0"), person.get("deathYear", "0")
-        dates[name] = {"born": int(born) if born.isdigit() and born != "0" else None,
-                       "died": int(died) if died.isdigit() and died != "0" else None,
-                       "hymnary": person.get("personID", "")}
-    (OUTPUT / "people.yaml").write_text("# Dates and IDs from Hymnary.org people data, by name as used in hymns.yaml.\n" + yaml.safe_dump(dates, sort_keys=False, allow_unicode=True, width=1000))
-    print(f"{len(hymns)} hymns, {sum(h['status'] == 'check' for h in hymns.values())} to check, {len(dates)} people")
+        dates[name] = {
+            "born": int(born) if born.isdigit() and born != "0" else None,
+            "died": int(died) if died.isdigit() and died != "0" else None,
+            "hymnary": person.get("personID", ""),
+        }
+    (OUTPUT / "people.yaml").write_text(
+        "# Dates and IDs from Hymnary.org people data, by name as used in hymns.yaml.\n"
+        + yaml.safe_dump(dates, sort_keys=False, allow_unicode=True, width=1000)
+    )
+    print(
+        f"{len(hymns)} hymns, {sum(h['status'] == 'check' for h in hymns.values())} to check, {len(dates)} people"
+    )
 
 
 if __name__ == "__main__":

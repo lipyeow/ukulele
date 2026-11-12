@@ -9,6 +9,7 @@ Usage:
   python3 scripts/convert.py --next N           convert the next N "todo" hymns, in CSV order
   python3 scripts/convert.py --force SLUG ...   overwrite existing .cho files
 """
+
 import csv
 import sys
 from pathlib import Path
@@ -43,8 +44,13 @@ def main(argv):
             print(f"skip {r['slug']}: {shown(out)} exists (use --force)")
             continue
         keep = "keep every chord" in r["notes"]
-        text, warnings = convert(str(SRC / r["canonical_source"]), r["key"], r["time"] or None,
-                                 r["title"], keep_marks=keep)
+        text, warnings = convert(
+            str(SRC / r["canonical_source"]),
+            r["key"],
+            r["time"] or None,
+            r["title"],
+            keep_marks=keep,
+        )
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(text)
         r["status"] = "converted"
