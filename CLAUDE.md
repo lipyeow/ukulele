@@ -8,7 +8,7 @@ Hymns come first; other genres follow later.
 - `songs/<genre>/<slug>.cho`: the source for each song. One file per song, kebab-case, no key in the filename. Folders are flat.
 - `pdf/<genre>/<slug>-<Key>.pdf`: generated from the sources and committed. Don't rename or move published PDFs, because people link to them. (The one exception: songs moved to the private repo, below.)
 - `config/`: shared ChordPro config (`ukulele.json`). Song sources go in `songs/`, not here.
-- `metadata/<genre>/`: song metadata. `hymns.yaml` and `people.yaml` hold the data; the `.md` pages are generated from them with `make metadata` (needs PyYAML).
+- `metadata/<genre>/`: song metadata. `hymns.yaml` and `people.yaml` hold the data; the `.md` pages are generated from them with `make metadata`.
 - `../gh-ukulele-private/` (GitHub `ukulele-private`, private): the songs whose words are still copyrighted in the US, as `songs/` and `pdf/` only. The tools and metadata here cover both repos (`scripts/repos.py`); commit each song and its PDFs in the repo that holds it. See `wiki/copyright.md`.
 - `wiki/`: context, plans and specs. Start with `wiki/bootstrap.md` (the hymn migration plan and the format conventions).
 
@@ -25,7 +25,7 @@ Hymns come first; other genres follow later.
 - `make check` fails a public song whose words are still copyrighted in the US (`words_pd_us` in `metadata/hymns/hymns.yaml`, unless `keep_public` is set) and notes a private one whose words have become public domain. Set `words_pd_us` for any new song with copyrighted words, and put it in the private repo.
 - Record decisions and plan changes in `wiki/`.
 - Scripts in `scripts/` must pass `make lint` (ruff: every rule, formatted) and `make typecheck` (pyrefly, every check) before committing; the few exceptions are explained in `pyproject.toml`. Suppress a single finding with `# ruff: ignore[rule-name] - reason`, never a blanket ignore.
-- The scripts run on Python 3.14 through uv: `uv run scripts/<name>.py`, or the Makefile targets. uv installs the Python, PyYAML, ruff and pyrefly from `uv.lock` (`uv sync` to set up; `uv add` / `uv add --dev` to add a dependency).
+- The scripts run on Python 3.14 through uv: `uv run scripts/<name>.py`, or the Makefile targets. uv installs the Python, PyYAML, ruff and pyrefly from `uv.lock` (`uv sync` to set up; `uv add` / `uv add --dev` to add a dependency). Never run them with the system `python3` (an old 3.7) or install packages with `pip`.
 
 ## Git
 
