@@ -91,9 +91,33 @@ So as of 2026-11-11, 20 sheets have copyrighted words; 19 once *Morning Has Brok
 `scripts/check.py` fails a song whose `words_pd_us` is a future date or `unknown`, and one whose
 `text_copyright` isn't public domain but has no `words_pd_us` (so new songs get looked at).
 Dates are compared with today's, so a song stops failing on its own once its words turn over.
-Until the 20 sheets are dealt with, `make check` reports them all.
+`make check` also notes a song in the private repo whose words have become public domain, so
+it can move back here.
 
-## Not decided yet
+`keep_public: <reason>` in `hymns.yaml` keeps a song public despite its date. It's set on
+*Morning Has Broken*, whose words turn over on 2027-01-01, weeks after the move.
 
-What to do with the sheets whose words are copyrighted: move them to a private repo, replace
-the words with public-domain texts in the same meter, or license a few.
+## The private repo (decided 2026-11-11)
+
+The 19 sheets with copyrighted words (all 20 except *Morning Has Broken*) moved to a private
+repo, `ukulele-private` on GitHub, checked out next to this one as `../gh-ukulele-private`.
+
+- It holds only `songs/hymns/*.cho` and `pdf/hymns/*.pdf`. Its Makefile runs this repo's
+  targets.
+- The tools, config, metadata and wiki stay here, for every song, so nothing has to be kept
+  in sync. `scripts/repos.py` finds songs in both repos (set `UKULELE_PRIVATE` to put the
+  private checkout elsewhere). Each song's PDFs are built into its own repo, and `build.py`
+  won't build a song with copyrighted words into this repo's `pdf/`.
+- `hymns.yaml` keeps all 110 hymns. It holds facts that Hymnary publishes too (titles,
+  authors, tunes, copyright lines); the only lyrics are first lines. The generated pages show
+  private hymns as "Title (private)", without a link.
+- Breaking the links to the 57 moved PDFs was deliberate: they weren't ours to publish.
+  `hymns-published.md` keeps their rows (and videos) and says "not public" for the PDFs.
+- Git history still has the old files. We'd purge it only if a rights holder asks.
+- Rejected: a private copy of the whole repo (two copies of the tools and metadata to merge,
+  and one push to the wrong remote publishes the private songs) and a git submodule (has
+  to be bumped after every tools change; only worth it if the private repo must build on
+  its own, such as in CI).
+
+Still open for any of the 19: public-domain words in the same meter would let a tune come
+back to the public repo, and licensing would be needed to sell any of them.

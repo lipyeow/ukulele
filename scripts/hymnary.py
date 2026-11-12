@@ -18,11 +18,15 @@ import yaml
 from collections import defaultdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repos import song_files  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "tmp/hymnary"
 MATCHES = DATA / "matches.json"
 OUTPUT = ROOT / "metadata/hymns"
 CACHE = DATA / "cache"
+HAND_SET = ("words_pd_us", "keep_public")  # hymns.yaml fields not from Hymnary
 UA = "ukulele-hymns-metadata/0.1 (personal song sheet project)"
 csv.field_size_limit(10**9)
 
@@ -120,7 +124,7 @@ def match():
             by_title[tuple(norm(name))].append(text)
         by_start[tuple(norm(text["firstLine"])[:2])].append(text)
     results = {}
-    for path in sorted((ROOT / "songs/hymns").glob("*.cho")):
+    for path in song_files("hymns"):
         title, first, lines = song(path)
         pool = {t["textAuthNumber"]: t for t in by_title[tuple(norm(title))]}
         for line in lines:
@@ -385,19 +389,19 @@ def build():
                 "status": "check" if flags else ("reviewed" if basis == "chosen" else "likely"),
                 "notes": flags,
             }
-            # words_pd_us is set by hand (see wiki/copyright.md), so keep it after text_copyright.
-            pd_us = (existing.get(slug) or {}).get("words_pd_us")
-            if pd_us:
+            # Fields set by hand (see wiki/copyright.md) are kept, after text_copyright.
+            hand = {k: v for k, v in (existing.get(slug) or {}).items() if k in HAND_SET}
+            if hand:
                 entry = {}
                 for key, value in hymns[slug].items():
                     entry[key] = value
                     if key == "text_copyright":
-                        entry["words_pd_us"] = pd_us
+                        entry.update(hand)
                 hymns[slug] = entry
         hymns[slug] = with_topics(hymns[slug])
         used.update(hymns[slug]["words"], hymns[slug]["music"])
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    header = "# Hymn metadata from Hymnary.org (https://hymnary.org), checked by hand.\n# Set status: reviewed once an entry is confirmed; scripts/hymnary.py then leaves it alone.\n# Pages in this folder are generated from this file: run make metadata.\n# words_pd_us is set by hand (kept even for unreviewed entries): see wiki/copyright.md.\n"
+    header = "# Hymn metadata from Hymnary.org (https://hymnary.org), checked by hand.\n# Set status: reviewed once an entry is confirmed; scripts/hymnary.py then leaves it alone.\n# Pages in this folder are generated from this file: run make metadata.\n# words_pd_us and keep_public are set by hand (kept even for unreviewed entries): see wiki/copyright.md.\n"
     path.write_text(header + yaml.safe_dump(hymns, sort_keys=False, allow_unicode=True, width=1000))
     dates = {}
     for name in sorted(used):

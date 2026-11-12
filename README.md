@@ -28,3 +28,6 @@ Each song has one source in `songs/`, in [ChordPro](https://www.chordpro.org/) f
 original key. The PDFs in `pdf/` are generated from those sources. After changing a source,
 run `make all` to regenerate its PDFs (needs ChordPro) and `make check` to check it. Format
 conventions are in [wiki/style-guide.md](wiki/style-guide.md).
+
+Hymns whose words are still under copyright aren't published here: see
+[wiki/copyright.md](wiki/copyright.md).

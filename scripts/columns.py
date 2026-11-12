@@ -5,7 +5,7 @@ pages. This builds the song both ways in a temporary folder (in every output key
 transposed chords have different widths) and compares the pages and the number of lyric
 rows ChordPro drew: more rows in two columns means some line wrapped.
 
-Usage: python3 scripts/columns.py [SLUG ...]   (default: every song in songs/hymns)
+Usage: python3 scripts/columns.py [SLUG ...]   (default: every hymn, public and private)
 """
 import re
 import subprocess
@@ -17,9 +17,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import CONFIG, chordpro_bin, output_keys, semitones  # noqa: E402
+from repos import find, song_files  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-SONGS = ROOT / "songs" / "hymns"
 TEXT_SIZE = b"13"  # lyric font size in config/ukulele.json
 MIDDLE = 306  # half the letter page width, in points
 
@@ -96,7 +96,7 @@ def describe(cho, m):
 
 
 def main(argv):
-    chos = [SONGS / f"{s}.cho" for s in argv] or sorted(SONGS.glob("*.cho"))
+    chos = [find(s) for s in argv] or song_files("hymns")
     with ThreadPoolExecutor(8) as ex:
         for cho, m in zip(chos, ex.map(measure, chos)):
             has, fits, text = describe(cho, m)

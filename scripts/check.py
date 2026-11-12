@@ -7,9 +7,12 @@ For each songs/hymns/<slug>.cho with a row in wiki/migration.csv:
   there, in order; dropped pickup chords are listed so they can be checked;
 - lint: unknown chords or missing diagrams (from ChordPro itself), a missing {time},
   empty sections, digits or stray tokens in lyric lines, and two-column source layouts;
-- words: a song whose words are still copyrighted in the US (words_pd_us in
-  metadata/hymns/hymns.yaml is a future date or "unknown") fails, because it shouldn't be in
-  the public repo; so does one with a copyright line but no words_pd_us (wiki/copyright.md).
+- words: a song in the public repo whose words are still copyrighted in the US (words_pd_us
+  in metadata/hymns/hymns.yaml is a future date or "unknown") fails unless it sets
+  keep_public: it belongs in the private repo (scripts/repos.py, wiki/copyright.md). So does
+  one with a copyright line but no words_pd_us.
+
+Songs in the private repo are checked too.
 
 Songs with status "reviewed" in the CSV only get the lint checks: review may fix errors
 in the source, so the .cho is the reference from then on. So do new songs written
@@ -23,22 +26,20 @@ import difflib
 import re
 import subprocess
 import sys
-from datetime import date
 from pathlib import Path
 
-import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import CONFIG, chordpro_bin  # noqa: E402
+from repos import PRIVATE, find, hymns, repo_of, song_files, words_status  # noqa: E402
 from txt2cho import (BEAT_LINE, CHORD_LINE, KEY_HEADER, LABEL, TOKEN,  # noqa: E402
                      VERSE_NO, simplify)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"
 CSV = ROOT / "wiki" / "migration.csv"
-SONGS = ROOT / "songs" / "hymns"
 GAP = re.compile(r"\S\s{5,}\S")
-HYMNS = yaml.safe_load((ROOT / "metadata" / "hymns" / "hymns.yaml").read_text())
+HYMNS = hymns()
 
 
 def words(text):
@@ -155,30 +156,37 @@ def tune_problems(slug, text):
     return [] if actual == expected else [f"tune: .cho has \"{actual}\", hymns.yaml has \"{expected}\""]
 
 
-def words_problems(slug):
-    """Copyrighted words don't belong in the public repo (wiki/copyright.md)."""
+def words_check(slug, cho):
+    """Problems and notes on where a song lives, by its words' copyright (wiki/copyright.md).
+
+    Copyrighted words belong in the private repo, unless hymns.yaml sets keep_public.
+    """
     hymn = HYMNS.get(slug) or {}
-    pd_us = hymn.get("words_pd_us")
-    if pd_us is None:
-        if "public domain" in (hymn.get("text_copyright") or "public domain").lower():
-            return []
-        return [f"words: hymns.yaml has \"{hymn['text_copyright']}\" but no words_pd_us"]
-    if pd_us == "now":
-        return []
-    if pd_us == "unknown":
-        return ["words: copyrighted in the US, public domain date unknown"]
-    try:
-        free = date.fromisoformat(str(pd_us))
-    except ValueError:
-        return [f"words: words_pd_us \"{pd_us}\" is not a date, now or unknown"]
-    return [] if free <= date.today() else [f"words: copyrighted in the US until {free}"]
+    state, message = words_status(hymn)
+    private = repo_of(cho) == PRIVATE
+    if state == "error":
+        return [f"words: {message}"], []
+    if private and state == "free":
+        return [], ["words: public domain now, so the song can move to the public repo"]
+    if private and hymn.get("keep_public"):
+        return [], ["words: keep_public is set, but the song is in the private repo"]
+    if not private and state == "copyrighted":
+        if hymn.get("keep_public"):
+            return [], [f"{message}; kept public: {hymn['keep_public']}"]
+        return [f"{message}: move it to the private repo"], []
+    return [], []
 
 
 def check(row):
-    cho = SONGS / f"{row['slug']}.cho"
+    cho = find(row["slug"])
+    problems, notes = check_song(row, cho)
+    more_problems, more_notes = words_check(row["slug"], cho)
+    return problems + more_problems, notes + more_notes
+
+
+def check_song(row, cho):
     song, more, chorus = song_parts(cho.read_text())
     lint = more + chordpro_problems(cho) + tune_problems(row["slug"], cho.read_text())
-    lint += words_problems(row["slug"])
     if not row["canonical_source"]:
         return lint, ["new song: no source to compare with"]
     src, problems, notes = source_parts(SRC / row["canonical_source"])
@@ -230,7 +238,7 @@ def check(row):
 
 def main(argv):
     rows = {r["slug"]: r for r in csv.DictReader(CSV.open())}
-    slugs = argv or sorted(p.stem for p in SONGS.glob("*.cho"))
+    slugs = argv or [p.stem for p in song_files("hymns")]
     bad = 0
     for slug in slugs:
         if slug not in rows:

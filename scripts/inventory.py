@@ -11,10 +11,12 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repos import find  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"
 OUT = ROOT / "wiki" / "migration.csv"
-SONGS = ROOT / "songs" / "hymns"
 
 DEFAULT_KEYS = {"major": ["C", "G", "F"], "minor": ["Am", "Em", "Dm"]}
 FILE = re.compile(r"^Lyrics-(?P<name>.+?)-(?P<key>[A-G][#b]?m?)(?P<variant>(?:-[^.]+)?)\.(?P<ext>\w+)$")
@@ -137,7 +139,7 @@ def main(argv):
             if f["header_key"] and f["header_key"] != f["key"]:
                 notes.append(f"{f['path'].name}: header says key {f['header_key']}")
         key = canon["key"]
-        cho = SONGS / f"{slug}.cho"
+        cho = find(slug)
         if cho.exists():
             key = re.search(r"^\{key:\s*(\S+?)\s*\}", cho.read_text(), re.M).group(1)
         elif canon["last"] and canon["last"] != key:
@@ -169,7 +171,7 @@ def main(argv):
             "output_keys": " ".join(out_keys),
             "canonical_source": canon["path"].name,
             "other_sources": " ".join(f["path"].name for f in files if f is not canon),
-            "status": "converted" if (SONGS / f"{slug}.cho").exists() else "todo",
+            "status": "converted" if cho.exists() else "todo",
             "notes": "; ".join(notes),
         })
 

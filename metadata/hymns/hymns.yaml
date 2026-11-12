@@ -1,7 +1,7 @@
 # Hymn metadata from Hymnary.org (https://hymnary.org), checked by hand.
 # Set status: reviewed once an entry is confirmed; scripts/hymnary.py then leaves it alone.
 # Pages in this folder are generated from this file: run make metadata.
-# words_pd_us is set by hand (kept even for unreviewed entries): see wiki/copyright.md.
+# words_pd_us and keep_public are set by hand (kept even for unreviewed entries): see wiki/copyright.md.
 a-mighty-fortress-is-our-god:
   title: A Mighty Fortress Is Our God
   first_line: A mighty fortress is our God, a bulwark never fai-ling
@@ -2492,6 +2492,7 @@ morning-has-broken:
   text_meter: "5.5.5.4.D."
   text_copyright: By permission of David Higham Associates Limited, London
   words_pd_us: '2027-01-01'
+  keep_public: words public domain in the US on 2027-01-01
   umh:
   - '145'
   topics:

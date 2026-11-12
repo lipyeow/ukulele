@@ -11,7 +11,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build import NOTES, SONGS, output_keys, semitones  # noqa: E402
+from build import NOTES, output_keys, semitones  # noqa: E402
+from repos import find, song_files  # noqa: E402
 
 SHARPS = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 FLATS = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"]
@@ -65,7 +66,7 @@ def fmt(counts):
 def main(argv):
     show_all = "--all" in argv
     slugs = [a for a in argv if not a.startswith("--")]
-    songs = [SONGS / f"{s}.cho" for s in slugs] or sorted(SONGS.rglob("*.cho"))
+    songs = [find(s) for s in slugs] or song_files()
     for cho in songs:
         rep = report(cho.read_text(encoding="utf-8"))
         if show_all or any(h for h, _ in rep.values()):

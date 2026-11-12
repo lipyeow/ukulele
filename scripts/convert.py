@@ -14,12 +14,12 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repos import find, shown  # noqa: E402
 from txt2cho import convert  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"
 CSV = ROOT / "wiki" / "migration.csv"
-SONGS = ROOT / "songs" / "hymns"
 
 
 def main(argv):
@@ -38,9 +38,9 @@ def main(argv):
         todo = [by_slug[s] for s in args]
 
     for r in todo:
-        out = SONGS / f"{r['slug']}.cho"
+        out = find(r["slug"])  # the private repo's copy, if the song lives there
         if out.exists() and not force:
-            print(f"skip {r['slug']}: {out.relative_to(ROOT)} exists (use --force)")
+            print(f"skip {r['slug']}: {shown(out)} exists (use --force)")
             continue
         keep = "keep every chord" in r["notes"]
         text, warnings = convert(str(SRC / r["canonical_source"]), r["key"], r["time"] or None,
@@ -48,7 +48,7 @@ def main(argv):
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(text)
         r["status"] = "converted"
-        print(f"{out.relative_to(ROOT)}" + "".join(f"\n  warning: {w}" for w in warnings))
+        print(f"{shown(out)}" + "".join(f"\n  warning: {w}" for w in warnings))
 
     with CSV.open("w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0]), lineterminator="\n")

@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Generate the markdown pages in metadata/hymns/ from hymns.yaml and people.yaml."""
+import sys
 from collections import defaultdict
 from pathlib import Path
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repos import is_private  # noqa: E402
 
 OUT = Path(__file__).resolve().parent.parent / "metadata/hymns"
 CREDIT = "Generated from `hymns.yaml` by `make metadata`; edit that file, not this page. Data from [Hymnary.org](https://hymnary.org).\n"
@@ -26,6 +30,8 @@ def meter_of(h):
 
 
 def song_link(slug, h):
+    if is_private(h):  # words still copyrighted: the song is in the private repo
+        return f"{esc(h['title'])} (private)"
     return f"[{esc(h['title'])}](../../songs/hymns/{slug}.cho)"
 
 

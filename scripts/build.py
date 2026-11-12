@@ -5,6 +5,10 @@ Am Em Dm for minor), unless the song sets {meta: pdf_keys ...}. A PDF is rebuilt
 when it is older than its source, the shared config, or this script. --quick builds only
 C (Am for minor songs), for fast iterations; the other keys' PDFs are left as they are.
 
+Songs in the private repo (scripts/repos.py) are built too, into that repo's pdf/. A song
+whose words are still copyrighted is not built into this repo's pdf/: move it to the
+private repo first (wiki/copyright.md).
+
 Usage: python3 scripts/build.py [--force] [--quick] [songs/hymns/foo.cho ...]
 """
 import os
@@ -13,6 +17,9 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repos import hymns, is_private, repo_of, shown, song_files, words_status  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 SONGS = ROOT / "songs"
@@ -54,16 +61,21 @@ def semitones(src, dst):
     return up if dst in SHARP_KEYS else up - 12 if up else 0
 
 
-def build(cho, force=False, quick=False):
+def build(cho, force=False, quick=False, metadata=None):
+    root = repo_of(cho)
+    hymn = (metadata or {}).get(cho.stem) or {}
+    if root == ROOT and is_private(hymn):
+        print(f"skip {shown(cho)}: {words_status(hymn)[1]}; move it to the private repo")
+        return 0
     text = cho.read_text(encoding="utf-8")
     src_key, keys = output_keys(text)
     if quick:
         keys = [DEFAULT_KEYS["minor" if src_key.endswith("m") else "major"][0]]
-    rel = cho.relative_to(SONGS).with_suffix("")
+    rel = cho.relative_to(root / "songs").with_suffix("")
     newest = max(p.stat().st_mtime for p in (cho, CONFIG, Path(__file__)))
     built = 0
     for key in keys:
-        out = PDF / rel.parent / f"{rel.name}-{key}.pdf"
+        out = root / "pdf" / rel.parent / f"{rel.name}-{key}.pdf"
         if not force and out.exists() and out.stat().st_mtime >= newest:
             continue
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -72,7 +84,7 @@ def build(cho, force=False, quick=False):
         if shift:
             cmd.append(f"--transpose={shift}")
         subprocess.run(cmd, check=True, cwd=ROOT)  # the config's fontdir is relative to the repo root
-        print(out.relative_to(ROOT))
+        print(shown(out))
         built += 1
     return built
 
@@ -80,8 +92,9 @@ def build(cho, force=False, quick=False):
 def main(argv):
     force, quick = "--force" in argv, "--quick" in argv
     paths = [Path(a).resolve() for a in argv if not a.startswith("--")]
-    songs = paths or sorted(SONGS.rglob("*.cho"))
-    built = sum(build(p, force, quick) for p in songs)
+    songs = paths or song_files()
+    metadata = hymns()
+    built = sum(build(p, force, quick, metadata) for p in songs)
     print(f"{built} PDF(s) built from {len(songs)} song(s)")
 
 
