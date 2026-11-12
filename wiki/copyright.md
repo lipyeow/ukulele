@@ -64,7 +64,7 @@ differ: *Morning Has Broken* stays copyrighted in the UK until 2036 (Farjeon die
 | You Are the Seed | Gabarain 1979; English tr. Gutiérrez-Achón, Chávez-Melo | unknown | translator death date unknown |
 | Sing We Now of Christmas | traditional French carol | now | UMH 237 credits a "Traditional French carol"; the only claim there is on Martin Shaw's 1928 harmonization, which we don't use; hymnals credit the English as anonymous |
 
-So as of 2026-11-11, 19 sheets have copyrighted words; 18 once *Morning Has Broken* turns over on
+So as of 2026-11-11, 20 sheets have copyrighted words; 19 once *Morning Has Broken* turns over on
 2027-01-01.
 
 ## Checks done (2026-11-11)
@@ -86,8 +86,14 @@ So as of 2026-11-11, 19 sheets have copyrighted words; 18 once *Morning Has Brok
   1931 *Songs of Praise* (`songsofpraisewit0000unse_t6i7`, hymn 30) is borrow-only and
   needs a free account. Compare it by hand before relying on `2027-01-01`.
 
+## `make check`
+
+`scripts/check.py` fails a song whose `words_pd_us` is a future date or `unknown`, and one whose
+`text_copyright` isn't public domain but has no `words_pd_us` (so new songs get looked at).
+Dates are compared with today's, so a song stops failing on its own once its words turn over.
+Until the 20 sheets are dealt with, `make check` reports them all.
+
 ## Not decided yet
 
 What to do with the sheets whose words are copyrighted: move them to a private repo, replace
-the words with public-domain texts in the same meter, or license a few. A `make check` rule
-could then fail on any public sheet whose `words_pd_us` is still in the future.
+the words with public-domain texts in the same meter, or license a few.

@@ -6,7 +6,10 @@ For each songs/hymns/<slug>.cho with a row in wiki/migration.csv:
 - chords: every chord in the source (except parenthesized passing chords) must still be
   there, in order; dropped pickup chords are listed so they can be checked;
 - lint: unknown chords or missing diagrams (from ChordPro itself), a missing {time},
-  empty sections, digits or stray tokens in lyric lines, and two-column source layouts.
+  empty sections, digits or stray tokens in lyric lines, and two-column source layouts;
+- words: a song whose words are still copyrighted in the US (words_pd_us in
+  metadata/hymns/hymns.yaml is a future date or "unknown") fails, because it shouldn't be in
+  the public repo; so does one with a copyright line but no words_pd_us (wiki/copyright.md).
 
 Songs with status "reviewed" in the CSV only get the lint checks: review may fix errors
 in the source, so the .cho is the reference from then on. So do new songs written
@@ -20,6 +23,7 @@ import difflib
 import re
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 import yaml
@@ -151,10 +155,30 @@ def tune_problems(slug, text):
     return [] if actual == expected else [f"tune: .cho has \"{actual}\", hymns.yaml has \"{expected}\""]
 
 
+def words_problems(slug):
+    """Copyrighted words don't belong in the public repo (wiki/copyright.md)."""
+    hymn = HYMNS.get(slug) or {}
+    pd_us = hymn.get("words_pd_us")
+    if pd_us is None:
+        if "public domain" in (hymn.get("text_copyright") or "public domain").lower():
+            return []
+        return [f"words: hymns.yaml has \"{hymn['text_copyright']}\" but no words_pd_us"]
+    if pd_us == "now":
+        return []
+    if pd_us == "unknown":
+        return ["words: copyrighted in the US, public domain date unknown"]
+    try:
+        free = date.fromisoformat(str(pd_us))
+    except ValueError:
+        return [f"words: words_pd_us \"{pd_us}\" is not a date, now or unknown"]
+    return [] if free <= date.today() else [f"words: copyrighted in the US until {free}"]
+
+
 def check(row):
     cho = SONGS / f"{row['slug']}.cho"
     song, more, chorus = song_parts(cho.read_text())
     lint = more + chordpro_problems(cho) + tune_problems(row["slug"], cho.read_text())
+    lint += words_problems(row["slug"])
     if not row["canonical_source"]:
         return lint, ["new song: no source to compare with"]
     src, problems, notes = source_parts(SRC / row["canonical_source"])

@@ -21,6 +21,7 @@ Hymns come first; other genres follow later.
   off the usual beat (see `wiki/style-guide.md`).
 - After changing a `.cho` file, run `make all` to regenerate its PDFs in every key (needs ChordPro; see `scripts/build.py`) and commit them in the same commit. Plain `make` builds only C / Am, for quick iterations.
 - Each `.cho` with a standard tune name has `{meta: tune NAME}` under `{time: ...}`, printed after the time signature. It must match `metadata/<genre>/`; `make check` compares them.
+- `make check` also fails songs whose words are still copyrighted in the US (`words_pd_us` in `metadata/hymns/hymns.yaml`; see `wiki/copyright.md`). Set `words_pd_us` for any new song with copyrighted words.
 - Record decisions and plan changes in `wiki/`.
 
 ## Git
