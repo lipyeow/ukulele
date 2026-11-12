@@ -385,10 +385,19 @@ def build():
                 "status": "check" if flags else ("reviewed" if basis == "chosen" else "likely"),
                 "notes": flags,
             }
+            # words_pd_us is set by hand (see wiki/copyright.md), so keep it after text_copyright.
+            pd_us = (existing.get(slug) or {}).get("words_pd_us")
+            if pd_us:
+                entry = {}
+                for key, value in hymns[slug].items():
+                    entry[key] = value
+                    if key == "text_copyright":
+                        entry["words_pd_us"] = pd_us
+                hymns[slug] = entry
         hymns[slug] = with_topics(hymns[slug])
         used.update(hymns[slug]["words"], hymns[slug]["music"])
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    header = "# Hymn metadata from Hymnary.org (https://hymnary.org), checked by hand.\n# Set status: reviewed once an entry is confirmed; scripts/hymnary.py then leaves it alone.\n# Pages in this folder are generated from this file: run make metadata.\n"
+    header = "# Hymn metadata from Hymnary.org (https://hymnary.org), checked by hand.\n# Set status: reviewed once an entry is confirmed; scripts/hymnary.py then leaves it alone.\n# Pages in this folder are generated from this file: run make metadata.\n# words_pd_us is set by hand (kept even for unreviewed entries): see wiki/copyright.md.\n"
     path.write_text(header + yaml.safe_dump(hymns, sort_keys=False, allow_unicode=True, width=1000))
     dates = {}
     for name in sorted(used):

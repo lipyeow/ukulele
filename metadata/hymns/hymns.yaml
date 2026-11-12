@@ -1,6 +1,7 @@
 # Hymn metadata from Hymnary.org (https://hymnary.org), checked by hand.
 # Set status: reviewed once an entry is confirmed; scripts/hymnary.py then leaves it alone.
 # Pages in this folder are generated from this file: run make metadata.
+# words_pd_us is set by hand (kept even for unreviewed entries): see wiki/copyright.md.
 a-mighty-fortress-is-our-god:
   title: A Mighty Fortress Is Our God
   first_line: A mighty fortress is our God, a bulwark never fai-ling
@@ -470,6 +471,7 @@ because-he-lives:
   meter: "9.8.9.11 with refrain"
   text_meter: "9.8.9.11 with refrain"
   text_copyright: © 1971 Hanna Street Music (BMI) (admin. at CapitolCMGPublishing.com)
+  words_pd_us: '2067-01-01'
   umh:
   - '364'
   topics:
@@ -541,6 +543,7 @@ christ-is-the-worlds-light:
   meter: "10.11.11.6"
   text_meter: "10 11 11.6"
   text_copyright: © 1969 Hope Publishing Co.
+  words_pd_us: '2065-01-01'
   umh:
   - '188'
   topics:
@@ -1154,6 +1157,7 @@ god-has-spoken:
   meter: "8.7.8.7 D"
   text_meter: "8.7.8.7 D"
   text_copyright: © 1953. Renewal 1981 The Hymn Society (admin. Hope Publishing Co.)
+  words_pd_us: '2049-01-01'
   umh:
   - '108'
   topics:
@@ -1269,6 +1273,7 @@ god-of-the-sparrow:
   meter: "5.4.6.7.7"
   text_meter: "5.4.6.7.7"
   text_copyright: © 1983 Concordia Publishing House
+  words_pd_us: '2079-01-01'
   umh:
   - '122'
   topics:
@@ -1305,6 +1310,7 @@ god-whose-love-is-reigning-oer-us:
   meter: "8.7.8.7.8.7"
   text_meter: "87.87.87"
   text_copyright: © 1980, Korean trans. © 2001 William Boyd Groves; Words © 1980 William Boyd Grove
+  words_pd_us: '2094-01-01'
   umh:
   - '100'
   topics:
@@ -1571,6 +1577,7 @@ he-lives:
   meter: "7.6.7.6.7.6.7.4 with refrain"
   text_meter: "7.6.7.6.7.6.7.4 with refrain"
   text_copyright: © 1933. Renewed 1961 Word Music, LLC.
+  words_pd_us: '2029-01-01'
   umh:
   - '310'
   topics:
@@ -1602,6 +1609,7 @@ here-i-am-lord:
   meter: "7.7.7.4 D with refrain"
   text_meter: "7.7.7.4 D with refrain"
   text_copyright: © 1981, OCP Publications
+  words_pd_us: unknown
   umh:
   - '593'
   topics:
@@ -1751,6 +1759,7 @@ hymn-of-promise:
   meter: "8.7.8.7 D"
   text_meter: "8.7.8.7 D"
   text_copyright: © 1986 Hope Publishing Co.
+  words_pd_us: '2063-01-01'
   umh:
   - '707'
   topics:
@@ -1813,6 +1822,7 @@ i-come-with-joy-to-meet-my-lord:
   meter: "8.6.8.6"
   text_meter: "8.6.8.6"
   text_copyright: © 1971, 1995, Hope Publishing Co.
+  words_pd_us: '2067-01-01'
   umh:
   - '617'
   topics:
@@ -1849,6 +1859,7 @@ i-know-who-holds-tomorrow:
   meter: ""
   text_meter: ""
   text_copyright: © 1950 New Spring Publishing Inc. (ASCAP) (admin. at CapitolCMGPublishing.com)
+  words_pd_us: '2046-01-01'
   umh: []
   topics: []
   tune: '[I don''t know about tomorrow]'
@@ -2289,6 +2300,7 @@ lord-of-the-dance:
   meter: "Irregular"
   text_meter: "Irregular"
   text_copyright: © 1963, Stainer & Bell, Ltd., London, England. (admin. by Hope Publishing Co.)
+  words_pd_us: '2059-01-01'
   umh:
   - '261'
   topics:
@@ -2356,6 +2368,7 @@ lord-whose-love-through-humble-service:
   meter: "8.7.8.7 D"
   text_meter: "8.7.8.7 D."
   text_copyright: © Oxford University Press
+  words_pd_us: '2057-01-01'
   umh:
   - '581'
   topics:
@@ -2396,6 +2409,7 @@ lord-you-give-the-great-commission:
   meter: "8.7.8.7 D"
   text_meter: "8.7.8.7. D."
   text_copyright: © 1978 Hope Publishing Co.
+  words_pd_us: '2096-01-01'
   umh:
   - '584'
   topics:
@@ -2477,6 +2491,7 @@ morning-has-broken:
   meter: "5.5.5.4 D"
   text_meter: "5.5.5.4.D."
   text_copyright: By permission of David Higham Associates Limited, London
+  words_pd_us: '2027-01-01'
   umh:
   - '145'
   topics:
@@ -2769,6 +2784,7 @@ o-day-of-peace-that-dimly-shines:
   meter: "8.8.8.8 D"
   text_meter: "8.8.8.8 D"
   text_copyright: © 1982 Hope Publishing Company
+  words_pd_us: unknown
   umh:
   - '729'
   topics:
@@ -2809,6 +2825,7 @@ o-god-beyond-all-praising:
   meter: "13.13.13.13.13.13"
   text_meter: "13.13.13.13.13.13."
   text_copyright: © 1982, Hope Publishing Co.
+  words_pd_us: '2067-01-01'
   umh: []
   topics: []
   tune: THAXTED
@@ -3370,6 +3387,7 @@ sent-forth-by-gods-blessing:
   meter: "6.6.11.6.6.11 D"
   text_meter: "6.6.11.6.6.11 D"
   text_copyright: © 1964 World Library Publications, Inc.
+  words_pd_us: '2060-01-01'
   umh:
   - '664'
   topics:
@@ -3453,6 +3471,7 @@ sing-we-now-of-christmas:
   meter: "11.10.10.11"
   text_meter: "11 10.10 11"
   text_copyright: ''
+  words_pd_us: now
   umh:
   - '237'
   topics:
@@ -3673,6 +3692,7 @@ the-gift-of-love:
   meter: "8.8.8.8"
   text_meter: "8.8.8.8"
   text_copyright: © 1972 by Hope Publishing Company
+  words_pd_us: '2068-01-01'
   umh:
   - '408'
   topics:
@@ -3861,6 +3881,7 @@ this-is-my-song:
   meter: "11.10.11.10.11.10"
   text_meter: "11.10.11.10.11.10."
   text_copyright: © 1934, 1962, Lorenz Publishing Co
+  words_pd_us: '2060-01-01'
   umh:
   - '437'
   topics:
@@ -4229,6 +4250,7 @@ you-are-the-seed:
   meter: "10.9.10.8 D with refrain"
   text_meter: "10 9 10 8 D and refrain"
   text_copyright: © 1979 Cesareo Gabarain. Published by OCP Publications
+  words_pd_us: unknown
   umh:
   - '583'
   topics:
