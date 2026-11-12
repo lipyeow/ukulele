@@ -1,10 +1,29 @@
-# Tool settings for scripts/. Run `make lint` (ruff) and `make typecheck` (pyrefly).
-# Both are pinned in the Makefile.
-# This isn't an installable package: the scripts are run directly with python3.
+# The scripts' Python, dependencies and tools, managed by uv (https://docs.astral.sh/uv/).
+# Run the scripts with `uv run scripts/<name>.py`, or through the Makefile. `make lint` runs
+# ruff and `make typecheck` runs pyrefly, both pinned in uv.lock.
+
+[project]
+name = "ukulele-scripts"
+version = "0"
+description = "Build and check the ukulele song sheets."
+requires-python = ">=3.14"
+dependencies = [
+    "pyyaml>=6.0.3",
+]
+
+[dependency-groups]
+dev = [
+    "pyrefly==1.4.1",
+    "ruff==0.17.4",
+    "types-pyyaml==6.0.12.20260906",
+]
+
+[tool.uv]
+# Not an installable package: uv just keeps a .venv with the dependencies.
+package = false
 
 [tool.ruff]
-# The scripts still run on the system Python 3.7, so ruff mustn't suggest newer syntax.
-target-version = "py37"
+# target-version comes from requires-python.
 line-length = 100
 src = ["scripts"]
 
@@ -32,7 +51,6 @@ ignore = [
 [tool.pyrefly]
 project-includes = ["scripts"]
 search-path = ["scripts"]
-python-version = "3.7"
 # Every error kind; each one turned off below says why.
 preset = "all"
 

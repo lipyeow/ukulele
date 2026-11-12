@@ -12,8 +12,6 @@ Needs the Hymnary CSV downloads in tmp/hymnary/ (gitignored; see hymnary.org/exp
           status: reviewed are kept exactly as they are.
 """
 
-from __future__ import annotations
-
 import csv
 import difflib
 import io
@@ -27,16 +25,16 @@ import urllib.request
 from collections import defaultdict
 from operator import itemgetter
 from pathlib import Path
-from typing import Any, Dict, Tuple
+from typing import Any
 
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from repos import Hymn, song_files
 
-Row = Dict[str, str]  # a row of one of Hymnary's CSV downloads
-Match = Dict[str, Any]  # what match() found for a song, as saved in matches.json
-Ranked = Tuple[int, float, float, bool, Row]  # (instances, start, anywhere, named, text)
+type Row = dict[str, str]  # a row of one of Hymnary's CSV downloads
+type Match = dict[str, Any]  # what match() found for a song, as saved in matches.json
+type Ranked = tuple[int, float, float, bool, Row]  # (instances, start, anywhere, named, text)
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "tmp/hymnary"

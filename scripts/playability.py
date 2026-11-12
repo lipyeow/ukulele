@@ -4,22 +4,23 @@ Spells each song's chords in each output key the way ChordPro does (sharps going
 flats going down, see build.py) and lists the ones in HARD and FAIR. Optional chords are
 listed in parentheses: a player can leave them out.
 
-Usage: python3 scripts/playability.py [--all] [SLUG ...]   (--all lists clean songs too)
+Usage: uv run scripts/playability.py [--all] [SLUG ...]   (--all lists clean songs too)
 """
-
-from __future__ import annotations
 
 import re
 import sys
 from pathlib import Path
-from typing import Dict, Iterator, Tuple
+from typing import TYPE_CHECKING
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import NOTES, output_keys, semitones
 from repos import find, song_files
 
-Counts = Dict[str, int]  # how often each chord appears
-Report = Dict[str, Tuple[Counts, Counts]]  # by output key: (hard chords, fair chords)
+if TYPE_CHECKING:
+    from collections.abc import Iterator
+
+type Counts = dict[str, int]  # how often each chord appears
+type Report = dict[str, tuple[Counts, Counts]]  # by output key: (hard chords, fair chords)
 
 SHARPS = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 FLATS = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"]

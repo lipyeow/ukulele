@@ -26,7 +26,8 @@ Chords in parentheses, like `(F)`, are optional, so you can also just leave them
 
 Each song has one source in `songs/`, in [ChordPro](https://www.chordpro.org/) format, in its
 original key. The PDFs in `pdf/` are generated from those sources. After changing a source,
-run `make all` to regenerate its PDFs (needs ChordPro) and `make check` to check it. Format
+run `make all` to regenerate its PDFs (needs ChordPro and [uv](https://docs.astral.sh/uv/)) and
+`make check` to check it. Format
 conventions are in [wiki/style-guide.md](wiki/style-guide.md).
 
 Hymns whose words are still under copyright aren't published here: see

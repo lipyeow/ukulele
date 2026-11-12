@@ -4,22 +4,20 @@ Groups the Lyrics-<Name>-<Key>[-variant].* files by name, picks a suggested cano
 source and key, and flags anything Review 2 should look at. Once Review 2 starts the CSV
 is edited by hand, so this refuses to overwrite it without --force.
 
-Usage: python3 scripts/inventory.py [--force] [SRC_DIR]
+Usage: uv run scripts/inventory.py [--force] [SRC_DIR]
 """
-
-from __future__ import annotations
 
 import csv
 import re
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from repos import find
 
-SourceFile = Dict[str, Any]  # one Lyrics-* file: its path, the parts of its name, what it says
-Published = Tuple[str, str, List[str]]  # (date, title, video keys) from published.md
+type SourceFile = dict[str, Any]  # one Lyrics-* file: its path, the parts of its name, what it says
+type Published = tuple[str, str, list[str]]  # (date, title, video keys) from published.md
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"

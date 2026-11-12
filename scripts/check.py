@@ -18,11 +18,9 @@ Songs with status "reviewed" in the CSV only get the lint checks: review may fix
 in the source, so the .cho is the reference from then on. So do new songs written
 directly as .cho, with no canonical_source.
 
-Usage: python3 scripts/check.py [SLUG ...]   (default: every converted song)
+Usage: uv run scripts/check.py [SLUG ...]   (default: every converted song)
 Exits 1 if any song has problems.
 """
-
-from __future__ import annotations
 
 import csv
 import difflib
@@ -30,16 +28,15 @@ import re
 import subprocess  # ruff: ignore[suspicious-subprocess-import] - runs ChordPro
 import sys
 from pathlib import Path
-from typing import Dict, List, Tuple
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import CONFIG, chordpro_bin
 from repos import PRIVATE, find, hymns, repo_of, song_files, words_status
 from txt2cho import BEAT_LINE, CHORD_LINE, KEY_HEADER, LABEL, TOKEN, VERSE_NO, simplify
 
-Line = Tuple[List[str], List[str]]  # a line's lyric words and the chords on it
-Findings = Tuple[List[str], List[str]]  # (problems, notes)
-Row = Dict[str, str]  # a row of wiki/migration.csv
+type Line = tuple[list[str], list[str]]  # a line's lyric words and the chords on it
+type Findings = tuple[list[str], list[str]]  # (problems, notes)
+type Row = dict[str, str]  # a row of wiki/migration.csv
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"

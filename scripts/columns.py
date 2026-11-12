@@ -5,10 +5,8 @@ pages. This builds the song both ways in a temporary folder (in every output key
 transposed chords have different widths) and compares the pages and the number of lyric
 rows ChordPro drew: more rows in two columns means some line wrapped.
 
-Usage: python3 scripts/columns.py [SLUG ...]   (default: every hymn, public and private)
+Usage: uv run scripts/columns.py [SLUG ...]   (default: every hymn, public and private)
 """
-
-from __future__ import annotations
 
 import re
 import subprocess  # ruff: ignore[suspicious-subprocess-import] - runs ChordPro
@@ -17,14 +15,13 @@ import tempfile
 import zlib
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from typing import Dict, Tuple
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import CONFIG, chordpro_bin, output_keys, semitones
 from repos import find, song_files
 
-Layout = Tuple[int, int]  # (pages, lyric rows) of one PDF
-Measures = Dict[str, Dict[int, Layout]]  # by output key, then by number of columns
+type Layout = tuple[int, int]  # (pages, lyric rows) of one PDF
+type Measures = dict[str, dict[int, Layout]]  # by output key, then by number of columns
 
 ROOT = Path(__file__).resolve().parent.parent
 TEXT_SIZE = b"13"  # lyric font size in config/ukulele.json
@@ -154,7 +151,7 @@ def main(argv: list[str]) -> None:
     """
     chos = [find(s) for s in argv] or song_files("hymns")
     with ThreadPoolExecutor(8) as ex:
-        for cho, m in zip(chos, ex.map(measure, chos)):
+        for cho, m in zip(chos, ex.map(measure, chos), strict=True):
             has, fits, text = describe(cho, m)
             mark = "2col" if has else ("  ->" if fits else "")
             print(f"{mark:4} {cho.stem:40} {text}")

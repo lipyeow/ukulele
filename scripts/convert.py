@@ -5,12 +5,10 @@ scripts/txt2cho.py), and sets the row's status to "converted". Existing .cho fil
 left alone unless --force is given, so reviewed songs are never overwritten by accident.
 
 Usage:
-  python3 scripts/convert.py SLUG ...           convert these hymns
-  python3 scripts/convert.py --next N           convert the next N "todo" hymns, in CSV order
-  python3 scripts/convert.py --force SLUG ...   overwrite existing .cho files
+  uv run scripts/convert.py SLUG ...           convert these hymns
+  uv run scripts/convert.py --next N           convert the next N "todo" hymns, in CSV order
+  uv run scripts/convert.py --force SLUG ...   overwrite existing .cho files
 """
-
-from __future__ import annotations
 
 import csv
 import sys

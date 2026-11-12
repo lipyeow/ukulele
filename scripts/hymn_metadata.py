@@ -1,21 +1,19 @@
 """Generate the markdown pages in metadata/hymns/ from hymns.yaml and people.yaml."""
 
-from __future__ import annotations
-
 import sys
 from collections import defaultdict
 from itertools import starmap
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any
 
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from repos import Hymn, is_private
 
-Hymns = Dict[str, Hymn]  # hymns.yaml, by slug
-People = Dict[str, Dict[str, Any]]  # people.yaml, by name
-Items = List[Tuple[str, Hymn]]  # (slug, hymn) pairs
+type Hymns = dict[str, Hymn]  # hymns.yaml, by slug
+type People = dict[str, dict[str, Any]]  # people.yaml, by name
+type Items = list[tuple[str, Hymn]]  # (slug, hymn) pairs
 
 OUT = Path(__file__).resolve().parent.parent / "metadata/hymns"
 CREDIT = (

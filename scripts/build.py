@@ -9,10 +9,8 @@ Songs in the private repo (scripts/repos.py) are built too, into that repo's pdf
 whose words are still copyrighted is not built into this repo's pdf/: move it to the
 private repo first (wiki/copyright.md).
 
-Usage: python3 scripts/build.py [--force] [--quick] [songs/hymns/foo.cho ...]
+Usage: uv run scripts/build.py [--force] [--quick] [songs/hymns/foo.cho ...]
 """
-
-from __future__ import annotations
 
 import os
 import re

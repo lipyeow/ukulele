@@ -5,24 +5,21 @@ compared line by line with the canonical one: which lyric lines they share, and 
 the chords over the shared lines match once transposed. Two-column layouts are split
 into their columns first. Writes wiki/variant-report.md.
 
-Usage: python3 scripts/compare_variants.py [SRC_DIR]
+Usage: uv run scripts/compare_variants.py [SRC_DIR]
 """
-
-from __future__ import annotations
 
 import csv
 import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Tuple
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from txt2cho import CHORD_LINE, chords_of
 
-Words = List[List[str]]  # [word, chords on it] for each word of a stanza
-Shingle = Tuple[str, ...]  # N words in a row
-Shingles = Dict[Shingle, str]  # the chords on each shingle's first word
+type Words = list[list[str]]  # [word, chords on it] for each word of a stanza
+type Shingle = tuple[str, ...]  # N words in a row
+type Shingles = dict[Shingle, str]  # the chords on each shingle's first word
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent / "gh-home" / "other" / "hymns"

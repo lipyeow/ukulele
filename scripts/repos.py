@@ -6,16 +6,14 @@ pdf/: the tools, config and metadata stay here. Without a private checkout, the 
 just see the public songs.
 """
 
-from __future__ import annotations
-
 import os
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any
 
 import yaml
 
-Hymn = Dict[str, Any]  # one entry of metadata/hymns/hymns.yaml
+type Hymn = dict[str, Any]  # one entry of metadata/hymns/hymns.yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 PRIVATE = Path(os.environ.get("UKULELE_PRIVATE") or ROOT.parent / "gh-ukulele-private").resolve()
@@ -116,7 +114,7 @@ def today() -> date:
     Returns:
         The local date.
     """
-    return datetime.now(timezone.utc).astimezone().date()
+    return datetime.now(UTC).astimezone().date()
 
 
 def words_status(hymn: Hymn, on: date | None = None) -> tuple[str, str]:

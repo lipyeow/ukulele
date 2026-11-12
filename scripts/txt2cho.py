@@ -1,19 +1,17 @@
 """Convert a chords-over-lyrics hymn .txt file to ChordPro, following wiki/style-guide.md.
 
-Usage: python3 scripts/txt2cho.py SRC.txt [KEY [TIME]] > out.cho
+Usage: uv run scripts/txt2cho.py SRC.txt [KEY [TIME]] > out.cho
 (scripts/convert.py runs this for the hymns in wiki/migration.csv.)
 """
 
-from __future__ import annotations
-
 import re
 import sys
+from itertools import pairwise
 from pathlib import Path
-from typing import List, Optional, Tuple
 
-Chords = List[Tuple[int, str]]  # (column, chord) for each chord on a line
-Pair = Tuple[Chords, Optional[str]]  # a chord line and the lyric under it (None if none)
-Section = List[Pair]
+type Chords = list[tuple[int, str]]  # (column, chord) for each chord on a line
+type Pair = tuple[Chords, str | None]  # a chord line and the lyric under it (None if none)
+type Section = list[Pair]
 
 CHORD = r"[A-G][#b]?(?:maj7|maj|m7|m|dim7|dim|aug|sus2|sus4|sus|add9|7|6|9|2)?(?:/[A-G][#b]?)?"
 OPTIONAL = r"\(\s*(?:" + CHORD + r"|\d+)\s*\)"  # passing chord (F), or a note like (6)
@@ -104,7 +102,7 @@ def dehyphenate(text: str) -> str:
     for m in HYPHENATED.finditer(plain):
         parts = re.split(r" *-+ *", m.group())
         pos = m.start()
-        for left, right in zip(parts, parts[1:]):
+        for left, right in pairwise(parts):
             pos += len(left)
             run_match = re.match(r" *-+ *", plain[pos:])
             run = run_match.end() if run_match else 0

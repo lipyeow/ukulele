@@ -3,28 +3,28 @@
 # Default: rebuild out-of-date PDFs in C (Am for minor songs) only, for fast iterations.
 # Override the ChordPro binary with CHORDPRO=/path/to/chordpro.
 quick:
-	python3 scripts/build.py --quick
+	uv run scripts/build.py --quick
 
 # Rebuild out-of-date PDFs in every output key (do this before committing).
 all:
-	python3 scripts/build.py
+	uv run scripts/build.py
 
 # Rebuild every PDF in every key.
 force:
-	python3 scripts/build.py --force
+	uv run scripts/build.py --force
 
 # Check converted songs against their sources (scripts/check.py).
 check:
-	python3 scripts/check.py
+	uv run scripts/check.py
 
 # Which songs suit {columns: 2} (scripts/columns.py). Slow: builds every key both ways.
 columns:
-	python3 scripts/columns.py
+	uv run scripts/columns.py
 
-# Python tools, pinned and run through uv (https://docs.astral.sh/uv/); settings in pyproject.toml.
-RUFF = uvx ruff@0.17.4
-# Pyrefly gets the PyYAML the scripts use, plus its type stubs.
-PYREFLY = uvx --with pyyaml==6.0.1 --with types-pyyaml==6.0.12.20260906 pyrefly@1.4.1
+# The scripts, their Python and these tools all run through uv (https://docs.astral.sh/uv/),
+# pinned in uv.lock; settings in pyproject.toml.
+RUFF = uv run ruff
+PYREFLY = uv run pyrefly
 
 # Check the scripts' formatting and lint them (run before committing a script change).
 lint:
@@ -42,4 +42,4 @@ format:
 
 # Regenerate the pages in metadata/hymns/ from hymns.yaml (scripts/hymn_metadata.py).
 metadata:
-	python3 scripts/hymn_metadata.py
+	uv run scripts/hymn_metadata.py
