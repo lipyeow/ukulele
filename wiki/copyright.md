@@ -42,9 +42,9 @@ differ: *Morning Has Broken* stays copyrighted in the UK until 2036 (Farjeon die
 
 | Hymn | Words | `words_pd_us` | Basis |
 |---|---|---|---|
-| Morning Has Broken | Farjeon, pub. 1931 | 2027-01-01 | 1931 + 95; UK author so restored regardless of renewal. Hymnary also shows "© 1957", likely a reprint; check our text matches the 1931 one |
+| Morning Has Broken | Farjeon, pub. 1931 | 2027-01-01 | 1931 + 95; UK author so restored regardless of renewal. Assumes our text is the 1931 one, not Farjeon's 1957 variant (see below) |
 | He Lives | Ackley, 1933 | 2029-01-01 | renewed 1961 |
-| I Know Who Holds Tomorrow | Stanphill, 1950 | 2046-01-01 | renewal assumed (Capitol CMG still licenses it); not confirmed |
+| I Know Who Holds Tomorrow | Stanphill, 1950 | 2046-01-01 | renewed 1978 (per a 1979 hymnal's copyright line) |
 | God Has Spoken | Briggs, 1953 | 2049-01-01 | renewed 1981 |
 | Lord Whose Love Through Humble Service | Bayly, 1961 | 2057-01-01 | UK author, restored |
 | Lord of the Dance | Carter, 1963 | 2059-01-01 | UK author, restored |
@@ -62,16 +62,29 @@ differ: *Morning Has Broken* stays copyrighted in the UK until 2036 (Farjeon die
 | Here I Am Lord | Schutte, 1981 | unknown | author living |
 | O Day of Peace That Dimly Shines | Daw, 1982 | unknown | author living |
 | You Are the Seed | Gabarain 1979; English tr. Gutiérrez-Achón, Chávez-Melo | unknown | translator death date unknown |
-| Sing We Now of Christmas | traditional French carol | now | UMH 237 credits a "Traditional French carol"; the only claim there is on Martin Shaw's 1928 harmonization, which we don't use. Check our verse 3 wording isn't a named translator's |
+| Sing We Now of Christmas | traditional French carol | now | UMH 237 credits a "Traditional French carol"; the only claim there is on Martin Shaw's 1928 harmonization, which we don't use; hymnals credit the English as anonymous |
 
 So as of 2026-11-11, 19 sheets have copyrighted words; 18 once *Morning Has Broken* turns over on
 2027-01-01.
 
-## Open checks
+## Checks done (2026-11-11)
 
-- *I Know Who Holds Tomorrow*: search the Copyright Office's renewal records for 1977–78.
-- *Morning Has Broken*: compare our text with the 1931 *Songs of Praise* version.
-- *Sing We Now of Christmas*: confirm the English text has no named translator.
+- *I Know Who Holds Tomorrow*: **renewed.** The copyright line in *Praise! Our Songs and Hymns*
+  (1979, #341) reads "1950, renewal 1978 by Singspiration"; later hymnals credit Benson, and
+  CCLI now credits New Spring. Not confirmed against the Copyright Office's own records, whose
+  online catalog can't be searched from a script. `2046-01-01` stands.
+- *Sing We Now of Christmas*: **public domain.** Hymnals credit our English text as
+  "tr. anonymous", "Anonymous" or a traditional or 15th-century French carol, and none claims a
+  copyright on it. Two hymnals credit Richard Zgodava (Covenant Hymnal #177) and Tom Fettke
+  (Celebration Hymnal #275), but those look like their own versions. Ours matches UMH 237. `now`
+  stands.
+- *Morning Has Broken*: **probably the 1931 text, not proven.** Our words are the standard
+  hymnal text, which hymnals credit to *Enlarged Songs of Praise*, 1931. Farjeon reprinted a
+  "slight variation" as "A Morning Song" in *The Children's Bells* (1957). If our wording
+  followed that version, the changed lines would stay copyrighted in the US until 2053. I
+  couldn't get a copy of either printing to compare word for word: the Internet Archive's
+  1931 *Songs of Praise* (`songsofpraisewit0000unse_t6i7`, hymn 30) is borrow-only and
+  needs a free account. Compare it by hand before relying on `2027-01-01`.
 
 ## Not decided yet
 
