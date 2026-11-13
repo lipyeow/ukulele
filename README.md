@@ -39,6 +39,13 @@ D - D U        D U U
 1 & 2 &        1 2 3
 ```
 
+Two alternates for triple time:
+
+```
+D - U          D - - - D U
+1 2 3          1 & 2 & 3 &
+```
+
 Each chord name or `*` beat marker on a sheet stands for one group: one `D-DU`, or one `DUU`.
 
 | Time | Each chord or `*` lasts | Strum |
