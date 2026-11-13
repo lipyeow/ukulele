@@ -45,6 +45,10 @@ page layout, melismas) are in [bootstrap.md](bootstrap.md#format-conventions).
 Every few beats there is either a chord or a `[**]` beat marker (shown as `*`). Where no
 chord changes on that beat, a `[**]` goes there instead.
 
+Each chord or marker is one strumming group (README, "Strumming"): one `D-DU` for a
+two-quarter-note spacing, one `DUU` for a three-beat one. The spacing below is chosen so
+that this holds.
+
 Count in quarter notes:
 
 | Time signature | Marker every | Markers fall on |

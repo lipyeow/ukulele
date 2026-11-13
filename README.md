@@ -32,6 +32,9 @@ patterns:
 | Duple: 2/4, 4/4 | `D-DU` | Two quarter notes: a down on the first, then down-up on the second |
 | Triple: 3/4, 3/8, 6/8, … | `DUU` | Each group of three: one down, then two ups |
 
+Each chord name or `*` beat marker on a sheet stands for one group: one `D-DU`, or one `DUU`.
+Where a word has no chord or `*` over it, keep strumming the pattern.
+
 Where it fits a song, the sheets use 2/2 or 4/2 rather than 2/4 or 4/4, so that each beat
 (a half note) takes one `D-DU`.
 
