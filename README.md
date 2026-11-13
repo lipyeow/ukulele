@@ -32,6 +32,13 @@ patterns:
 | Duple: 2/4, 4/4 | `D-DU` | Two quarter notes: a down on the first, then down-up on the second |
 | Triple: 3/4, 3/8, 6/8, … | `DUU` | Each group of three: one down, then two ups |
 
+With the counts written under each strum:
+
+```
+D - D U        D U U
+1 & 2 &        1 2 3
+```
+
 Each chord name or `*` beat marker on a sheet stands for one group: one `D-DU`, or one `DUU`.
 
 | Time | Each chord or `*` lasts | Strum |
