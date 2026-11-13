@@ -13,13 +13,28 @@ type Chords = list[tuple[int, str]]  # (column, chord) for each chord on a line
 type Pair = tuple[Chords, str | None]  # a chord line and the lyric under it (None if none)
 type Section = list[Pair]
 
-CHORD = r"[A-G][#b]?(?:maj7|maj|m7|m|dim7|dim|aug|sus2|sus4|sus|add9|7|6|9|2)?(?:/[A-G][#b]?)?"
+CHORD = (
+    r"[A-G][#b]?(?:maj7|maj|M7|m7|m|dim7|dim|aug|7sus4|7sus|sus2|sus4|sus|add9|7|6|9|5|2)?"
+    r"(?:/[A-G][#b]?m?)?"  # a bass note, or an alternative chord (G/Em)
+)
 OPTIONAL = r"\(\s*(?:" + CHORD + r"|\d+)\s*\)"  # passing chord (F), or a note like (6)
-TOKEN = re.compile(OPTIONAL + r"|" + CHORD + r"|\*")
-CHORD_LINE = re.compile(r"^\s*(?:\d\.?\s+)?(?:(?:" + OPTIONAL + r"|" + CHORD + r"|\*)\s*)+$")
+REPEAT = r"\(?(?:x\s*\d|\d\s*x)\)?"  # "x2", "2x" or "(x2)": play this line again
+# A beat is * (or + in some worship sources); | marks a bar line.
+TOKEN = re.compile(OPTIONAL + r"|" + CHORD + r"|[*+]")
+CHORD_LINE = re.compile(
+    r"^\s*(?:\d\.?\s+)?(?:(?:" + OPTIONAL + r"|" + REPEAT + r"|" + CHORD + r"|[*+|])\s*)+$"
+)
 BEAT_LINE = re.compile(r"^\s*(?:\d\s*)+$")
 VERSE_NO = re.compile(r"^\s*\d\.?\s")
-LABEL = re.compile(r"^\s*\[?\s*(verse\s*\d*|chorus|refrain)\s*\]?\s*:?\s*$", re.IGNORECASE)
+LABEL = re.compile(
+    r"^\s*\[?\s*(verse\s*\d*|chorus\s*\d*|refrain|pre-?chorus|bridge\s*\d*|intro|outro"
+    r"|instrumental|interlude|tag|ending)\s*(?:"
+    + REPEAT
+    + r")?\s*\]?\s*:?\s*(?:"
+    + REPEAT
+    + r")?\s*$",
+    re.IGNORECASE,
+)
 KEY_HEADER = re.compile(r"\bkey\s*:", re.IGNORECASE)
 HELD = "\x00"  # a dropped beat; becomes a hyphen if the syllable is held into a chord
 HYPHENATED = re.compile(r"[A-Za-z']+(?: *-+ *[A-Za-z']+)+")  # "lu-   ia" is a held syllable
@@ -121,6 +136,8 @@ def simplify(chord: str) -> str:
     """Spell a chord the ukulele-friendly way.
 
     No slash bass (G/B -> G), "sus" means sus4, and E is played as E7 (the familiar shape).
+    Power chords and add9 chords, which have no ukulele diagrams, become plain major chords
+    (G5 -> G, Fadd9 -> F).
 
     Args:
         chord: A chord as the source writes it.
@@ -128,7 +145,8 @@ def simplify(chord: str) -> str:
     Returns:
         The chord as the sheets write it.
     """
-    chord = chord.split("/", maxsplit=1)[0]
+    chord = chord.split("/", maxsplit=1)[0].replace("M7", "maj7")
+    chord = re.sub(r"(?<=[A-G#b])(?:5|add9)$", "", chord)
     if chord == "E":
         return "E7"
     return chord + "4" if chord.endswith("sus") else chord
@@ -148,7 +166,7 @@ def chords_of(line: str) -> Chords:
         tok = m.group()
         if tok.startswith("("):
             continue
-        out.append((m.start(), "**" if tok == "*" else simplify(tok)))
+        out.append((m.start(), "**" if tok in {"*", "+"} else simplify(tok)))
     return out
 
 

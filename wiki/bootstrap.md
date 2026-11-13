@@ -90,6 +90,14 @@ gh-ukulele/
   `$CHORDPRO`, then `chordpro` on `PATH`, then the app's bundled CLI.
 - Added `config/ukulele.json` (originally `chordpro/`, renamed to avoid confusion with song sources), `scripts/build.py` and the `Makefile` (`make` rebuilds
   out-of-date PDFs, `make force` rebuilds all; ~3 s per PDF).
+- **Content hashes (2026-11-12):** a PDF counts as out of date only when the contents of its
+  `.cho`, `config/ukulele.json` or the fonts in `config/fonts/` change.
+  `pdf/build-hashes.json` in each repo records a hash of what each PDF was built from, and is
+  committed with the PDFs. File dates used to decide it, and editing `build.py` once rebuilt
+  all 330 hymn PDFs, which differed only in their embedded dates (and so were thrown away).
+  Now a checkout, pull, `touch` or script change rebuilds nothing; `make force` still
+  rebuilds everything. A missing hash file means every PDF in that repo is rebuilt (the
+  hashes were seeded once from the committed PDFs, known to be current).
 - Transposition direction: ChordPro spells with sharps when transposing up and flats when
   transposing down, so `build.py` shifts up into sharp keys (G, D, Em, …) and down into
   everything else. C→F gives `Bb`, not `A#`.

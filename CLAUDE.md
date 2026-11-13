@@ -20,7 +20,7 @@ Hymns come first; other genres follow later.
 - Write beat placeholders as `[**]`. Leave out the sources' optional passing chords such as
   `(F)`; write `[(F)]` only for a chord that is truly optional, and `[<off>F</off>]` for one
   off the usual beat (see `wiki/style-guide.md`).
-- After changing a `.cho` file, run `make all` to regenerate its PDFs in every key (needs ChordPro; see `scripts/build.py`) and commit them in the same commit. Plain `make` builds only C / Am, for quick iterations.
+- After changing a `.cho` file, run `make all` to regenerate its PDFs in every key (needs ChordPro; see `scripts/build.py`) and commit them, with `pdf/build-hashes.json`, in the same commit. Only PDFs whose `.cho` or settings (`config/`) changed in content are rebuilt. Plain `make` builds only C / Am, for quick iterations.
 - Each `.cho` with a standard tune name has `{meta: tune NAME}` under `{time: ...}`, printed after the time signature. It must match `metadata/<genre>/`; `make check` compares them.
 - `make check` fails a public song whose words are still copyrighted in the US (`words_pd_us` in `metadata/hymns/hymns.yaml`, unless `keep_public` is set) and notes a private one whose words have become public domain. Set `words_pd_us` for any new song with copyrighted words, and put it in the private repo.
 - Record decisions and plan changes in `wiki/`.

@@ -1,6 +1,6 @@
 """Automated checks on converted songs (Phase 3), run before a batch goes to review.
 
-For each songs/hymns/<slug>.cho with a row in wiki/migration.csv:
+For each songs/<genre>/<slug>.cho with a row in its genre's migration CSV (CSVS):
 - lyrics: the words, read in order with {chorus} expanded, must match the canonical source
   (ignoring case, punctuation, hyphens, verse numbers and labels);
 - chords: every chord in the source (except parenthesized passing chords) must still be
@@ -8,7 +8,8 @@ For each songs/hymns/<slug>.cho with a row in wiki/migration.csv:
 - lint: unknown chords or missing diagrams (from ChordPro itself), a missing {time},
   empty sections, digits or stray tokens in lyric lines, and two-column source layouts;
 - words: a song in the public repo whose words are still copyrighted in the US (words_pd_us
-  in metadata/hymns/hymns.yaml is a future date or "unknown") fails unless it sets
+  in its genre's metadata (repos.metadata) is a future date or "unknown", or a non-hymn
+  song has no metadata entry at all) fails unless it sets
   keep_public: it belongs in the private repo (scripts/repos.py, wiki/copyright.md). So does
   one with a copyright line but no words_pd_us.
 
@@ -31,7 +32,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import CONFIG, chordpro_bin
-from repos import PRIVATE, find, hymns, repo_of, song_files, words_status
+from repos import PRIVATE, Hymn, entry, find, repo_of, song_files, words_status
 from txt2cho import BEAT_LINE, CHORD_LINE, KEY_HEADER, LABEL, TOKEN, VERSE_NO, simplify
 
 type Line = tuple[list[str], list[str]]  # a line's lyric words and the chords on it
@@ -39,13 +40,16 @@ type Findings = tuple[list[str], list[str]]  # (problems, notes)
 type Row = dict[str, str]  # a row of wiki/migration.csv
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT.parent / "gh-home" / "other" / "hymns"
-CSV = ROOT / "wiki" / "migration.csv"
+OLD = ROOT.parent / "gh-home" / "other"
+CSVS = {  # genre: (its migration CSV, the folder of the old sources it names)
+    "hymns": (ROOT / "wiki" / "migration.csv", OLD / "hymns"),
+    "worship": (ROOT / "wiki" / "worship-migration.csv", OLD / "songs"),
+}
 GAP = re.compile(r"\S\s{5,}\S")
-HYMNS = hymns()
 CHORUS = "{chorus}"  # the directive that repeats the chorus
 TWO_COLUMNS = 3  # wide gaps at the same place on this many lines suggest two columns
 CONTEXT = 2  # words of context around a lyric difference
+REPEAT_MIN = 4  # words in the shortest run that counts as a repeated section
 
 
 def words(text: str) -> list[str]:
@@ -90,6 +94,14 @@ def source_parts(path: Path) -> tuple[list[Line], list[str], list[str]]:
     lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
     if lines and not CHORD_LINE.match(lines[0]):
         lines = lines[1:]  # title line
+        while (
+            lines
+            and lines[0].strip()
+            and not (
+                CHORD_LINE.match(lines[0]) or BEAT_LINE.match(lines[0]) or LABEL.match(lines[0])
+            )
+        ):
+            lines = lines[1:]  # more header, such as the songwriter's name
     out: list[Line] = []
     problems: list[str] = []
     gaps: dict[int, list[int]] = {}
@@ -103,7 +115,7 @@ def source_parts(path: Path) -> tuple[list[Line], list[str], list[str]]:
             pending = [
                 simplify(t)
                 for t in (m.group() for m in TOKEN.finditer(line))
-                if t != "*" and not t.startswith("(")
+                if t not in {"*", "+"} and not t.startswith("(")
             ]
             continue
         lyric = VERSE_NO.sub("", line)
@@ -241,36 +253,35 @@ def subsequence(small: list[str], big: list[str]) -> bool:
     return all(any(c == x for x in it) for c in small)
 
 
-def tune_problems(slug: str, text: str) -> list[str]:
-    """Check the {meta: tune} line against metadata/hymns/hymns.yaml.
+def tune_problems(meta: Hymn, text: str) -> list[str]:
+    """Check the {meta: tune} line against the song's metadata.
 
     Args:
-        slug: The song's slug.
+        meta: The song's metadata.
         text: Its .cho source.
 
     Returns:
         A problem if they differ.
     """
-    tune = (HYMNS.get(slug) or {}).get("tune") or ""
+    tune = meta.get("tune") or ""
     expected = "" if tune.startswith("[") else tune
     found = re.search(r"^\{meta:\s*tune\s+(.*?)\}", text, re.MULTILINE)
     actual = found.group(1).strip() if found else ""
-    return [] if actual == expected else [f'tune: .cho has "{actual}", hymns.yaml has "{expected}"']
+    return [] if actual == expected else [f'tune: .cho has "{actual}", metadata has "{expected}"']
 
 
-def words_check(slug: str, cho: Path) -> Findings:
+def words_check(hymn: Hymn, cho: Path) -> Findings:
     """Check that a song is in the right repo for its words' copyright (wiki/copyright.md).
 
-    Copyrighted words belong in the private repo, unless hymns.yaml sets keep_public.
+    Copyrighted words belong in the private repo, unless the metadata sets keep_public.
 
     Args:
-        slug: The song's slug.
+        hymn: The song's metadata.
         cho: Its source.
 
     Returns:
         (problems, notes).
     """
-    hymn = HYMNS.get(slug) or {}
     state, message = words_status(hymn)
     private = repo_of(cho) == PRIVATE
     if state == "error":
@@ -290,15 +301,44 @@ def check(row: Row) -> Findings:
     """Run every check on one song.
 
     Args:
-        row: Its row of wiki/migration.csv.
+        row: Its row of its genre's migration CSV, with the genre added.
 
     Returns:
         (problems, notes).
     """
-    cho = find(row["slug"])
-    problems, notes = check_song(row, cho)
-    more_problems, more_notes = words_check(row["slug"], cho)
+    cho = find(row["slug"], row["genre"])
+    meta = entry(cho)
+    problems, notes = check_song(row, cho, meta)
+    more_problems, more_notes = words_check(meta, cho)
     return problems + more_problems, notes + more_notes
+
+
+def repeated(ws: list[str], i: int, j: int) -> bool:
+    """Say whether words i to j repeat sections sung elsewhere in the song.
+
+    Worship sources often recall sections by their labels ("[Verse 1]", "[Chorus]")
+    instead of writing them out; the .cho writes them out in full.
+
+    Args:
+        ws: The song's words.
+        i: Where the inserted words start.
+        j: Where they end.
+
+    Returns:
+        True if the words split into runs of at least REPEAT_MIN words that each also
+        appear outside i to j. (Not every run of REPEAT_MIN words: where two recalled
+        sections meet, in an order the song doesn't otherwise have, the words that span the
+        join appear nowhere else.)
+    """
+    rest = (" " + " ".join(ws[:i]) + " ", " " + " ".join(ws[j:]) + " ")
+    while i < j:
+        n = j - i  # the longest run from i that appears elsewhere
+        while n >= REPEAT_MIN and not any(" " + " ".join(ws[i : i + n]) + " " in r for r in rest):
+            n -= 1
+        if n < REPEAT_MIN:
+            return False
+        i += n
+    return True
 
 
 def lyric_findings(src: list[Line], song: list[Line], chorus: list[str]) -> Findings:
@@ -322,6 +362,9 @@ def lyric_findings(src: list[Line], song: list[Line], chorus: list[str]) -> Find
             continue  # same letters, joined differently ("undous" / "undo us")
         if op == "insert" and chorus and cho_words[j1:j2] == chorus * ((j2 - j1) // len(chorus)):
             notes.append("chorus sung more often than the source shows it")
+            continue
+        if op == "insert" and repeated(cho_words, j1, j2):
+            notes.append(f'section written out again: "{phrase(cho_words, j1, j1 + 3)}"')
             continue
         problems.append(
             f'lyrics {op}: source "{phrase(src_words, i1, i2)}" '
@@ -372,22 +415,23 @@ def chord_findings(src: list[Line], song: list[Line]) -> Findings:
     return problems, [f"{note}: check them in review"]
 
 
-def check_song(row: Row, cho: Path) -> Findings:
+def check_song(row: Row, cho: Path, meta: Hymn) -> Findings:
     """Check a song's .cho, and compare it with its source unless it's been reviewed.
 
     Args:
-        row: Its row of wiki/migration.csv.
+        row: Its row of its genre's migration CSV, with the genre added.
         cho: Its source.
+        meta: Its metadata.
 
     Returns:
         (problems, notes).
     """
     text = cho.read_text(encoding="utf-8")
     song, more, chorus = song_parts(text)
-    lint = more + chordpro_problems(cho) + tune_problems(row["slug"], text)
+    lint = more + chordpro_problems(cho) + tune_problems(meta, text)
     if not row["canonical_source"]:
         return lint, ["new song: no source to compare with"]
-    src, problems, notes = source_parts(SRC / row["canonical_source"])
+    src, problems, notes = source_parts(CSVS[row["genre"]][1] / row["canonical_source"])
     problems += lint
     if row["status"] == "reviewed":
         # Review 3 signed off on this .cho, including fixes to errors in the source, so
@@ -408,13 +452,19 @@ def main(argv: list[str]) -> None:
     Args:
         argv: Slugs.
     """
-    with CSV.open(encoding="utf-8") as fh:
-        rows = {r["slug"]: r for r in csv.DictReader(fh)}
-    slugs = argv or [p.stem for p in song_files("hymns")]
+    rows: dict[str, Row] = {}
+    for genre, (path, _) in CSVS.items():
+        if path.exists():
+            with path.open(encoding="utf-8") as fh:
+                for r in csv.DictReader(fh):
+                    if r["slug"] in rows:
+                        sys.exit(f"{r['slug']} is in two genres' migration CSVs")
+                    rows[r["slug"]] = r | {"genre": genre}
+    slugs = argv or [p.stem for genre in CSVS for p in song_files(genre)]
     bad = 0
     for slug in slugs:
         if slug not in rows:
-            print(f"{slug}: not in {CSV.name}")
+            print(f"{slug}: not in a migration CSV")
             bad += 1
             continue
         problems, notes = check(rows[slug])

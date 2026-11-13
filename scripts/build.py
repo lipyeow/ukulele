@@ -1,9 +1,15 @@
 """Build PDFs for every song: songs/<genre>/<slug>.cho -> pdf/<genre>/<slug>-<Key>.pdf.
 
 Each song is rendered in its own {key} plus the default output keys (C G F for major,
-Am Em Dm for minor), unless the song sets {meta: pdf_keys ...}. A PDF is rebuilt only
-when it is older than its source, the shared config, or this script. --quick builds only
+Am Em Dm for minor), unless the song sets {meta: pdf_keys ...}. --quick builds only
 C (Am for minor songs), for fast iterations; the other keys' PDFs are left as they are.
+
+Building is slow, and a rebuilt PDF differs from the old one only in its embedded dates, so
+a PDF is rebuilt only when the contents of its source or of the settings (the shared config
+and its fonts) have changed, or when it's missing. pdf/build-hashes.json in each repo records
+a hash of what each PDF was built from; it's committed with the PDFs. File dates don't
+matter, so a checkout, pull or touch rebuilds nothing, and neither does a change to this
+script (use --force for that).
 
 Songs in the private repo (scripts/repos.py) are built too, into that repo's pdf/. A song
 whose words are still copyrighted is not built into this repo's pdf/: move it to the
@@ -12,6 +18,8 @@ private repo first (wiki/copyright.md).
 Usage: uv run scripts/build.py [--force] [--quick] [songs/hymns/foo.cho ...]
 """
 
+import hashlib
+import json
 import os
 import re
 import shutil
@@ -20,10 +28,12 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from repos import Hymn, hymns, is_private, repo_of, shown, song_files, words_status
+from repos import entry, is_private, repo_of, roots, shown, song_files, words_status
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "ukulele.json"
+FONTS = ROOT / "config" / "fonts"
+HASHES = "build-hashes.json"  # in each repo's pdf/: what each PDF was built from
 APP_CHORDPRO = "/Applications/ChordPro.app/Contents/MacOS/chordpro"
 
 DEFAULT_KEYS = {"major": ["C", "G", "F"], "minor": ["Am", "Em", "Dm"]}
@@ -109,22 +119,63 @@ def semitones(src: str, dst: str) -> int:
     return up if dst in SHARP_KEYS else up - 12 if up else 0
 
 
+def settings_hash() -> str:
+    """Hash the settings every PDF depends on.
+
+    Returns:
+        A hash of the shared ChordPro config and the font files it uses.
+    """
+    digest = hashlib.sha256()
+    for path in [CONFIG, *sorted(FONTS.glob("*.ttf"))]:
+        digest.update(path.name.encode() + b"\0" + path.read_bytes() + b"\0")
+    return digest.hexdigest()
+
+
+def load_hashes(root: Path) -> dict[str, str]:
+    """Read a repo's pdf/build-hashes.json.
+
+    Args:
+        root: The repo.
+
+    Returns:
+        What each PDF was built from, by its path relative to pdf/; empty if there's no file.
+    """
+    path = root / "pdf" / HASHES
+    return json.loads(path.read_text()) if path.exists() else {}
+
+
+def save_hashes(root: Path, hashes: dict[str, str]) -> None:
+    """Write a repo's pdf/build-hashes.json, dropping PDFs that are gone, if it has changed.
+
+    Args:
+        root: The repo.
+        hashes: What each PDF was built from.
+    """
+    kept = {k: v for k, v in sorted(hashes.items()) if (root / "pdf" / k).exists()}
+    text = json.dumps(kept, indent=1) + "\n"
+    path = root / "pdf" / HASHES
+    if not path.exists() or path.read_text() != text:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text)
+
+
 def build(
-    cho: Path, *, force: bool = False, quick: bool = False, metadata: dict[str, Hymn] | None = None
+    cho: Path, hashes: dict[Path, dict[str, str]], settings: str, *, force: bool, quick: bool
 ) -> int:
     """Build one song's out-of-date PDFs, into the repo that holds the song.
 
     Args:
         cho: The song's source.
+        hashes: Each repo's build hashes (load_hashes); updated for the PDFs built.
+        settings: The settings' hash (settings_hash()).
         force: Rebuild even PDFs that are up to date.
         quick: Only the first default key (C, or Am for minor songs).
-        metadata: hymns.yaml, to refuse copyrighted words in the public repo.
 
     Returns:
         How many PDFs were built.
     """
     root = repo_of(cho)
-    hymn = (metadata or {}).get(cho.stem) or {}
+    hymn = entry(cho)
     if root == ROOT and is_private(hymn):
         print(f"skip {shown(cho)}: {words_status(hymn)[1]}; move it to the private repo")
         return 0
@@ -133,11 +184,13 @@ def build(
     if quick:
         keys = [DEFAULT_KEYS["minor" if src_key.endswith("m") else "major"][0]]
     rel = cho.relative_to(root / "songs").with_suffix("")
-    newest = max(p.stat().st_mtime for p in (cho, CONFIG, Path(__file__)))
+    source = hashlib.sha256(settings.encode() + b"\0" + cho.read_bytes()).hexdigest()
+    built_from = hashes[root]
     built = 0
     for key in keys:
-        out = root / "pdf" / rel.parent / f"{rel.name}-{key}.pdf"
-        if not force and out.exists() and out.stat().st_mtime >= newest:
+        name = f"{rel.parent.as_posix()}/{rel.name}-{key}.pdf"
+        out = root / "pdf" / name
+        if not force and out.exists() and built_from.get(name) == source:
             continue
         out.parent.mkdir(parents=True, exist_ok=True)
         cmd = [chordpro_bin(), f"--config={CONFIG}", str(cho), "-o", str(out)]
@@ -146,6 +199,7 @@ def build(
             cmd.append(f"--transpose={shift}")
         # The config's fontdir is relative to this repo's root.
         subprocess.run(cmd, check=True, cwd=ROOT)  # ruff: ignore[subprocess-without-shell-equals-true] - our own arguments
+        built_from[name] = source
         print(shown(out))
         built += 1
     return built
@@ -160,8 +214,15 @@ def main(argv: list[str]) -> None:
     force, quick = "--force" in argv, "--quick" in argv
     paths = [Path(a).resolve() for a in argv if not a.startswith("--")]
     songs = paths or song_files()
-    metadata = hymns()
-    built = sum(build(p, force=force, quick=quick, metadata=metadata) for p in songs)
+    hashes = {root: load_hashes(root) for root in roots()}
+    settings = settings_hash()
+    built = 0
+    try:  # save what was built even if a build fails or is interrupted
+        for p in songs:
+            built += build(p, hashes, settings, force=force, quick=quick)
+    finally:
+        for root, root_hashes in hashes.items():
+            save_hashes(root, root_hashes)
     print(f"{built} PDF(s) built from {len(songs)} song(s)")
 
 
