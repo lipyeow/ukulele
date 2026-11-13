@@ -22,6 +22,19 @@ Eb needs no swap: the sheets already show the easier `0 3 3 1`.
 
 Chords in parentheses, like `(F)`, are optional, so you can also just leave them out.
 
+## Strumming
+
+`D` is a down strum, `U` an up strum, and `-` a gap where you'd strum but don't. The default
+patterns:
+
+| Time | Pattern | Fits |
+|------|---------|------|
+| Duple: 2/4, 4/4 | `D-DU` | Two quarter notes: a down on the first, then down-up on the second |
+| Triple: 3/4, 3/8, 6/8, … | `DUU` | Each group of three: one down, then two ups |
+
+Where it fits a song, the sheets use 2/2 or 4/2 rather than 2/4 or 4/4, so that each beat
+(a half note) takes one `D-DU`.
+
 ## Working on the songs
 
 Each song has one source in `songs/`, in [ChordPro](https://www.chordpro.org/) format, in its
