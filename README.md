@@ -35,6 +35,13 @@ patterns:
 Each chord name or `*` beat marker on a sheet stands for one group: one `D-DU`, or one `DUU`.
 Where a word has no chord or `*` over it, keep strumming the pattern.
 
+| Time | Each chord or `*` lasts | Strum |
+|------|-------------------------|-------|
+| 2/4, 4/4 | 2 quarter notes | `D-DU` |
+| 2/2, 3/2, 4/2 | 1 half note | `D-DU` |
+| 3/4 | 3 quarter notes (one bar) | `DUU` |
+| 6/8, 9/8 | 1 dotted quarter (3 eighth notes) | `DUU` |
+
 Where it fits a song, the sheets use 2/2 or 4/2 rather than 2/4 or 4/4, so that each beat
 (a half note) takes one `D-DU`.
 
