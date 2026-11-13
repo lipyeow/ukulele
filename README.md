@@ -33,7 +33,6 @@ patterns:
 | Triple: 3/4, 3/8, 6/8, … | `DUU` | Each group of three: one down, then two ups |
 
 Each chord name or `*` beat marker on a sheet stands for one group: one `D-DU`, or one `DUU`.
-Where a word has no chord or `*` over it, keep strumming the pattern.
 
 | Time | Each chord or `*` lasts | Strum |
 |------|-------------------------|-------|
